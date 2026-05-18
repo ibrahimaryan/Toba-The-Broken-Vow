@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System;
 
 public class PlayerControllerScript : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class PlayerControllerScript : MonoBehaviour
     private Rigidbody2D rb;
     private Animator myAnimator;
     private SpriteRenderer mySpriteRenderer;
+
+    public static event Action OnInteractPressed;
+    public static event Action OnClosePressed;
 
     private void Awake()
     {
@@ -23,6 +27,12 @@ public class PlayerControllerScript : MonoBehaviour
         // Menggunakan callback untuk input yang lebih responsif
         playerControls.Movement.Move.performed += ctx => movement = ctx.ReadValue<Vector2>();
         playerControls.Movement.Move.canceled += ctx => movement = Vector2.zero;
+
+        // Callback Interact (Tombol E)
+        playerControls.Movement.Interact.performed += ctx => OnInteractPressed?.Invoke();
+
+        // Callback untuk tombol Close (ESC)
+        playerControls.Movement.Close.performed += ctx => OnClosePressed?.Invoke();
     }
 
     private void OnEnable()

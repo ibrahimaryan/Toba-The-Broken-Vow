@@ -1,0 +1,1300 @@
+fileFormatVersion: 2
+guid: 9d2445426817d5545928ab324c9011dc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8843666836794663244
+    second: toba_0
+  - first:
+      213: -3753452671031568394
+    second: toba_1
+  - first:
+      213: -1882677632062316952
+    second: toba_2
+  - first:
+      213: -8418247519866607284
+    second: toba_3
+  - first:
+      213: 2576271503784484007
+    second: toba_4
+  - first:
+      213: -383666355290556000
+    second: toba_5
+  - first:
+      213: -3909904612807951665
+    second: toba_6
+  - first:
+      213: 5351090032243849484
+    second: toba_7
+  - first:
+      213: 23498198018045056
+    second: toba_8
+  - first:
+      213: 5028985502942600430
+    second: toba_9
+  - first:
+      213: 7268465606023309932
+    second: toba_10
+  - first:
+      213: -8127623575918212045
+    second: toba_11
+  - first:
+      213: 9048719850137617908
+    second: toba_12
+  - first:
+      213: -1708869094253543175
+    second: toba_13
+  - first:
+      213: -4504149871091313643
+    second: toba_14
+  - first:
+      213: -2072890701019045527
+    second: toba_15
+  - first:
+      213: -2314094021546151210
+    second: toba_16
+  - first:
+      213: 8321874779489491143
+    second: toba_17
+  - first:
+      213: -5853136558171279074
+    second: toba_18
+  - first:
+      213: 7449380810417389736
+    second: toba_19
+  - first:
+      213: -3607101991336180703
+    second: toba_20
+  - first:
+      213: 2646905984002153228
+    second: toba_21
+  - first:
+      213: -4912605095118079254
+    second: toba_22
+  - first:
+      213: 7565005466332960374
+    second: toba_23
+  - first:
+      213: 1152929739430502393
+    second: toba_24
+  - first:
+      213: 6415245340876445468
+    second: toba_25
+  - first:
+      213: 6298801675040594411
+    second: toba_26
+  - first:
+      213: -4577936051339848739
+    second: toba_27
+  - first:
+      213: 3649212236097709227
+    second: toba_28
+  - first:
+      213: -4936799860241525112
+    second: toba_29
+  - first:
+      213: -1145011029788775924
+    second: toba_30
+  - first:
+      213: 6001782347235435464
+    second: toba_31
+  - first:
+      213: 5489083254747184693
+    second: toba_32
+  - first:
+      213: 4436180796033980303
+    second: toba_33
+  - first:
+      213: 437831973338577915
+    second: toba_34
+  - first:
+      213: 7022958186983067532
+    second: toba_35
+  - first:
+      213: -2591582660488574755
+    second: toba_36
+  - first:
+      213: -4043761762829157680
+    second: toba_37
+  - first:
+      213: -925221448148149420
+    second: toba_38
+  - first:
+      213: -4883263933532331290
+    second: toba_39
+  - first:
+      213: -1770114471410951686
+    second: toba_40
+  - first:
+      213: -2046521913424521042
+    second: toba_41
+  - first:
+      213: -992250176151347149
+    second: toba_42
+  - first:
+      213: 4176076945327755348
+    second: toba_43
+  - first:
+      213: -1218374353586571020
+    second: toba_44
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: toba_0
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 749
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4be93f02edbf44580800000000000000
+      internalID: -8843666836794663244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_1
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 749
+        width: 21
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f71cedaeae09ebc0800000000000000
+      internalID: -3753452671031568394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_2
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 749
+        width: 28
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86e1a522ba26fd5e0800000000000000
+      internalID: -1882677632062316952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_3
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 749
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c49a9038b706c2b80800000000000000
+      internalID: -8418247519866607284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_4
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 666
+        width: 88
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ac19047841c0c320800000000000000
+      internalID: 2576271503784484007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_5
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 666
+        width: 90
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a933ac8b71fcaaf0800000000000000
+      internalID: -383666355290556000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_6
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 663
+        width: 88
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcabbef587a3db9c0800000000000000
+      internalID: -3909904612807951665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_7
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 664
+        width: 88
+        height: 184
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0937057804e24a40800000000000000
+      internalID: 5351090032243849484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_8
+      rect:
+        serializedVersion: 2
+        x: 921
+        y: 662
+        width: 92
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0843ab19c7b735000800000000000000
+      internalID: 23498198018045056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_9
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 662
+        width: 94
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eec9b739bab8ac540800000000000000
+      internalID: 5028985502942600430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_10
+      rect:
+        serializedVersion: 2
+        x: 1283
+        y: 664
+        width: 90
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6ae92d65f6ced460800000000000000
+      internalID: 7268465606023309932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_11
+      rect:
+        serializedVersion: 2
+        x: 1464
+        y: 666
+        width: 89
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33c0e417b61e43f80800000000000000
+      internalID: -8127623575918212045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_12
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 536
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f58a73f2c2839d70800000000000000
+      internalID: 9048719850137617908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_13
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 538
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f0cf5ddc90e848e0800000000000000
+      internalID: -1708869094253543175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_14
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 448
+        width: 97
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5141b766e8b0e71c0800000000000000
+      internalID: -4504149871091313643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_15
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 448
+        width: 96
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 961ac8bd3ec9b33e0800000000000000
+      internalID: -2072890701019045527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_16
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 450
+        width: 94
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d2f2ec7fbfa2efd0800000000000000
+      internalID: -2314094021546151210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_17
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 450
+        width: 94
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c8d0c0550d3d7370800000000000000
+      internalID: 8321874779489491143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_18
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 450
+        width: 94
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e113954cf4b75cea0800000000000000
+      internalID: -5853136558171279074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_19
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 451
+        width: 98
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a04a89e064816760800000000000000
+      internalID: 7449380810417389736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_20
+      rect:
+        serializedVersion: 2
+        x: 1283
+        y: 448
+        width: 97
+        height: 186
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1248dc1a9dff0fdc0800000000000000
+      internalID: -3607101991336180703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_21
+      rect:
+        serializedVersion: 2
+        x: 1463
+        y: 448
+        width: 97
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0bdd42f7f2bbb420800000000000000
+      internalID: 2646905984002153228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_22
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 320
+        width: 18
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aea76bfa1bbe2dbb0800000000000000
+      internalID: -4912605095118079254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_23
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 319
+        width: 8
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6761aa8f36c4cf860800000000000000
+      internalID: 7565005466332960374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_24
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 319
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ff1db15d77000010800000000000000
+      internalID: 1152929739430502393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_25
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 319
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c179be9e5a7870950800000000000000
+      internalID: 6415245340876445468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_26
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 321
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be91e6f30c6d96750800000000000000
+      internalID: 6298801675040594411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_27
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 244
+        width: 60
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd31f6f8a67e770c0800000000000000
+      internalID: -4577936051339848739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_28
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 247
+        width: 75
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba4ec92c13b94a230800000000000000
+      internalID: 3649212236097709227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_29
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 244
+        width: 61
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8861b13fea6fc7bb0800000000000000
+      internalID: -4936799860241525112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_30
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 248
+        width: 80
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0a2981f88a1c10f0800000000000000
+      internalID: -1145011029788775924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_31
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 245
+        width: 67
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c3ad2afe3d9a4350800000000000000
+      internalID: 6001782347235435464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_32
+      rect:
+        serializedVersion: 2
+        x: 1112
+        y: 248
+        width: 80
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53e30c543242d2c40800000000000000
+      internalID: 5489083254747184693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_33
+      rect:
+        serializedVersion: 2
+        x: 1301
+        y: 245
+        width: 67
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f87d30b1eea709d30800000000000000
+      internalID: 4436180796033980303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_34
+      rect:
+        serializedVersion: 2
+        x: 1483
+        y: 243
+        width: 62
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfb772a2cdd731600800000000000000
+      internalID: 437831973338577915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_35
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 112
+        width: 17
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8f0c87034f867160800000000000000
+      internalID: 7022958186983067532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_36
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 113
+        width: 47
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd844831d49d80cd0800000000000000
+      internalID: -2591582660488574755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_37
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 41
+        width: 58
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dab24af91ca1e7c0800000000000000
+      internalID: -4043761762829157680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_38
+      rect:
+        serializedVersion: 2
+        x: 376
+        y: 46
+        width: 76
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45b9e84bef3f823f0800000000000000
+      internalID: -925221448148149420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_39
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 42
+        width: 65
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e2245933592b3cb0800000000000000
+      internalID: -4883263933532331290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_40
+      rect:
+        serializedVersion: 2
+        x: 741
+        y: 47
+        width: 77
+        height: 168
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af995c7444a4f67e0800000000000000
+      internalID: -1770114471410951686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_41
+      rect:
+        serializedVersion: 2
+        x: 938
+        y: 42
+        width: 65
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea85745a92b4993e0800000000000000
+      internalID: -2046521913424521042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_42
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 47
+        width: 79
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3302e22d8b1da32f0800000000000000
+      internalID: -992250176151347149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_43
+      rect:
+        serializedVersion: 2
+        x: 1300
+        y: 42
+        width: 62
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45095f02bd764f930800000000000000
+      internalID: 4176076945327755348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: toba_44
+      rect:
+        serializedVersion: 2
+        x: 1477
+        y: 41
+        width: 60
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f8b60b0bf6771fe0800000000000000
+      internalID: -1218374353586571020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      toba_0: -8843666836794663244
+      toba_1: -3753452671031568394
+      toba_10: 7268465606023309932
+      toba_11: -8127623575918212045
+      toba_12: 9048719850137617908
+      toba_13: -1708869094253543175
+      toba_14: -4504149871091313643
+      toba_15: -2072890701019045527
+      toba_16: -2314094021546151210
+      toba_17: 8321874779489491143
+      toba_18: -5853136558171279074
+      toba_19: 7449380810417389736
+      toba_2: -1882677632062316952
+      toba_20: -3607101991336180703
+      toba_21: 2646905984002153228
+      toba_22: -4912605095118079254
+      toba_23: 7565005466332960374
+      toba_24: 1152929739430502393
+      toba_25: 6415245340876445468
+      toba_26: 6298801675040594411
+      toba_27: -4577936051339848739
+      toba_28: 3649212236097709227
+      toba_29: -4936799860241525112
+      toba_3: -8418247519866607284
+      toba_30: -1145011029788775924
+      toba_31: 6001782347235435464
+      toba_32: 5489083254747184693
+      toba_33: 4436180796033980303
+      toba_34: 437831973338577915
+      toba_35: 7022958186983067532
+      toba_36: -2591582660488574755
+      toba_37: -4043761762829157680
+      toba_38: -925221448148149420
+      toba_39: -4883263933532331290
+      toba_4: 2576271503784484007
+      toba_40: -1770114471410951686
+      toba_41: -2046521913424521042
+      toba_42: -992250176151347149
+      toba_43: 4176076945327755348
+      toba_44: -1218374353586571020
+      toba_5: -383666355290556000
+      toba_6: -3909904612807951665
+      toba_7: 5351090032243849484
+      toba_8: 23498198018045056
+      toba_9: 5028985502942600430
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

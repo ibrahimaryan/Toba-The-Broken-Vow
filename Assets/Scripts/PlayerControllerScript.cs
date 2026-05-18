@@ -49,11 +49,13 @@ public class PlayerControllerScript : MonoBehaviour
 
     private void UpdateAnimationParameters()
     {
-        // Pastikan parameter "moveX" dan "moveY" ada di Animator Controller
         if (myAnimator != null) 
         {
             myAnimator.SetFloat("moveX", movement.x);
             myAnimator.SetFloat("moveY", movement.y);
+            
+            // BARIS INI WAJIB ADA:
+            myAnimator.SetFloat("speed", movement.sqrMagnitude); 
         }
     }
 
@@ -67,12 +69,11 @@ public class PlayerControllerScript : MonoBehaviour
     {
         // Cara baru mengambil posisi mouse di Input System
         Vector3 mousePos = Mouse.current.position.ReadValue(); 
-        
         Vector3 playerScreenPoint = Camera.main.WorldToScreenPoint(transform.position);
         
-        if (mySpriteRenderer != null)
-        {
-            mySpriteRenderer.flipX = mousePos.x < playerScreenPoint.x;
-        }
+        // if (mySpriteRenderer != null)
+        // {
+        //     mySpriteRenderer.flipX = mousePos.x < playerScreenPoint.x;
+        // }
     }
 }

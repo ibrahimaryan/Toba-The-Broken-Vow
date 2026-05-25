@@ -14,6 +14,7 @@ public class PlayerControllerScript : MonoBehaviour
 
     public static event Action OnInteractPressed;
     public static event Action OnClosePressed;
+    public static event Action OnInventoryPressed;
 
     private void Awake()
     {
@@ -33,6 +34,9 @@ public class PlayerControllerScript : MonoBehaviour
 
         // Callback untuk tombol Close (ESC)
         playerControls.Movement.Close.performed += ctx => OnClosePressed?.Invoke();
+
+        // Callback untuk tombol Inventory (I)
+        playerControls.Movement.Inventory.performed += ctx => OnInventoryPressed?.Invoke();
     }
 
     private void OnEnable()

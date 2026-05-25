@@ -1,6 +1,6 @@
 using UnityEngine;
 using TMPro;
-using System.Collections; // Wajib ada untuk Coroutine
+using System.Collections;
 
 public class PasswordTerminal : MonoBehaviour
 {
@@ -9,15 +9,15 @@ public class PasswordTerminal : MonoBehaviour
     [SerializeField] private TMP_InputField inputField;
     [SerializeField] private SecretItem firstItem;
     [SerializeField] private GameObject panel;
-    [SerializeField] private DoorController door;
+    [SerializeField] private GameObject rewardPanel;
 
     [Header("Blink Settings")]
-    [SerializeField] private float blinkSpeed = 1.5f; // Kecepatan kedip papan
-    [Range(0f, 1f)] [SerializeField] private float minAlpha = 0.4f; // Batas paling tipis saat memudar
+    [SerializeField] private float blinkSpeed = 1.5f; 
+    [Range(0f, 1f)] [SerializeField] private float minAlpha = 0.4f; 
 
     private int attemptCount = 0;
     private bool isPlayerInRange = false;
-    private bool isPuzzleSolved = false; // Pengaman agar berhenti berkedip jika sudah menang
+    private bool isPuzzleSolved = false; 
 
     private SpriteRenderer spriteRenderer;
     private Coroutine blinkCoroutine;
@@ -29,20 +29,19 @@ public class PasswordTerminal : MonoBehaviour
 
     private void Start()
     {
-        // Mulai efek kedip sejak awal level berjalan
         StartBlink();
     }
 
     private void OnEnable()
     {
         PlayerControllerScript.OnInteractPressed += HandleInteraction;
-        PlayerControllerScript.OnClosePressed += ClosePanel;
+        PlayerControllerScript.OnClosePressed += CloseAllPanels; // Diubah agar menutup reward juga dengan ESC
     }
 
     private void OnDisable()
     {
         PlayerControllerScript.OnInteractPressed -= HandleInteraction;
-        PlayerControllerScript.OnClosePressed -= ClosePanel;
+        PlayerControllerScript.OnClosePressed -= CloseAllPanels;
     }
 
     private void HandleInteraction()
@@ -61,13 +60,22 @@ public class PasswordTerminal : MonoBehaviour
 
         if (inputField.text == correctCodes[actualIndex])
         {
-            Debug.Log("Kode Benar! Pintu Terbuka.");
+            Debug.Log("Kode Benar! Pemain Mendapatkan Kail Pancing.");
             isPuzzleSolved = true;
 
-            if (door != null) door.OpenDoor();
-            
-            StopBlink(); // Hentikan kedip selamanya karena puzzle sudah selesai
-            ClosePanel();
+            // 1. Masukkan kail pancing ke sistem Inventory
+            if (InventoryManager.Instance != null)
+            {
+                InventoryManager.Instance.GetFishingRod();
+            }
+
+            // 2. Tutup panel input kode
+            if (panel != null) panel.SetActive(false);
+
+            // 3. Munculkan pop-up reward kail pancing di layar
+            if (rewardPanel != null) rewardPanel.SetActive(true);
+
+            StopBlink(); // Berhenti kedip selamanya karena laci/terminal sudah terpecahkan
         }
         else
         {
@@ -79,7 +87,7 @@ public class PasswordTerminal : MonoBehaviour
             if (attemptCount >= 3)
             {
                 attemptCount = 0;
-                firstItem.ResetInteractions(); // Mengacak ulang gambar di benda pertama
+                firstItem.ResetInteractions(); 
                 ClosePanel(); 
             }
         }
@@ -87,6 +95,9 @@ public class PasswordTerminal : MonoBehaviour
 
     public void OpenPanel()
     {
+        // Jangan buka panel input jika reward sedang tampil atau teka-teki sudah selesai
+        if (isPuzzleSolved || (rewardPanel != null && rewardPanel.activeSelf)) return;
+
         if (panel != null)
         {
             panel.SetActive(true);
@@ -95,7 +106,7 @@ public class PasswordTerminal : MonoBehaviour
             inputField.onEndEdit.RemoveAllListeners(); 
             inputField.onEndEdit.AddListener(delegate { CheckPassword(); });
 
-            StopBlink(); // Hentikan kedip saat panel UI sedang dibuka agar tidak mengganggu background
+            StopBlink(); 
         }
     }
 
@@ -106,12 +117,22 @@ public class PasswordTerminal : MonoBehaviour
             inputField.text = ""; 
             panel.SetActive(false);
 
-            // Mulai kedip lagi saat panel ditutup (jika puzzle belum sukses dipecahkan)
-            StartBlink();
+            if (!isPuzzleSolved) StartBlink();
         }
     }
 
-    // --- FUNGSI UNTUK MENGATUR COROUTINE KEDIP ---
+    // Fungsi baru untuk menutup segalanya saat tombol ESC ditekan
+    public void CloseAllPanels()
+    {
+        ClosePanel();
+
+        if (rewardPanel != null && rewardPanel.activeSelf)
+        {
+            rewardPanel.SetActive(false);
+        }
+    }
+
+    // --- COROUTINE KEDIP (TETAP SAMA) ---
     private void StartBlink()
     {
         if (!isPuzzleSolved && blinkCoroutine == null && spriteRenderer != null)
@@ -136,26 +157,19 @@ public class PasswordTerminal : MonoBehaviour
         {
             float lerpTime = Mathf.PingPong(Time.time * blinkSpeed, 1f);
             float alpha = Mathf.Lerp(minAlpha, 1f, lerpTime);
-
             spriteRenderer.color = new Color(1f, 1f, 1f, alpha);
-
             yield return null; 
         }
     }
 
     private void ResetSpriteColor()
     {
-        if (spriteRenderer != null)
-        {
-            spriteRenderer.color = Color.white; 
-        }
+        if (spriteRenderer != null) spriteRenderer.color = Color.white; 
     }
-    // ---------------------------------------------
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
-            isPlayerInRange = true;
+        if (other.CompareTag("Player")) isPlayerInRange = true;
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -163,7 +177,7 @@ public class PasswordTerminal : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayerInRange = false;
-            ClosePanel(); 
+            CloseAllPanels(); 
         }
     }
 }

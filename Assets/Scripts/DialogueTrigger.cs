@@ -1,35 +1,32 @@
 using UnityEngine;
-using UnityEngine.InputSystem; // Jika menggunakan New Input System
 
 public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue; // Tempat memasukkan data dialog di Inspector
 
-    private bool playerInRange = false;
+    [Header("Pengaturan Pemicu")]
+    [Tooltip("Centang jika dialog ini hanya boleh muncul satu kali saja saat dilewati.")]
+    public bool triggerOnlyOnce = true; 
+    
+    private bool hasTriggered = false; // Penanda dari sistem apakah dialog sudah pernah jalan
 
-    void Update()
-    {
-        // Cek apakah pemain menekan tombol 'E' (Interact) dan berada di dekat objek
-        if (playerInRange && Keyboard.current.eKey.wasPressedThisFrame)
-        {
-            TriggerDialogue();
-        }
-    }
-
-    public void TriggerDialogue()
-    {
-        // Memanggil Manager untuk memulai percakapan
-        DialogueManager.instance.StartDialogue(dialogue);
-    }
-
-    // Mendeteksi apakah Samosir ada di dekat objek ini (Butuh BoxCollider2D mode IsTrigger)
+    // Fungsi ini otomatis terpanggil SEKETIKA saat ada objek menyentuh area Box Collider 2D (Is Trigger)
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player")) playerInRange = true;
-    }
+        // Mengecek apakah objek yang menyentuh area ini memiliki Tag "Player" (Samosir)
+        if (collision.CompareTag("Player"))
+        {
+            // Jika disetting hanya boleh sekali, dan ternyata sudah pernah jalan, maka batalkan perintah
+            if (triggerOnlyOnce && hasTriggered)
+            {
+                return;
+            }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player")) playerInRange = false;
+            // Memanggil Manager untuk memulai percakapan
+            DialogueManager.instance.StartDialogue(dialogue);
+            
+            // Menandai bahwa dialog sudah berhasil dijalankan
+            hasTriggered = true; 
+        }
     }
 }

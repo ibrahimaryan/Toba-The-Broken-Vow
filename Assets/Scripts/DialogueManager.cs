@@ -2,27 +2,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.InputSystem; // Tambahkan ini untuk membaca tombol keyboard
 
 public class DialogueManager : MonoBehaviour
 {
-    public static DialogueManager instance; // Singleton agar mudah dipanggil dari script lain
+    public static DialogueManager instance; 
 
     [Header("Screen Box UI")]
     public GameObject screenBoxPanel;
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogText;
 
-    [Header("Speech Bubble UI (Dari Samosir)")]
+    [Header("Speech Bubble UI")]
     public GameObject bubblePanel;
     public TextMeshProUGUI bubbleText;
 
-    // Queue digunakan untuk mengantre kalimat dialog seperti antrean kasir
+    [Header("Pengaturan Waktu")]
+    [Tooltip("Berapa lama bubble bertahan setelah teks selesai diketik?")]
+    public float durasiBubble = 3f; // Kamu bisa ubah nilainya di Inspector!
+
     private Queue<DialogueLine> sentences; 
-    private bool isTyping = false; // Mencegah teks bertumpuk saat diketik
+    private bool isTyping = false; 
 
     void Awake()
     {
-        // Setup Singleton
         if (instance == null) instance = this;
         else Destroy(gameObject);
     }
@@ -34,22 +37,29 @@ public class DialogueManager : MonoBehaviour
         bubblePanel.SetActive(false);
     }
 
+    void Update()
+    {
+        // Fitur menekan tombol 'E' untuk melanjutkan dialog di Kotak Bawah (Screen Box)
+        // Dialog hanya bisa dilanjut jika teks sudah selesai diketik dan kotak sedang aktif
+        if (!isTyping && screenBoxPanel.activeInHierarchy && Keyboard.current.eKey.wasPressedThisFrame)
+        {
+            DisplayNextSentence();
+        }
+    }
+
     public void StartDialogue(Dialogue dialogue)
     {
-        sentences.Clear(); // Bersihkan antrean lama
-
-        // Masukkan semua kalimat baru ke dalam antrean
+        sentences.Clear(); 
         foreach (DialogueLine line in dialogue.lines)
         {
             sentences.Enqueue(line);
         }
-
         DisplayNextSentence();
     }
 
     public void DisplayNextSentence()
     {
-        if (isTyping) return; // Abaikan klik jika teks masih diketik
+        if (isTyping) return; 
 
         if (sentences.Count == 0)
         {
@@ -57,8 +67,7 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        DialogueLine currentLine = sentences.Dequeue(); // Keluarkan kalimat urutan pertama dari antrean
-        
+        DialogueLine currentLine = sentences.Dequeue(); 
         StopAllCoroutines();
         StartCoroutine(TypeSentence(currentLine));
     }
@@ -71,7 +80,6 @@ public class DialogueManager : MonoBehaviour
 
         TextMeshProUGUI activeTextDisplay;
 
-        // Cek apakah kalimat ini disetting sebagai Bubble atau Screen Box
         if (line.isSpeechBubble)
         {
             bubblePanel.SetActive(true);
@@ -80,26 +88,33 @@ public class DialogueManager : MonoBehaviour
         else
         {
             screenBoxPanel.SetActive(true);
-            nameText.text = line.characterName; // Tampilkan nama karakter di Box
+            nameText.text = line.characterName; 
             activeTextDisplay = dialogText;
         }
 
-        activeTextDisplay.text = ""; // Kosongkan teks sebelum mulai ngetik
+        activeTextDisplay.text = ""; 
 
-        // Efek Typewriter (Ketik per huruf)
+        // Efek mesin tik
         foreach (char letter in line.sentence.ToCharArray())
         {
             activeTextDisplay.text += letter;
-            yield return new WaitForSeconds(0.02f); // Kecepatan ngetik, bisa diubah
+            yield return new WaitForSeconds(0.02f); 
         }
 
         isTyping = false;
+
+        // FITUR BARU: Auto-Hilang / Auto-Lanjut khusus untuk Speech Bubble
+        if (line.isSpeechBubble)
+        {
+            // Tunggu beberapa detik sesuai pengaturan, lalu otomatis lanjut/tutup
+            yield return new WaitForSeconds(durasiBubble);
+            DisplayNextSentence(); 
+        }
     }
 
     private void EndDialogue()
     {
         screenBoxPanel.SetActive(false);
         bubblePanel.SetActive(false);
-        Debug.Log("Percakapan Selesai.");
     }
 }

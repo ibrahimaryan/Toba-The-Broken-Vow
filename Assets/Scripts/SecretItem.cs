@@ -1,35 +1,49 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System;
-using System.Collections.Generic; // Dibutuhkan untuk List
+using System.Collections; 
+using System.Collections.Generic;
 
 public class SecretItem : MonoBehaviour
 {
+    [Header("UI Settings")]
     [SerializeField] private GameObject popUpPanel;
     [SerializeField] private Image displayImage;
     [SerializeField] private Sprite[] secretSprites;
     
+    [Header("Blink Settings")]
+    [SerializeField] private float blinkSpeed = 1.5f; 
+    [Range(0f, 1f)] [SerializeField] private float minAlpha = 0.4f; 
+
     private int currentSpriteIndex = 0;
     private bool canInteract = true;
     private bool isPlayerInRange = false;
 
-    // Tambahkan variabel untuk menyimpan urutan acak
     private List<int> randomizedIndices = new List<int>();
+    private SpriteRenderer spriteRenderer;
+    private Coroutine blinkCoroutine;
 
     private void Awake()
     {
+        spriteRenderer = GetComponent<SpriteRenderer>();
         RandomizeOrder();
+    }
+
+    private void Start()
+    {
+        if (canInteract)
+        {
+            blinkCoroutine = StartCoroutine(BlinkEffect());
+        }
     }
 
     private void RandomizeOrder()
     {
-        // Masukkan semua index (0, 1, 2) ke dalam list
         for (int i = 0; i < secretSprites.Length; i++)
         {
             randomizedIndices.Add(i);
         }
 
-        // Acak urutan list menggunakan algoritma Fisher-Yates sederhana
         for (int i = 0; i < randomizedIndices.Count; i++)
         {
             int temp = randomizedIndices[i];
@@ -62,21 +76,49 @@ public class SecretItem : MonoBehaviour
     }
 
     void ShowPopUp() {
-        // Ambil sprite berdasarkan urutan yang sudah diacak
         int spriteToDisplay = randomizedIndices[currentSpriteIndex];
         displayImage.sprite = secretSprites[spriteToDisplay];
         
         popUpPanel.SetActive(true);
         canInteract = false; 
+
+        if (blinkCoroutine != null)
+        {
+            StopCoroutine(blinkCoroutine);
+            ResetSpriteColor(); 
+        }
     }
 
     public void ResetInteractions() {
         canInteract = true;
-        // Pindah ke urutan acak berikutnya
         currentSpriteIndex = (currentSpriteIndex + 1) % secretSprites.Length;
+
+        if (blinkCoroutine != null) StopCoroutine(blinkCoroutine);
+        blinkCoroutine = StartCoroutine(BlinkEffect());
     }
 
-    // Fungsi tambahan agar PasswordTerminal tahu index mana yang sedang aktif
+    // PERBAIKAN: Menggunakan IEnumerator non-generik bawaan System.Collections
+    private IEnumerator BlinkEffect()
+    {
+        while (canInteract && spriteRenderer != null)
+        {
+            float lerpTime = Mathf.PingPong(Time.time * blinkSpeed, 1f);
+            float alpha = Mathf.Lerp(minAlpha, 1f, lerpTime);
+
+            spriteRenderer.color = new Color(1f, 1f, 1f, alpha);
+
+            yield return null; 
+        }
+    }
+
+    private void ResetSpriteColor()
+    {
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.color = Color.white; 
+        }
+    }
+
     public int GetCurrentSecretIndex()
     {
         return randomizedIndices[currentSpriteIndex];

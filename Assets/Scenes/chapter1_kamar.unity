@@ -269,7 +269,7 @@ GameObject:
   - component: {fileID: 215572379}
   - component: {fileID: 215572378}
   - component: {fileID: 215572377}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Canvas (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -357,7 +357,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!1 &225490377
 GameObject:
@@ -509,7 +509,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -5441,7 +5441,7 @@ GameObject:
   - component: {fileID: 1319493372}
   - component: {fileID: 1319493371}
   - component: {fileID: 1319493373}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Bubble_Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6006,6 +6006,7 @@ GameObject:
   - component: {fileID: 1439669761}
   - component: {fileID: 1439669762}
   - component: {fileID: 1439669763}
+  - component: {fileID: 1439669764}
   m_Layer: 0
   m_Name: Laci
   m_TagString: Untagged
@@ -6154,7 +6155,7 @@ MonoBehaviour:
   panel: {fileID: 1399572033}
   door: {fileID: 1063465467}
   blinkSpeed: 2
-  minAlpha: 0.9
+  minAlpha: 0.8
 --- !u!61 &1439669763
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6201,6 +6202,24 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.54, y: 1.33}
   m_EdgeRadius: 0
+--- !u!114 &1439669764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1439669758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12ad33e31c105944c805ededc22a7604, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialogue:
+    lines:
+    - characterName: Samosir
+      sentence: Kenapa Laci ini terkunci? Apa isinya..?
+      isSpeechBubble: 1
+  triggerOnlyOnce: 1
 --- !u!1 &1464778457
 GameObject:
   m_ObjectHideFlags: 0
@@ -6622,6 +6641,7 @@ MonoBehaviour:
   dialogText: {fileID: 1196506982}
   bubblePanel: {fileID: 1319493369}
   bubbleText: {fileID: 2015693894}
+  durasiBubble: 3
 --- !u!4 &1512039004
 Transform:
   m_ObjectHideFlags: 0
@@ -7731,7 +7751,7 @@ GameObject:
   - component: {fileID: 2015693896}
   - component: {fileID: 2015693895}
   - component: {fileID: 2015693894}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7791,7 +7811,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535

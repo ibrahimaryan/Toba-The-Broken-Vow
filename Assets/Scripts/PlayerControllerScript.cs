@@ -18,35 +18,40 @@ public class PlayerControllerScript : MonoBehaviour
 
     private void Awake()
     {
-        playerControls = new PlayerControls();
+        DontDestroyOnLoad(gameObject);
         
         // Ambil referensi komponen agar tidak null
         rb = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
-
-        // Menggunakan callback untuk input yang lebih responsif
-        playerControls.Movement.Move.performed += ctx => movement = ctx.ReadValue<Vector2>();
-        playerControls.Movement.Move.canceled += ctx => movement = Vector2.zero;
-
-        // Callback Interact (Tombol E)
-        playerControls.Movement.Interact.performed += ctx => OnInteractPressed?.Invoke();
-
-        // Callback untuk tombol Close (ESC)
-        playerControls.Movement.Close.performed += ctx => OnClosePressed?.Invoke();
-
-        // Callback untuk tombol Inventory (I)
-        playerControls.Movement.Inventory.performed += ctx => OnInventoryPressed?.Invoke();
+        
     }
 
     private void OnEnable()
     {
+        // PENGAMAN: Jika playerControls kosong, buat baru dulu sebelum di-Enable
+        if (playerControls == null)
+        {
+            playerControls = new PlayerControls();
+            
+            // Daftarkan ulang callback agar input tidak macet setelah reset fisik
+            playerControls.Movement.Move.performed += ctx => movement = ctx.ReadValue<Vector2>();
+            playerControls.Movement.Move.canceled += ctx => movement = Vector2.zero;
+            playerControls.Movement.Interact.performed += ctx => OnInteractPressed?.Invoke();
+            playerControls.Movement.Close.performed += ctx => OnClosePressed?.Invoke();
+            playerControls.Movement.Inventory.performed += ctx => OnInventoryPressed?.Invoke();
+        }
+        
         playerControls.Enable();
     }
 
     private void OnDisable()
     {
-        playerControls.Disable();
+        // PENGAMAN: Hanya panggil Disable jika objeknya beneran ada (tidak null)
+        if (playerControls != null)
+        {
+            playerControls.Disable();
+        }
     }
 
     private void Update()

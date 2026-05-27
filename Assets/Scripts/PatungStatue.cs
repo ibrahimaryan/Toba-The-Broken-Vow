@@ -1,13 +1,20 @@
 using UnityEngine;
+using System.Collections;
 
 public class PatungStatue : MonoBehaviour
 {
-    [SerializeField] private Sprite fullColorSprite; // Masukkan aset patung warna di sini
-    [SerializeField] private DoorController door; // Referensi ke script pintu kamu yang kemarin
+    [Header("Aset & Target")]
+    [SerializeField] private Sprite fullColorSprite; 
+    [SerializeField] private DoorController door; 
+
+    [Header("Blink Settings")]
+    [SerializeField] private float blinkSpeed = 1.5f; 
+    [Range(0f, 1f)] [SerializeField] private float minAlpha = 0.4f; 
 
     private SpriteRenderer spriteRenderer;
     private bool isSolved = false;
     private bool isPlayerInRange = false;
+    private Coroutine blinkCoroutine;
 
     private void Awake()
     {
@@ -24,21 +31,59 @@ public class PatungStatue : MonoBehaviour
         PlayerControllerScript.OnInteractPressed -= PlaceItem;
     }
 
+    // FUNGSI BARU: Dipanggil dari PasswordTerminal saat password benar
+    public void StartBlinkEffect()
+    {
+        if (!isSolved && blinkCoroutine == null && spriteRenderer != null)
+        {
+            blinkCoroutine = StartCoroutine(BlinkEffect());
+        }
+    }
+
+    // FUNGSI BARU: Untuk menghentikan kedip dan mengembalikan warna normal
+    private void StopBlinkEffect()
+    {
+        if (blinkCoroutine != null)
+        {
+            StopCoroutine(blinkCoroutine);
+            blinkCoroutine = null;
+        }
+        ResetSpriteColor();
+    }
+
+    private IEnumerator BlinkEffect()
+    {
+        while (!isSolved && spriteRenderer != null)
+        {
+            float lerpTime = Mathf.PingPong(Time.time * blinkSpeed, 1f);
+            float alpha = Mathf.Lerp(minAlpha, 1f, lerpTime);
+            spriteRenderer.color = new Color(1f, 1f, 1f, alpha);
+            yield return null;
+        }
+    }
+
+    private void ResetSpriteColor()
+    {
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.color = Color.white;
+        }
+    }
+
     private void PlaceItem()
     {
         if (isPlayerInRange && !isSolved)
         {
-            // CEK: Apakah player bawa kail pancing?
             if (InventoryManager.Instance.hasFishingRod)
             {
                 isSolved = true;
-                InventoryManager.Instance.UseFishingRod(); // Hapus item dari inventory
+                InventoryManager.Instance.UseFishingRod(); 
 
-                // 1. Ubah aset patung jadi Full Color
+                StopBlinkEffect(); // TAMBAHAN: Matikan kedip karena patung sudah selesai!
+
                 if (fullColorSprite != null)
                     spriteRenderer.sprite = fullColorSprite;
 
-                // 2. Buka Pintu & putar suara (memakai fungsi DoorController kemarin)
                 if (door != null)
                     door.OpenDoor();
 
@@ -47,7 +92,6 @@ public class PatungStatue : MonoBehaviour
             else
             {
                 Debug.Log("Patung membutuhkan alat pancing...");
-                // Di sini kamu bisa memunculkan teks UI "Butuh kail pancing" jika mau
             }
         }
     }

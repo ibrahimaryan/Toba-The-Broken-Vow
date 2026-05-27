@@ -1,17 +1,16 @@
 using UnityEngine;
-using UnityEngine.UI; // Wajib ada untuk memanipulasi komponen Image
+using UnityEngine.UI; // Wajib untuk komponen Image
 
 public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager Instance;
 
     [Header("UI Panels")]
-    [SerializeField] private GameObject inventoryPanel; // Papan besar inventory (diaktifkan pakai tombol I)
+    [SerializeField] private GameObject inventoryPanel; 
     
     [Header("Item Slots")]
-    [SerializeField] private GameObject fishingRodSlotImage; // Gambar/Icon Kail Pancing di dalam UI Inventory
+    [SerializeField] private Image fishingRodSlotImage; // KITA UBAH JADI Image
 
-    // Status item 
     public bool hasFishingRod { get; private set; } = false;
 
     private void Awake()
@@ -27,22 +26,25 @@ public class InventoryManager : MonoBehaviour
 
     private void OnDisable()
     {
+        PlayerControllerScript.OnInventoryPressed -= TransitionToggle; 
+    }
+
+    private void TransitionToggle()
+    {
         PlayerControllerScript.OnInventoryPressed -= ToggleInventory;
     }
 
-    // Fungsi mengambil kail pancing
     public void GetFishingRod()
     {
         hasFishingRod = true;
-        UpdateInventoryUI(); // Update tampilan UI biar kailnya muncul
+        UpdateInventoryUI(); 
         Debug.Log("Kail Pancing masuk ke inventory!");
     }
 
-    // Fungsi menggunakan kail pancing
     public void UseFishingRod()
     {
         hasFishingRod = false;
-        UpdateInventoryUI(); // Update tampilan UI biar kailnya hilang
+        UpdateInventoryUI(); 
         Debug.Log("Kail Pancing telah digunakan!");
     }
 
@@ -50,10 +52,7 @@ public class InventoryManager : MonoBehaviour
     {
         if (inventoryPanel != null)
         {
-            // Buka atau tutup panel utama saat tombol I ditekan
             inventoryPanel.SetActive(!inventoryPanel.activeSelf);
-
-            // Jika panelnya sedang dibuka, sekalian update isi slotnya
             if (inventoryPanel.activeSelf)
             {
                 UpdateInventoryUI();
@@ -61,13 +60,12 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    // --- FUNGSI BARU: Mengatur muncul/hilangnya item di UI ---
     private void UpdateInventoryUI()
     {
         if (fishingRodSlotImage != null)
         {
-            // Jika player punya kail pancing, gambar icon kail AKTIF. Jika tidak, gambar kail MATI.
-            fishingRodSlotImage.SetActive(hasFishingRod);
+            // Mengaktifkan/mematikan komponen gambarnya saja, objek UI tetap aman hidup
+            fishingRodSlotImage.enabled = hasFishingRod;
         }
     }
 }

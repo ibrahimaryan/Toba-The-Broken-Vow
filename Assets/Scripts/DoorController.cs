@@ -3,8 +3,12 @@ using UnityEngine.SceneManagement;
 
 public class DoorController : MonoBehaviour
 {
-    [SerializeField] private string nextSceneName; // Nama scene berikutnya
-    [SerializeField] private GameObject transitionZone; // Objek TransitionZone (anak dari Gate)
+    [SerializeField] private string nextSceneName; 
+    
+    // PERBAIKAN: Langsung kunci ke komponen BoxCollider2D milik Transition Zone
+    [SerializeField] private BoxCollider2D transitionZoneCollider; 
+    
+    [SerializeField] private string doorID; 
 
     private BoxCollider2D solidCollider;
     private AudioSource audioSource;
@@ -13,42 +17,44 @@ public class DoorController : MonoBehaviour
     private void Awake()
     {
         solidCollider = GetComponent<BoxCollider2D>();
-        audioSource = GetComponent<AudioSource>(); // Mengambil komponen Audio Source
+        audioSource = GetComponent<AudioSource>(); 
     }
 
     public void OpenDoor()
     {
         isOpen = true;
         
-        // 1. Putar Suara Pintu Terbuka
-        if (audioSource != null)
+        if (audioSource != null) audioSource.Play();
+        if (solidCollider != null) solidCollider.enabled = false; // Matikan tembok padat
+        
+        // PERBAIKAN: Nyalakan langsung collider-nya secara instan
+        if (transitionZoneCollider != null) 
         {
-            audioSource.Play();
+            Debug.Log("Transition Active: " + transitionZoneCollider.gameObject.activeInHierarchy);
+            Debug.Log("Collider Enabled: " + transitionZoneCollider.enabled);
+            // Nyalakan GameObject tempat kolider itu berada jika statusnya mati
+            transitionZoneCollider.gameObject.SetActive(true); 
+            
+            // Nyalakan fungsi trigger fisika
+            transitionZoneCollider.enabled = true;
+            
+            Debug.Log("Pintu Terbuka! Sensor BoxCollider2D pada Transition Zone BERHASIL DIAKTIFKAN.");
         }
         else
         {
-            Debug.LogWarning("AudioSource tidak ditemukan di objek Gate!");
+            Debug.LogError("Gagal mengaktifkan sensor! Slot 'Transition Zone Collider' di Inspector masih kosong.");
         }
-
-        // 2. Matikan Tembok (Collider Padat) agar Player bisa lewat
-        if (solidCollider != null)
-        {
-            solidCollider.enabled = false;
-        }
-
-        // 3. Nyalakan Zona Transisi Pindah Scene
-        if (transitionZone != null)
-        {
-            transitionZone.SetActive(true);
-        }
-
-        Debug.Log("Pintu Terbuka (Suara diputar)! Silakan masuk.");
     }
 
     public void GoToNextScene()
     {
         if (isOpen)
         {
+            if (GameManager.Instance != null)
+            {
+                GameManager.Instance.lastExitDoorID = doorID;
+            }
+
             SceneManager.LoadScene(nextSceneName);
         }
     }

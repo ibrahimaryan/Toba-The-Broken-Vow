@@ -1,0 +1,2340 @@
+fileFormatVersion: 2
+guid: 446c5c0110ded354e8ef1656be91b6cf
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2820838091728616746
+    second: perabotan_dapur_gudang_0
+  - first:
+      213: -4340129660714905444
+    second: perabotan_dapur_gudang_1
+  - first:
+      213: 6286253439069173351
+    second: perabotan_dapur_gudang_2
+  - first:
+      213: 2858483572745754473
+    second: perabotan_dapur_gudang_3
+  - first:
+      213: -735346918801682702
+    second: perabotan_dapur_gudang_4
+  - first:
+      213: -7100365911799506782
+    second: perabotan_dapur_gudang_5
+  - first:
+      213: -1194756453721186746
+    second: perabotan_dapur_gudang_6
+  - first:
+      213: 5932428385752442443
+    second: perabotan_dapur_gudang_7
+  - first:
+      213: -6174619666336068847
+    second: perabotan_dapur_gudang_8
+  - first:
+      213: -4451822829193996376
+    second: perabotan_dapur_gudang_9
+  - first:
+      213: -3231781752476132215
+    second: perabotan_dapur_gudang_10
+  - first:
+      213: 3198651386335768960
+    second: perabotan_dapur_gudang_11
+  - first:
+      213: 8551286036922303431
+    second: perabotan_dapur_gudang_12
+  - first:
+      213: 2079774690999572738
+    second: perabotan_dapur_gudang_13
+  - first:
+      213: -121881780988640892
+    second: perabotan_dapur_gudang_14
+  - first:
+      213: 7068968947419323175
+    second: perabotan_dapur_gudang_15
+  - first:
+      213: -6481329347512613090
+    second: perabotan_dapur_gudang_16
+  - first:
+      213: 201654761668206644
+    second: perabotan_dapur_gudang_17
+  - first:
+      213: 199108904961312710
+    second: perabotan_dapur_gudang_18
+  - first:
+      213: -1741996863479209247
+    second: perabotan_dapur_gudang_19
+  - first:
+      213: -2175648877807633701
+    second: perabotan_dapur_gudang_20
+  - first:
+      213: 239946594361786441
+    second: perabotan_dapur_gudang_21
+  - first:
+      213: 3186338799379344754
+    second: perabotan_dapur_gudang_22
+  - first:
+      213: 3737482370003123449
+    second: perabotan_dapur_gudang_23
+  - first:
+      213: 5449907412302453401
+    second: perabotan_dapur_gudang_24
+  - first:
+      213: 4369581948871344678
+    second: perabotan_dapur_gudang_25
+  - first:
+      213: 5523611920238537070
+    second: perabotan_dapur_gudang_26
+  - first:
+      213: 8366052420685781614
+    second: perabotan_dapur_gudang_27
+  - first:
+      213: -6487904387541701462
+    second: perabotan_dapur_gudang_28
+  - first:
+      213: -6926072971232590815
+    second: perabotan_dapur_gudang_29
+  - first:
+      213: 6466011396470134498
+    second: perabotan_dapur_gudang_30
+  - first:
+      213: -6804770950229980499
+    second: perabotan_dapur_gudang_31
+  - first:
+      213: -2588129804132144410
+    second: perabotan_dapur_gudang_32
+  - first:
+      213: 562461541967238502
+    second: perabotan_dapur_gudang_33
+  - first:
+      213: 1471159548837494338
+    second: perabotan_dapur_gudang_34
+  - first:
+      213: -2779227842356156540
+    second: perabotan_dapur_gudang_35
+  - first:
+      213: -7448140750472183440
+    second: perabotan_dapur_gudang_36
+  - first:
+      213: 1129425074683899930
+    second: perabotan_dapur_gudang_37
+  - first:
+      213: -3429411864089148666
+    second: perabotan_dapur_gudang_38
+  - first:
+      213: 8338838763460735809
+    second: perabotan_dapur_gudang_39
+  - first:
+      213: -7936896351751685083
+    second: perabotan_dapur_gudang_40
+  - first:
+      213: -1764442447258088333
+    second: perabotan_dapur_gudang_41
+  - first:
+      213: -1829172417652834202
+    second: perabotan_dapur_gudang_42
+  - first:
+      213: 6837582103085188050
+    second: perabotan_dapur_gudang_43
+  - first:
+      213: 7911663046762688658
+    second: perabotan_dapur_gudang_44
+  - first:
+      213: 7033498832011761622
+    second: perabotan_dapur_gudang_45
+  - first:
+      213: -8436644502998563186
+    second: perabotan_dapur_gudang_46
+  - first:
+      213: 4288126352589811932
+    second: perabotan_dapur_gudang_47
+  - first:
+      213: -2843347743704973279
+    second: perabotan_dapur_gudang_48
+  - first:
+      213: 2840867471277278867
+    second: perabotan_dapur_gudang_49
+  - first:
+      213: -871002032295003300
+    second: perabotan_dapur_gudang_50
+  - first:
+      213: 7469225294097288397
+    second: perabotan_dapur_gudang_51
+  - first:
+      213: -454756408827035083
+    second: perabotan_dapur_gudang_52
+  - first:
+      213: 6338059518979311140
+    second: perabotan_dapur_gudang_53
+  - first:
+      213: -1081599978873617951
+    second: perabotan_dapur_gudang_54
+  - first:
+      213: 1971178960158475960
+    second: perabotan_dapur_gudang_55
+  - first:
+      213: -5114347280505270331
+    second: perabotan_dapur_gudang_56
+  - first:
+      213: 1266894983593020077
+    second: perabotan_dapur_gudang_57
+  - first:
+      213: -4356259751098880624
+    second: perabotan_dapur_gudang_58
+  - first:
+      213: 4565522940603467391
+    second: perabotan_dapur_gudang_59
+  - first:
+      213: -2857207054849548920
+    second: perabotan_dapur_gudang_60
+  - first:
+      213: 6186629725526894278
+    second: perabotan_dapur_gudang_61
+  - first:
+      213: -4175538429497982441
+    second: perabotan_dapur_gudang_62
+  - first:
+      213: -1205336847660832859
+    second: perabotan_dapur_gudang_63
+  - first:
+      213: -5256185187889540056
+    second: perabotan_dapur_gudang_64
+  - first:
+      213: 7957053279715543162
+    second: perabotan_dapur_gudang_65
+  - first:
+      213: 6863321610584132363
+    second: perabotan_dapur_gudang_66
+  - first:
+      213: -1961324125517166669
+    second: perabotan_dapur_gudang_67
+  - first:
+      213: 3729489409718282245
+    second: perabotan_dapur_gudang_68
+  - first:
+      213: -7918938306779125788
+    second: perabotan_dapur_gudang_69
+  - first:
+      213: 234381709856550355
+    second: perabotan_dapur_gudang_70
+  - first:
+      213: 5041491231732989670
+    second: perabotan_dapur_gudang_71
+  - first:
+      213: -16239217630728220
+    second: perabotan_dapur_gudang_72
+  - first:
+      213: -1890244355067864104
+    second: perabotan_dapur_gudang_73
+  - first:
+      213: 3016136889039033536
+    second: perabotan_dapur_gudang_74
+  - first:
+      213: 5217596124808575304
+    second: perabotan_dapur_gudang_75
+  - first:
+      213: 1756011268226244881
+    second: perabotan_dapur_gudang_76
+  - first:
+      213: 6310736527788273070
+    second: perabotan_dapur_gudang_77
+  - first:
+      213: -276158212315113163
+    second: perabotan_dapur_gudang_78
+  - first:
+      213: -2834621202340668972
+    second: perabotan_dapur_gudang_79
+  - first:
+      213: 860661550360552346
+    second: perabotan_dapur_gudang_80
+  - first:
+      213: 3074120096266657620
+    second: perabotan_dapur_gudang_81
+  - first:
+      213: 1247250738879152043
+    second: perabotan_dapur_gudang_82
+  - first:
+      213: 7691629561194688483
+    second: perabotan_dapur_gudang_83
+  - first:
+      213: 1729238329237558192
+    second: perabotan_dapur_gudang_84
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_0
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 867
+        width: 138
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d200a573be5ad8d0800000000000000
+      internalID: -2820838091728616746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_1
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 867
+        width: 129
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9093fd8113c4c3c0800000000000000
+      internalID: -4340129660714905444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_2
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 879
+        width: 117
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 766bbc362324d3750800000000000000
+      internalID: 6286253439069173351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_3
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 887
+        width: 129
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 967dccd1aaf5ba720800000000000000
+      internalID: 2858483572745754473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_4
+      rect:
+        serializedVersion: 2
+        x: 661
+        y: 888
+        width: 143
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fec5269fd58bc5f0800000000000000
+      internalID: -735346918801682702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_5
+      rect:
+        serializedVersion: 2
+        x: 834
+        y: 879
+        width: 193
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a8d5e392de667d90800000000000000
+      internalID: -7100365911799506782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_6
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 879
+        width: 172
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64ed7ded55f5b6fe0800000000000000
+      internalID: -1194756453721186746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_7
+      rect:
+        serializedVersion: 2
+        x: 1262
+        y: 879
+        width: 210
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b46e73c7f28345250800000000000000
+      internalID: 5932428385752442443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_8
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 760
+        width: 144
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11bc5e4c0285f4aa0800000000000000
+      internalID: -6174619666336068847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_9
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 762
+        width: 155
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a7daee39b2f732c0800000000000000
+      internalID: -4451822829193996376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_10
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 758
+        width: 158
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98c121c6e976623d0800000000000000
+      internalID: -3231781752476132215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_11
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 770
+        width: 147
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 081bada1d74e36c20800000000000000
+      internalID: 3198651386335768960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_12
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 775
+        width: 122
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c3038b08554ca670800000000000000
+      internalID: 8551286036922303431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_13
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 774
+        width: 134
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20990e5ff08dcdc10800000000000000
+      internalID: 2079774690999572738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_14
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 766
+        width: 106
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 481849b7a2dfe4ef0800000000000000
+      internalID: -121881780988640892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_15
+      rect:
+        serializedVersion: 2
+        x: 1230
+        y: 775
+        width: 87
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72b123ffdc50a1260800000000000000
+      internalID: 7068968947419323175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_16
+      rect:
+        serializedVersion: 2
+        x: 1348
+        y: 775
+        width: 106
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1742394c41bd06a0800000000000000
+      internalID: -6481329347512613090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_17
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 640
+        width: 121
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 430ef74ffeb6cc200800000000000000
+      internalID: 201654761668206644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_18
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 640
+        width: 100
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c706df7e7063c200800000000000000
+      internalID: 199108904961312710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_19
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 640
+        width: 86
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e22a78051f23d7e0800000000000000
+      internalID: -1741996863479209247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_20
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 638
+        width: 90
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bda7c4a6fda8ec1e0800000000000000
+      internalID: -2175648877807633701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_21
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 637
+        width: 79
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 940cff10826745300800000000000000
+      internalID: 239946594361786441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_22
+      rect:
+        serializedVersion: 2
+        x: 626
+        y: 637
+        width: 87
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27dec0f8146283c20800000000000000
+      internalID: 3186338799379344754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_23
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 637
+        width: 73
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fc325ad9643ed330800000000000000
+      internalID: 3737482370003123449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_24
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 637
+        width: 87
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99a5e09aae5f1ab40800000000000000
+      internalID: 5449907412302453401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_25
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 637
+        width: 86
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6228f67a1afd3ac30800000000000000
+      internalID: 4369581948871344678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_26
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 634
+        width: 99
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e696eeea6cfc7ac40800000000000000
+      internalID: 5523611920238537070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_27
+      rect:
+        serializedVersion: 2
+        x: 1161
+        y: 634
+        width: 95
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6ad543f9503a1470800000000000000
+      internalID: 8366052420685781614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_28
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 634
+        width: 94
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aace0eb755556f5a0800000000000000
+      internalID: -6487904387541701462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_29
+      rect:
+        serializedVersion: 2
+        x: 1388
+        y: 632
+        width: 100
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1244f3d1455a1ef90800000000000000
+      internalID: -6926072971232590815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_30
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 475
+        width: 132
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e6da305b13ebb950800000000000000
+      internalID: 6466011396470134498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_31
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 482
+        width: 130
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daa05adbfd89091a0800000000000000
+      internalID: -6804770950229980499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_32
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 482
+        width: 134
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ea2a18d7ad151cd0800000000000000
+      internalID: -2588129804132144410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_33
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 482
+        width: 96
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66596c8dac34ec700800000000000000
+      internalID: 562461541967238502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_34
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 492
+        width: 144
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24ef16ca0db9a6410800000000000000
+      internalID: 1471159548837494338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_35
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 495
+        width: 104
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4876c7a90033e69d0800000000000000
+      internalID: -2779227842356156540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_36
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 495
+        width: 94
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0718efa0373e2a890800000000000000
+      internalID: -7448140750472183440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_37
+      rect:
+        serializedVersion: 2
+        x: 1078
+        y: 496
+        width: 83
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a10f3f81f168caf00800000000000000
+      internalID: 1129425074683899930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_38
+      rect:
+        serializedVersion: 2
+        x: 1185
+        y: 501
+        width: 89
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 603c47454184860d0800000000000000
+      internalID: -3429411864089148666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_39
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 500
+        width: 78
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 143b55f9ca189b370800000000000000
+      internalID: 8338838763460735809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_40
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 501
+        width: 101
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52c3fbec1da7ad190800000000000000
+      internalID: -7936896351751685083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_41
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 360
+        width: 91
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37c8f8051f07387e0800000000000000
+      internalID: -1764442447258088333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_42
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 362
+        width: 94
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6604cd4a0697d96e0800000000000000
+      internalID: -1829172417652834202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_43
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 362
+        width: 102
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d306f812b8f3ee50800000000000000
+      internalID: 6837582103085188050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_44
+      rect:
+        serializedVersion: 2
+        x: 361
+        y: 363
+        width: 86
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 290ffdc8f9fdbcd60800000000000000
+      internalID: 7911663046762688658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_45
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 363
+        width: 88
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d79f223ce10c9160800000000000000
+      internalID: 7033498832011761622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_46
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 363
+        width: 87
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e86c48616840bea80800000000000000
+      internalID: -8436644502998563186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_47
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 363
+        width: 95
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd07b1eb23c728b30800000000000000
+      internalID: 4288126352589811932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_48
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 362
+        width: 88
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1208e83ba466a88d0800000000000000
+      internalID: -2843347743704973279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_49
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 370
+        width: 62
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 396c17fd9e9cc6720800000000000000
+      internalID: 2840867471277278867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_50
+      rect:
+        serializedVersion: 2
+        x: 996
+        y: 369
+        width: 51
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5bb962344499e3f0800000000000000
+      internalID: -871002032295003300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_51
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 370
+        width: 52
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcc0802d4d408a760800000000000000
+      internalID: 7469225294097288397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_52
+      rect:
+        serializedVersion: 2
+        x: 1132
+        y: 363
+        width: 47
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5324880a47160b9f0800000000000000
+      internalID: -454756408827035083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_53
+      rect:
+        serializedVersion: 2
+        x: 1208
+        y: 359
+        width: 39
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4268b025d8f45f750800000000000000
+      internalID: 6338059518979311140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_54
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 359
+        width: 43
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e10b2ebc826df0f0800000000000000
+      internalID: -1081599978873617951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_55
+      rect:
+        serializedVersion: 2
+        x: 1339
+        y: 359
+        width: 56
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b648fc02d80b5b10800000000000000
+      internalID: 1971178960158475960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_56
+      rect:
+        serializedVersion: 2
+        x: 1421
+        y: 366
+        width: 46
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cf8f7fce303609b0800000000000000
+      internalID: -5114347280505270331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_57
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 225
+        width: 103
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daa49c8764ae49110800000000000000
+      internalID: 1266894983593020077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_58
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 224
+        width: 99
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09d6b6a36d47b83c0800000000000000
+      internalID: -4356259751098880624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_59
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 225
+        width: 102
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f760190eceefb5f30800000000000000
+      internalID: 4565522940603467391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_60
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 223
+        width: 99
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88dd3fd52592958d0800000000000000
+      internalID: -2857207054849548920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_61
+      rect:
+        serializedVersion: 2
+        x: 504
+        y: 223
+        width: 100
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c627ea05f25bd550800000000000000
+      internalID: 6186629725526894278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_62
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 223
+        width: 99
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 712c7cbdbe18d06c0800000000000000
+      internalID: -4175538429497982441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_63
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 223
+        width: 98
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a7ac70f588c54fe0800000000000000
+      internalID: -1205336847660832859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_64
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 223
+        width: 100
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8249c2a8b674e07b0800000000000000
+      internalID: -5256185187889540056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_65
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 223
+        width: 99
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a784d44bcc12d6e60800000000000000
+      internalID: 7957053279715543162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_66
+      rect:
+        serializedVersion: 2
+        x: 1105
+        y: 226
+        width: 91
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0b012234aa6f3f50800000000000000
+      internalID: 6863321610584132363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_67
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 227
+        width: 91
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b74521791af7c4e0800000000000000
+      internalID: -1961324125517166669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_68
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 226
+        width: 80
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 508e6d3cbdec1c330800000000000000
+      internalID: 3729489409718282245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_69
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 226
+        width: 93
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e7623af0974a1290800000000000000
+      internalID: -7918938306779125788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_70
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 48
+        width: 73
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dd29dd5ce0b04300800000000000000
+      internalID: 234381709856550355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_71
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 48
+        width: 81
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6eef0b57099f6f540800000000000000
+      internalID: 5041491231732989670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_72
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 48
+        width: 69
+        height: 144
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4efa0b1848e46cff0800000000000000
+      internalID: -16239217630728220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_73
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 48
+        width: 67
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8db1e7526c084c5e0800000000000000
+      internalID: -1890244355067864104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_74
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 52
+        width: 68
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c49f1935887bd920800000000000000
+      internalID: 3016136889039033536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_75
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 49
+        width: 73
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8497ba01800a86840800000000000000
+      internalID: 5217596124808575304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_76
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 54
+        width: 59
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1116538d1fa9e5810800000000000000
+      internalID: 1756011268226244881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_77
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 58
+        width: 59
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eade6e1bf6d349750800000000000000
+      internalID: 6310736527788273070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_78
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 47
+        width: 77
+        height: 136
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 539962da193ea2cf0800000000000000
+      internalID: -276158212315113163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_79
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 47
+        width: 90
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d991b1f80769a8d0800000000000000
+      internalID: -2834621202340668972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_80
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 62
+        width: 133
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a93e31dbe1fa1fb00800000000000000
+      internalID: 860661550360552346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_81
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 52
+        width: 103
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45f1ddea0f779aa20800000000000000
+      internalID: 3074120096266657620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_82
+      rect:
+        serializedVersion: 2
+        x: 1128
+        y: 58
+        width: 89
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: baf3cb450ff1f4110800000000000000
+      internalID: 1247250738879152043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_83
+      rect:
+        serializedVersion: 2
+        x: 1238
+        y: 53
+        width: 105
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ef27ea75582eba60800000000000000
+      internalID: 7691629561194688483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perabotan_dapur_gudang_84
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 49
+        width: 127
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b3d13a391d7ff710800000000000000
+      internalID: 1729238329237558192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      perabotan_dapur_gudang_0: -2820838091728616746
+      perabotan_dapur_gudang_1: -4340129660714905444
+      perabotan_dapur_gudang_10: -3231781752476132215
+      perabotan_dapur_gudang_11: 3198651386335768960
+      perabotan_dapur_gudang_12: 8551286036922303431
+      perabotan_dapur_gudang_13: 2079774690999572738
+      perabotan_dapur_gudang_14: -121881780988640892
+      perabotan_dapur_gudang_15: 7068968947419323175
+      perabotan_dapur_gudang_16: -6481329347512613090
+      perabotan_dapur_gudang_17: 201654761668206644
+      perabotan_dapur_gudang_18: 199108904961312710
+      perabotan_dapur_gudang_19: -1741996863479209247
+      perabotan_dapur_gudang_2: 6286253439069173351
+      perabotan_dapur_gudang_20: -2175648877807633701
+      perabotan_dapur_gudang_21: 239946594361786441
+      perabotan_dapur_gudang_22: 3186338799379344754
+      perabotan_dapur_gudang_23: 3737482370003123449
+      perabotan_dapur_gudang_24: 5449907412302453401
+      perabotan_dapur_gudang_25: 4369581948871344678
+      perabotan_dapur_gudang_26: 5523611920238537070
+      perabotan_dapur_gudang_27: 8366052420685781614
+      perabotan_dapur_gudang_28: -6487904387541701462
+      perabotan_dapur_gudang_29: -6926072971232590815
+      perabotan_dapur_gudang_3: 2858483572745754473
+      perabotan_dapur_gudang_30: 6466011396470134498
+      perabotan_dapur_gudang_31: -6804770950229980499
+      perabotan_dapur_gudang_32: -2588129804132144410
+      perabotan_dapur_gudang_33: 562461541967238502
+      perabotan_dapur_gudang_34: 1471159548837494338
+      perabotan_dapur_gudang_35: -2779227842356156540
+      perabotan_dapur_gudang_36: -7448140750472183440
+      perabotan_dapur_gudang_37: 1129425074683899930
+      perabotan_dapur_gudang_38: -3429411864089148666
+      perabotan_dapur_gudang_39: 8338838763460735809
+      perabotan_dapur_gudang_4: -735346918801682702
+      perabotan_dapur_gudang_40: -7936896351751685083
+      perabotan_dapur_gudang_41: -1764442447258088333
+      perabotan_dapur_gudang_42: -1829172417652834202
+      perabotan_dapur_gudang_43: 6837582103085188050
+      perabotan_dapur_gudang_44: 7911663046762688658
+      perabotan_dapur_gudang_45: 7033498832011761622
+      perabotan_dapur_gudang_46: -8436644502998563186
+      perabotan_dapur_gudang_47: 4288126352589811932
+      perabotan_dapur_gudang_48: -2843347743704973279
+      perabotan_dapur_gudang_49: 2840867471277278867
+      perabotan_dapur_gudang_5: -7100365911799506782
+      perabotan_dapur_gudang_50: -871002032295003300
+      perabotan_dapur_gudang_51: 7469225294097288397
+      perabotan_dapur_gudang_52: -454756408827035083
+      perabotan_dapur_gudang_53: 6338059518979311140
+      perabotan_dapur_gudang_54: -1081599978873617951
+      perabotan_dapur_gudang_55: 1971178960158475960
+      perabotan_dapur_gudang_56: -5114347280505270331
+      perabotan_dapur_gudang_57: 1266894983593020077
+      perabotan_dapur_gudang_58: -4356259751098880624
+      perabotan_dapur_gudang_59: 4565522940603467391
+      perabotan_dapur_gudang_6: -1194756453721186746
+      perabotan_dapur_gudang_60: -2857207054849548920
+      perabotan_dapur_gudang_61: 6186629725526894278
+      perabotan_dapur_gudang_62: -4175538429497982441
+      perabotan_dapur_gudang_63: -1205336847660832859
+      perabotan_dapur_gudang_64: -5256185187889540056
+      perabotan_dapur_gudang_65: 7957053279715543162
+      perabotan_dapur_gudang_66: 6863321610584132363
+      perabotan_dapur_gudang_67: -1961324125517166669
+      perabotan_dapur_gudang_68: 3729489409718282245
+      perabotan_dapur_gudang_69: -7918938306779125788
+      perabotan_dapur_gudang_7: 5932428385752442443
+      perabotan_dapur_gudang_70: 234381709856550355
+      perabotan_dapur_gudang_71: 5041491231732989670
+      perabotan_dapur_gudang_72: -16239217630728220
+      perabotan_dapur_gudang_73: -1890244355067864104
+      perabotan_dapur_gudang_74: 3016136889039033536
+      perabotan_dapur_gudang_75: 5217596124808575304
+      perabotan_dapur_gudang_76: 1756011268226244881
+      perabotan_dapur_gudang_77: 6310736527788273070
+      perabotan_dapur_gudang_78: -276158212315113163
+      perabotan_dapur_gudang_79: -2834621202340668972
+      perabotan_dapur_gudang_8: -6174619666336068847
+      perabotan_dapur_gudang_80: 860661550360552346
+      perabotan_dapur_gudang_81: 3074120096266657620
+      perabotan_dapur_gudang_82: 1247250738879152043
+      perabotan_dapur_gudang_83: 7691629561194688483
+      perabotan_dapur_gudang_84: 1729238329237558192
+      perabotan_dapur_gudang_9: -4451822829193996376
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

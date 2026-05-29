@@ -100,14 +100,14 @@ public class CutsceneManager : MonoBehaviour
             yield return new WaitUntil(() => timelineDirector.state != PlayState.Playing);
         }
 
-        // 5. MENJALANKAN DIALOG
-        if (cutsceneDialogue != null && cutsceneDialogue.lines.Length > 0 && DialogueManager.instance != null)
-        {
-            DialogueManager.instance.StartDialogue(cutsceneDialogue);
-            yield return new WaitUntil(() => 
-                !DialogueManager.instance.screenBoxPanel.activeInHierarchy && 
-                !DialogueManager.instance.bubblePanel.activeInHierarchy);
-        }
+        // // 5. MENJALANKAN DIALOG
+        // if (cutsceneDialogue != null && cutsceneDialogue.lines.Length > 0 && DialogueManager.instance != null)
+        // {
+        //     DialogueManager.instance.StartDialogue(cutsceneDialogue);
+        //     yield return new WaitUntil(() => 
+        //         !DialogueManager.instance.screenBoxPanel.activeInHierarchy && 
+        //         !DialogueManager.instance.bubblePanel.activeInHierarchy);
+        // }
 
         // 6. MENGAKTIFKAN EVENT SETELAH SELESAI
         OnCutsceneSelesai?.Invoke();

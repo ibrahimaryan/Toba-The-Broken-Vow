@@ -2,24 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.InputSystem; // Tambahkan ini untuk membaca tombol keyboard
+using UnityEngine.InputSystem; 
 
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager instance; 
 
-    [Header("Screen Box UI")]
+    [Header("Screen Box UI (Dialog Biasa)")]
     public GameObject screenBoxPanel;
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI dialogText;
 
-    [Header("Speech Bubble UI")]
+    [Header("Cutscene Box UI (Otomatis)")]
+    public GameObject cutsceneBoxPanel;
+    public TextMeshProUGUI cutsceneNameText;
+    public TextMeshProUGUI cutsceneDialogText;
+
+    [Header("Speech Bubble UI (Otomatis)")]
     public GameObject bubblePanel;
     public TextMeshProUGUI bubbleText;
 
-    [Header("Pengaturan Waktu")]
-    [Tooltip("Berapa lama bubble bertahan setelah teks selesai diketik?")]
-    public float durasiBubble = 3f; // Kamu bisa ubah nilainya di Inspector!
+    [Header("Pengaturan Waktu (Untuk Cutscene/Bubble)")]
+    [Tooltip("Berapa detik jeda sebelum dialog otomatis memuat kalimat berikutnya?")]
+    public float durasiOtomatis = 3f; 
 
     private Queue<DialogueLine> sentences; 
     private bool isTyping = false; 
@@ -35,12 +40,14 @@ public class DialogueManager : MonoBehaviour
         sentences = new Queue<DialogueLine>();
         screenBoxPanel.SetActive(false);
         bubblePanel.SetActive(false);
+        
+        if (cutsceneBoxPanel != null) cutsceneBoxPanel.SetActive(false);
     }
 
     void Update()
     {
-        // Fitur menekan tombol 'E' untuk melanjutkan dialog di Kotak Bawah (Screen Box)
-        // Dialog hanya bisa dilanjut jika teks sudah selesai diketik dan kotak sedang aktif
+        // PENTING: Tombol 'E' SEKARANG HANYA BERLAKU UNTUK DIALOG KECIL/BIASA.
+        // Dialog cutscene atau bubble (otomatis) tidak bisa di-skip pakai E.
         if (!isTyping && screenBoxPanel.activeInHierarchy && Keyboard.current.eKey.wasPressedThisFrame)
         {
             DisplayNextSentence();
@@ -49,6 +56,10 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
+        // Paksa berhenti seluruh ketikan lama yang menggantung!
+        StopAllCoroutines(); 
+        isTyping = false; 
+
         sentences.Clear(); 
         foreach (DialogueLine line in dialogue.lines)
         {
@@ -63,20 +74,23 @@ public class DialogueManager : MonoBehaviour
 
         if (sentences.Count == 0)
         {
-            EndDialogue();
+            TutupPaksaSeluruhPanel(); // Ganti rujukan tutup
             return;
         }
 
         DialogueLine currentLine = sentences.Dequeue(); 
-        StopAllCoroutines();
+        StopAllCoroutines(); // Paksa matikan TypeSentence lama lagi
         StartCoroutine(TypeSentence(currentLine));
     }
 
     private IEnumerator TypeSentence(DialogueLine line)
     {
         isTyping = true;
+        
+        // Sembunyikan semuanya sebelum menentukan yang mana yg aktif
         screenBoxPanel.SetActive(false);
         bubblePanel.SetActive(false);
+        if (cutsceneBoxPanel != null) cutsceneBoxPanel.SetActive(false);
 
         TextMeshProUGUI activeTextDisplay;
 
@@ -85,7 +99,13 @@ public class DialogueManager : MonoBehaviour
             bubblePanel.SetActive(true);
             activeTextDisplay = bubbleText;
         }
-        else
+        else if (line.isCutsceneStyle && cutsceneBoxPanel != null) 
+        {
+            cutsceneBoxPanel.SetActive(true);
+            if (cutsceneNameText != null) cutsceneNameText.text = line.characterName;
+            activeTextDisplay = cutsceneDialogText;
+        }
+        else 
         {
             screenBoxPanel.SetActive(true);
             nameText.text = line.characterName; 
@@ -94,7 +114,7 @@ public class DialogueManager : MonoBehaviour
 
         activeTextDisplay.text = ""; 
 
-        // Efek mesin tik
+        // Efek mesin tik (Typewriter) mengeja satu persatu
         foreach (char letter in line.sentence.ToCharArray())
         {
             activeTextDisplay.text += letter;
@@ -103,12 +123,16 @@ public class DialogueManager : MonoBehaviour
 
         isTyping = false;
 
-        // FITUR BARU: Auto-Hilang / Auto-Lanjut khusus untuk Speech Bubble
+        // FITUR OTOMATIS LANJUT SEPERTI FILM (Kini khusus untuk Bubble Saja!)
         if (line.isSpeechBubble)
         {
-            // Tunggu beberapa detik sesuai pengaturan, lalu otomatis lanjut/tutup
-            yield return new WaitForSeconds(durasiBubble);
+            // Tahan layar sejenak
+            yield return new WaitForSeconds(durasiOtomatis);
             DisplayNextSentence(); 
+        }
+        else if (line.isCutsceneStyle)
+        {
+            // [DIKOSONGKAN] Tipe Cutscene akan diam menunggu ditutup oleh panjang balok Timeline!
         }
     }
 
@@ -116,5 +140,18 @@ public class DialogueManager : MonoBehaviour
     {
         screenBoxPanel.SetActive(false);
         bubblePanel.SetActive(false);
+        if (cutsceneBoxPanel != null) cutsceneBoxPanel.SetActive(false);
+    }
+
+    public void TutupPaksaSeluruhPanel()
+    {
+        StopAllCoroutines(); 
+        isTyping = false;     // Matikan sisa ketikan yang nanggung
+        sentences.Clear(); 
+        
+        // Jangan panggil EndDialogue(), kita matikan manual saja di sini:
+        if(screenBoxPanel != null) screenBoxPanel.SetActive(false);
+        if(bubblePanel != null) bubblePanel.SetActive(false);
+        if(cutsceneBoxPanel != null) cutsceneBoxPanel.SetActive(false);
     }
 }

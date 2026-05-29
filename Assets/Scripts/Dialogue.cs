@@ -1,6 +1,5 @@
 using UnityEngine;
 
-// System.Serializable wajib ditambahkan agar class ini muncul di Inspector Unity
 [System.Serializable]
 public class DialogueLine
 {
@@ -9,7 +8,11 @@ public class DialogueLine
     [TextArea(3, 10)] // Membuat kolom teks di Inspector jadi lebih lebar
     public string sentence; // Isi dialognya
     
+    [Tooltip("Centang ini jika dialognya mau muncul sebagai Bubble di atas objek")]
     public bool isSpeechBubble; // Centang ini di Inspector jika dialognya mau muncul sebagai Bubble
+    
+    [Tooltip("Centang ini jika dialognya mau muncul besar secara OTOMATIS ala Cutscene Film")]
+    public bool isCutsceneStyle; // Centang ini di Inspector jika dialognya mau muncul besar secara OTOMATIS ala Cutscene Film
 }
 
 [System.Serializable]

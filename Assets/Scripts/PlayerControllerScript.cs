@@ -95,4 +95,31 @@ public class PlayerControllerScript : MonoBehaviour
         //     mySpriteRenderer.flipX = mousePos.x < playerScreenPoint.x;
         // }
     }
+
+    /// <summary>
+    /// Dipanggil oleh CutsceneManager / DialogueManager untuk menghidupkan atau mematikan Input (bisa jalan & interaksi atau tidak).
+    /// </summary>
+    public void ToggleInput(bool enable)
+    {
+        if (playerControls == null) return;
+
+        if (enable)
+        {
+            playerControls.Enable();
+        }
+        else
+        {
+            playerControls.Disable();
+            StopMovement(); // Pastikan karakter tidak meluncur/sliding jika dinonaktifkan saat berjalan
+        }
+    }
+
+    /// <summary>
+    /// Menghentikan gaya gerak saat ini secara paksa.
+    /// </summary>
+    public void StopMovement()
+    {
+        movement = Vector2.zero;
+        UpdateAnimationParameters(); // Paksa kecepatan animasi jadi 0 / Idle
+    }
 }

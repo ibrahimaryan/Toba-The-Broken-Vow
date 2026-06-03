@@ -31,10 +31,27 @@ public class CutsceneManager : MonoBehaviour
     {
         player = FindAnyObjectByType<PlayerControllerScript>();
 
-        if (PlayerPrefs.GetInt(cutsceneID, 0) == 1)
+        bool alreadyPlayed = false;
+        if (GameManager.Instance != null && GameManager.Instance.IsFlagSet(cutsceneID))
+        {
+            alreadyPlayed = true;
+        }
+        else if (PlayerPrefs.GetInt(cutsceneID, 0) == 1)
+        {
+            alreadyPlayed = true;
+        }
+
+        if (alreadyPlayed)
         {
             hasPlayed = true;
             if (fadePanel != null) fadePanel.alpha = 0; 
+            
+            // Nonaktifkan Timeline agar tidak otomatis berjalan dari scene
+            if (timelineDirector != null)
+            {
+                timelineDirector.playOnAwake = false;
+                timelineDirector.Stop();
+            }
             return;
         }
 
@@ -64,6 +81,10 @@ public class CutsceneManager : MonoBehaviour
     {
         hasPlayed = true;
         PlayerPrefs.SetInt(cutsceneID, 1); 
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.SetFlag(cutsceneID, true);
+        }
 
         // 1. Matikan kontrol
         if (player != null) player.ToggleInput(false); 

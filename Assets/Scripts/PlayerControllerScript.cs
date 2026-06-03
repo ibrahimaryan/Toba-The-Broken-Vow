@@ -16,15 +16,25 @@ public class PlayerControllerScript : MonoBehaviour
     public static event Action OnClosePressed;
     public static event Action OnInventoryPressed;
 
+    public static PlayerControllerScript Instance { get; private set; }
+
     private void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
         
         // Ambil referensi komponen agar tidak null
         rb = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
-        
     }
 
     private void OnEnable()

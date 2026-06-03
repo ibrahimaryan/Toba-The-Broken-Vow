@@ -5,7 +5,8 @@ public class TimelineDialogTrigger : MonoBehaviour
 {
     [Header("Daftar Obrolan (Cutscene)")]
     [Tooltip("Isi daftar berbagai dialog. Element 0=Awal, Element 1=Cabang B, dsbgnya.")]
-    public Dialogue[] listDialogs; 
+    public Dialogue[] listDialogs;
+    public string triggerID; 
 
     // --- FITUR TERBAIK UNTUK SIGNAL (Tanpa Parameter / Hardcoded per Indeks) ---
 
@@ -35,14 +36,14 @@ public class TimelineDialogTrigger : MonoBehaviour
     private void EksekusiDialogAman(int index)
     {
         if (DialogueManager.instance == null) return;
+        if (!string.IsNullOrEmpty(triggerID) && GameManager.Instance != null &&
+            GameManager.Instance.IsFlagSet(triggerID)) return;
 
-        if (index >= 0 && index < listDialogs.Length)
+        DialogueManager.instance.StartDialogue(listDialogs[index]);
+
+        if (GameManager.Instance != null && !string.IsNullOrEmpty(triggerID))
         {
-            DialogueManager.instance.StartDialogue(listDialogs[index]);
-        }
-        else
-        {
-            Debug.LogWarning("TIDAK ADA DIALOG! Dialog Element " + index + " belum dibuat di Inspector Cutscene_Intro Anda!");
+            GameManager.Instance.SetFlag(triggerID, true);
         }
     }
 
@@ -54,12 +55,22 @@ public class TimelineDialogTrigger : MonoBehaviour
     {
         if (DialogueManager.instance == null) return;
 
+        // CEK: Apakah cutscene/dialog ini sudah pernah diputar sebelumnya?
+        if (!string.IsNullOrEmpty(triggerID) && GameManager.Instance != null &&
+            GameManager.Instance.IsFlagSet(triggerID)) return;
+
         // Ubah teks "0" atau "1" yang dikirim Timeline menjadi Integer beneran
         if (int.TryParse(textIndex, out int parsedIndex))
         {
             if (parsedIndex >= 0 && parsedIndex < listDialogs.Length)
             {
                 DialogueManager.instance.StartDialogue(listDialogs[parsedIndex]);
+
+                // Simpan flag status ke GameManager
+                if (GameManager.Instance != null && !string.IsNullOrEmpty(triggerID))
+                {
+                    GameManager.Instance.SetFlag(triggerID, true);
+                }
             }
             else
             {

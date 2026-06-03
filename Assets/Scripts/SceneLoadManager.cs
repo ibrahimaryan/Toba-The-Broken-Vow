@@ -26,7 +26,14 @@ public class SceneLoadManager : MonoBehaviour
         // Cari player secara otomatis jika slot di inspector kosong
         if (playerObject == null)
         {
-            playerObject = GameObject.FindGameObjectWithTag("Player");
+            if (PlayerControllerScript.Instance != null)
+            {
+                playerObject = PlayerControllerScript.Instance.gameObject;
+            }
+            else
+            {
+                playerObject = GameObject.FindGameObjectWithTag("Player");
+            }
         }
 
         if (GameManager.Instance == null || playerObject == null)
@@ -50,11 +57,12 @@ public class SceneLoadManager : MonoBehaviour
                 {
                     rb.simulated = false; // Matikan fisika sementara
                     
-                    // 2. Pindahkan posisi Transform
-                    playerObject.transform.position = point.spawnTransform.position;
+                    // 2. Pindahkan posisi Transform (Amankan Z agar tidak tertutup background atau keluar kamera)
+                    Vector3 targetPosition = new Vector3(point.spawnTransform.position.x, point.spawnTransform.position.y, playerObject.transform.position.z);
+                    playerObject.transform.position = targetPosition;
                     
                     // 3. Pindahkan posisi Rigidbody
-                    rb.position = point.spawnTransform.position;
+                    rb.position = new Vector2(targetPosition.x, targetPosition.y);
                     rb.linearVelocity = Vector2.zero;
 
                     // 4. Sinkronisasi paksa
@@ -65,8 +73,8 @@ public class SceneLoadManager : MonoBehaviour
                 }
                 else
                 {
-                    // Jika tidak pakai Rigidbody, langsung pindah transform
-                    playerObject.transform.position = point.spawnTransform.position;
+                    // Jika tidak pakai Rigidbody, langsung pindah transform (Amankan Z)
+                    playerObject.transform.position = new Vector3(point.spawnTransform.position.x, point.spawnTransform.position.y, playerObject.transform.position.z);
                 }
 
                 Debug.Log("Player berhasil disitir ke: " + playerObject.transform.position);

@@ -2,31 +2,29 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    public Dialogue dialogue; // Tempat memasukkan data dialog di Inspector
-
-    [Header("Pengaturan Pemicu")]
+    public Dialogue dialogue;
     [Tooltip("Centang jika dialog ini hanya boleh muncul satu kali saja saat dilewati.")]
-    public bool triggerOnlyOnce = true; 
-    
-    private bool hasTriggered = false; // Penanda dari sistem apakah dialog sudah pernah jalan
+    public bool triggerOnlyOnce = true;
+    public string triggerID;
 
-    // Fungsi ini otomatis terpanggil SEKETIKA saat ada objek menyentuh area Box Collider 2D (Is Trigger)
+    private bool hasTriggered = false;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Mengecek apakah objek yang menyentuh area ini memiliki Tag "Player" (Samosir)
-        if (collision.CompareTag("Player"))
-        {
-            // Jika disetting hanya boleh sekali, dan ternyata sudah pernah jalan, maka batalkan perintah
-            if (triggerOnlyOnce && hasTriggered)
-            {
-                return;
-            }
+        if (!collision.CompareTag("Player")) return;
 
-            // Memanggil Manager untuk memulai percakapan
-            DialogueManager.instance.StartDialogue(dialogue);
-            
-            // Menandai bahwa dialog sudah berhasil dijalankan
-            hasTriggered = true; 
+        if (triggerOnlyOnce)
+        {
+            if (hasTriggered) return;
+            if (GameManager.Instance != null && GameManager.Instance.IsFlagSet(triggerID)) return;
+        }
+
+        DialogueManager.instance.StartDialogue(dialogue);
+        hasTriggered = true;
+
+        if (triggerOnlyOnce && GameManager.Instance != null && !string.IsNullOrEmpty(triggerID))
+        {
+            GameManager.Instance.SetFlag(triggerID, true);
         }
     }
 }

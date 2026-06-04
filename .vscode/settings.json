@@ -67,5 +67,5 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "Toba The Broken Vow.slnx"
+    "dotnet.defaultSolution": "Toba-The-Broken-Vow.slnx"
 }

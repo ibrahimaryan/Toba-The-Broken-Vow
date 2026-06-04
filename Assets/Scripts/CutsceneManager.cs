@@ -11,10 +11,8 @@ public class CutsceneManager : MonoBehaviour
     public Dialogue cutsceneDialogue;
     
     [Header("Pengaturan Fade & Flash")]
-    [Tooltip("Panel UI Canvas Group warna hitam untuk transisi")]
     public CanvasGroup fadePanel;
     public float fadeDuration = 1f;
-    [Tooltip("Centang jika ingin ada kilatan/flash sebelum Cutscene mulai")]
     public bool gunakanEfekKilatan = true; 
     
     [Header("Pengaturan Eksekusi")]
@@ -27,11 +25,12 @@ public class CutsceneManager : MonoBehaviour
     private PlayerControllerScript player;
     private bool hasPlayed = false;
 
-    private void Start()
+    // PINDAH KE AWAKE: Agar langsung dieksekusi sebelum PlayableDirector mulai jalan otomatis
+    private void Awake() 
     {
-        player = FindAnyObjectByType<PlayerControllerScript>();
-
         bool alreadyPlayed = false;
+        
+        // Cek apakah sudah pernah main
         if (GameManager.Instance != null && GameManager.Instance.IsFlagSet(cutsceneID))
         {
             alreadyPlayed = true;
@@ -44,18 +43,30 @@ public class CutsceneManager : MonoBehaviour
         if (alreadyPlayed)
         {
             hasPlayed = true;
+            Debug.Log($"<color=red>CutsceneManager ({cutsceneID}): SUDAH PERNAH DIMAINKAN. MENONAKTIFKAN TIMELINE!</color>");
+            
             if (fadePanel != null) fadePanel.alpha = 0; 
             
-            // Nonaktifkan Timeline agar tidak otomatis berjalan dari scene
+            // Matikan timeline seketika itu juga
             if (timelineDirector != null)
             {
                 timelineDirector.playOnAwake = false;
                 timelineDirector.Stop();
+                timelineDirector.enabled = false; 
             }
-            return;
+            else 
+            {
+                Debug.LogWarning("PERHATIAN: Kolom 'Timeline Director' di Inspector CutsceneManager kosong! Timeline mungkin masih jalan sendiri.");
+            }
         }
+    }
 
-        if (putarSaatMulai)
+    private void Start()
+    {
+        player = FindAnyObjectByType<PlayerControllerScript>();
+
+        // Lakukan pemutaran jika belum pernah dan emang disuruh pas mulai
+        if (!hasPlayed && putarSaatMulai)
         {
             StartCoroutine(JalankanCutscene());
         }
@@ -86,72 +97,50 @@ public class CutsceneManager : MonoBehaviour
             GameManager.Instance.SetFlag(cutsceneID, true);
         }
 
-        // 1. Matikan kontrol
         if (player != null) player.ToggleInput(false); 
 
-        // 2. FADE OUT & EFEK KILATAN (Flash)
         if (fadePanel != null)
         {
             if (gunakanEfekKilatan)
             {
-                // Eksekusi kilatan (Gelap -> Cepat Terang -> Gelap)
-                fadePanel.alpha = 1f;                  // Mulai dari gelap total
+                fadePanel.alpha = 1f;                  
                 yield return new WaitForSeconds(0.1f); 
-                yield return StartCoroutine(FadeRoutine(0f, 0.05f)); // Kilat terang! (sangat cepat)
-                yield return StartCoroutine(FadeRoutine(1f, 0.05f)); // Kilat gelap! (sangat cepat)
-                yield return new WaitForSeconds(0.5f); // Tahan gelap sebentar biar mantap
+                yield return StartCoroutine(FadeRoutine(0f, 0.05f)); 
+                yield return StartCoroutine(FadeRoutine(1f, 0.05f)); 
+                yield return new WaitForSeconds(0.5f); 
             }
             else
             {
-                // Fade out standar
                 yield return StartCoroutine(FadeRoutine(1f, fadeDuration)); 
             }
-        }
-
-        // 3. FADE IN (Layar perlahan terang dan mulai Timeline)
-        if (fadePanel != null)
-        {
             yield return StartCoroutine(FadeRoutine(0f, fadeDuration));
         }
 
-        // 4. MEMUTAR TIMELINE ANIMASI
         if (timelineDirector != null)
         {
             timelineDirector.Play();
             yield return new WaitUntil(() => timelineDirector.state != PlayState.Playing);
         }
 
-        // // 5. MENJALANKAN DIALOG
-        // if (cutsceneDialogue != null && cutsceneDialogue.lines.Length > 0 && DialogueManager.instance != null)
-        // {
-        //     DialogueManager.instance.StartDialogue(cutsceneDialogue);
-        //     yield return new WaitUntil(() => 
-        //         !DialogueManager.instance.screenBoxPanel.activeInHierarchy && 
-        //         !DialogueManager.instance.bubblePanel.activeInHierarchy);
-        // }
-
-        // 6. MENGAKTIFKAN EVENT SETELAH SELESAI
         OnCutsceneSelesai?.Invoke();
 
-        // 7. MENGEMBALIKAN KONTROL PLAYER
         if (player != null)
         {
             player.ToggleInput(true);
         }
     }
 
-    // Fungsi transparan UI Panel (Diperbarui dengan parameter kecepatan custom)
     private IEnumerator FadeRoutine(float targetAlpha, float duration)
     {
         float startAlpha = fadePanel.alpha;
         float time = 0;
-
         while (time < duration)
         {
+            if (fadePanel == null) yield break;
             time += Time.deltaTime;
             fadePanel.alpha = Mathf.Lerp(startAlpha, targetAlpha, time / duration);
             yield return null;
         }
-        fadePanel.alpha = targetAlpha;
+        if (fadePanel != null) fadePanel.alpha = targetAlpha;
     }
 }

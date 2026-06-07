@@ -1,20 +1,49 @@
 using UnityEngine;
-using UnityEngine.SceneManagement; // Wajib dipanggil untuk berpindah Scene
+using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
-    // Fungsi ini akan dipanggil saat tombol Play ditekan
-    public void PlayGame()
+    [Header("UI Buttons")]
+    public GameObject continueButton; // Tempat memasukkan tombol Continue
+
+    void Start()
     {
-        // "PrologueScene" adalah nama scene pertama kalian nanti. 
-        // Pastikan huruf besar/kecilnya sama persis!
+        // Saat menu dibuka, cek apakah ada data save bernama "SavedScene"
+        if (PlayerPrefs.HasKey("SavedScene"))
+        {
+            // Jika ada, munculkan tombol Continue
+            continueButton.SetActive(true);
+        }
+        else
+        {
+            // Jika belum ada save sama sekali, sembunyikan tombol Continue
+            continueButton.SetActive(false);
+        }
+    }
+
+    // Dipanggil oleh tombol New Game / Mulai
+    public void PlayNewGame()
+    {
+        // Opsional: Hapus save lama jika pemain benar-benar ingin mengulang dari awal
+        // PlayerPrefs.DeleteKey("SavedScene"); 
+
         SceneManager.LoadScene("chapter1_kamar"); 
     }
 
-    // Fungsi ini akan dipanggil saat tombol Quit ditekan
+    // Dipanggil oleh tombol Continue / Lanjutkan
+    public void ContinueGame()
+    {
+        // Ambil nama scene yang terakhir kali disimpan
+        string sceneToLoad = PlayerPrefs.GetString("SavedScene");
+        
+        // Muat scene tersebut
+        SceneManager.LoadScene(sceneToLoad);
+    }
+
+    // Dipanggil oleh tombol Quit
     public void QuitGame()
     {
-        Debug.Log("Game Keluar! (Perintah ini hanya terlihat di Editor)");
-        Application.Quit(); // Mematikan aplikasi (hanya berfungsi saat game sudah di-build)
+        Debug.Log("Game Keluar!");
+        Application.Quit();
     }
 }

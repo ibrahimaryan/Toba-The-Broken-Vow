@@ -12,51 +12,85 @@ public class DraggableItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     private CanvasGroup canvasGroup;
     private Canvas canvas;
     private Vector3 startPosition;
+    private Transform originalParent;
+    private Vector2 dragOffset;
 
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
         canvas = GetComponentInParent<Canvas>();
+    }
+
+    private void Start()
+    {
+        originalParent = transform.parent;
         startPosition = rectTransform.anchoredPosition;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        // Catat parent lama dan keluarkan dari layout agar bisa digeser bebas di atas elemen UI lain
+        if (canvas == null) canvas = GetComponentInParent<Canvas>();
+
+        // Catat parent sebelum diseret
         parentAfterDrag = transform.parent;
-        transform.SetAsLastSibling(); // Menampilkan item di depan elemen UI lainnya
+
+        // Pindahkan ke Canvas root agar terbebas dari Layout Group (Grid/Vertical/Horizontal Layout Group)
+        if (canvas != null)
+        {
+            transform.SetParent(canvas.transform);
+        }
+        transform.SetAsLastSibling(); // Menampilkan di paling depan
 
         canvasGroup.alpha = 0.6f;
-        canvasGroup.blocksRaycasts = false; // Mematikan raycast agar UI di belakangnya (Slot) bisa mendeteksi item
+        canvasGroup.blocksRaycasts = false; // Mematikan raycast agar UI di belakang (Slot) terdeteksi
+
+        // Hitung offset pointer agar item tidak melompat ketika mulai diseret
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            rectTransform, 
+            eventData.position, 
+            eventData.pressEventCamera, 
+            out dragOffset
+        );
     }
 
     public void OnDrag(PointerEventData eventData)
     {
         if (canvas == null) canvas = GetComponentInParent<Canvas>();
 
-        // Menggeser posisi RectTransform berdasarkan delta pergeseran pointer mouse
         if (canvas != null)
         {
-            rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
+            // Ambil posisi pointer relatif terhadap Canvas utama
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(
+                canvas.transform as RectTransform, 
+                eventData.position, 
+                canvas.worldCamera, 
+                out Vector2 localPoint
+            );
+            
+            // Set posisi rectTransform dikurangi offset awal
+            rectTransform.anchoredPosition = localPoint - dragOffset;
         }
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
         canvasGroup.alpha = 1f;
-        canvasGroup.blocksRaycasts = true; // Mengembalikan raycast agar item bisa diseret lagi nantinya
+        canvasGroup.blocksRaycasts = true;
 
-        // Jika setelah dilepas tidak ada slot yang menampung (parentAfterDrag tidak berubah)
-        if (transform.parent == parentAfterDrag)
+        // Pasang kembali ke parent target (bisa slot target atau originalParent jika dilepas di luar slot)
+        transform.SetParent(parentAfterDrag);
+
+        if (parentAfterDrag == originalParent)
         {
-            // Kembalikan ke posisi awal sebelum diseret
             rectTransform.anchoredPosition = startPosition;
         }
     }
 
-    public void ResetToStart()
+    public void ResetToOriginalState()
     {
+        parentAfterDrag = originalParent;
+        transform.SetParent(originalParent);
         rectTransform.anchoredPosition = startPosition;
     }
 }

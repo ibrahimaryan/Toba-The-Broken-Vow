@@ -17,12 +17,8 @@ public class SceneLoadManager : MonoBehaviour
     [Header("Spawn Points List")]
     [SerializeField] private SpawnPointSetup[] spawnPoints;
 
-    // UBAH void Start MENJADI IEnumerator Start
-    private IEnumerator Start()
+    private void Start()
     {
-        // JEDA 1 FRAME: Menunggu sampai semua script lain selesai berjalan
-        yield return new WaitForEndOfFrame(); 
-
         // Cari player secara otomatis jika slot di inspector kosong
         if (playerObject == null)
         {
@@ -39,7 +35,7 @@ public class SceneLoadManager : MonoBehaviour
         if (GameManager.Instance == null || playerObject == null)
         {
             Debug.LogError("GameManager atau Player tidak ditemukan!");
-            yield break; // Keluar dari Coroutine
+            return; // Keluar dari Start
         }
 
         string lastDoor = GameManager.Instance.lastExitDoorID;

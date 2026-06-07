@@ -27,7 +27,7 @@ public class PlayerControllerScript : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
+            DestroyImmediate(gameObject);
             return;
         }
         

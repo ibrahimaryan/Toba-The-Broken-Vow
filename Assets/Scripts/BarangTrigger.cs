@@ -1,10 +1,11 @@
 using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 
 public class BarangTrigger : MonoBehaviour
 {
-    [Header("Puzzle Panel UI")]
-    [SerializeField] private GameObject puzzlePanel; 
+    [Header("Puzzle Settings")]
+    [SerializeField] private SisikPuzzleManager puzzleManager; 
 
     [Header("Spawn Settings")]
     [Tooltip("Daftar semua ID Lokasi Sisik yang telah dipasang di Scene (chapter2_ruang_tamu, chapter2_gudang, chapter2_dapur)")]
@@ -18,7 +19,59 @@ public class BarangTrigger : MonoBehaviour
     [SerializeField] private Dialogue startScatteringDialogue;
     [SerializeField] private Dialogue notEnoughScalesDialogue;
 
+    [Header("Blink Settings")]
+    [SerializeField] private float blinkSpeed = 1.5f; 
+    [Range(0f, 1f)] [SerializeField] private float minAlpha = 0.4f; 
+
+    private SpriteRenderer spriteRenderer;
+    private Coroutine blinkCoroutine;
     private bool isPlayerInRange = false;
+
+    private void Awake()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
+    private void Start()
+    {
+        // Mulai berkedip jika puzzle belum diselesaikan
+        if (GameManager.Instance != null && !GameManager.Instance.IsFlagSet("sisik_puzzle_solved"))
+        {
+            StartBlink();
+        }
+    }
+
+    public void StartBlink()
+    {
+        if (blinkCoroutine == null && spriteRenderer != null)
+        {
+            blinkCoroutine = StartCoroutine(BlinkEffect());
+        }
+    }
+
+    public void StopBlink()
+    {
+        if (blinkCoroutine != null)
+        {
+            StopCoroutine(blinkCoroutine);
+            blinkCoroutine = null;
+        }
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.color = Color.white;
+        }
+    }
+
+    private IEnumerator BlinkEffect()
+    {
+        while (spriteRenderer != null)
+        {
+            float lerpTime = Mathf.PingPong(Time.time * blinkSpeed, 1f);
+            float alpha = Mathf.Lerp(minAlpha, 1f, lerpTime);
+            spriteRenderer.color = new Color(1f, 1f, 1f, alpha);
+            yield return null; 
+        }
+    }
 
     private void OnEnable()
     {
@@ -42,19 +95,29 @@ public class BarangTrigger : MonoBehaviour
 
         // Cek apakah quest mengumpulkan sisik sudah dimulai
         bool isSpawningActive = GameManager.Instance.IsFlagSet("sisik_spawning_active");
+        int collectedCount = 0;
+        if (InventoryManager.Instance != null)
+        {
+            collectedCount = InventoryManager.Instance.GetItemCount("sisik");
+        }
 
         if (!isSpawningActive)
         {
             // 1. Acak & Tebarkan Sisik
             StartScattering();
+
+            // 2. Buka panel dengan 0 item (belum ada yang terkumpul)
+            if (puzzleManager != null)
+            {
+                puzzleManager.OpenPuzzle(0);
+            }
         }
         else
         {
-            // 2. Cek jumlah sisik di Inventory
-            int collectedCount = 0;
-            if (InventoryManager.Instance != null)
+            // Buka panel dengan menampilkan jumlah item yang terkumpul
+            if (puzzleManager != null)
             {
-                collectedCount = InventoryManager.Instance.GetItemCount("sisik");
+                puzzleManager.OpenPuzzle(collectedCount);
             }
 
             if (collectedCount < 7)
@@ -62,18 +125,8 @@ public class BarangTrigger : MonoBehaviour
                 // Tampilkan pesan bahwa sisik belum lengkap
                 if (notEnoughScalesDialogue != null && DialogueManager.instance != null)
                 {
-                    // Modifikasi kalimat dialog dinamis jika perlu, atau tampilkan dialog bawaan
                     DialogueManager.instance.StartDialogue(notEnoughScalesDialogue);
                 }
-                else
-                {
-                    Debug.Log($"Sisik baru terkumpul: {collectedCount}/7. Cari sisanya!");
-                }
-            }
-            else
-            {
-                // 3. Sisik lengkap! Buka panel penyusunan Drag & Drop
-                OpenPuzzlePanel();
             }
         }
     }
@@ -115,23 +168,6 @@ public class BarangTrigger : MonoBehaviour
         else
         {
             Debug.Log("Sisik telah disebar! Cari 7 sisik yang berkedip di Chapter 2.");
-        }
-    }
-
-    private void OpenPuzzlePanel()
-    {
-        if (puzzlePanel != null)
-        {
-            puzzlePanel.SetActive(true);
-            Debug.Log("Membuka Puzzle Panel Drag & Drop!");
-            
-            // Matikan kontrol player saat menyusun puzzle
-            var player = FindAnyObjectByType<PlayerControllerScript>();
-            if (player != null) player.ToggleInput(false);
-        }
-        else
-        {
-            Debug.LogError("Slot 'Puzzle Panel' di Inspector masih kosong!");
         }
     }
 

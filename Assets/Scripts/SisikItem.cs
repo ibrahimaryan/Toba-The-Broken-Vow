@@ -7,6 +7,7 @@ public class SisikItem : MonoBehaviour
     public string sisikID; // ID Unik untuk spawn point ini (misal: sisik_loc_0, sisik_loc_1, dll)
     [SerializeField] private float blinkSpeed = 1.5f; 
     [Range(0f, 1f)] [SerializeField] private float minAlpha = 0.3f; 
+    [SerializeField] private Sprite[] possibleSprites; // Daftar 7 alternatif sprite sisik
 
     private SpriteRenderer spriteRenderer;
     private Coroutine blinkCoroutine;
@@ -19,28 +20,71 @@ public class SisikItem : MonoBehaviour
 
     private void Start()
     {
-        // Pengecekan status spawn dan koleksi dari GameManager
-        if (GameManager.Instance != null)
-        {
-            // Jika proses pencarian sisik belum aktif, atau lokasi ini tidak terpilih dalam 7 lokasi acak
-            if (!GameManager.Instance.IsFlagSet("sisik_spawning_active") || !GameManager.Instance.IsFlagSet("sisik_active_" + sisikID))
-            {
-                gameObject.SetActive(false);
-                return;
-            }
+        Debug.Log($"[SisikItem] Objek {gameObject.name} terdeteksi dengan sisikID: '{sisikID}'");
 
-            // Jika sisik di lokasi ini sudah pernah diambil oleh player
-            if (GameManager.Instance.IsFlagSet("sisik_collected_" + sisikID))
+        // Acak sprite secara konsisten berdasarkan sisikID agar tidak berubah saat reload scene
+        if (possibleSprites != null && possibleSprites.Length > 0)
+        {
+            Random.InitState(sisikID.GetHashCode());
+            int randomIndex = Random.Range(0, possibleSprites.Length);
+            if (spriteRenderer != null)
             {
-                gameObject.SetActive(false);
-                return;
+                spriteRenderer.sprite = possibleSprites[randomIndex];
             }
+            Random.InitState((int)System.DateTime.Now.Ticks); // Kembalikan seed random default
         }
 
-        // Mulai efek berkedip
-        if (spriteRenderer != null)
+        SetVisibility(false);
+    }
+
+    private void Update()
+    {
+        if (GameManager.Instance != null)
         {
-            blinkCoroutine = StartCoroutine(BlinkEffect());
+            bool shouldBeVisible = GameManager.Instance.IsFlagSet("sisik_spawning_active") 
+                                   && GameManager.Instance.IsFlagSet("sisik_active_" + sisikID)
+                                   && !GameManager.Instance.IsFlagSet("sisik_collected_" + sisikID);
+
+            if (shouldBeVisible)
+            {
+                if (spriteRenderer != null && !spriteRenderer.enabled)
+                {
+                    Debug.Log($"[SisikItem] Sisik dengan ID '{sisikID}' AKTIF dan MUNCUL!");
+                    SetVisibility(true);
+                }
+            }
+            else
+            {
+                if (spriteRenderer != null && spriteRenderer.enabled)
+                {
+                    SetVisibility(false);
+                }
+            }
+        }
+    }
+
+    private void SetVisibility(bool visible)
+    {
+        if (spriteRenderer != null) spriteRenderer.enabled = visible;
+        
+        Collider2D col = GetComponent<Collider2D>();
+        if (col != null) col.enabled = visible;
+
+        if (visible)
+        {
+            if (blinkCoroutine == null && spriteRenderer != null)
+            {
+                blinkCoroutine = StartCoroutine(BlinkEffect());
+            }
+        }
+        else
+        {
+            if (blinkCoroutine != null)
+            {
+                StopCoroutine(blinkCoroutine);
+                blinkCoroutine = null;
+            }
+            isPlayerInRange = false;
         }
     }
 

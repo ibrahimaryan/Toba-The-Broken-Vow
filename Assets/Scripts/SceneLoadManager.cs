@@ -17,8 +17,12 @@ public class SceneLoadManager : MonoBehaviour
     [Header("Spawn Points List")]
     [SerializeField] private SpawnPointSetup[] spawnPoints;
 
-    private void Start()
+   // 1. Ubah 'void' menjadi 'IEnumerator'
+    private IEnumerator Start()
     {
+        // 2. Tambahkan jeda 1 frame agar proses Singleton Samosir & GameManager selesai dulu
+        yield return new WaitForEndOfFrame(); 
+
         // Cari player secara otomatis jika slot di inspector kosong
         if (playerObject == null)
         {
@@ -35,7 +39,7 @@ public class SceneLoadManager : MonoBehaviour
         if (GameManager.Instance == null || playerObject == null)
         {
             Debug.LogError("GameManager atau Player tidak ditemukan!");
-            return; // Keluar dari Start
+            yield break; // 3. Ubah 'return' menjadi 'yield break'
         }
 
         string lastDoor = GameManager.Instance.lastExitDoorID;
@@ -47,24 +51,24 @@ public class SceneLoadManager : MonoBehaviour
             {
                 Debug.Log("MATCH! Memaksa teleportasi Player...");
 
-                // 1. Matikan komponen pergerakan/fisika sementara (agar tidak melawan)
+                // Matikan komponen pergerakan/fisika sementara (agar tidak melawan)
                 Rigidbody2D rb = playerObject.GetComponent<Rigidbody2D>();
                 if (rb != null)
                 {
                     rb.simulated = false; // Matikan fisika sementara
                     
-                    // 2. Pindahkan posisi Transform (Amankan Z agar tidak tertutup background atau keluar kamera)
+                    // Pindahkan posisi Transform (Amankan Z agar tidak tertutup background atau keluar kamera)
                     Vector3 targetPosition = new Vector3(point.spawnTransform.position.x, point.spawnTransform.position.y, playerObject.transform.position.z);
                     playerObject.transform.position = targetPosition;
                     
-                    // 3. Pindahkan posisi Rigidbody
+                    // Pindahkan posisi Rigidbody
                     rb.position = new Vector2(targetPosition.x, targetPosition.y);
                     rb.linearVelocity = Vector2.zero;
 
-                    // 4. Sinkronisasi paksa
+                    // Sinkronisasi paksa
                     Physics2D.SyncTransforms();
 
-                    // 5. Nyalakan lagi fisikanya
+                    // Nyalakan lagi fisikanya
                     rb.simulated = true;
                 }
                 else

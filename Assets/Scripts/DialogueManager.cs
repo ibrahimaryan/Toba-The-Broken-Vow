@@ -133,6 +133,8 @@ public class DialogueManager : MonoBehaviour
         else if (line.isCutsceneStyle)
         {
             // [DIKOSONGKAN] Tipe Cutscene akan diam menunggu ditutup oleh panjang balok Timeline!
+            yield return new WaitForSeconds(line.holdTime);
+            TutupPaksaSeluruhPanel();
         }
     }
 

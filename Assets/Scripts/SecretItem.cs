@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
-using System;
-using System.Collections; 
+using UnityEngine.SceneManagement;
+using System.Collections;
 using System.Collections.Generic;
 
 public class SecretItem : MonoBehaviour
@@ -14,6 +14,16 @@ public class SecretItem : MonoBehaviour
     [Header("Blink Settings")]
     [SerializeField] private float blinkSpeed = 1.5f; 
     [Range(0f, 1f)] [SerializeField] private float minAlpha = 0.4f; 
+
+    [Header("Cutscene Redirect Settings")]
+    [Tooltip("Centang jika item ini akan memicu pemuatan Cutscene dari Scene terpisah")]
+    public bool pindahSceneCutscene = false;
+    [Tooltip("Nama Scene Cutscene yang akan dituju, misal: Cutscene1")]
+    public string namaSceneCutscene = "Cutscene1";
+    [Tooltip("Lama menunggu sebelum layar diganti ke cutscene")]
+    public float delaySebelumPindah = 1f;
+    [Tooltip("ID dialog yang akan diputar setelah kembali dari scene cutscene. Cocokkan dengan PendingReturnDialoguePlayer di scene asal.")]
+    public string returnDialogueID;
 
     private int currentSpriteIndex = 0;
     private bool canInteract = true;
@@ -64,7 +74,8 @@ public class SecretItem : MonoBehaviour
     }
 
     public void ClosePopUp() {
-        if (popUpPanel.activeSelf) {
+        // Jika tidak disetting pindah scene, maka tombol close berfugnsi normal menutup popup
+        if (!pindahSceneCutscene && popUpPanel.activeSelf) {
             popUpPanel.SetActive(false);
         }
     }
@@ -87,6 +98,30 @@ public class SecretItem : MonoBehaviour
             StopCoroutine(blinkCoroutine);
             ResetSpriteColor(); 
         }
+
+        // --- FITUR BARU: Transisi ke Scene Cutscene Berbeda ---
+        if (pindahSceneCutscene)
+        {
+            StartCoroutine(PindahKeCutsceneTunggu());
+        }
+    }
+    
+    private IEnumerator PindahKeCutsceneTunggu()
+    {
+        // 1. Tunggu X detik dengan canvas popup yang masih menyala (player sedang melihat foto)
+        yield return new WaitForSeconds(delaySebelumPindah);
+        
+        // 2. Simpan scene tempat kita berada saat ini (misal "Chapter1") ke PlayerPrefs
+        // Agar saat Cutscene kelar, Cutscene tahu harus balikin kita ke scene apa
+        PlayerPrefs.SetString("ReturnSceneName", SceneManager.GetActiveScene().name);
+
+        if (!string.IsNullOrEmpty(returnDialogueID))
+        {
+            PlayerPrefs.SetString("PendingReturnDialogueID", returnDialogueID);
+        }
+        
+        // 3. Muat scene Cutscene1
+        SceneManager.LoadScene(namaSceneCutscene);
     }
 
     public void ResetInteractions() {
@@ -97,32 +132,23 @@ public class SecretItem : MonoBehaviour
         blinkCoroutine = StartCoroutine(BlinkEffect());
     }
 
-    // PERBAIKAN: Menggunakan IEnumerator non-generik bawaan System.Collections
     private IEnumerator BlinkEffect()
     {
         while (canInteract && spriteRenderer != null)
         {
             float lerpTime = Mathf.PingPong(Time.time * blinkSpeed, 1f);
             float alpha = Mathf.Lerp(minAlpha, 1f, lerpTime);
-
             spriteRenderer.color = new Color(1f, 1f, 1f, alpha);
-
-            yield return null; 
+            yield return null;
         }
     }
 
     private void ResetSpriteColor()
     {
-        if (spriteRenderer != null)
-        {
-            spriteRenderer.color = Color.white; 
-        }
+        if (spriteRenderer != null) spriteRenderer.color = Color.white; 
     }
 
-    public int GetCurrentSecretIndex()
-    {
-        return randomizedIndices[currentSpriteIndex];
-    }
+    public int GetCurrentSecretIndex() => randomizedIndices[currentSpriteIndex];
 
     private void OnTriggerEnter2D(Collider2D other) {
         if (other.CompareTag("Player")) isPlayerInRange = true;

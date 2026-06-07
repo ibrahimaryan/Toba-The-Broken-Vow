@@ -13,6 +13,9 @@ public class DialogueLine
     
     [Tooltip("Centang ini jika dialognya mau muncul besar secara OTOMATIS ala Cutscene Film")]
     public bool isCutsceneStyle; // Centang ini di Inspector jika dialognya mau muncul besar secara OTOMATIS ala Cutscene Film
+
+    [Tooltip("Berapa detik dialog tetap tampil setelah teks selesai diketik")]
+    public float holdTime = 3f;
 }
 
 [System.Serializable]

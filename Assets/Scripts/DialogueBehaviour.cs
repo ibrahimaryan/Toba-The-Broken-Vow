@@ -27,11 +27,12 @@ public class DialogueBehaviour : PlayableBehaviour
         {
             // Reset state agar clip ini bisa jalan lagi kalau di-rewind
             hasPlayed = false;
-
-            if (DialogueManager.instance != null)
-            {
-                DialogueManager.instance.TutupPaksaSeluruhPanel();
-            }
+            
+            // Jangan tutup langsung, biarkan DialogueManager menutup berdasarkan holdTime
+            // if (DialogueManager.instance != null)
+            // {
+            //     DialogueManager.instance.TutupPaksaSeluruhPanel();
+            // }
         }
     }
 }

@@ -135,7 +135,13 @@ public class BarangTrigger : MonoBehaviour
     {
         Debug.Log("Memulai penyebaran 7 sisik secara acak...");
 
-        // Acak dan pilih 7 lokasi unik dari database lokasi
+        // Gunakan daftar allLocationIDs dari Inspector agar bisa mengacak lintas scene (karena scene lain tidak sedang diload)
+        if (allLocationIDs == null || allLocationIDs.Length < 8)
+        {
+            Debug.LogError("[BarangTrigger] Error: Daftar 'All Location IDs' di Inspector kurang dari 7! Minimal butuh 7 lokasi.");
+            return;
+        }
+
         List<string> locationPool = new List<string>(allLocationIDs);
         List<string> selectedLocations = new List<string>();
 

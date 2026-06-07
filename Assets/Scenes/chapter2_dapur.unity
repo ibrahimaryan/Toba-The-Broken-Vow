@@ -4200,12 +4200,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 993478181}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5937676142d514d4d81d3b3b22c24628, type: 3}
+  m_Script: {fileID: 11500000, guid: 91c24b0bfd3e14541960d365aab5b096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SisikItem
-  sisikID: sisik_loc_5
+  sisikID: sisik_lokasi_5
   blinkSpeed: 2
-  minAlpha: 0.8
+  minAlpha: 0.6
   possibleSprites:
   - {fileID: 3535262683676170161, guid: 95b41c128d86e8b459fc9b7703338fdd, type: 3}
   - {fileID: -2957984617952984879, guid: f89fce302cc784d47a9528d1c318bf19, type: 3}
@@ -6212,17 +6212,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1466699903}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5937676142d514d4d81d3b3b22c24628, type: 3}
+  m_Script: {fileID: 11500000, guid: 91c24b0bfd3e14541960d365aab5b096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SisikItem
-  sisikID: sisik_loc_7
+  sisikID: sisik_lokasi_7
   blinkSpeed: 2
-  minAlpha: 0.8
+  minAlpha: 0.6
   possibleSprites:
-  - {fileID: -5230918167840577067, guid: 70f2f1a7d139f064aaf2f460911c45ad, type: 3}
-  - {fileID: -1508821506250449534, guid: aeba2ae1761d60847a71309f0cf838ae, type: 3}
-  - {fileID: -937112347299616935, guid: 277267c2c640bc945ae1e5dc5f5eb475, type: 3}
-  - {fileID: 2141898356924634242, guid: 89257291629841749a8e4d63443324f4, type: 3}
   - {fileID: 3535262683676170161, guid: 95b41c128d86e8b459fc9b7703338fdd, type: 3}
   - {fileID: -2957984617952984879, guid: f89fce302cc784d47a9528d1c318bf19, type: 3}
   - {fileID: 1477170442477182695, guid: 347c46a042238be4bae069564e8742ab, type: 3}
@@ -6755,17 +6751,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1569083672}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5937676142d514d4d81d3b3b22c24628, type: 3}
+  m_Script: {fileID: 11500000, guid: 91c24b0bfd3e14541960d365aab5b096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SisikItem
-  sisikID: sisik_loc_6
+  sisikID: sisik_lokasi_6
   blinkSpeed: 2
-  minAlpha: 0.8
+  minAlpha: 0.6
   possibleSprites:
-  - {fileID: -5230918167840577067, guid: 70f2f1a7d139f064aaf2f460911c45ad, type: 3}
-  - {fileID: -1508821506250449534, guid: aeba2ae1761d60847a71309f0cf838ae, type: 3}
-  - {fileID: -937112347299616935, guid: 277267c2c640bc945ae1e5dc5f5eb475, type: 3}
-  - {fileID: 2141898356924634242, guid: 89257291629841749a8e4d63443324f4, type: 3}
   - {fileID: 3535262683676170161, guid: 95b41c128d86e8b459fc9b7703338fdd, type: 3}
   - {fileID: -2957984617952984879, guid: f89fce302cc784d47a9528d1c318bf19, type: 3}
   - {fileID: 1477170442477182695, guid: 347c46a042238be4bae069564e8742ab, type: 3}
@@ -7742,17 +7734,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1731575458}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5937676142d514d4d81d3b3b22c24628, type: 3}
+  m_Script: {fileID: 11500000, guid: 91c24b0bfd3e14541960d365aab5b096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SisikItem
-  sisikID: sisik_loc_8
+  sisikID: sisik_lokasi_8
   blinkSpeed: 2
-  minAlpha: 0.8
+  minAlpha: 0.6
   possibleSprites:
-  - {fileID: -5230918167840577067, guid: 70f2f1a7d139f064aaf2f460911c45ad, type: 3}
-  - {fileID: -1508821506250449534, guid: aeba2ae1761d60847a71309f0cf838ae, type: 3}
-  - {fileID: -937112347299616935, guid: 277267c2c640bc945ae1e5dc5f5eb475, type: 3}
-  - {fileID: 2141898356924634242, guid: 89257291629841749a8e4d63443324f4, type: 3}
   - {fileID: 3535262683676170161, guid: 95b41c128d86e8b459fc9b7703338fdd, type: 3}
   - {fileID: -2957984617952984879, guid: f89fce302cc784d47a9528d1c318bf19, type: 3}
   - {fileID: 1477170442477182695, guid: 347c46a042238be4bae069564e8742ab, type: 3}

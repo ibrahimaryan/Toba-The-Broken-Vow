@@ -821,12 +821,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 203254127}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5937676142d514d4d81d3b3b22c24628, type: 3}
+  m_Script: {fileID: 11500000, guid: 91c24b0bfd3e14541960d365aab5b096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SisikItem
-  sisikID: sisik_loc_12
+  sisikID: sisik_lokasi_12
   blinkSpeed: 2
-  minAlpha: 0.8
+  minAlpha: 0.6
   possibleSprites:
   - {fileID: -5230918167840577067, guid: 70f2f1a7d139f064aaf2f460911c45ad, type: 3}
   - {fileID: -1508821506250449534, guid: aeba2ae1761d60847a71309f0cf838ae, type: 3}
@@ -4114,12 +4114,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 881890971}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5937676142d514d4d81d3b3b22c24628, type: 3}
+  m_Script: {fileID: 11500000, guid: 91c24b0bfd3e14541960d365aab5b096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SisikItem
-  sisikID: sisik_loc_11
+  sisikID: sisik_lokasi_11
   blinkSpeed: 2
-  minAlpha: 0.8
+  minAlpha: 0.6
   possibleSprites:
   - {fileID: -5230918167840577067, guid: 70f2f1a7d139f064aaf2f460911c45ad, type: 3}
   - {fileID: -1508821506250449534, guid: aeba2ae1761d60847a71309f0cf838ae, type: 3}
@@ -4272,12 +4272,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 895252625}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5937676142d514d4d81d3b3b22c24628, type: 3}
+  m_Script: {fileID: 11500000, guid: 91c24b0bfd3e14541960d365aab5b096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SisikItem
-  sisikID: sisik_loc_10
+  sisikID: sisik_lokasi_10
   blinkSpeed: 2
-  minAlpha: 0.8
+  minAlpha: 0.6
   possibleSprites:
   - {fileID: -5230918167840577067, guid: 70f2f1a7d139f064aaf2f460911c45ad, type: 3}
   - {fileID: -1508821506250449534, guid: aeba2ae1761d60847a71309f0cf838ae, type: 3}
@@ -6086,12 +6086,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1228743871}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5937676142d514d4d81d3b3b22c24628, type: 3}
+  m_Script: {fileID: 11500000, guid: 91c24b0bfd3e14541960d365aab5b096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SisikItem
-  sisikID: sisik_loc_9
+  sisikID: sisik_lokasi_9
   blinkSpeed: 2
-  minAlpha: 0.8
+  minAlpha: 0.6
   possibleSprites:
   - {fileID: -5230918167840577067, guid: 70f2f1a7d139f064aaf2f460911c45ad, type: 3}
   - {fileID: -1508821506250449534, guid: aeba2ae1761d60847a71309f0cf838ae, type: 3}

@@ -285,12 +285,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 55824241}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5937676142d514d4d81d3b3b22c24628, type: 3}
+  m_Script: {fileID: 11500000, guid: 91c24b0bfd3e14541960d365aab5b096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SisikItem
-  sisikID: sisik_loc_3
+  sisikID: sisik_lokasi_3
   blinkSpeed: 2
-  minAlpha: 0.4
+  minAlpha: 0.6
   possibleSprites:
   - {fileID: -937112347299616935, guid: 277267c2c640bc945ae1e5dc5f5eb475, type: 3}
   - {fileID: 2141898356924634242, guid: 89257291629841749a8e4d63443324f4, type: 3}
@@ -639,7 +639,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 62073032}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b06024790d178544e9eddfe8c4481b6a, type: 3}
+  m_Script: {fileID: 11500000, guid: 007715698c8ce194494e120ee9e3f1ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DraggableItem
   itemID: puzzle_sisik_5
@@ -1062,7 +1062,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 158010620}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b06024790d178544e9eddfe8c4481b6a, type: 3}
+  m_Script: {fileID: 11500000, guid: 007715698c8ce194494e120ee9e3f1ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DraggableItem
   itemID: puzzle_sisik_3
@@ -1518,13 +1518,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 223883349}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a071b2f6fe81a349a8a375918c6b077, type: 3}
+  m_Script: {fileID: 11500000, guid: 1d7b2767a3dde2d4c91991d09f156832, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SisikPuzzleManager
   slots:
   - {fileID: 558175182}
   - {fileID: 823950790}
-  - {fileID: 1051529876}
+  - {fileID: 823950790}
   - {fileID: 264763678}
   - {fileID: 1002791326}
   - {fileID: 1775029829}
@@ -1546,11 +1546,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   failDialogue:
-    lines:
-    - characterName: Samosir
-      sentence: Ah shitt!!
-      isSpeechBubble: 0
-      isCutsceneStyle: 1
+    lines: []
 --- !u!4 &223883351
 Transform:
   m_ObjectHideFlags: 0
@@ -1652,7 +1648,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 257632911}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b06024790d178544e9eddfe8c4481b6a, type: 3}
+  m_Script: {fileID: 11500000, guid: 007715698c8ce194494e120ee9e3f1ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DraggableItem
   itemID: puzzle_sisik_7
@@ -1786,12 +1782,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 270408925}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5937676142d514d4d81d3b3b22c24628, type: 3}
+  m_Script: {fileID: 11500000, guid: 91c24b0bfd3e14541960d365aab5b096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SisikItem
-  sisikID: sisik_loc_2
+  sisikID: sisik_lokasi_2
   blinkSpeed: 2
-  minAlpha: 0.4
+  minAlpha: 0.6
   possibleSprites:
   - {fileID: -937112347299616935, guid: 277267c2c640bc945ae1e5dc5f5eb475, type: 3}
   - {fileID: 2141898356924634242, guid: 89257291629841749a8e4d63443324f4, type: 3}
@@ -2812,33 +2808,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 701817334}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e04f4cec54926974593ae2ee3ac2bddd, type: 3}
+  m_Script: {fileID: 11500000, guid: 87202068bdd7c3149a8a816e46bbaa39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BarangTrigger
   puzzleManager: {fileID: 223883350}
   allLocationIDs:
-  - sisik_loc_1
-  - sisik_loc_2
-  - sisik_loc_3
-  - sisik_loc_4
-  - sisik_loc_5
-  - sisik_loc_6
-  - sisik_loc_7
-  - sisik_loc_8
-  - sisik_loc_9
-  - sisik_loc_10
-  - sisik_loc_11
-  - sisik_loc_12
+  - sisik_lokasi_1
+  - sisik_lokasi_2
+  - sisik_lokasi_3
+  - sisik_lokasi_4
+  - sisik_lokasi_5
+  - sisik_lokasi_6
+  - sisik_lokasi_7
+  - sisik_lokasi_8
+  - sisik_lokasi_9
+  - sisik_lokasi_10
+  - sisik_lokasi_11
+  - sisik_lokasi_12
   startScatteringDialogue:
     lines:
     - characterName: Samosir
-      sentence: Aku harus menemukan apa yang dimaksud dengan barang ini!
+      sentence: Aku harus menemukan seluruh kepingan yang dibutuhkan!
       isSpeechBubble: 1
       isCutsceneStyle: 0
   notEnoughScalesDialogue:
     lines: []
-  blinkSpeed: 1.5
-  minAlpha: 0.4
+  blinkSpeed: 2
+  minAlpha: 0.6
 --- !u!61 &701817339
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4457,7 +4453,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 980129340}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b06024790d178544e9eddfe8c4481b6a, type: 3}
+  m_Script: {fileID: 11500000, guid: 007715698c8ce194494e120ee9e3f1ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DraggableItem
   itemID: puzzle_sisik_6
@@ -5381,12 +5377,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1162757241}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5937676142d514d4d81d3b3b22c24628, type: 3}
+  m_Script: {fileID: 11500000, guid: 91c24b0bfd3e14541960d365aab5b096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SisikItem
-  sisikID: sisik_loc_1
+  sisikID: sisik_lokasi_1
   blinkSpeed: 2
-  minAlpha: 0.4
+  minAlpha: 0.6
   possibleSprites:
   - {fileID: -937112347299616935, guid: 277267c2c640bc945ae1e5dc5f5eb475, type: 3}
   - {fileID: 2141898356924634242, guid: 89257291629841749a8e4d63443324f4, type: 3}
@@ -8390,7 +8386,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1605520087}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b06024790d178544e9eddfe8c4481b6a, type: 3}
+  m_Script: {fileID: 11500000, guid: 007715698c8ce194494e120ee9e3f1ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DraggableItem
   itemID: puzzle_sisik_4
@@ -9494,7 +9490,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1876402587}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b06024790d178544e9eddfe8c4481b6a, type: 3}
+  m_Script: {fileID: 11500000, guid: 007715698c8ce194494e120ee9e3f1ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DraggableItem
   itemID: puzzle_sisik_2
@@ -9523,6 +9519,7 @@ GameObject:
   - component: {fileID: 1876632018}
   - component: {fileID: 1876632017}
   - component: {fileID: 1876632016}
+  - component: {fileID: 1876632020}
   m_Layer: 0
   m_Name: loc_4
   m_TagString: Untagged
@@ -9539,12 +9536,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1876632015}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5937676142d514d4d81d3b3b22c24628, type: 3}
+  m_Script: {fileID: 11500000, guid: 91c24b0bfd3e14541960d365aab5b096, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SisikItem
-  sisikID: sisik_loc_4
+  sisikID: sisik_lokasi_4
   blinkSpeed: 2
-  minAlpha: 0.4
+  minAlpha: 0.6
   possibleSprites:
   - {fileID: -937112347299616935, guid: 277267c2c640bc945ae1e5dc5f5eb475, type: 3}
   - {fileID: 2141898356924634242, guid: 89257291629841749a8e4d63443324f4, type: 3}
@@ -9669,6 +9666,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1876632020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1876632015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91c24b0bfd3e14541960d365aab5b096, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SisikItem
+  sisikID: 
+  blinkSpeed: 1.5
+  minAlpha: 0.6
+  possibleSprites: []
 --- !u!1 &1926859816
 GameObject:
   m_ObjectHideFlags: 0
@@ -9972,7 +9985,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1966617025}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b06024790d178544e9eddfe8c4481b6a, type: 3}
+  m_Script: {fileID: 11500000, guid: 007715698c8ce194494e120ee9e3f1ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DraggableItem
   itemID: puzzle_sisik_1

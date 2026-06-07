@@ -156,12 +156,15 @@ public class BarangTrigger : MonoBehaviour
 
         // Ambil 7 lokasi pertama
         int countToSelect = Mathf.Min(7, locationPool.Count);
+        string debugMsg = "Lokasi terpilih: ";
         for (int i = 0; i < countToSelect; i++)
         {
             selectedLocations.Add(locationPool[i]);
             // Tandai lokasi ini aktif di GameManager
             GameManager.Instance.SetFlag("sisik_active_" + locationPool[i], true);
+            debugMsg += locationPool[i] + (i < countToSelect - 1 ? ", " : "");
         }
+        Debug.Log(debugMsg);
 
         // Set status pencarian sisik menjadi aktif
         GameManager.Instance.SetFlag("sisik_spawning_active", true);

@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using System;
+using System.Collections;
 
 public class PlayerControllerScript : MonoBehaviour
 {
@@ -24,9 +26,11 @@ public class PlayerControllerScript : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
         else
         {
+            gameObject.SetActive(false);
             DestroyImmediate(gameObject);
             return;
         }
@@ -35,6 +39,43 @@ public class PlayerControllerScript : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
         mySpriteRenderer = GetComponent<SpriteRenderer>();
+    }
+
+    private void OnDestroy()
+    {
+        if (Instance == this)
+        {
+            SceneManager.sceneLoaded -= OnSceneLoaded;
+            Instance = null;
+        }
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // Hancurkan Player jika masuk ke scene MainMenu
+        if (scene.name == "MainMenu")
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        // Matikan simulasi fisika sementara agar tidak memicu transisi scene baru
+        // di posisi lama sebelum di-teleport oleh SceneLoadManager
+        if (rb != null)
+        {
+            rb.simulated = false;
+            StartCoroutine(ReEnablePhysicsCoroutine());
+        }
+    }
+
+    private IEnumerator ReEnablePhysicsCoroutine()
+    {
+        // Tunggu hingga akhir frame agar pemindahan posisi oleh SceneLoadManager selesai
+        yield return new WaitForEndOfFrame();
+        if (rb != null)
+        {
+            rb.simulated = true;
+        }
     }
 
     private void OnEnable()

@@ -41,7 +41,12 @@ public class SecretItem : MonoBehaviour
 
     private void Start()
     {
-        if (canInteract)
+        if (GameManager.Instance != null && GameManager.Instance.IsFlagSet("chapter1_puzzle_solved"))
+        {
+            canInteract = false;
+            ResetSpriteColor();
+        }
+        else if (canInteract)
         {
             blinkCoroutine = StartCoroutine(BlinkEffect());
         }
@@ -132,6 +137,17 @@ public class SecretItem : MonoBehaviour
         blinkCoroutine = StartCoroutine(BlinkEffect());
     }
 
+    public void SetPuzzleSolved() {
+        canInteract = false;
+        if (blinkCoroutine != null)
+        {
+            StopCoroutine(blinkCoroutine);
+            blinkCoroutine = null;
+        }
+        ResetSpriteColor();
+    }
+
+    // PERBAIKAN: Menggunakan IEnumerator non-generik bawaan System.Collections
     private IEnumerator BlinkEffect()
     {
         while (canInteract && spriteRenderer != null)

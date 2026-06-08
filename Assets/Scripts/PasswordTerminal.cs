@@ -34,7 +34,15 @@ public class PasswordTerminal : MonoBehaviour
 
     private void Start()
     {
-        StartBlink();
+        if (GameManager.Instance != null && GameManager.Instance.IsFlagSet("chapter1_puzzle_solved"))
+        {
+            isPuzzleSolved = true;
+            StopBlink();
+        }
+        else
+        {
+            StartBlink();
+        }
     }
 
     private void OnEnable()
@@ -126,6 +134,11 @@ public class PasswordTerminal : MonoBehaviour
             Debug.Log("Kode Benar! Pemain Mendapatkan Kail Pancing.");
             isPuzzleSolved = true;
 
+            if (GameManager.Instance != null)
+            {
+                GameManager.Instance.SetFlag("chapter1_puzzle_solved", true);
+            }
+
             if (InventoryManager.Instance != null)
             {
                 InventoryManager.Instance.GetFishingRod();
@@ -135,6 +148,11 @@ public class PasswordTerminal : MonoBehaviour
             if (rewardPanel != null) rewardPanel.SetActive(true);
 
             StopBlink(); 
+
+            if (firstItem != null)
+            {
+                firstItem.SetPuzzleSolved();
+            }
 
             if (targetStatue != null)
             {

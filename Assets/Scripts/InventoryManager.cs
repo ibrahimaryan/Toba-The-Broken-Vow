@@ -23,10 +23,24 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private GameObject[] staticSlots;    // Tarik 20 GameObject slot Anda ke sini di Inspector
     [SerializeField] private ItemData[] itemDatabase;     // Daftar asset gambar item berdasarkan ID-nya
 
+    [Header("Equipment Settings")]
+    [SerializeField] private int equipmentStartSlotIndex = 14; // Slot 15 di UI (0-indexed)
+
+    [Header("Equipment Slot Backgrounds")]
+    [SerializeField] private Sprite equipmentEmptyBgSprite;  // Sprite bg saat slot kosong (misal kotak putih bawaan)
+    [SerializeField] private Sprite equipmentNormalBgSprite; // Sprite bg saat equipment dimiliki tapi tidak dipakai (hilangkan bg putih -> transparan)
+    [SerializeField] private Sprite equipmentActiveBgSprite; // Sprite bg saat equipment aktif dipakai (asset gambar kuning/custom dari user)
+
     public bool hasFishingRod { get; private set; } = false;
+    public bool hasAxe { get; private set; } = false;
+    public bool hasEquipment2 { get; private set; } = false;
+    public string currentEquippedItem { get; private set; } = ""; // ID item yang sedang dipasang ("kapak", "equipment2", atau "")
 
     // Database penyimpanan item dan jumlahnya di runtime
     private Dictionary<string, int> items = new Dictionary<string, int>();
+
+    // Menyimpan sprite asli dari slot untuk dikembalikan saat kosong
+    private Dictionary<GameObject, Sprite> originalSlotSprites = new Dictionary<GameObject, Sprite>();
 
     private void Awake()
     {
@@ -36,6 +50,21 @@ public class InventoryManager : MonoBehaviour
 
     private void Start()
     {
+        // Catat sprite bawaan asli dari masing-masing slot agar bisa direstore saat kosong
+        if (staticSlots != null)
+        {
+            foreach (GameObject slot in staticSlots)
+            {
+                if (slot != null)
+                {
+                    Image img = slot.GetComponent<Image>();
+                    if (img != null)
+                    {
+                        originalSlotSprites[slot] = img.sprite;
+                    }
+                }
+            }
+        }
         UpdateInventoryUI();
     }
 
@@ -69,6 +98,50 @@ public class InventoryManager : MonoBehaviour
         RemoveItem("fishing_rod", 1);
         UpdateInventoryUI(); 
         Debug.Log("Kail Pancing telah digunakan!");
+    }
+
+    // --- EQUIPMENT METHODS ---
+    public void EquipAxe()
+    {
+        hasAxe = true;
+        UpdateInventoryUI();
+        Debug.Log("Kapak masuk ke equipment slot!");
+    }
+
+    public void EquipEquipment2()
+    {
+        hasEquipment2 = true;
+        UpdateInventoryUI();
+        Debug.Log("Equipment 2 masuk ke equipment slot!");
+    }
+
+    public void CycleEquipment()
+    {
+        List<string> ownedEquipment = new List<string>();
+        if (hasAxe) ownedEquipment.Add("kapak");
+        if (hasEquipment2) ownedEquipment.Add("equipment2");
+
+        if (ownedEquipment.Count == 0)
+        {
+            currentEquippedItem = "";
+            UpdateInventoryUI();
+            return;
+        }
+
+        int currentIndex = ownedEquipment.IndexOf(currentEquippedItem);
+        int nextIndex = currentIndex + 1;
+
+        if (nextIndex >= ownedEquipment.Count)
+        {
+            currentEquippedItem = ""; // Kembali ke tanpa equipment (None)
+        }
+        else
+        {
+            currentEquippedItem = ownedEquipment[nextIndex];
+        }
+
+        UpdateInventoryUI();
+        Debug.Log($"Equipment aktif diganti ke: {(string.IsNullOrEmpty(currentEquippedItem) ? "None" : currentEquippedItem)}");
     }
 
     // --- DYNAMIC INVENTORY METHODS ---
@@ -134,30 +207,112 @@ public class InventoryManager : MonoBehaviour
         // 2. Update static slots grid jika dipasang di inspector
         if (staticSlots != null && staticSlots.Length > 0)
         {
-            // Ambil semua item dalam list untuk dipetakan ke slot
-            List<KeyValuePair<string, int>> currentItems = new List<KeyValuePair<string, int>>();
+            // Ambil semua item dalam list untuk dipetakan ke slot (hanya item biasa)
+            List<KeyValuePair<string, int>> normalItems = new List<KeyValuePair<string, int>>();
             foreach (KeyValuePair<string, int> pair in items)
             {
                 // Item legasi pancingan tidak perlu digambar ulang di slot dinamis jika sudah menggunakan slot fisik tersendiri
                 if (pair.Key == "fishing_rod" && fishingRodSlotImage != null) continue;
-                currentItems.Add(pair);
+                normalItems.Add(pair);
             }
 
-            // Update setiap slot UI berdasarkan data item
-            for (int i = 0; i < staticSlots.Length; i++)
+            // Batas maksimal slot item biasa adalah sebelum slot equipment (misal index 14 untuk slot 15)
+            int maxNormalSlots = Mathf.Min(equipmentStartSlotIndex, staticSlots.Length);
+
+            // 2a. Gambar normal items di slot sebelum slot equipment
+            for (int i = 0; i < maxNormalSlots; i++)
             {
                 GameObject slotObj = staticSlots[i];
                 if (slotObj == null) continue;
 
-                if (i < currentItems.Count)
+                if (i < normalItems.Count)
                 {
-                    // Masukkan item ke slot
-                    UpdateSlotUI(slotObj, currentItems[i].Key, currentItems[i].Value);
+                    UpdateSlotUI(slotObj, normalItems[i].Key, normalItems[i].Value);
                 }
                 else
                 {
-                    // Kosongkan slot
                     ClearSlotUI(slotObj);
+                }
+            }
+
+            // 2b. Gambar equipment items mulai dari slot index equipmentStartSlotIndex (Slot 15+)
+            List<string> ownedEquipment = new List<string>();
+            if (hasAxe) ownedEquipment.Add("kapak");
+            if (hasEquipment2) ownedEquipment.Add("equipment2");
+
+            for (int i = equipmentStartSlotIndex; i < staticSlots.Length; i++)
+            {
+                GameObject slotObj = staticSlots[i];
+                if (slotObj == null) continue;
+
+                int equipListIdx = i - equipmentStartSlotIndex;
+                if (equipListIdx < ownedEquipment.Count)
+                {
+                    string equipID = ownedEquipment[equipListIdx];
+                    UpdateSlotUI(slotObj, equipID, 1);
+                    HighlightEquippedSlot(slotObj, equipID == currentEquippedItem, true);
+                }
+                else
+                {
+                    ClearSlotUI(slotObj);
+                    HighlightEquippedSlot(slotObj, false, false);
+                }
+            }
+        }
+    }
+
+    private void HighlightEquippedSlot(GameObject slot, bool isActive, bool hasItem)
+    {
+        // Cari child image bernama "Highlight" atau "Outline" atau "Selected"
+        Transform hlTransform = slot.transform.Find("Highlight") ?? slot.transform.Find("Outline") ?? slot.transform.Find("Selected");
+        if (hlTransform != null)
+        {
+            Image hlImage = hlTransform.GetComponent<Image>();
+            if (hlImage != null)
+            {
+                hlImage.enabled = isActive;
+                return;
+            }
+        }
+
+        // Fallback: Ubah sprite / warna background slot itu sendiri
+        Image slotImage = slot.GetComponent<Image>();
+        if (slotImage != null)
+        {
+            if (!hasItem)
+            {
+                // Jika slot kosong, kembalikan ke background bawaan asli (atau sprite kosong kustom jika di-assign)
+                slotImage.sprite = (equipmentEmptyBgSprite != null) ? equipmentEmptyBgSprite : (originalSlotSprites.ContainsKey(slot) ? originalSlotSprites[slot] : null);
+                slotImage.color = Color.white;
+            }
+            else if (isActive)
+            {
+                // Jika aktif dipakai, ubah ke sprite aktif dari user
+                if (equipmentActiveBgSprite != null)
+                {
+                    slotImage.sprite = equipmentActiveBgSprite;
+                    slotImage.color = Color.white;
+                }
+                else
+                {
+                    // Fallback jika sprite tidak di-assign: warna kuning
+                    slotImage.sprite = null;
+                    slotImage.color = new Color(1f, 0.92f, 0.016f, 0.8f);
+                }
+            }
+            else
+            {
+                // Jika dimiliki tapi tidak dipakai, hilangkan background putih (buat transparan)
+                if (equipmentNormalBgSprite != null)
+                {
+                    slotImage.sprite = equipmentNormalBgSprite;
+                    slotImage.color = Color.white;
+                }
+                else
+                {
+                    // Membuat background transparan penuh (menghilangkan bg putih)
+                    slotImage.sprite = null;
+                    slotImage.color = new Color(1f, 1f, 1f, 0f);
                 }
             }
         }

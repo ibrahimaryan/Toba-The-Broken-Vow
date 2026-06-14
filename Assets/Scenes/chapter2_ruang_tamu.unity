@@ -6442,6 +6442,7 @@ MonoBehaviour:
       sentence: Aku harus menemukan seluruh kepingan yang dibutuhkan!
       isSpeechBubble: 1
       isCutsceneStyle: 0
+      holdTime: 3
   notEnoughScalesDialogue:
     lines: []
   blinkSpeed: 2
@@ -7089,6 +7090,8 @@ MonoBehaviour:
     spawnTransform: {fileID: 1603277199}
   - doorID: Dari_Gudang_woi
     spawnTransform: {fileID: 793560336}
+  - doorID: Dari_Luar
+    spawnTransform: {fileID: 2114652728}
 --- !u!1 &764399672
 GameObject:
   m_ObjectHideFlags: 0
@@ -8808,7 +8811,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df9ccb830e5306f4cbe0ad6ab5875c61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DoorController
-  nextSceneName: 
+  nextSceneName: luar_rumah
   transitionZoneCollider: {fileID: 839790547}
   doorID: Dari_Ruang_Tamu_bawah
   requiresPuzzle: 1
@@ -10502,6 +10505,10 @@ MonoBehaviour:
     itemIcon: {fileID: 2496060635202433848, guid: 89262d7826999da4ea40a863bc57ed7d, type: 3}
   - itemID: sisik
     itemIcon: {fileID: -1508821506250449534, guid: aeba2ae1761d60847a71309f0cf838ae, type: 3}
+  equipmentStartSlotIndex: 14
+  equipmentEmptyBgSprite: {fileID: 0}
+  equipmentNormalBgSprite: {fileID: 0}
+  equipmentActiveBgSprite: {fileID: 0}
 --- !u!114 &1040935693
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24388,7 +24395,7 @@ Transform:
   m_GameObject: {fileID: 2114652727}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.45, y: -3.68, z: 0}
+  m_LocalPosition: {x: -0.45, y: -3.82, z: 0}
   m_LocalScale: {x: 2, y: 0.93701416, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

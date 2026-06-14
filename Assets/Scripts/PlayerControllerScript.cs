@@ -109,6 +109,19 @@ public class PlayerControllerScript : MonoBehaviour
     {
         // Update parameter animasi setiap frame
         UpdateAnimationParameters();
+
+        // Cek tombol Q untuk ganti equipment hanya jika input player sedang aktif
+        if (playerControls != null && playerControls.Movement.enabled)
+        {
+            if (UnityEngine.InputSystem.Keyboard.current != null && 
+                UnityEngine.InputSystem.Keyboard.current.qKey.wasPressedThisFrame)
+            {
+                if (InventoryManager.Instance != null)
+                {
+                    InventoryManager.Instance.CycleEquipment();
+                }
+            }
+        }
     }
 
     private void FixedUpdate()

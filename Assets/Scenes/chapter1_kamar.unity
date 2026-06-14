@@ -15910,6 +15910,12 @@ MonoBehaviour:
     itemIcon: {fileID: 2496060635202433848, guid: 89262d7826999da4ea40a863bc57ed7d, type: 3}
   - itemID: sisik
     itemIcon: {fileID: -1508821506250449534, guid: aeba2ae1761d60847a71309f0cf838ae, type: 3}
+  - itemID: kapak
+    itemIcon: {fileID: 5736220196789336816, guid: b6d470a34e0a6e643889dd3a3e46923c, type: 3}
+  equipmentStartSlotIndex: 15
+  equipmentEmptyBgSprite: {fileID: -8358113870863188520, guid: 626f3ae7c708c2e40843758fcb2bda53, type: 3}
+  equipmentNormalBgSprite: {fileID: 0}
+  equipmentActiveBgSprite: {fileID: 905024258411163469, guid: 06b6248c6261e3242a92cfd13286a7fc, type: 3}
 --- !u!114 &1512039006
 MonoBehaviour:
   m_ObjectHideFlags: 0

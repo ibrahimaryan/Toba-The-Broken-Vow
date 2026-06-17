@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.Events;
 public class DialogueTrigger : MonoBehaviour
 {
     public Dialogue dialogue;
@@ -8,7 +8,7 @@ public class DialogueTrigger : MonoBehaviour
     public string triggerID;
 
     private bool hasTriggered = false;
-
+    public UnityEvent saatDialogBerjalan;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!collision.CompareTag("Player")) return;
@@ -20,6 +20,7 @@ public class DialogueTrigger : MonoBehaviour
         }
 
         DialogueManager.instance.StartDialogue(dialogue);
+        saatDialogBerjalan?.Invoke();
         hasTriggered = true;
 
         if (triggerOnlyOnce && GameManager.Instance != null && !string.IsNullOrEmpty(triggerID))

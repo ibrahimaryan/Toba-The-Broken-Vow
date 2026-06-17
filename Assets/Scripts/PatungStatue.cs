@@ -78,7 +78,11 @@ public class PatungStatue : MonoBehaviour
             {
                 isSolved = true;
                 InventoryManager.Instance.UseFishingRod(); 
-
+                if (ToDoManager.Instance != null)
+                {
+                    // Angka 1 berarti mencoret misi urutan KEDUA di daftar misi Chapter tersebut
+                    ToDoManager.Instance.SelesaikanMisi(2); 
+                }
                 StopBlinkEffect(); // TAMBAHAN: Matikan kedip karena patung sudah selesai!
 
                 if (fullColorSprite != null)

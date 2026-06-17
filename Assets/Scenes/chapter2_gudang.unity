@@ -17934,6 +17934,10 @@ MonoBehaviour:
     itemIcon: {fileID: 2496060635202433848, guid: 89262d7826999da4ea40a863bc57ed7d, type: 3}
   - itemID: sisik
     itemIcon: {fileID: -1508821506250449534, guid: aeba2ae1761d60847a71309f0cf838ae, type: 3}
+  equipmentStartSlotIndex: 14
+  equipmentEmptyBgSprite: {fileID: 0}
+  equipmentNormalBgSprite: {fileID: 0}
+  equipmentActiveBgSprite: {fileID: 0}
 --- !u!114 &1698607226
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21365,6 +21369,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2089651843}
   m_CullTransparentMesh: 1
+--- !u!1 &2091195752
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2091195754}
+  - component: {fileID: 2091195753}
+  m_Layer: 0
+  m_Name: QuestData_Chapter2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2091195753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091195752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6eeb86874dcb010469ca642c61dc25d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ChapterQuests
+  chapterID: Chapter_2
+  misiDiSceneIni:
+  - namaMisi: Explore semua ruangan
+    sudahSelesai: 0
+  - namaMisi: Cari dan Lihat Kertas
+    sudahSelesai: 0
+  - namaMisi: Selesaikan
+    sudahSelesai: 0
+--- !u!4 &2091195754
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091195752}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2092730098
 GameObject:
   m_ObjectHideFlags: 0
@@ -22279,6 +22335,7 @@ SceneRoots:
   - {fileID: 1845395436}
   - {fileID: 42912170}
   - {fileID: 265531904}
+  - {fileID: 2091195754}
   - {fileID: 307972033}
   - {fileID: 1950960304}
   - {fileID: 651700979}

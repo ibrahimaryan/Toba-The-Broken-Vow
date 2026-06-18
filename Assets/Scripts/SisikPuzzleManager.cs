@@ -80,6 +80,11 @@ public class SisikPuzzleManager : MonoBehaviour
         {
             Debug.Log("Puzzle Sukses! Sisik tersusun dengan benar.");
             HandleSuccess();
+            if (ToDoManager.Instance != null)
+                {
+                    // Angka 1 berarti mencoret misi urutan KEDUA di daftar misi Chapter tersebut
+                    ToDoManager.Instance.SelesaikanMisi(2); 
+                }
         }
         else
         {

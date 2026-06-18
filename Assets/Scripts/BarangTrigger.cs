@@ -133,6 +133,11 @@ public class BarangTrigger : MonoBehaviour
 
     private void StartScattering()
     {
+        if (ToDoManager.Instance != null)
+                {
+                    // Angka 1 berarti mencoret misi urutan KEDUA di daftar misi Chapter tersebut
+                    ToDoManager.Instance.SelesaikanMisi(1); 
+                }
         Debug.Log("Memulai penyebaran 7 sisik secara acak...");
 
         // Gunakan daftar allLocationIDs dari Inspector agar bisa mengacak lintas scene (karena scene lain tidak sedang diload)

@@ -6283,6 +6283,7 @@ GameObject:
   - component: {fileID: 701817335}
   - component: {fileID: 701817338}
   - component: {fileID: 701817339}
+  - component: {fileID: 701817340}
   m_Layer: 0
   m_Name: barang_trigger
   m_TagString: Untagged
@@ -6493,6 +6494,35 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 6, y: 8}
   m_EdgeRadius: 0
+--- !u!114 &701817340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701817334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 12ad33e31c105944c805ededc22a7604, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
+  dialogue:
+    lines:
+    - characterName: Samosir
+      sentence: Meja ini kertasnya kayak ada sesuatu deh
+      isSpeechBubble: 1
+      isCutsceneStyle: 0
+      holdTime: 3
+    - characterName: Samosir
+      sentence: Eh apa itu ada emas emas
+      isSpeechBubble: 1
+      isCutsceneStyle: 0
+      holdTime: 3
+  triggerOnlyOnce: 1
+  triggerID: 
+  saatDialogBerjalan:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &716875007
 GameObject:
   m_ObjectHideFlags: 0
@@ -20553,7 +20583,7 @@ MonoBehaviour:
     sudahSelesai: 0
   - namaMisi: Cari dan Lihat Kertas
     sudahSelesai: 0
-  - namaMisi: Selesaikan
+  - namaMisi: Selesaikan Tantangan
     sudahSelesai: 0
 --- !u!4 &1818489252
 Transform:

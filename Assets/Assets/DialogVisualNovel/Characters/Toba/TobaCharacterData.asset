@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b7c594e34c74494c965c0ebbab0f6ac, type: 3}
   m_Name: TobaCharacterData
   m_EditorClassIdentifier: Assembly-CSharp::VNCharacterData
-  characterName: 
+  characterName: Toba
   neutralPortrait: {fileID: 0}
   happyPortrait: {fileID: 0}
   angryPortrait: {fileID: 0}
   shockedPortrait: {fileID: 0}
   confusedPortrait: {fileID: 0}
+  sadPortrait: {fileID: 0}

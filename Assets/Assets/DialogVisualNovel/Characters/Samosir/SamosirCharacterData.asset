@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b7c594e34c74494c965c0ebbab0f6ac, type: 3}
   m_Name: SamosirCharacterData
   m_EditorClassIdentifier: Assembly-CSharp::VNCharacterData
-  characterName: 
-  neutralPortrait: {fileID: 0}
-  happyPortrait: {fileID: 0}
-  angryPortrait: {fileID: 0}
-  shockedPortrait: {fileID: 0}
-  confusedPortrait: {fileID: 0}
+  characterName: Samosir
+  neutralPortrait: {fileID: 6937817954938267909, guid: 7d0ff0ea609347c4b9fb72be4d4f6be0, type: 3}
+  happyPortrait: {fileID: -6470460504253458178, guid: 31675a06b8ee6b441aa0eefba4613f0c, type: 3}
+  angryPortrait: {fileID: -5099292496197868168, guid: 531323abd87a5504080d5daadaa0a298, type: 3}
+  shockedPortrait: {fileID: 4113829005332862926, guid: bbf41f869ac8c9248924d0afb645765d, type: 3}
+  confusedPortrait: {fileID: 4130640169021434097, guid: 413b8d597054db34ead5eb54a63e825e, type: 3}
+  sadPortrait: {fileID: -6747219157669017561, guid: c5f299e629dcd0249beafbb018ae91fe, type: 3}

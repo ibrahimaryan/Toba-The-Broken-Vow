@@ -9,6 +9,7 @@ public class VNCharacterData : ScriptableObject
     public Sprite angryPortrait;
     public Sprite shockedPortrait;
     public Sprite confusedPortrait;
+    public Sprite sadPortrait;
 
     public Sprite GetPortrait(VNEmotion emotion)
     {
@@ -18,6 +19,7 @@ public class VNCharacterData : ScriptableObject
             case VNEmotion.Angry: return angryPortrait;
             case VNEmotion.Shocked: return shockedPortrait;
             case VNEmotion.Confused: return confusedPortrait;
+            case VNEmotion.Sad: return sadPortrait;
             case VNEmotion.Neutral:
             default: 
                 return neutralPortrait;

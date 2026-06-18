@@ -6,7 +6,8 @@ public enum VNEmotion
     Happy,
     Angry,
     Shocked,
-    Confused
+    Confused,
+    Sad
 }
 
 public enum VNPortraitPosition

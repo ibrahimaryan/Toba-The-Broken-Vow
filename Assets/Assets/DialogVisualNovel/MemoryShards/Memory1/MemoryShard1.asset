@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948eabe8877b5a943862498f87e128e9, type: 3}
   m_Name: MemoryShard1
   m_EditorClassIdentifier: Assembly-CSharp::MemoryShardData
-  shardID: memory_shard_1
+  shardID: Chapter1
   title: 
   thumbnail: {fileID: 0}
-  dialogueData: {fileID: 0}
-  isUnlocked: 0
+  dialogueData: {fileID: 11400000, guid: 2adf62e7d1086dd4caa4e280f4942451, type: 2}
+  isUnlocked: 1

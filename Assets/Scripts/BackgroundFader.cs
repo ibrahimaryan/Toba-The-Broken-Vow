@@ -12,6 +12,7 @@ public class BackgroundFader : MonoBehaviour
     {
         if (backgroundImage != null && backgroundImage.sprite != newBg)
         {
+            gameObject.SetActive(true); // Pastikan objek aktif agar Coroutine bisa berjalan
             StartCoroutine(FadeRoutine(newBg));
         }
     }
@@ -31,8 +32,19 @@ public class BackgroundFader : MonoBehaviour
         }
 
         // Swap Sprite
-        if (newBg != null && backgroundImage != null)
-            backgroundImage.sprite = newBg;
+        if (backgroundImage != null)
+        {
+            if (newBg == null)
+            {
+                backgroundImage.sprite = null;
+                backgroundImage.color = new Color(1, 1, 1, 0); // Tembus pandang
+            }
+            else
+            {
+                backgroundImage.sprite = newBg;
+                backgroundImage.color = new Color(1, 1, 1, 1); // Muncul normal
+            }
+        }
 
         if (fadeOverlay != null)
         {

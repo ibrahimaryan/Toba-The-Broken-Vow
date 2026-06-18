@@ -12,4 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ab77d71d3b830b499fe68f1bee93993, type: 3}
   m_Name: Chapter1_Intro
   m_EditorClassIdentifier: Assembly-CSharp::VNDialogueData
-  lines: []
+  lines:
+  - speaker: {fileID: 0}
+    text: 
+    emotion: 0
+    position: 0
+    backgroundOverride: {fileID: 0}
+  - speaker: {fileID: 0}
+    text: 
+    emotion: 0
+    position: 0
+    backgroundOverride: {fileID: 0}
+  - speaker: {fileID: 0}
+    text: 
+    emotion: 0
+    position: 0
+    backgroundOverride: {fileID: 0}
+  - speaker: {fileID: 0}
+    text: 
+    emotion: 0
+    position: 0
+    backgroundOverride: {fileID: 0}

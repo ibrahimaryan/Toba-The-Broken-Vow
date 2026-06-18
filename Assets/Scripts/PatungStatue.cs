@@ -6,6 +6,7 @@ public class PatungStatue : MonoBehaviour
     [Header("Aset & Target")]
     [SerializeField] private Sprite fullColorSprite; 
     [SerializeField] private DoorController door; 
+    [SerializeField] private string memoryShardID = "Chapter1"; // ID shard yang mau di-unlock
 
     [Header("Blink Settings")]
     [SerializeField] private float blinkSpeed = 1.5f; 
@@ -34,7 +35,13 @@ public class PatungStatue : MonoBehaviour
     // FUNGSI BARU: Dipanggil dari PasswordTerminal saat password benar
     public void StartBlinkEffect()
     {
-        if (!isSolved && blinkCoroutine == null && spriteRenderer != null)
+        // Otomatis aktifkan game object jika masih mati (agar tidak error coroutine)
+        if (!gameObject.activeInHierarchy)
+        {
+            gameObject.SetActive(true);
+        }
+
+        if (!isSolved && blinkCoroutine == null && spriteRenderer != null && gameObject.activeInHierarchy)
         {
             blinkCoroutine = StartCoroutine(BlinkEffect());
         }
@@ -88,6 +95,17 @@ public class PatungStatue : MonoBehaviour
                     door.OpenDoor();
 
                 Debug.Log("Patung telah terpasang kail! Pintu terbuka.");
+
+                // MUNCULKAN UI MEMORY SHARD
+                if (MemoryShardManager.Instance != null && !string.IsNullOrEmpty(memoryShardID))
+                {
+                    MemoryShardManager.Instance.UnlockShard(memoryShardID);
+                }
+                else if (MemoryShardManager.Instance != null)
+                {
+                    // Jika lupa ngisi ID, langsung munculkan saja
+                    MemoryShardManager.Instance.ShowShardPopup();
+                }
             }
             else
             {

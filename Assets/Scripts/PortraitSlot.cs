@@ -16,12 +16,17 @@ public class PortraitSlot : MonoBehaviour
     {
         if (sprite == null)
         {
+            Debug.Log($"[PortraitSlot] {gameObject.name}: GAGAL! Sprite kosong/null. Membersihkan wadah.");
             Clear();
             return;
         }
         
         portraitImage.sprite = sprite;
         portraitImage.color = new Color(1, 1, 1, 1);
+        gameObject.SetActive(true); // Otomatis nyalakan wadah
+        
+        RectTransform rect = GetComponent<RectTransform>();
+        Debug.Log($"[PortraitSlot] {gameObject.name}: BERHASIL dipasang gambar '{sprite.name}'. Posisi X: {rect.anchoredPosition.x}, Y: {rect.anchoredPosition.y}, Apakah wadah aktif? {gameObject.activeInHierarchy}");
     }
 
     public void SetDimmed(bool isDimmed)
@@ -37,5 +42,6 @@ public class PortraitSlot : MonoBehaviour
     {
         portraitImage.sprite = null;
         portraitImage.color = new Color(1, 1, 1, 0); // Hide image
+        gameObject.SetActive(false); // Otomatis sembunyikan wadah
     }
 }

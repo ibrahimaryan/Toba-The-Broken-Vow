@@ -23,13 +23,14 @@ public class DialogueManagerCS : MonoBehaviour
     private bool isPlaying = false;
     private bool isTyping = false;
     private string currentFullText = "";
+    private Sprite currentBgSprite;
 
     public void PlayDialogue(VNDialogueData dialogueData)
     {
         currentDialogue = dialogueData;
         currentLineIndex = 0;
         isPlaying = true;
-        dialoguePanel.SetActive(true);
+        currentBgSprite = null;
         
         // Clear portraits initially
         if (leftSlot != null) leftSlot.Clear();
@@ -53,6 +54,11 @@ public class DialogueManagerCS : MonoBehaviour
         if (currentLineIndex < currentDialogue.lines.Count)
         {
             VNDialogueLine line = currentDialogue.lines[currentLineIndex];
+            
+            // Tampilkan panel HANYA jika teks tidak kosong atau ada karakter yang bicara
+            bool showPanel = !string.IsNullOrWhiteSpace(line.text) || line.speaker != null;
+            if (dialoguePanel != null) dialoguePanel.SetActive(showPanel);
+
             UpdateVisuals(line);
             StartCoroutine(TypeLine(line));
             currentLineIndex++;
@@ -65,6 +71,22 @@ public class DialogueManagerCS : MonoBehaviour
 
     private void UpdateVisuals(VNDialogueLine line)
     {
+        // 1. Cek apakah background berubah ke gambar yang BARU
+        if (line.backgroundOverride != null && line.backgroundOverride != currentBgSprite)
+        {
+            // Jika berubah, bersihkan semua potret karakter agar layar segar kembali
+            if (leftSlot != null) leftSlot.Clear();
+            if (centerSlot != null) centerSlot.Clear();
+            if (rightSlot != null) rightSlot.Clear();
+            
+            if (backgroundFader != null)
+            {
+                backgroundFader.SetBackground(line.backgroundOverride);
+            }
+            currentBgSprite = line.backgroundOverride;
+        }
+
+        // 2. Tampilkan Karakter
         if (line.speaker != null)
         {
             if (speakerNameText != null) speakerNameText.text = line.speaker.characterName;
@@ -96,11 +118,6 @@ public class DialogueManagerCS : MonoBehaviour
             if (centerSlot != null) centerSlot.SetDimmed(true);
             if (rightSlot != null) rightSlot.SetDimmed(true);
         }
-
-        if (line.backgroundOverride != null && backgroundFader != null)
-        {
-            backgroundFader.SetBackground(line.backgroundOverride);
-        }
     }
 
     private IEnumerator TypeLine(VNDialogueLine line)
@@ -109,10 +126,13 @@ public class DialogueManagerCS : MonoBehaviour
         currentFullText = line.text;
         dialogueText.text = "";
         
-        foreach (char c in line.text.ToCharArray())
+        if (!string.IsNullOrEmpty(line.text))
         {
-            dialogueText.text += c;
-            yield return new WaitForSeconds(0.02f); // Typing speed
+            foreach (char c in line.text.ToCharArray())
+            {
+                dialogueText.text += c;
+                yield return new WaitForSeconds(0.02f); // Typing speed
+            }
         }
         isTyping = false;
     }
@@ -121,13 +141,33 @@ public class DialogueManagerCS : MonoBehaviour
     {
         isPlaying = false;
         if (dialoguePanel != null) dialoguePanel.SetActive(false);
+        
+        // Bersihkan layar dari semua potret
+        if (leftSlot != null) leftSlot.Clear();
+        if (centerSlot != null) centerSlot.Clear();
+        if (rightSlot != null) rightSlot.Clear();
+        
+        // Kembalikan background ke kondisi normal (tembus pandang ke gameplay)
+        if (backgroundFader != null) backgroundFader.SetBackground(null);
+        currentBgSprite = null;
     }
     
     private void Update()
     {
         if (!isPlaying) return;
         
-        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
+        bool nextClicked = false;
+
+#if ENABLE_INPUT_SYSTEM
+        // Mendukung sistem Input System baru (Unity 6+)
+        if (UnityEngine.InputSystem.Mouse.current != null && UnityEngine.InputSystem.Mouse.current.leftButton.wasPressedThisFrame) nextClicked = true;
+        if (UnityEngine.InputSystem.Keyboard.current != null && (UnityEngine.InputSystem.Keyboard.current.spaceKey.wasPressedThisFrame || UnityEngine.InputSystem.Keyboard.current.enterKey.wasPressedThisFrame)) nextClicked = true;
+#else
+        // Mendukung sistem Input Manager lama
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return)) nextClicked = true;
+#endif
+
+        if (nextClicked)
         {
             DisplayNextLine();
         }

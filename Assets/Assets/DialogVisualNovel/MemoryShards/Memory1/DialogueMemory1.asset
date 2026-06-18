@@ -12,4 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ab77d71d3b830b499fe68f1bee93993, type: 3}
   m_Name: DialogueMemory1
   m_EditorClassIdentifier: Assembly-CSharp::VNDialogueData
-  lines: []
+  lines:
+  - speaker: {fileID: 11400000, guid: 5a317f8e905122e4b80de0d576f24bde, type: 2}
+    text: Ayahh??
+    emotion: 4
+    position: 1
+    backgroundOverride: {fileID: 0}
+  - speaker: {fileID: 11400000, guid: 05f1881af97bcd44196b835b0b3bf3f1, type: 2}
+    text: Sudah seharian penuh aku melempar kail, tak satu pun ikan yang mendekat...
+      Apakah hari ini aku harus kelaparan?
+    emotion: 4
+    position: 1
+    backgroundOverride: {fileID: 0}
+  - speaker: {fileID: 0}
+    text: 
+    emotion: 0
+    position: 1
+    backgroundOverride: {fileID: -2385007020577217817, guid: 7d49329c9c042704b8feb673dcc0eb2c, type: 3}
+  - speaker: {fileID: 11400000, guid: 05f1881af97bcd44196b835b0b3bf3f1, type: 2}
+    text: Tunggu... tarikan ini kuat sekali! Ikan apa ini? Sisiknya... berkilau seperti
+      emas murni! Aku belum pernah melihat ikan seajaib ini di sungai mana pun!
+    emotion: 3
+    position: 1
+    backgroundOverride: {fileID: 0}

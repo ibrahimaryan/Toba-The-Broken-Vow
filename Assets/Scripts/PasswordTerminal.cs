@@ -133,7 +133,11 @@ public class PasswordTerminal : MonoBehaviour
         {
             Debug.Log("Kode Benar! Pemain Mendapatkan Kail Pancing.");
             isPuzzleSolved = true;
-
+            if (ToDoManager.Instance != null)
+            {
+                // Angka 1 berarti mencoret misi urutan KEDUA di daftar misi Chapter tersebut
+                ToDoManager.Instance.SelesaikanMisi(1); 
+            }
             if (GameManager.Instance != null)
             {
                 GameManager.Instance.SetFlag("chapter1_puzzle_solved", true);

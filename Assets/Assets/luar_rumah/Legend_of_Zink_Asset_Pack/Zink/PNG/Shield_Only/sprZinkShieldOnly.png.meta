@@ -1,0 +1,936 @@
+fileFormatVersion: 2
+guid: 4d696cd233b4fb24cbea067fbf462441
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1072658600752356685
+    second: sprZinkShieldOnly_0
+  - first:
+      213: -8837400221687288176
+    second: sprZinkShieldOnly_1
+  - first:
+      213: -5220852346752875927
+    second: sprZinkShieldOnly_2
+  - first:
+      213: -1122194769884612328
+    second: sprZinkShieldOnly_3
+  - first:
+      213: -2924553955589557323
+    second: sprZinkShieldOnly_4
+  - first:
+      213: 3449874514992757750
+    second: sprZinkShieldOnly_5
+  - first:
+      213: -1047307366084291237
+    second: sprZinkShieldOnly_6
+  - first:
+      213: -1542745301876814596
+    second: sprZinkShieldOnly_7
+  - first:
+      213: -9146646226658456619
+    second: sprZinkShieldOnly_8
+  - first:
+      213: -3102129649267213994
+    second: sprZinkShieldOnly_9
+  - first:
+      213: -120377667535451941
+    second: sprZinkShieldOnly_10
+  - first:
+      213: 624354068045220955
+    second: sprZinkShieldOnly_11
+  - first:
+      213: 3466725994511962
+    second: sprZinkShieldOnly_12
+  - first:
+      213: -4328883038561170250
+    second: sprZinkShieldOnly_13
+  - first:
+      213: -6813676889739427428
+    second: sprZinkShieldOnly_14
+  - first:
+      213: -6078367782506060628
+    second: sprZinkShieldOnly_15
+  - first:
+      213: -5559206316754331386
+    second: sprZinkShieldOnly_16
+  - first:
+      213: -1028639537343078436
+    second: sprZinkShieldOnly_17
+  - first:
+      213: -3426837704614954246
+    second: sprZinkShieldOnly_18
+  - first:
+      213: -5085452307153311725
+    second: sprZinkShieldOnly_19
+  - first:
+      213: 3678007834144693717
+    second: sprZinkShieldOnly_20
+  - first:
+      213: -2003969879818908336
+    second: sprZinkShieldOnly_21
+  - first:
+      213: 916338206512964084
+    second: sprZinkShieldOnly_22
+  - first:
+      213: 4907002768955983668
+    second: sprZinkShieldOnly_23
+  - first:
+      213: -5983965937601942137
+    second: sprZinkShieldOnly_24
+  - first:
+      213: -495418420044558202
+    second: sprZinkShieldOnly_25
+  - first:
+      213: 6177857745286603482
+    second: sprZinkShieldOnly_26
+  - first:
+      213: -2623457744520356931
+    second: sprZinkShieldOnly_27
+  - first:
+      213: 9116070003275197302
+    second: sprZinkShieldOnly_28
+  - first:
+      213: 1941565961422883108
+    second: sprZinkShieldOnly_29
+  - first:
+      213: -5527842396002085471
+    second: sprZinkShieldOnly_30
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sprZinkShieldOnly_0
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 15
+        width: 102
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b263e09fa62d11f0800000000000000
+      internalID: -1072658600752356685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkShieldOnly_1
+      rect:
+        serializedVersion: 2
+        x: 1127
+        y: 15
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09eee58225f3b5580800000000000000
+      internalID: -8837400221687288176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkShieldOnly_2
+      rect:
+        serializedVersion: 2
+        x: 1175
+        y: 15
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 962c70fa37ecb87b0800000000000000
+      internalID: -5220852346752875927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkShieldOnly_3
+      rect:
+        serializedVersion: 2
+        x: 1515
+        y: 15
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 819f93c6dc92d60f0800000000000000
+      internalID: -1122194769884612328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkShieldOnly_4
+      rect:
+        serializedVersion: 2
+        x: 1563
+        y: 17
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b3fe9e1ca5e967d0800000000000000
+      internalID: -2924553955589557323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkShieldOnly_5
+      rect:
+        serializedVersion: 2
+        x: 1611
+        y: 17
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fbf0d9d79a60ef20800000000000000
+      internalID: 3449874514992757750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkShieldOnly_6
+      rect:
+        serializedVersion: 2
+        x: 1659
+        y: 17
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5555e9df773771f0800000000000000
+      internalID: -1047307366084291237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkShieldOnly_7
+      rect:
+        serializedVersion: 2
+        x: 1707
+        y: 17
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfccabe5251179ae0800000000000000
+      internalID: -1542745301876814596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkShieldOnly_8
+      rect:
+        serializedVersion: 2
+        x: 1755
+        y: 17
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5db0bd5c7b5901180800000000000000
+      internalID: -9146646226658456619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkShieldOnly_9
+      rect:
+        serializedVersion: 2
+        x: 1803
+        y: 15
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6597830158503f4d0800000000000000
+      internalID: -3102129649267213994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkShieldOnly_10
+      rect:
+        serializedVersion: 2
+        x: 1851
+        y: 17
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd8c8af2625545ef0800000000000000
+      internalID: -120377667535451941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkShieldOnly_11
+      rect:
+        serializedVersion: 2
+        x: 1899
+        y: 17
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5cc7e787b62aa800800000000000000
+      internalID: 624354068045220955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkShieldOnly_12
+      rect:
+        serializedVersion: 2
+        x: 2031
+        y: 15
+        width: 101
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5ebf6b08f05c0000800000000000000
+      internalID: 3466725994511962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkShieldOnly_13
+      rect:
+        serializedVersion: 2
+        x: 2655
+        y: 15
+        width: 54
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bc0954dfc7bce3c0800000000000000
+      internalID: -4328883038561170250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkShieldOnly_14
+      rect:
+        serializedVersion: 2
+        x: 2751
+        y: 15
+        width: 52
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c910bcc18f4f071a0800000000000000
+      internalID: -6813676889739427428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkShieldOnly_15
+      rect:
+        serializedVersion: 2
+        x: 2847
+        y: 15
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca42c85d4bc45aba0800000000000000
+      internalID: -6078367782506060628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkShieldOnly_16
+      rect:
+        serializedVersion: 2
+        x: 2895
+        y: 15
+        width: 52
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60910c01f4bb9d2b0800000000000000
+      internalID: -5559206316754331386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkShieldOnly_17
+      rect:
+        serializedVersion: 2
+        x: 2991
+        y: 15
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdf5ebe6ac989b1f0800000000000000
+      internalID: -1028639537343078436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkShieldOnly_18
+      rect:
+        serializedVersion: 2
+        x: 3039
+        y: 15
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afab289834d6170d0800000000000000
+      internalID: -3426837704614954246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkShieldOnly_19
+      rect:
+        serializedVersion: 2
+        x: 3807
+        y: 15
+        width: 543
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 318afed0218dc69b0800000000000000
+      internalID: -5085452307153311725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkShieldOnly_20
+      rect:
+        serializedVersion: 2
+        x: 4391
+        y: 16
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dd5c4363a8ea0330800000000000000
+      internalID: 3678007834144693717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkShieldOnly_21
+      rect:
+        serializedVersion: 2
+        x: 4443
+        y: 18
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05dcfc403087034e0800000000000000
+      internalID: -2003969879818908336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkShieldOnly_22
+      rect:
+        serializedVersion: 2
+        x: 4959
+        y: 18
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f1e25d6ebc77bc00800000000000000
+      internalID: 916338206512964084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkShieldOnly_23
+      rect:
+        serializedVersion: 2
+        x: 5019
+        y: 17
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 437ca7b150d291440800000000000000
+      internalID: 4907002768955983668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkShieldOnly_24
+      rect:
+        serializedVersion: 2
+        x: 5067
+        y: 17
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78de2352faea4fca0800000000000000
+      internalID: -5983965937601942137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkShieldOnly_25
+      rect:
+        serializedVersion: 2
+        x: 5103
+        y: 18
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6801f02629bef19f0800000000000000
+      internalID: -495418420044558202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkShieldOnly_26
+      rect:
+        serializedVersion: 2
+        x: 5163
+        y: 17
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad224bc33e82cb550800000000000000
+      internalID: 6177857745286603482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkShieldOnly_27
+      rect:
+        serializedVersion: 2
+        x: 5211
+        y: 17
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbbdd9eb41b979bd0800000000000000
+      internalID: -2623457744520356931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkShieldOnly_28
+      rect:
+        serializedVersion: 2
+        x: 5247
+        y: 18
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67befc47e59c28e70800000000000000
+      internalID: 9116070003275197302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkShieldOnly_29
+      rect:
+        serializedVersion: 2
+        x: 5307
+        y: 17
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 429c99e74f3d1fa10800000000000000
+      internalID: 1941565961422883108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkShieldOnly_30
+      rect:
+        serializedVersion: 2
+        x: 5355
+        y: 17
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a593fbe0a82943b0800000000000000
+      internalID: -5527842396002085471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sprZinkShieldOnly_0: -1072658600752356685
+      sprZinkShieldOnly_1: -8837400221687288176
+      sprZinkShieldOnly_10: -120377667535451941
+      sprZinkShieldOnly_11: 624354068045220955
+      sprZinkShieldOnly_12: 3466725994511962
+      sprZinkShieldOnly_13: -4328883038561170250
+      sprZinkShieldOnly_14: -6813676889739427428
+      sprZinkShieldOnly_15: -6078367782506060628
+      sprZinkShieldOnly_16: -5559206316754331386
+      sprZinkShieldOnly_17: -1028639537343078436
+      sprZinkShieldOnly_18: -3426837704614954246
+      sprZinkShieldOnly_19: -5085452307153311725
+      sprZinkShieldOnly_2: -5220852346752875927
+      sprZinkShieldOnly_20: 3678007834144693717
+      sprZinkShieldOnly_21: -2003969879818908336
+      sprZinkShieldOnly_22: 916338206512964084
+      sprZinkShieldOnly_23: 4907002768955983668
+      sprZinkShieldOnly_24: -5983965937601942137
+      sprZinkShieldOnly_25: -495418420044558202
+      sprZinkShieldOnly_26: 6177857745286603482
+      sprZinkShieldOnly_27: -2623457744520356931
+      sprZinkShieldOnly_28: 9116070003275197302
+      sprZinkShieldOnly_29: 1941565961422883108
+      sprZinkShieldOnly_3: -1122194769884612328
+      sprZinkShieldOnly_30: -5527842396002085471
+      sprZinkShieldOnly_4: -2924553955589557323
+      sprZinkShieldOnly_5: 3449874514992757750
+      sprZinkShieldOnly_6: -1047307366084291237
+      sprZinkShieldOnly_7: -1542745301876814596
+      sprZinkShieldOnly_8: -9146646226658456619
+      sprZinkShieldOnly_9: -3102129649267213994
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

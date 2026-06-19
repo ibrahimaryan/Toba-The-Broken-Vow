@@ -1,0 +1,3094 @@
+fileFormatVersion: 2
+guid: 72162b3cc91293e4b96929ae257c9d6f
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8583131981268374526
+    second: sprZink_0
+  - first:
+      213: 8841750216435265035
+    second: sprZink_1
+  - first:
+      213: 5876460539776507170
+    second: sprZink_2
+  - first:
+      213: -730423564298734476
+    second: sprZink_3
+  - first:
+      213: -6552872546281412452
+    second: sprZink_4
+  - first:
+      213: 959840008251266284
+    second: sprZink_5
+  - first:
+      213: 48725833891009267
+    second: sprZink_6
+  - first:
+      213: -2195786185192687281
+    second: sprZink_7
+  - first:
+      213: 1585348336625427816
+    second: sprZink_8
+  - first:
+      213: 8604704892129467585
+    second: sprZink_9
+  - first:
+      213: -7383764039364518757
+    second: sprZink_10
+  - first:
+      213: -7430678213798175126
+    second: sprZink_11
+  - first:
+      213: -3375257059994657437
+    second: sprZink_12
+  - first:
+      213: -5567911955842052509
+    second: sprZink_13
+  - first:
+      213: 3798700944763793853
+    second: sprZink_14
+  - first:
+      213: -8450734293912385675
+    second: sprZink_15
+  - first:
+      213: 2143154134881487426
+    second: sprZink_16
+  - first:
+      213: -2649069408851268373
+    second: sprZink_17
+  - first:
+      213: -6487665920473128202
+    second: sprZink_18
+  - first:
+      213: -2239489852290341942
+    second: sprZink_19
+  - first:
+      213: -1810326764907897898
+    second: sprZink_20
+  - first:
+      213: -5898865646800235040
+    second: sprZink_21
+  - first:
+      213: 5601815525077380287
+    second: sprZink_22
+  - first:
+      213: 8402368649957516554
+    second: sprZink_23
+  - first:
+      213: -6098905212536017410
+    second: sprZink_24
+  - first:
+      213: -6649200793723151660
+    second: sprZink_25
+  - first:
+      213: 3709744979709927225
+    second: sprZink_26
+  - first:
+      213: 1393750900662339257
+    second: sprZink_27
+  - first:
+      213: 6026239977526439141
+    second: sprZink_28
+  - first:
+      213: -1614106270840987696
+    second: sprZink_29
+  - first:
+      213: 245050619175760885
+    second: sprZink_30
+  - first:
+      213: 2582455085901419131
+    second: sprZink_31
+  - first:
+      213: 3057779758562988151
+    second: sprZink_32
+  - first:
+      213: -5584674262466831221
+    second: sprZink_33
+  - first:
+      213: -5484832262647116117
+    second: sprZink_34
+  - first:
+      213: 7508812788879583078
+    second: sprZink_35
+  - first:
+      213: -3791929362995630423
+    second: sprZink_36
+  - first:
+      213: -37010339252191339
+    second: sprZink_37
+  - first:
+      213: 2831704381614526848
+    second: sprZink_38
+  - first:
+      213: -5865476266947823562
+    second: sprZink_39
+  - first:
+      213: -2224277470126997018
+    second: sprZink_40
+  - first:
+      213: -5546282976051280750
+    second: sprZink_41
+  - first:
+      213: -4047312309037114133
+    second: sprZink_42
+  - first:
+      213: 6372608602411480449
+    second: sprZink_43
+  - first:
+      213: -9182727951825545884
+    second: sprZink_44
+  - first:
+      213: -346690340736102082
+    second: sprZink_45
+  - first:
+      213: 3391305554027883084
+    second: sprZink_46
+  - first:
+      213: 130077948056113883
+    second: sprZink_47
+  - first:
+      213: 8163148283596587308
+    second: sprZink_48
+  - first:
+      213: 6778294617768403000
+    second: sprZink_49
+  - first:
+      213: 3418462806759867123
+    second: sprZink_50
+  - first:
+      213: -394588537310013252
+    second: sprZink_51
+  - first:
+      213: -4094706588215642238
+    second: sprZink_52
+  - first:
+      213: -5225345672189576045
+    second: sprZink_53
+  - first:
+      213: 7450246724989476484
+    second: sprZink_54
+  - first:
+      213: -8586578588556245536
+    second: sprZink_55
+  - first:
+      213: -4792071274047411264
+    second: sprZink_56
+  - first:
+      213: 2428821114255815173
+    second: sprZink_57
+  - first:
+      213: -8598797302860171673
+    second: sprZink_58
+  - first:
+      213: -8106750991321706851
+    second: sprZink_59
+  - first:
+      213: 916668257041616642
+    second: sprZink_60
+  - first:
+      213: 771695291178516967
+    second: sprZink_61
+  - first:
+      213: -4500503863603890518
+    second: sprZink_62
+  - first:
+      213: 2951373672000365990
+    second: sprZink_63
+  - first:
+      213: -6433162085911899113
+    second: sprZink_64
+  - first:
+      213: -4305663920416981500
+    second: sprZink_65
+  - first:
+      213: -8263412114056227620
+    second: sprZink_66
+  - first:
+      213: 6648805923804625080
+    second: sprZink_67
+  - first:
+      213: 3537276219938915851
+    second: sprZink_68
+  - first:
+      213: -3373719180244106096
+    second: sprZink_69
+  - first:
+      213: -9184777742916355215
+    second: sprZink_70
+  - first:
+      213: 967481915639987991
+    second: sprZink_71
+  - first:
+      213: -4643036512141793646
+    second: sprZink_72
+  - first:
+      213: -7564480096465755086
+    second: sprZink_73
+  - first:
+      213: 2454405435249275802
+    second: sprZink_74
+  - first:
+      213: -7813782963854877234
+    second: sprZink_75
+  - first:
+      213: -5426269179011698038
+    second: sprZink_76
+  - first:
+      213: 6121628669045912109
+    second: sprZink_77
+  - first:
+      213: -3399862999849646957
+    second: sprZink_78
+  - first:
+      213: 6458636426951807275
+    second: sprZink_79
+  - first:
+      213: 2913301338874888000
+    second: sprZink_80
+  - first:
+      213: -988727188932306397
+    second: sprZink_81
+  - first:
+      213: -2383293910499289732
+    second: sprZink_82
+  - first:
+      213: -4131843952588343366
+    second: sprZink_83
+  - first:
+      213: 8931695311458960218
+    second: sprZink_84
+  - first:
+      213: -5112283382946806570
+    second: sprZink_85
+  - first:
+      213: -3222422331807017733
+    second: sprZink_86
+  - first:
+      213: 703888482137368288
+    second: sprZink_87
+  - first:
+      213: 1810291049607869989
+    second: sprZink_88
+  - first:
+      213: 776671118413039789
+    second: sprZink_89
+  - first:
+      213: -5714201391515862729
+    second: sprZink_90
+  - first:
+      213: -4497851906621005246
+    second: sprZink_91
+  - first:
+      213: 4837350046686411263
+    second: sprZink_92
+  - first:
+      213: -1636801631745299060
+    second: sprZink_93
+  - first:
+      213: 3644779639743633786
+    second: sprZink_94
+  - first:
+      213: 800085928701457258
+    second: sprZink_95
+  - first:
+      213: -2642639809120460880
+    second: sprZink_96
+  - first:
+      213: -6041615969029363856
+    second: sprZink_97
+  - first:
+      213: -8517891718004660663
+    second: sprZink_98
+  - first:
+      213: 744350472734692693
+    second: sprZink_99
+  - first:
+      213: -5029249424519314952
+    second: sprZink_100
+  - first:
+      213: 3548368779636282976
+    second: sprZink_101
+  - first:
+      213: 1841806670065365879
+    second: sprZink_102
+  - first:
+      213: 359874047797765506
+    second: sprZink_103
+  - first:
+      213: -4813444197414080731
+    second: sprZink_104
+  - first:
+      213: 219783498407348272
+    second: sprZink_105
+  - first:
+      213: 9027207360543991723
+    second: sprZink_106
+  - first:
+      213: -1044549180108607209
+    second: sprZink_107
+  - first:
+      213: -4578724879029566576
+    second: sprZink_108
+  - first:
+      213: 3121593320071799612
+    second: sprZink_109
+  - first:
+      213: 5458514482976036363
+    second: sprZink_110
+  - first:
+      213: 2969928655342303599
+    second: sprZink_111
+  - first:
+      213: -8280000341620402502
+    second: sprZink_112
+  - first:
+      213: -2491812104729877113
+    second: sprZink_113
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sprZink_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20c243c30f692e880800000000000000
+      internalID: -8583131981268374526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_1
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0e6b5be9f434ba70800000000000000
+      internalID: 8841750216435265035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_2
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22d9af1e9b16d8150800000000000000
+      internalID: 5876460539776507170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_3
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 474366263a30dd5f0800000000000000
+      internalID: -730423564298734476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_4
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c98ac7443258f05a0800000000000000
+      internalID: -6552872546281412452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_5
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce4560de669025d00800000000000000
+      internalID: 959840008251266284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_6
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f2557443eb1da000800000000000000
+      internalID: 48725833891009267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_7
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 15
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4931ec29100781e0800000000000000
+      internalID: -2195786185192687281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_8
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 865a0d1a9e9400610800000000000000
+      internalID: 1585348336625427816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_9
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 17
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cc517c728d0a6770800000000000000
+      internalID: 8604704892129467585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_10
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 18
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9cdf502ab9978990800000000000000
+      internalID: -7383764039364518757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_11
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 20
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6e5352b88de0e890800000000000000
+      internalID: -7430678213798175126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_12
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36d9369369da821d0800000000000000
+      internalID: -3375257059994657437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_13
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36e4263839dcab2b0800000000000000
+      internalID: -5567911955842052509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_14
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db136940262b7b430800000000000000
+      internalID: 3798700944763793853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_15
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57704200fe5f8ba80800000000000000
+      internalID: -8450734293912385675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_16
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24a458ca4530ebd10800000000000000
+      internalID: 2143154134881487426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_17
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 15
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bece014786d9c3bd0800000000000000
+      internalID: -2649069408851268373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_18
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f2aacce73e27f5a0800000000000000
+      internalID: -6487665920473128202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_19
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac3642c38dbbbe0e0800000000000000
+      internalID: -2239489852290341942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_20
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6db584a166d60e6e0800000000000000
+      internalID: -1810326764907897898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_21
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 17
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e597b0a2f4032ea0800000000000000
+      internalID: -5898865646800235040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_22
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 17
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbc61855a85adbd40800000000000000
+      internalID: 5601815525077380287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_23
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 15
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a05a89cf4c53b9470800000000000000
+      internalID: 8402368649957516554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_24
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 15
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efd2308c5065c5ba0800000000000000
+      internalID: -6098905212536017410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_25
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dad2e96b1b49b3a0800000000000000
+      internalID: -6649200793723151660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_26
+      rect:
+        serializedVersion: 2
+        x: 1263
+        y: 15
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93f16ea6769ab7330800000000000000
+      internalID: 3709744979709927225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_27
+      rect:
+        serializedVersion: 2
+        x: 1311
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b60c5b4f09975310800000000000000
+      internalID: 1393750900662339257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_28
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5eca8b7c45181a350800000000000000
+      internalID: 6026239977526439141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_29
+      rect:
+        serializedVersion: 2
+        x: 1407
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dfdac806ea8999e0800000000000000
+      internalID: -1614106270840987696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_30
+      rect:
+        serializedVersion: 2
+        x: 1455
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f3f5f36d38966300800000000000000
+      internalID: 245050619175760885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_31
+      rect:
+        serializedVersion: 2
+        x: 1503
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b721e8bd739b6d320800000000000000
+      internalID: 2582455085901419131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_32
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 770d6865d7a6f6a20800000000000000
+      internalID: 3057779758562988151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_33
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8cd56fd8504f72b0800000000000000
+      internalID: -5584674262466831221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_34
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bae0154fd16f1e3b0800000000000000
+      internalID: -5484832262647116117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_35
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 667e316b279a43860800000000000000
+      internalID: 7508812788879583078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_36
+      rect:
+        serializedVersion: 2
+        x: 1743
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aea549b55c506bc0800000000000000
+      internalID: -3791929362995630423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_37
+      rect:
+        serializedVersion: 2
+        x: 1791
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59f3bd3ea438c7ff0800000000000000
+      internalID: -37010339252191339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_38
+      rect:
+        serializedVersion: 2
+        x: 1839
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0811d0fc12c3c4720800000000000000
+      internalID: 2831704381614526848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_39
+      rect:
+        serializedVersion: 2
+        x: 1887
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 638371e6964a99ea0800000000000000
+      internalID: -5865476266947823562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_40
+      rect:
+        serializedVersion: 2
+        x: 1935
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e10d27fc67c121e0800000000000000
+      internalID: -2224277470126997018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_41
+      rect:
+        serializedVersion: 2
+        x: 1983
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 294caacc405a703b0800000000000000
+      internalID: -5546282976051280750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_42
+      rect:
+        serializedVersion: 2
+        x: 2031
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: becd6c406ee05d7c0800000000000000
+      internalID: -4047312309037114133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_43
+      rect:
+        serializedVersion: 2
+        x: 2079
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 185b557a2cd007850800000000000000
+      internalID: 6372608602411480449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_44
+      rect:
+        serializedVersion: 2
+        x: 2127
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 465536a7495609080800000000000000
+      internalID: -9182727951825545884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_45
+      rect:
+        serializedVersion: 2
+        x: 2175
+        y: 17
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e319d51d8fe403bf0800000000000000
+      internalID: -346690340736102082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_46
+      rect:
+        serializedVersion: 2
+        x: 2223
+        y: 17
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4a24a8fe66501f20800000000000000
+      internalID: 3391305554027883084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_47
+      rect:
+        serializedVersion: 2
+        x: 2271
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd21ffe54312ec100800000000000000
+      internalID: 130077948056113883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_48
+      rect:
+        serializedVersion: 2
+        x: 2319
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c214d9c1d14594170800000000000000
+      internalID: 8163148283596587308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_49
+      rect:
+        serializedVersion: 2
+        x: 2367
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 830270bba07511e50800000000000000
+      internalID: 6778294617768403000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_50
+      rect:
+        serializedVersion: 2
+        x: 2415
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f28eca9fc1d07f20800000000000000
+      internalID: 3418462806759867123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_51
+      rect:
+        serializedVersion: 2
+        x: 2463
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb81231e0d3268af0800000000000000
+      internalID: -394588537310013252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_52
+      rect:
+        serializedVersion: 2
+        x: 2511
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28774fd7d0eac27c0800000000000000
+      internalID: -4094706588215642238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_53
+      rect:
+        serializedVersion: 2
+        x: 2559
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39cf384dbc7db77b0800000000000000
+      internalID: -5225345672189576045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_54
+      rect:
+        serializedVersion: 2
+        x: 2607
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48ed30c5ce7946760800000000000000
+      internalID: 7450246724989476484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_55
+      rect:
+        serializedVersion: 2
+        x: 2655
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e54121744856d880800000000000000
+      internalID: -8586578588556245536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_56
+      rect:
+        serializedVersion: 2
+        x: 2703
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cbec04d0942f7db0800000000000000
+      internalID: -4792071274047411264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_57
+      rect:
+        serializedVersion: 2
+        x: 2751
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 502bf2a5fe7e4b120800000000000000
+      internalID: 2428821114255815173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_58
+      rect:
+        serializedVersion: 2
+        x: 2799
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 766be63596feaa880800000000000000
+      internalID: -8598797302860171673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_59
+      rect:
+        serializedVersion: 2
+        x: 2847
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9e49bfbce80f7f80800000000000000
+      internalID: -8106750991321706851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_60
+      rect:
+        serializedVersion: 2
+        x: 2895
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20f87dd4ce8a8bc00800000000000000
+      internalID: 916668257041616642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_61
+      rect:
+        serializedVersion: 2
+        x: 2943
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e1898957cc95ba00800000000000000
+      internalID: 771695291178516967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_62
+      rect:
+        serializedVersion: 2
+        x: 2991
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa6fd9ba49ffa81c0800000000000000
+      internalID: -4500503863603890518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_63
+      rect:
+        serializedVersion: 2
+        x: 3039
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a5a507b7b265f820800000000000000
+      internalID: 2951373672000365990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_64
+      rect:
+        serializedVersion: 2
+        x: 3087
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 714d5beca21d8b6a0800000000000000
+      internalID: -6433162085911899113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_65
+      rect:
+        serializedVersion: 2
+        x: 3135
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40e745d0a753f34c0800000000000000
+      internalID: -4305663920416981500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_66
+      rect:
+        serializedVersion: 2
+        x: 3183
+        y: 15
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd4d405b676725d80800000000000000
+      internalID: -8263412114056227620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_67
+      rect:
+        serializedVersion: 2
+        x: 3231
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b833e4c2cd454c50800000000000000
+      internalID: 6648805923804625080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_68
+      rect:
+        serializedVersion: 2
+        x: 3279
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0645e11bfde61130800000000000000
+      internalID: 3537276219938915851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_69
+      rect:
+        serializedVersion: 2
+        x: 3327
+        y: 17
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 094c0a1c7442e21d0800000000000000
+      internalID: -3373719180244106096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_70
+      rect:
+        serializedVersion: 2
+        x: 3375
+        y: 17
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17b7e8c4e4d198080800000000000000
+      internalID: -9184777742916355215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_71
+      rect:
+        serializedVersion: 2
+        x: 3423
+        y: 15
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71ff5542daf2d6d00800000000000000
+      internalID: 967481915639987991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_72
+      rect:
+        serializedVersion: 2
+        x: 3471
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 296ae9e54ee909fb0800000000000000
+      internalID: -4643036512141793646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_73
+      rect:
+        serializedVersion: 2
+        x: 3519
+        y: 15
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23465ab3e61950790800000000000000
+      internalID: -7564480096465755086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_74
+      rect:
+        serializedVersion: 2
+        x: 3567
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9332d64dbccf0220800000000000000
+      internalID: 2454405435249275802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_75
+      rect:
+        serializedVersion: 2
+        x: 3615
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecd5e672bcddf8390800000000000000
+      internalID: -7813782963854877234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_76
+      rect:
+        serializedVersion: 2
+        x: 3663
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a827b596ee402b4b0800000000000000
+      internalID: -5426269179011698038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_77
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d22345937d464f450800000000000000
+      internalID: 6121628669045912109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_78
+      rect:
+        serializedVersion: 2
+        x: 3759
+        y: 15
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 394c7f86d9241d0d0800000000000000
+      internalID: -3399862999849646957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_79
+      rect:
+        serializedVersion: 2
+        x: 3807
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b215cd96c9fa1a950800000000000000
+      internalID: 6458636426951807275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_80
+      rect:
+        serializedVersion: 2
+        x: 3855
+        y: 15
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04fbe43e1202e6820800000000000000
+      internalID: 2913301338874888000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_81
+      rect:
+        serializedVersion: 2
+        x: 3903
+        y: 15
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32a5be33cd55742f0800000000000000
+      internalID: -988727188932306397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_82
+      rect:
+        serializedVersion: 2
+        x: 3951
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c75965dc0d6dceed0800000000000000
+      internalID: -2383293910499289732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_83
+      rect:
+        serializedVersion: 2
+        x: 3999
+        y: 15
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab730aa01ddb8a6c0800000000000000
+      internalID: -4131843952588343366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_84
+      rect:
+        serializedVersion: 2
+        x: 4047
+        y: 15
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5388894091c3fb70800000000000000
+      internalID: 8931695311458960218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_85
+      rect:
+        serializedVersion: 2
+        x: 4095
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d4c25869558d09b0800000000000000
+      internalID: -5112283382946806570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_86
+      rect:
+        serializedVersion: 2
+        x: 4143
+        y: 15
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf45b5c56f7a743d0800000000000000
+      internalID: -3222422331807017733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_87
+      rect:
+        serializedVersion: 2
+        x: 4191
+        y: 15
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e6694b58d6b4c900800000000000000
+      internalID: 703888482137368288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_88
+      rect:
+        serializedVersion: 2
+        x: 4239
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52632f74e127f1910800000000000000
+      internalID: 1810291049607869989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_89
+      rect:
+        serializedVersion: 2
+        x: 4287
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da88058644a47ca00800000000000000
+      internalID: 776671118413039789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_90
+      rect:
+        serializedVersion: 2
+        x: 4335
+        y: 15
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73977ab0c1413b0b0800000000000000
+      internalID: -5714201391515862729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_91
+      rect:
+        serializedVersion: 2
+        x: 4383
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 242aa85858b6491c0800000000000000
+      internalID: -4497851906621005246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_92
+      rect:
+        serializedVersion: 2
+        x: 4431
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff976f2fc38b12340800000000000000
+      internalID: 4837350046686411263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_93
+      rect:
+        serializedVersion: 2
+        x: 4479
+        y: 17
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8daa0c8699e849e0800000000000000
+      internalID: -1636801631745299060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_94
+      rect:
+        serializedVersion: 2
+        x: 4527
+        y: 17
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a79de7f75cbd49230800000000000000
+      internalID: 3644779639743633786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_95
+      rect:
+        serializedVersion: 2
+        x: 4575
+        y: 15
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a63f902c9e97a1b00800000000000000
+      internalID: 800085928701457258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_96
+      rect:
+        serializedVersion: 2
+        x: 4623
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bf911c4815735bd0800000000000000
+      internalID: -2642639809120460880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_97
+      rect:
+        serializedVersion: 2
+        x: 4671
+        y: 15
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0776da8394ed72ca0800000000000000
+      internalID: -6041615969029363856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_98
+      rect:
+        serializedVersion: 2
+        x: 4719
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9462719bc9e5ac980800000000000000
+      internalID: -8517891718004660663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_99
+      rect:
+        serializedVersion: 2
+        x: 4767
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 555debbafc6745a00800000000000000
+      internalID: 744350472734692693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_100
+      rect:
+        serializedVersion: 2
+        x: 4815
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f140b46b44843ab0800000000000000
+      internalID: -5029249424519314952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_101
+      rect:
+        serializedVersion: 2
+        x: 4863
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0669e42ea965e3130800000000000000
+      internalID: 3548368779636282976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_102
+      rect:
+        serializedVersion: 2
+        x: 4911
+        y: 15
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 773f03a78696f8910800000000000000
+      internalID: 1841806670065365879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_103
+      rect:
+        serializedVersion: 2
+        x: 4959
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2852ede2a878ef400800000000000000
+      internalID: 359874047797765506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_104
+      rect:
+        serializedVersion: 2
+        x: 5007
+        y: 15
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52fe7f25106333db0800000000000000
+      internalID: -4813444197414080731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_105
+      rect:
+        serializedVersion: 2
+        x: 5055
+        y: 15
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03800166de3dc0300800000000000000
+      internalID: 219783498407348272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_106
+      rect:
+        serializedVersion: 2
+        x: 5103
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba724072445174d70800000000000000
+      internalID: 9027207360543991723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_107
+      rect:
+        serializedVersion: 2
+        x: 5151
+        y: 15
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71173311e040181f0800000000000000
+      internalID: -1044549180108607209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_108
+      rect:
+        serializedVersion: 2
+        x: 5199
+        y: 15
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 093033d4bf91570c0800000000000000
+      internalID: -4578724879029566576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_109
+      rect:
+        serializedVersion: 2
+        x: 5247
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c33ac10f590225b20800000000000000
+      internalID: 3121593320071799612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_110
+      rect:
+        serializedVersion: 2
+        x: 5295
+        y: 15
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b069c17700a80cb40800000000000000
+      internalID: 5458514482976036363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_111
+      rect:
+        serializedVersion: 2
+        x: 5343
+        y: 15
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f697eed606e473920800000000000000
+      internalID: 2969928655342303599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_112
+      rect:
+        serializedVersion: 2
+        x: 5391
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab65a910f87871d80800000000000000
+      internalID: -8280000341620402502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZink_113
+      rect:
+        serializedVersion: 2
+        x: 5439
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 785ae8ac71e4b6dd0800000000000000
+      internalID: -2491812104729877113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sprZink_0: -8583131981268374526
+      sprZink_1: 8841750216435265035
+      sprZink_10: -7383764039364518757
+      sprZink_100: -5029249424519314952
+      sprZink_101: 3548368779636282976
+      sprZink_102: 1841806670065365879
+      sprZink_103: 359874047797765506
+      sprZink_104: -4813444197414080731
+      sprZink_105: 219783498407348272
+      sprZink_106: 9027207360543991723
+      sprZink_107: -1044549180108607209
+      sprZink_108: -4578724879029566576
+      sprZink_109: 3121593320071799612
+      sprZink_11: -7430678213798175126
+      sprZink_110: 5458514482976036363
+      sprZink_111: 2969928655342303599
+      sprZink_112: -8280000341620402502
+      sprZink_113: -2491812104729877113
+      sprZink_12: -3375257059994657437
+      sprZink_13: -5567911955842052509
+      sprZink_14: 3798700944763793853
+      sprZink_15: -8450734293912385675
+      sprZink_16: 2143154134881487426
+      sprZink_17: -2649069408851268373
+      sprZink_18: -6487665920473128202
+      sprZink_19: -2239489852290341942
+      sprZink_2: 5876460539776507170
+      sprZink_20: -1810326764907897898
+      sprZink_21: -5898865646800235040
+      sprZink_22: 5601815525077380287
+      sprZink_23: 8402368649957516554
+      sprZink_24: -6098905212536017410
+      sprZink_25: -6649200793723151660
+      sprZink_26: 3709744979709927225
+      sprZink_27: 1393750900662339257
+      sprZink_28: 6026239977526439141
+      sprZink_29: -1614106270840987696
+      sprZink_3: -730423564298734476
+      sprZink_30: 245050619175760885
+      sprZink_31: 2582455085901419131
+      sprZink_32: 3057779758562988151
+      sprZink_33: -5584674262466831221
+      sprZink_34: -5484832262647116117
+      sprZink_35: 7508812788879583078
+      sprZink_36: -3791929362995630423
+      sprZink_37: -37010339252191339
+      sprZink_38: 2831704381614526848
+      sprZink_39: -5865476266947823562
+      sprZink_4: -6552872546281412452
+      sprZink_40: -2224277470126997018
+      sprZink_41: -5546282976051280750
+      sprZink_42: -4047312309037114133
+      sprZink_43: 6372608602411480449
+      sprZink_44: -9182727951825545884
+      sprZink_45: -346690340736102082
+      sprZink_46: 3391305554027883084
+      sprZink_47: 130077948056113883
+      sprZink_48: 8163148283596587308
+      sprZink_49: 6778294617768403000
+      sprZink_5: 959840008251266284
+      sprZink_50: 3418462806759867123
+      sprZink_51: -394588537310013252
+      sprZink_52: -4094706588215642238
+      sprZink_53: -5225345672189576045
+      sprZink_54: 7450246724989476484
+      sprZink_55: -8586578588556245536
+      sprZink_56: -4792071274047411264
+      sprZink_57: 2428821114255815173
+      sprZink_58: -8598797302860171673
+      sprZink_59: -8106750991321706851
+      sprZink_6: 48725833891009267
+      sprZink_60: 916668257041616642
+      sprZink_61: 771695291178516967
+      sprZink_62: -4500503863603890518
+      sprZink_63: 2951373672000365990
+      sprZink_64: -6433162085911899113
+      sprZink_65: -4305663920416981500
+      sprZink_66: -8263412114056227620
+      sprZink_67: 6648805923804625080
+      sprZink_68: 3537276219938915851
+      sprZink_69: -3373719180244106096
+      sprZink_7: -2195786185192687281
+      sprZink_70: -9184777742916355215
+      sprZink_71: 967481915639987991
+      sprZink_72: -4643036512141793646
+      sprZink_73: -7564480096465755086
+      sprZink_74: 2454405435249275802
+      sprZink_75: -7813782963854877234
+      sprZink_76: -5426269179011698038
+      sprZink_77: 6121628669045912109
+      sprZink_78: -3399862999849646957
+      sprZink_79: 6458636426951807275
+      sprZink_8: 1585348336625427816
+      sprZink_80: 2913301338874888000
+      sprZink_81: -988727188932306397
+      sprZink_82: -2383293910499289732
+      sprZink_83: -4131843952588343366
+      sprZink_84: 8931695311458960218
+      sprZink_85: -5112283382946806570
+      sprZink_86: -3222422331807017733
+      sprZink_87: 703888482137368288
+      sprZink_88: 1810291049607869989
+      sprZink_89: 776671118413039789
+      sprZink_9: 8604704892129467585
+      sprZink_90: -5714201391515862729
+      sprZink_91: -4497851906621005246
+      sprZink_92: 4837350046686411263
+      sprZink_93: -1636801631745299060
+      sprZink_94: 3644779639743633786
+      sprZink_95: 800085928701457258
+      sprZink_96: -2642639809120460880
+      sprZink_97: -6041615969029363856
+      sprZink_98: -8517891718004660663
+      sprZink_99: 744350472734692693
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,3328 @@
+fileFormatVersion: 2
+guid: 22e879b4a46801a4bab7bcfe737f978c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3970640369567291518
+    second: sprZinkWeaponsAndShield_0
+  - first:
+      213: -8391487588291370212
+    second: sprZinkWeaponsAndShield_1
+  - first:
+      213: -8707693902674576697
+    second: sprZinkWeaponsAndShield_2
+  - first:
+      213: 8044189658352886478
+    second: sprZinkWeaponsAndShield_3
+  - first:
+      213: 7677364514896828433
+    second: sprZinkWeaponsAndShield_4
+  - first:
+      213: -608127466779927503
+    second: sprZinkWeaponsAndShield_5
+  - first:
+      213: 6378886322052350700
+    second: sprZinkWeaponsAndShield_6
+  - first:
+      213: 5512901244905129230
+    second: sprZinkWeaponsAndShield_7
+  - first:
+      213: 5523674303854340210
+    second: sprZinkWeaponsAndShield_8
+  - first:
+      213: 5792108101351211662
+    second: sprZinkWeaponsAndShield_9
+  - first:
+      213: 3262302264497932068
+    second: sprZinkWeaponsAndShield_10
+  - first:
+      213: -7953348292456689472
+    second: sprZinkWeaponsAndShield_11
+  - first:
+      213: 2891742487569473313
+    second: sprZinkWeaponsAndShield_12
+  - first:
+      213: 7352757800565197063
+    second: sprZinkWeaponsAndShield_13
+  - first:
+      213: -3649315590273125989
+    second: sprZinkWeaponsAndShield_14
+  - first:
+      213: 5737156688672366151
+    second: sprZinkWeaponsAndShield_15
+  - first:
+      213: 2040248797964657783
+    second: sprZinkWeaponsAndShield_16
+  - first:
+      213: 9066860367108509074
+    second: sprZinkWeaponsAndShield_17
+  - first:
+      213: 3488877327060697283
+    second: sprZinkWeaponsAndShield_18
+  - first:
+      213: -2268503106381213453
+    second: sprZinkWeaponsAndShield_19
+  - first:
+      213: 2261941456750337406
+    second: sprZinkWeaponsAndShield_20
+  - first:
+      213: -4370913161777314399
+    second: sprZinkWeaponsAndShield_21
+  - first:
+      213: -4507037536944097783
+    second: sprZinkWeaponsAndShield_22
+  - first:
+      213: -569708495221305610
+    second: sprZinkWeaponsAndShield_23
+  - first:
+      213: -6929592511606987793
+    second: sprZinkWeaponsAndShield_24
+  - first:
+      213: -355497297313267452
+    second: sprZinkWeaponsAndShield_25
+  - first:
+      213: -1802979466291419158
+    second: sprZinkWeaponsAndShield_26
+  - first:
+      213: -8129108973347875950
+    second: sprZinkWeaponsAndShield_27
+  - first:
+      213: -7792860876379400173
+    second: sprZinkWeaponsAndShield_28
+  - first:
+      213: -7795754617618079702
+    second: sprZinkWeaponsAndShield_29
+  - first:
+      213: -5008156146989816603
+    second: sprZinkWeaponsAndShield_30
+  - first:
+      213: -5533319375104036035
+    second: sprZinkWeaponsAndShield_31
+  - first:
+      213: -3536893131277693989
+    second: sprZinkWeaponsAndShield_32
+  - first:
+      213: 2705347597988352580
+    second: sprZinkWeaponsAndShield_33
+  - first:
+      213: 6370639770592734703
+    second: sprZinkWeaponsAndShield_34
+  - first:
+      213: 2852527209074790910
+    second: sprZinkWeaponsAndShield_35
+  - first:
+      213: -6751472402484773786
+    second: sprZinkWeaponsAndShield_36
+  - first:
+      213: 8943263184193961101
+    second: sprZinkWeaponsAndShield_37
+  - first:
+      213: -8916846363263863788
+    second: sprZinkWeaponsAndShield_38
+  - first:
+      213: -5110382499307376013
+    second: sprZinkWeaponsAndShield_39
+  - first:
+      213: -3318754572959841022
+    second: sprZinkWeaponsAndShield_40
+  - first:
+      213: 5192612622921982784
+    second: sprZinkWeaponsAndShield_41
+  - first:
+      213: -7719406203307116191
+    second: sprZinkWeaponsAndShield_42
+  - first:
+      213: 4549536190256408689
+    second: sprZinkWeaponsAndShield_43
+  - first:
+      213: -6210860439818190212
+    second: sprZinkWeaponsAndShield_44
+  - first:
+      213: 7973901190787390028
+    second: sprZinkWeaponsAndShield_45
+  - first:
+      213: -7068934914529558066
+    second: sprZinkWeaponsAndShield_46
+  - first:
+      213: -8795151874305584282
+    second: sprZinkWeaponsAndShield_47
+  - first:
+      213: 2825661118708079599
+    second: sprZinkWeaponsAndShield_48
+  - first:
+      213: -1125614003426055487
+    second: sprZinkWeaponsAndShield_49
+  - first:
+      213: 3465659633934972282
+    second: sprZinkWeaponsAndShield_50
+  - first:
+      213: -298330397626817113
+    second: sprZinkWeaponsAndShield_51
+  - first:
+      213: 6548975665252552603
+    second: sprZinkWeaponsAndShield_52
+  - first:
+      213: -6286616737467382237
+    second: sprZinkWeaponsAndShield_53
+  - first:
+      213: 7956379709509082794
+    second: sprZinkWeaponsAndShield_54
+  - first:
+      213: -2786147216679693433
+    second: sprZinkWeaponsAndShield_55
+  - first:
+      213: 1813254864390362098
+    second: sprZinkWeaponsAndShield_56
+  - first:
+      213: 2215669421486673938
+    second: sprZinkWeaponsAndShield_57
+  - first:
+      213: 6780731427643547928
+    second: sprZinkWeaponsAndShield_58
+  - first:
+      213: 3176469899191127445
+    second: sprZinkWeaponsAndShield_59
+  - first:
+      213: -5015761604364727368
+    second: sprZinkWeaponsAndShield_60
+  - first:
+      213: 4551201337650876891
+    second: sprZinkWeaponsAndShield_61
+  - first:
+      213: 2074741719243509404
+    second: sprZinkWeaponsAndShield_62
+  - first:
+      213: 6636771669176520065
+    second: sprZinkWeaponsAndShield_63
+  - first:
+      213: 4552301961475573566
+    second: sprZinkWeaponsAndShield_64
+  - first:
+      213: -329523742613253585
+    second: sprZinkWeaponsAndShield_65
+  - first:
+      213: -5416926415365781046
+    second: sprZinkWeaponsAndShield_66
+  - first:
+      213: 8889673507005446420
+    second: sprZinkWeaponsAndShield_67
+  - first:
+      213: 7688093352274450843
+    second: sprZinkWeaponsAndShield_68
+  - first:
+      213: 2402193898425491683
+    second: sprZinkWeaponsAndShield_69
+  - first:
+      213: -2926131926248869720
+    second: sprZinkWeaponsAndShield_70
+  - first:
+      213: 7227890709112755822
+    second: sprZinkWeaponsAndShield_71
+  - first:
+      213: 6186847497470559503
+    second: sprZinkWeaponsAndShield_72
+  - first:
+      213: -6628863573994056679
+    second: sprZinkWeaponsAndShield_73
+  - first:
+      213: -7306146542507002787
+    second: sprZinkWeaponsAndShield_74
+  - first:
+      213: -7851273530492041785
+    second: sprZinkWeaponsAndShield_75
+  - first:
+      213: -8310128879242389862
+    second: sprZinkWeaponsAndShield_76
+  - first:
+      213: 2998991032234175491
+    second: sprZinkWeaponsAndShield_77
+  - first:
+      213: 4015761913606789713
+    second: sprZinkWeaponsAndShield_78
+  - first:
+      213: 5294396687990163470
+    second: sprZinkWeaponsAndShield_79
+  - first:
+      213: -8993532941767801463
+    second: sprZinkWeaponsAndShield_80
+  - first:
+      213: 6431842919069757474
+    second: sprZinkWeaponsAndShield_81
+  - first:
+      213: 3272285822828571376
+    second: sprZinkWeaponsAndShield_82
+  - first:
+      213: -7988867858474088427
+    second: sprZinkWeaponsAndShield_83
+  - first:
+      213: -2129150100891491071
+    second: sprZinkWeaponsAndShield_84
+  - first:
+      213: 1053104056200960712
+    second: sprZinkWeaponsAndShield_85
+  - first:
+      213: -4334736352974779491
+    second: sprZinkWeaponsAndShield_86
+  - first:
+      213: 3441327332589529366
+    second: sprZinkWeaponsAndShield_87
+  - first:
+      213: 9121800280446921737
+    second: sprZinkWeaponsAndShield_88
+  - first:
+      213: 6471291481587979623
+    second: sprZinkWeaponsAndShield_89
+  - first:
+      213: -8974084304324929253
+    second: sprZinkWeaponsAndShield_90
+  - first:
+      213: -3563040692442808842
+    second: sprZinkWeaponsAndShield_91
+  - first:
+      213: 633646548249416025
+    second: sprZinkWeaponsAndShield_92
+  - first:
+      213: 8359504520980659156
+    second: sprZinkWeaponsAndShield_93
+  - first:
+      213: -7857590826949218544
+    second: sprZinkWeaponsAndShield_94
+  - first:
+      213: 595676133071231186
+    second: sprZinkWeaponsAndShield_95
+  - first:
+      213: -878951294653572198
+    second: sprZinkWeaponsAndShield_96
+  - first:
+      213: -1372191021475009383
+    second: sprZinkWeaponsAndShield_97
+  - first:
+      213: 4047399055627041112
+    second: sprZinkWeaponsAndShield_98
+  - first:
+      213: -2469515268464621147
+    second: sprZinkWeaponsAndShield_99
+  - first:
+      213: 7679903965554791817
+    second: sprZinkWeaponsAndShield_100
+  - first:
+      213: -5508451577143422872
+    second: sprZinkWeaponsAndShield_101
+  - first:
+      213: 3688372516588559245
+    second: sprZinkWeaponsAndShield_102
+  - first:
+      213: -8175029381567952342
+    second: sprZinkWeaponsAndShield_103
+  - first:
+      213: -381760572414205818
+    second: sprZinkWeaponsAndShield_104
+  - first:
+      213: -1662004921894381068
+    second: sprZinkWeaponsAndShield_105
+  - first:
+      213: 8606307689353799810
+    second: sprZinkWeaponsAndShield_106
+  - first:
+      213: 7625162684518074990
+    second: sprZinkWeaponsAndShield_107
+  - first:
+      213: 2906509617489589991
+    second: sprZinkWeaponsAndShield_108
+  - first:
+      213: -6159168144277954788
+    second: sprZinkWeaponsAndShield_109
+  - first:
+      213: 1808634707109558095
+    second: sprZinkWeaponsAndShield_110
+  - first:
+      213: 6074164479794987911
+    second: sprZinkWeaponsAndShield_111
+  - first:
+      213: -8574083174220976279
+    second: sprZinkWeaponsAndShield_112
+  - first:
+      213: 7680259570076171396
+    second: sprZinkWeaponsAndShield_113
+  - first:
+      213: -5956868339850680392
+    second: sprZinkWeaponsAndShield_114
+  - first:
+      213: 2560853057649535868
+    second: sprZinkWeaponsAndShield_115
+  - first:
+      213: 9037804781369547902
+    second: sprZinkWeaponsAndShield_116
+  - first:
+      213: 6423122152855732644
+    second: sprZinkWeaponsAndShield_117
+  - first:
+      213: -3564043583016838325
+    second: sprZinkWeaponsAndShield_118
+  - first:
+      213: 6464068053157784495
+    second: sprZinkWeaponsAndShield_119
+  - first:
+      213: 8775303171088492726
+    second: sprZinkWeaponsAndShield_120
+  - first:
+      213: 6486819018937516730
+    second: sprZinkWeaponsAndShield_121
+  - first:
+      213: -5820442556683065791
+    second: sprZinkWeaponsAndShield_122
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 287ad190f9375e8c0800000000000000
+      internalID: -3970640369567291518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_1
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c132bca9f727b8b80800000000000000
+      internalID: -8391487588291370212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_2
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ca3f36e78e082780800000000000000
+      internalID: -8707693902674576697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_3
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec2aef3dfd3b2af60800000000000000
+      internalID: 8044189658352886478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_4
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1185d91995a7b8a60800000000000000
+      internalID: 7677364514896828433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_5
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13c9c6c7a4f7f87f0800000000000000
+      internalID: -608127466779927503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_6
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce24788205b568850800000000000000
+      internalID: 6378886322052350700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_7
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 15
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0501604972c18c40800000000000000
+      internalID: 5512901244905129230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_8
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 278e030838808ac40800000000000000
+      internalID: 5523674303854340210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_9
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8283b951a3b16050800000000000000
+      internalID: 5792108101351211662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_10
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4270a5900a6064d20800000000000000
+      internalID: 3262302264497932068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_11
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c0d82dddd700a190800000000000000
+      internalID: -7953348292456689472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_12
+      rect:
+        serializedVersion: 2
+        x: 783
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12f9b79a878812820800000000000000
+      internalID: 2891742487569473313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_13
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 709cb26534e3a0660800000000000000
+      internalID: 7352757800565197063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_14
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b91b9783ec60b5dc0800000000000000
+      internalID: -3649315590273125989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_15
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74e92119c997e9f40800000000000000
+      internalID: 5737156688672366151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_16
+      rect:
+        serializedVersion: 2
+        x: 1023
+        y: 17
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 774e918d87b605c10800000000000000
+      internalID: 2040248797964657783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_17
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29d02913775f3dd70800000000000000
+      internalID: 9066860367108509074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_18
+      rect:
+        serializedVersion: 2
+        x: 1311
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c00e50b17bfa6030800000000000000
+      internalID: 3488877327060697283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_19
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f0174c9178a480e0800000000000000
+      internalID: -2268503106381213453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_20
+      rect:
+        serializedVersion: 2
+        x: 1407
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7d555845c7046f10800000000000000
+      internalID: 2261941456750337406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_21
+      rect:
+        serializedVersion: 2
+        x: 1455
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a50f2033a56753c0800000000000000
+      internalID: -4370913161777314399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_22
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 15
+        width: 33
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 906781d4d39c371c0800000000000000
+      internalID: -4507037536944097783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_23
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fecfcc542df718f0800000000000000
+      internalID: -569708495221305610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_24
+      rect:
+        serializedVersion: 2
+        x: 1599
+        y: 0
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe36573435425df90800000000000000
+      internalID: -6929592511606987793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_25
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40108037715011bf0800000000000000
+      internalID: -355497297313267452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_26
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 0
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae7606e5ab78af6e0800000000000000
+      internalID: -1802979466291419158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_27
+      rect:
+        serializedVersion: 2
+        x: 1732
+        y: 4
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 293d827657a9f2f80800000000000000
+      internalID: -8129108973347875950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_28
+      rect:
+        serializedVersion: 2
+        x: 1788
+        y: 15
+        width: 21
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 318dd5f32523ad390800000000000000
+      internalID: -7792860876379400173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_29
+      rect:
+        serializedVersion: 2
+        x: 1839
+        y: 0
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2063cc9a7aefc390800000000000000
+      internalID: -7795754617618079702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_30
+      rect:
+        serializedVersion: 2
+        x: 1887
+        y: 0
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e4abf6c4847f7ab0800000000000000
+      internalID: -5008156146989816603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_31
+      rect:
+        serializedVersion: 2
+        x: 1935
+        y: 7
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d33332a5853b533b0800000000000000
+      internalID: -5533319375104036035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_32
+      rect:
+        serializedVersion: 2
+        x: 1983
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdb8ca5bf6e6aeec0800000000000000
+      internalID: -3536893131277693989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_33
+      rect:
+        serializedVersion: 2
+        x: 2031
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4425d0c8e435b8520800000000000000
+      internalID: 2705347597988352580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_34
+      rect:
+        serializedVersion: 2
+        x: 2079
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fede7264e1f096850800000000000000
+      internalID: 6370639770592734703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_35
+      rect:
+        serializedVersion: 2
+        x: 2127
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef11a012266369720800000000000000
+      internalID: 2852527209074790910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_36
+      rect:
+        serializedVersion: 2
+        x: 2175
+        y: 17
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66cba0bee93fd42a0800000000000000
+      internalID: -6751472402484773786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_37
+      rect:
+        serializedVersion: 2
+        x: 2271
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8cb5ba8b7adc1c70800000000000000
+      internalID: 8943263184193961101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_38
+      rect:
+        serializedVersion: 2
+        x: 2319
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4147ce0e97ff04480800000000000000
+      internalID: -8916846363263863788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_39
+      rect:
+        serializedVersion: 2
+        x: 2367
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 372396e51364419b0800000000000000
+      internalID: -5110382499307376013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_40
+      rect:
+        serializedVersion: 2
+        x: 2415
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2058606ac4a61f1d0800000000000000
+      internalID: -3318754572959841022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_41
+      rect:
+        serializedVersion: 2
+        x: 2463
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 043697d3baddf0840800000000000000
+      internalID: 5192612622921982784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_42
+      rect:
+        serializedVersion: 2
+        x: 2511
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 169beee05f82fd490800000000000000
+      internalID: -7719406203307116191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_43
+      rect:
+        serializedVersion: 2
+        x: 2559
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17864018f03332f30800000000000000
+      internalID: 4549536190256408689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_44
+      rect:
+        serializedVersion: 2
+        x: 2607
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c724c1726579ec9a0800000000000000
+      internalID: -6210860439818190212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_45
+      rect:
+        serializedVersion: 2
+        x: 2655
+        y: 15
+        width: 33
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4a52fea2ecf8ae60800000000000000
+      internalID: 7973901190787390028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_46
+      rect:
+        serializedVersion: 2
+        x: 2703
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec10c17e52916ed90800000000000000
+      internalID: -7068934914529558066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_47
+      rect:
+        serializedVersion: 2
+        x: 2719
+        y: 31
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 663976218f751f580800000000000000
+      internalID: -8795151874305584282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_48
+      rect:
+        serializedVersion: 2
+        x: 2751
+        y: 15
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: feb5a3401d3c63720800000000000000
+      internalID: 2825661118708079599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_49
+      rect:
+        serializedVersion: 2
+        x: 2788
+        y: 15
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1caa59317040160f0800000000000000
+      internalID: -1125614003426055487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_50
+      rect:
+        serializedVersion: 2
+        x: 2847
+        y: 15
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a75ba11431f781030800000000000000
+      internalID: 3465659633934972282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_51
+      rect:
+        serializedVersion: 2
+        x: 2895
+        y: 15
+        width: 29
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a5a0cf751e1cdbf0800000000000000
+      internalID: -298330397626817113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_52
+      rect:
+        serializedVersion: 2
+        x: 2943
+        y: 15
+        width: 21
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9f4e0a6ba2a2ea50800000000000000
+      internalID: 6548975665252552603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_53
+      rect:
+        serializedVersion: 2
+        x: 2991
+        y: 15
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3264b3c926371c8a0800000000000000
+      internalID: -6286616737467382237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_54
+      rect:
+        serializedVersion: 2
+        x: 3039
+        y: 15
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aae1a6be03dba6e60800000000000000
+      internalID: 7956379709509082794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_55
+      rect:
+        serializedVersion: 2
+        x: 3087
+        y: 15
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7831dd93edd9559d0800000000000000
+      internalID: -2786147216679693433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_56
+      rect:
+        serializedVersion: 2
+        x: 3135
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f39c3f21b9f92910800000000000000
+      internalID: 1813254864390362098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_57
+      rect:
+        serializedVersion: 2
+        x: 3136
+        y: 33
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21098678993afbe10800000000000000
+      internalID: 2215669421486673938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_58
+      rect:
+        serializedVersion: 2
+        x: 3231
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 811650ebe4ff91e50800000000000000
+      internalID: 6780731427643547928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_59
+      rect:
+        serializedVersion: 2
+        x: 3279
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59d020d2b86151c20800000000000000
+      internalID: 3176469899191127445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_60
+      rect:
+        serializedVersion: 2
+        x: 3375
+        y: 17
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bb0ccd356f646ab0800000000000000
+      internalID: -5015761604364727368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_61
+      rect:
+        serializedVersion: 2
+        x: 3471
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd196f7d08d192f30800000000000000
+      internalID: 4551201337650876891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_62
+      rect:
+        serializedVersion: 2
+        x: 3567
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9e4138e996facc10800000000000000
+      internalID: 2074741719243509404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_63
+      rect:
+        serializedVersion: 2
+        x: 3615
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18d84a48bac8a1c50800000000000000
+      internalID: 6636771669176520065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_64
+      rect:
+        serializedVersion: 2
+        x: 3663
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e37c01cc3860d2f30800000000000000
+      internalID: 4552301961475573566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_65
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f22da78e6eb4d6bf0800000000000000
+      internalID: -329523742613253585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_66
+      rect:
+        serializedVersion: 2
+        x: 3807
+        y: 15
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac941b5102633d4b0800000000000000
+      internalID: -5416926415365781046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_67
+      rect:
+        serializedVersion: 2
+        x: 3855
+        y: 15
+        width: 29
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 419b24284f67e5b70800000000000000
+      internalID: 8889673507005446420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_68
+      rect:
+        serializedVersion: 2
+        x: 3951
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b995c5eab2891ba60800000000000000
+      internalID: 7688093352274450843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_69
+      rect:
+        serializedVersion: 2
+        x: 3967
+        y: 31
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e0234d8f9e465120800000000000000
+      internalID: 2402193898425491683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_70
+      rect:
+        serializedVersion: 2
+        x: 3999
+        y: 15
+        width: 33
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a0b102348a4467d0800000000000000
+      internalID: -2926131926248869720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_71
+      rect:
+        serializedVersion: 2
+        x: 4095
+        y: 15
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6613001e40ae4460800000000000000
+      internalID: 7227890709112755822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_72
+      rect:
+        serializedVersion: 2
+        x: 4239
+        y: 15
+        width: 26
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f054f3605091cd550800000000000000
+      internalID: 6186847497470559503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_73
+      rect:
+        serializedVersion: 2
+        x: 4287
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 914de8f53bb8104a0800000000000000
+      internalID: -6628863573994056679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_74
+      rect:
+        serializedVersion: 2
+        x: 4383
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d54fbe0ed6a5b9a90800000000000000
+      internalID: -7306146542507002787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_75
+      rect:
+        serializedVersion: 2
+        x: 4431
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c54894625caa0390800000000000000
+      internalID: -7851273530492041785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_76
+      rect:
+        serializedVersion: 2
+        x: 4527
+        y: 17
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a96da0330dd7cac80800000000000000
+      internalID: -8310128879242389862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_77
+      rect:
+        serializedVersion: 2
+        x: 4623
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30c66e8547e8e9920800000000000000
+      internalID: 2998991032234175491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_78
+      rect:
+        serializedVersion: 2
+        x: 4719
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15a531b1f2adab730800000000000000
+      internalID: 4015761913606789713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_79
+      rect:
+        serializedVersion: 2
+        x: 4767
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0888af9cb9797940800000000000000
+      internalID: 5294396687990163470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_80
+      rect:
+        serializedVersion: 2
+        x: 4815
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9850822707d803380800000000000000
+      internalID: -8993532941767801463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_81
+      rect:
+        serializedVersion: 2
+        x: 4863
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 220b34abe0f724950800000000000000
+      internalID: 6431842919069757474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_82
+      rect:
+        serializedVersion: 2
+        x: 4959
+        y: 15
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0fa6e395e9e796d20800000000000000
+      internalID: 3272285822828571376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_83
+      rect:
+        serializedVersion: 2
+        x: 4996
+        y: 15
+        width: 29
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 518cd127207d12190800000000000000
+      internalID: -7988867858474088427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_84
+      rect:
+        serializedVersion: 2
+        x: 5092
+        y: 31
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10520e2934db372e0800000000000000
+      internalID: -2129150100891491071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_85
+      rect:
+        serializedVersion: 2
+        x: 5103
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ca916d3f806d9e00800000000000000
+      internalID: 1053104056200960712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_86
+      rect:
+        serializedVersion: 2
+        x: 5136
+        y: 15
+        width: 33
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9b47fdd04ce7d3c0800000000000000
+      internalID: -4334736352974779491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_87
+      rect:
+        serializedVersion: 2
+        x: 5244
+        y: 15
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61967ded9fc02cf20800000000000000
+      internalID: 3441327332589529366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_88
+      rect:
+        serializedVersion: 2
+        x: 5383
+        y: 15
+        width: 26
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90ce8149605279e70800000000000000
+      internalID: 9121800280446921737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_89
+      rect:
+        serializedVersion: 2
+        x: 5439
+        y: 15
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 765101ee055aec950800000000000000
+      internalID: 6471291481587979623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_90
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b19dd483fd5a57380800000000000000
+      internalID: -8974084304324929253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_91
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 17
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fd3fa63e598d8ec0800000000000000
+      internalID: -3563040692442808842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_92
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 18
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9511f8dad2a2bc800800000000000000
+      internalID: 633646548249416025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_93
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 20
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dbf25f321de20470800000000000000
+      internalID: 8359504520980659156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_94
+      rect:
+        serializedVersion: 2
+        x: 831
+        y: 15
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01fe25136ca34f290800000000000000
+      internalID: -7857590826949218544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_95
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 17
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d893e87944444800800000000000000
+      internalID: 595676133071231186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_96
+      rect:
+        serializedVersion: 2
+        x: 1119
+        y: 15
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9bdd4354765dc3f0800000000000000
+      internalID: -878951294653572198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_97
+      rect:
+        serializedVersion: 2
+        x: 1167
+        y: 15
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99c6001498ff4fce0800000000000000
+      internalID: -1372191021475009383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_98
+      rect:
+        serializedVersion: 2
+        x: 1263
+        y: 15
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 859b6ee3fff3b2830800000000000000
+      internalID: 4047399055627041112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_99
+      rect:
+        serializedVersion: 2
+        x: 2223
+        y: 17
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a943c782f48abdd0800000000000000
+      internalID: -2469515268464621147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_100
+      rect:
+        serializedVersion: 2
+        x: 3183
+        y: 15
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 985d10087ff749a60800000000000000
+      internalID: 7679903965554791817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_101
+      rect:
+        serializedVersion: 2
+        x: 3327
+        y: 17
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8601de1c97c0e83b0800000000000000
+      internalID: -5508451577143422872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_102
+      rect:
+        serializedVersion: 2
+        x: 3423
+        y: 15
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8b1392134bbf2330800000000000000
+      internalID: 3688372516588559245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_103
+      rect:
+        serializedVersion: 2
+        x: 3519
+        y: 15
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2ac24337167c8e80800000000000000
+      internalID: -8175029381567952342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_104
+      rect:
+        serializedVersion: 2
+        x: 3759
+        y: 15
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 680600438c6b3baf0800000000000000
+      internalID: -381760572414205818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_105
+      rect:
+        serializedVersion: 2
+        x: 3903
+        y: 15
+        width: 33
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f9d887445f5fe8e0800000000000000
+      internalID: -1662004921894381068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_106
+      rect:
+        serializedVersion: 2
+        x: 4047
+        y: 4
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28865abce3fbf6770800000000000000
+      internalID: 8606307689353799810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_107
+      rect:
+        serializedVersion: 2
+        x: 4143
+        y: 15
+        width: 34
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6a834dcf0502d960800000000000000
+      internalID: 7625162684518074990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_108
+      rect:
+        serializedVersion: 2
+        x: 4191
+        y: 15
+        width: 34
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e639b6091ff55820800000000000000
+      internalID: 2906509617489589991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_109
+      rect:
+        serializedVersion: 2
+        x: 4305
+        y: 16
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1f1968943d368aa0800000000000000
+      internalID: -6159168144277954788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_110
+      rect:
+        serializedVersion: 2
+        x: 4335
+        y: 15
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4735bdfeaf891910800000000000000
+      internalID: 1808634707109558095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_111
+      rect:
+        serializedVersion: 2
+        x: 4479
+        y: 17
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 783c97d7964cb4450800000000000000
+      internalID: 6074164479794987911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_112
+      rect:
+        serializedVersion: 2
+        x: 4575
+        y: 15
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96fa7edc7ccb20980800000000000000
+      internalID: -8574083174220976279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_113
+      rect:
+        serializedVersion: 2
+        x: 4671
+        y: 15
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48c3f212363c59a60800000000000000
+      internalID: 7680259570076171396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_114
+      rect:
+        serializedVersion: 2
+        x: 4911
+        y: 15
+        width: 18
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b7ed654ec3f45da0800000000000000
+      internalID: -5956868339850680392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_115
+      rect:
+        serializedVersion: 2
+        x: 5040
+        y: 15
+        width: 33
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7b6c27b94af98320800000000000000
+      internalID: 2560853057649535868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_116
+      rect:
+        serializedVersion: 2
+        x: 5188
+        y: 4
+        width: 29
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7cdbd6709bbc6d70800000000000000
+      internalID: 9037804781369547902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_117
+      rect:
+        serializedVersion: 2
+        x: 5279
+        y: 15
+        width: 34
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a188ed1193832950800000000000000
+      internalID: 6423122152855732644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_118
+      rect:
+        serializedVersion: 2
+        x: 5327
+        y: 15
+        width: 34
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4b554e8e39f98ec0800000000000000
+      internalID: -3564043583016838325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_119
+      rect:
+        serializedVersion: 2
+        x: 5431
+        y: 16
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fabab6075abf4b950800000000000000
+      internalID: 6464068053157784495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_120
+      rect:
+        serializedVersion: 2
+        x: 1537
+        y: 4
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b8a6159db328c970800000000000000
+      internalID: 8775303171088492726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_121
+      rect:
+        serializedVersion: 2
+        x: 1663
+        y: 4
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab2c402778fc50a50800000000000000
+      internalID: 6486819018937516730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprZinkWeaponsAndShield_122
+      rect:
+        serializedVersion: 2
+        x: 1984
+        y: 7
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 146e65d2552a93fa0800000000000000
+      internalID: -5820442556683065791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sprZinkWeaponsAndShield_0: -3970640369567291518
+      sprZinkWeaponsAndShield_1: -8391487588291370212
+      sprZinkWeaponsAndShield_10: 3262302264497932068
+      sprZinkWeaponsAndShield_100: 7679903965554791817
+      sprZinkWeaponsAndShield_101: -5508451577143422872
+      sprZinkWeaponsAndShield_102: 3688372516588559245
+      sprZinkWeaponsAndShield_103: -8175029381567952342
+      sprZinkWeaponsAndShield_104: -381760572414205818
+      sprZinkWeaponsAndShield_105: -1662004921894381068
+      sprZinkWeaponsAndShield_106: 8606307689353799810
+      sprZinkWeaponsAndShield_107: 7625162684518074990
+      sprZinkWeaponsAndShield_108: 2906509617489589991
+      sprZinkWeaponsAndShield_109: -6159168144277954788
+      sprZinkWeaponsAndShield_11: -7953348292456689472
+      sprZinkWeaponsAndShield_110: 1808634707109558095
+      sprZinkWeaponsAndShield_111: 6074164479794987911
+      sprZinkWeaponsAndShield_112: -8574083174220976279
+      sprZinkWeaponsAndShield_113: 7680259570076171396
+      sprZinkWeaponsAndShield_114: -5956868339850680392
+      sprZinkWeaponsAndShield_115: 2560853057649535868
+      sprZinkWeaponsAndShield_116: 9037804781369547902
+      sprZinkWeaponsAndShield_117: 6423122152855732644
+      sprZinkWeaponsAndShield_118: -3564043583016838325
+      sprZinkWeaponsAndShield_119: 6464068053157784495
+      sprZinkWeaponsAndShield_12: 2891742487569473313
+      sprZinkWeaponsAndShield_120: 8775303171088492726
+      sprZinkWeaponsAndShield_121: 6486819018937516730
+      sprZinkWeaponsAndShield_122: -5820442556683065791
+      sprZinkWeaponsAndShield_13: 7352757800565197063
+      sprZinkWeaponsAndShield_14: -3649315590273125989
+      sprZinkWeaponsAndShield_15: 5737156688672366151
+      sprZinkWeaponsAndShield_16: 2040248797964657783
+      sprZinkWeaponsAndShield_17: 9066860367108509074
+      sprZinkWeaponsAndShield_18: 3488877327060697283
+      sprZinkWeaponsAndShield_19: -2268503106381213453
+      sprZinkWeaponsAndShield_2: -8707693902674576697
+      sprZinkWeaponsAndShield_20: 2261941456750337406
+      sprZinkWeaponsAndShield_21: -4370913161777314399
+      sprZinkWeaponsAndShield_22: -4507037536944097783
+      sprZinkWeaponsAndShield_23: -569708495221305610
+      sprZinkWeaponsAndShield_24: -6929592511606987793
+      sprZinkWeaponsAndShield_25: -355497297313267452
+      sprZinkWeaponsAndShield_26: -1802979466291419158
+      sprZinkWeaponsAndShield_27: -8129108973347875950
+      sprZinkWeaponsAndShield_28: -7792860876379400173
+      sprZinkWeaponsAndShield_29: -7795754617618079702
+      sprZinkWeaponsAndShield_3: 8044189658352886478
+      sprZinkWeaponsAndShield_30: -5008156146989816603
+      sprZinkWeaponsAndShield_31: -5533319375104036035
+      sprZinkWeaponsAndShield_32: -3536893131277693989
+      sprZinkWeaponsAndShield_33: 2705347597988352580
+      sprZinkWeaponsAndShield_34: 6370639770592734703
+      sprZinkWeaponsAndShield_35: 2852527209074790910
+      sprZinkWeaponsAndShield_36: -6751472402484773786
+      sprZinkWeaponsAndShield_37: 8943263184193961101
+      sprZinkWeaponsAndShield_38: -8916846363263863788
+      sprZinkWeaponsAndShield_39: -5110382499307376013
+      sprZinkWeaponsAndShield_4: 7677364514896828433
+      sprZinkWeaponsAndShield_40: -3318754572959841022
+      sprZinkWeaponsAndShield_41: 5192612622921982784
+      sprZinkWeaponsAndShield_42: -7719406203307116191
+      sprZinkWeaponsAndShield_43: 4549536190256408689
+      sprZinkWeaponsAndShield_44: -6210860439818190212
+      sprZinkWeaponsAndShield_45: 7973901190787390028
+      sprZinkWeaponsAndShield_46: -7068934914529558066
+      sprZinkWeaponsAndShield_47: -8795151874305584282
+      sprZinkWeaponsAndShield_48: 2825661118708079599
+      sprZinkWeaponsAndShield_49: -1125614003426055487
+      sprZinkWeaponsAndShield_5: -608127466779927503
+      sprZinkWeaponsAndShield_50: 3465659633934972282
+      sprZinkWeaponsAndShield_51: -298330397626817113
+      sprZinkWeaponsAndShield_52: 6548975665252552603
+      sprZinkWeaponsAndShield_53: -6286616737467382237
+      sprZinkWeaponsAndShield_54: 7956379709509082794
+      sprZinkWeaponsAndShield_55: -2786147216679693433
+      sprZinkWeaponsAndShield_56: 1813254864390362098
+      sprZinkWeaponsAndShield_57: 2215669421486673938
+      sprZinkWeaponsAndShield_58: 6780731427643547928
+      sprZinkWeaponsAndShield_59: 3176469899191127445
+      sprZinkWeaponsAndShield_6: 6378886322052350700
+      sprZinkWeaponsAndShield_60: -5015761604364727368
+      sprZinkWeaponsAndShield_61: 4551201337650876891
+      sprZinkWeaponsAndShield_62: 2074741719243509404
+      sprZinkWeaponsAndShield_63: 6636771669176520065
+      sprZinkWeaponsAndShield_64: 4552301961475573566
+      sprZinkWeaponsAndShield_65: -329523742613253585
+      sprZinkWeaponsAndShield_66: -5416926415365781046
+      sprZinkWeaponsAndShield_67: 8889673507005446420
+      sprZinkWeaponsAndShield_68: 7688093352274450843
+      sprZinkWeaponsAndShield_69: 2402193898425491683
+      sprZinkWeaponsAndShield_7: 5512901244905129230
+      sprZinkWeaponsAndShield_70: -2926131926248869720
+      sprZinkWeaponsAndShield_71: 7227890709112755822
+      sprZinkWeaponsAndShield_72: 6186847497470559503
+      sprZinkWeaponsAndShield_73: -6628863573994056679
+      sprZinkWeaponsAndShield_74: -7306146542507002787
+      sprZinkWeaponsAndShield_75: -7851273530492041785
+      sprZinkWeaponsAndShield_76: -8310128879242389862
+      sprZinkWeaponsAndShield_77: 2998991032234175491
+      sprZinkWeaponsAndShield_78: 4015761913606789713
+      sprZinkWeaponsAndShield_79: 5294396687990163470
+      sprZinkWeaponsAndShield_8: 5523674303854340210
+      sprZinkWeaponsAndShield_80: -8993532941767801463
+      sprZinkWeaponsAndShield_81: 6431842919069757474
+      sprZinkWeaponsAndShield_82: 3272285822828571376
+      sprZinkWeaponsAndShield_83: -7988867858474088427
+      sprZinkWeaponsAndShield_84: -2129150100891491071
+      sprZinkWeaponsAndShield_85: 1053104056200960712
+      sprZinkWeaponsAndShield_86: -4334736352974779491
+      sprZinkWeaponsAndShield_87: 3441327332589529366
+      sprZinkWeaponsAndShield_88: 9121800280446921737
+      sprZinkWeaponsAndShield_89: 6471291481587979623
+      sprZinkWeaponsAndShield_9: 5792108101351211662
+      sprZinkWeaponsAndShield_90: -8974084304324929253
+      sprZinkWeaponsAndShield_91: -3563040692442808842
+      sprZinkWeaponsAndShield_92: 633646548249416025
+      sprZinkWeaponsAndShield_93: 8359504520980659156
+      sprZinkWeaponsAndShield_94: -7857590826949218544
+      sprZinkWeaponsAndShield_95: 595676133071231186
+      sprZinkWeaponsAndShield_96: -878951294653572198
+      sprZinkWeaponsAndShield_97: -1372191021475009383
+      sprZinkWeaponsAndShield_98: 4047399055627041112
+      sprZinkWeaponsAndShield_99: -2469515268464621147
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,624 @@
+fileFormatVersion: 2
+guid: c62e213de18b390409508b9ebb524de3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3745436856246752429
+    second: sprWeaponBombExplosion_0
+  - first:
+      213: -4195572290075294977
+    second: sprWeaponBombExplosion_1
+  - first:
+      213: 1950155469556662267
+    second: sprWeaponBombExplosion_2
+  - first:
+      213: -2042970809721151101
+    second: sprWeaponBombExplosion_3
+  - first:
+      213: -5575865364793854788
+    second: sprWeaponBombExplosion_4
+  - first:
+      213: -623313662857462550
+    second: sprWeaponBombExplosion_5
+  - first:
+      213: 2862571485024276128
+    second: sprWeaponBombExplosion_6
+  - first:
+      213: -8603573610369987792
+    second: sprWeaponBombExplosion_7
+  - first:
+      213: 9077726010441031549
+    second: sprWeaponBombExplosion_8
+  - first:
+      213: -6879591244610224488
+    second: sprWeaponBombExplosion_9
+  - first:
+      213: 6955987204596789583
+    second: sprWeaponBombExplosion_10
+  - first:
+      213: 4482468015386258524
+    second: sprWeaponBombExplosion_11
+  - first:
+      213: -2941347804593454222
+    second: sprWeaponBombExplosion_12
+  - first:
+      213: -1055101715372618335
+    second: sprWeaponBombExplosion_13
+  - first:
+      213: 612557771690310701
+    second: sprWeaponBombExplosion_14
+  - first:
+      213: -4618298643114550839
+    second: sprWeaponBombExplosion_15
+  - first:
+      213: -643566175835775005
+    second: sprWeaponBombExplosion_16
+  - first:
+      213: -3237399430136879374
+    second: sprWeaponBombExplosion_17
+  - first:
+      213: 3308719443593211664
+    second: sprWeaponBombExplosion_18
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sprWeaponBombExplosion_0
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 7
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35ba1cef509850cc0800000000000000
+      internalID: -3745436856246752429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeaponBombExplosion_1
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 1
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff207943b3556c5c0800000000000000
+      internalID: -4195572290075294977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeaponBombExplosion_2
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 1
+        width: 30
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bffb5b33118501b10800000000000000
+      internalID: 1950155469556662267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeaponBombExplosion_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 15
+        width: 32
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38124186fd8e5a3e0800000000000000
+      internalID: -2042970809721151101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeaponBombExplosion_4
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 17
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb4fe003efb8e92b0800000000000000
+      internalID: -5575865364793854788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeaponBombExplosion_5
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 17
+        width: 28
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aecbbbda68b8957f0800000000000000
+      internalID: -623313662857462550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeaponBombExplosion_6
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 24
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0aec80d5995e9b720800000000000000
+      internalID: 2862571485024276128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeaponBombExplosion_7
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 24
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03bc8f29267f99880800000000000000
+      internalID: -8603573610369987792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeaponBombExplosion_8
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 17
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7f59ace5bf8afd70800000000000000
+      internalID: 9077726010441031549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeaponBombExplosion_9
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89ebe117638c680a0800000000000000
+      internalID: -6879591244610224488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeaponBombExplosion_10
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 1
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4177281281a88060800000000000000
+      internalID: 6955987204596789583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeaponBombExplosion_11
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 15
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5ce52e29ece43e30800000000000000
+      internalID: 4482468015386258524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeaponBombExplosion_12
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1
+        width: 28
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 273055271cb3e27d0800000000000000
+      internalID: -2941347804593454222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeaponBombExplosion_13
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 15
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ad4f4d74968b51f0800000000000000
+      internalID: -1055101715372618335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeaponBombExplosion_14
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 8
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2c71024c0e308800800000000000000
+      internalID: 612557771690310701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeaponBombExplosion_15
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 8
+        width: 14
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c91d765ad188efb0800000000000000
+      internalID: -4618298643114550839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeaponBombExplosion_16
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 0
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ef1adb09f79117f0800000000000000
+      internalID: -643566175835775005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeaponBombExplosion_17
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 0
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f6a3aaee527213d0800000000000000
+      internalID: -3237399430136879374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprWeaponBombExplosion_18
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 1
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01f2dc8bdceeaed20800000000000000
+      internalID: 3308719443593211664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sprWeaponBombExplosion_0: -3745436856246752429
+      sprWeaponBombExplosion_1: -4195572290075294977
+      sprWeaponBombExplosion_10: 6955987204596789583
+      sprWeaponBombExplosion_11: 4482468015386258524
+      sprWeaponBombExplosion_12: -2941347804593454222
+      sprWeaponBombExplosion_13: -1055101715372618335
+      sprWeaponBombExplosion_14: 612557771690310701
+      sprWeaponBombExplosion_15: -4618298643114550839
+      sprWeaponBombExplosion_16: -643566175835775005
+      sprWeaponBombExplosion_17: -3237399430136879374
+      sprWeaponBombExplosion_18: 3308719443593211664
+      sprWeaponBombExplosion_2: 1950155469556662267
+      sprWeaponBombExplosion_3: -2042970809721151101
+      sprWeaponBombExplosion_4: -5575865364793854788
+      sprWeaponBombExplosion_5: -623313662857462550
+      sprWeaponBombExplosion_6: 2862571485024276128
+      sprWeaponBombExplosion_7: -8603573610369987792
+      sprWeaponBombExplosion_8: 9077726010441031549
+      sprWeaponBombExplosion_9: -6879591244610224488
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

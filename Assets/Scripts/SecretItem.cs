@@ -11,6 +11,10 @@ public class SecretItem : MonoBehaviour
     [SerializeField] private Image displayImage;
     [SerializeField] private Sprite[] secretSprites;
     
+    [Header("Audio Settings")]
+    [SerializeField] private AudioClip interactSound;
+    [SerializeField] private AudioClip closeSound;
+    
     [Header("Blink Settings")]
     [SerializeField] private float blinkSpeed = 1.5f; 
     [Range(0f, 1f)] [SerializeField] private float minAlpha = 0.4f; 
@@ -31,11 +35,18 @@ public class SecretItem : MonoBehaviour
 
     private List<int> randomizedIndices = new List<int>();
     private SpriteRenderer spriteRenderer;
+    private AudioSource audioSource;
     private Coroutine blinkCoroutine;
 
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+            audioSource.playOnAwake = false;
+        }
         RandomizeOrder();
     }
 
@@ -82,6 +93,10 @@ public class SecretItem : MonoBehaviour
         // Jika tidak disetting pindah scene, maka tombol close berfugnsi normal menutup popup
         if (!pindahSceneCutscene && popUpPanel.activeSelf) {
             popUpPanel.SetActive(false);
+            if (audioSource != null && closeSound != null)
+            {
+                audioSource.PlayOneShot(closeSound);
+            }
         }
     }
 
@@ -97,6 +112,11 @@ public class SecretItem : MonoBehaviour
         
         popUpPanel.SetActive(true);
         canInteract = false; 
+
+        if (audioSource != null && interactSound != null)
+        {
+            audioSource.PlayOneShot(interactSound);
+        }
 
         if (blinkCoroutine != null)
         {

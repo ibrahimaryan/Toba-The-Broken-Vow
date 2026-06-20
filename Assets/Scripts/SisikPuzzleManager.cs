@@ -26,6 +26,23 @@ public class SisikPuzzleManager : MonoBehaviour
     [Header("Dialogue (Optional)")]
     [SerializeField] private Dialogue failDialogue; // Dialog saat susunan masih salah
 
+    [Header("Audio Settings")]
+    [SerializeField] private AudioClip buttonClickSound;
+    [SerializeField] private AudioClip wrongPasswordSound;
+    [SerializeField] private AudioClip rewardSound;
+
+    private AudioSource audioSource;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+            audioSource.playOnAwake = false;
+        }
+    }
+    
     public void OpenPuzzle(int collectedCount)
     {
         if (puzzlePanel != null)
@@ -79,6 +96,10 @@ public class SisikPuzzleManager : MonoBehaviour
         if (allCorrect)
         {
             Debug.Log("Puzzle Sukses! Sisik tersusun dengan benar.");
+            if (audioSource != null && buttonClickSound != null)
+            {
+                audioSource.PlayOneShot(buttonClickSound);
+            }
             HandleSuccess();
             if (ToDoManager.Instance != null)
                 {
@@ -89,6 +110,10 @@ public class SisikPuzzleManager : MonoBehaviour
         else
         {
             Debug.Log("Susunan sisik masih salah atau belum lengkap!");
+            if (audioSource != null && wrongPasswordSound != null)
+            {
+                audioSource.PlayOneShot(wrongPasswordSound);
+            }
             HandleFailure();
         }
     }
@@ -102,6 +127,10 @@ public class SisikPuzzleManager : MonoBehaviour
         }
 
         // Tampilkan panel dapat kunci
+        if (audioSource != null && rewardSound != null)
+        {
+            audioSource.PlayOneShot(rewardSound);
+        }
         if (rewardPanel != null)
         {
             rewardPanel.SetActive(true);

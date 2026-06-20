@@ -6,6 +6,28 @@ public class PuzzleSlot : MonoBehaviour, IDropHandler
     [Tooltip("ID item yang benar untuk slot ini (misal: sisik_part_0, sisik_part_1, dll.)")]
     public string correctItemID;
 
+    [Header("Audio Settings")]
+    [SerializeField] private AudioClip dropSound;
+    private AudioSource audioSource;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+            audioSource.playOnAwake = false;
+        }
+    }
+
+    private void PlayDropSound()
+    {
+        if (audioSource != null && dropSound != null)
+        {
+            audioSource.PlayOneShot(dropSound);
+        }
+    }
+
     public void OnDrop(PointerEventData eventData)
     {
         GameObject dropped = eventData.pointerDrag;
@@ -29,6 +51,7 @@ public class PuzzleSlot : MonoBehaviour, IDropHandler
                     droppedRect.anchoredPosition = Vector2.zero;
                 }
                 
+                PlayDropSound();
                 Debug.Log($"Item '{draggable.itemID}' diletakkan di Slot dengan target '{correctItemID}'");
             }
         }
@@ -47,6 +70,7 @@ public class PuzzleSlot : MonoBehaviour, IDropHandler
                     droppedRect.anchoredPosition = Vector2.zero;
                 }
                 
+                PlayDropSound();
                 Debug.Log($"Chapter 3 Item '{c3Draggable.itemID}' diletakkan di Slot dengan target '{correctItemID}'");
             }
             else
@@ -76,6 +100,7 @@ public class PuzzleSlot : MonoBehaviour, IDropHandler
                         droppedRect.anchoredPosition = Vector2.zero;
                     }
                     
+                    PlayDropSound();
                     Debug.Log($"Swap Chapter 3: Tukar '{c3Draggable.itemID}' ke slot '{correctItemID}' dan '{occupyingItem.itemID}' ke slot asal.");
                 }
             }

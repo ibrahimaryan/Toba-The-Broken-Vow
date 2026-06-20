@@ -21,15 +21,25 @@ public class BarangTrigger : MonoBehaviour
 
     [Header("Blink Settings")]
     [SerializeField] private float blinkSpeed = 1.5f; 
-    [Range(0f, 1f)] [SerializeField] private float minAlpha = 0.4f; 
+    [Range(0f, 1f)] [SerializeField] private float minAlpha = 0.4f;
+
+    [Header("Audio Settings")]
+    [SerializeField] private AudioClip opensound; 
 
     private SpriteRenderer spriteRenderer;
     private Coroutine blinkCoroutine;
     private bool isPlayerInRange = false;
+    private AudioSource audioSource;
 
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+            audioSource.playOnAwake = false;
+        }
     }
 
     private void Start()
@@ -91,6 +101,11 @@ public class BarangTrigger : MonoBehaviour
         {
             Debug.LogError("GameManager tidak ditemukan!");
             return;
+        }
+
+        if (audioSource != null && opensound != null)
+        {
+            audioSource.PlayOneShot(opensound);
         }
 
         // Cek apakah quest mengumpulkan sisik sudah dimulai

@@ -283,7 +283,16 @@ public class InventoryManager : MonoBehaviour
             {
                 // Jika slot kosong, kembalikan ke background bawaan asli (atau sprite kosong kustom jika di-assign)
                 slotImage.sprite = (equipmentEmptyBgSprite != null) ? equipmentEmptyBgSprite : (originalSlotSprites.ContainsKey(slot) ? originalSlotSprites[slot] : null);
-                slotImage.color = Color.white;
+                
+                Color emptyColor;
+                if (ColorUtility.TryParseHtmlString("#472C17", out emptyColor))
+                {
+                    slotImage.color = emptyColor;
+                }
+                else
+                {
+                    slotImage.color = Color.white;
+                }
             }
             else if (isActive)
             {
@@ -320,6 +329,17 @@ public class InventoryManager : MonoBehaviour
 
     private void UpdateSlotUI(GameObject slot, string itemID, int count)
     {
+        // Pertahankan warna background slot agar tidak menjadi putih polos saat ada item
+        Image slotImage = slot.GetComponent<Image>();
+        if (slotImage != null)
+        {
+            Color emptyColor;
+            if (ColorUtility.TryParseHtmlString("#472C17", out emptyColor))
+            {
+                slotImage.color = emptyColor;
+            }
+        }
+
         // Cari Image Component untuk Icon (mencari di child bernama "icon", "Icon" atau "Image" atau "ItemImage")
         Image iconImage = null;
         Transform iconTransform = slot.transform.Find("icon") ?? slot.transform.Find("Icon") ?? slot.transform.Find("Image") ?? slot.transform.Find("ItemImage");
@@ -399,6 +419,17 @@ public class InventoryManager : MonoBehaviour
 
     private void ClearSlotUI(GameObject slot)
     {
+        // Set warna background slot menjadi #472C17 saat kosong
+        Image slotImage = slot.GetComponent<Image>();
+        if (slotImage != null)
+        {
+            Color emptyColor;
+            if (ColorUtility.TryParseHtmlString("#472C17", out emptyColor))
+            {
+                slotImage.color = emptyColor;
+            }
+        }
+
         // Matikan gambar ikon
         Image iconImage = null;
         Transform iconTransform = slot.transform.Find("icon") ?? slot.transform.Find("Icon") ?? slot.transform.Find("Image") ?? slot.transform.Find("ItemImage");

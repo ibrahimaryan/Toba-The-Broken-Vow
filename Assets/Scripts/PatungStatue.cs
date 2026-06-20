@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PatungStatue : MonoBehaviour
 {
@@ -7,19 +8,42 @@ public class PatungStatue : MonoBehaviour
     [SerializeField] private Sprite fullColorSprite; 
     [SerializeField] private DoorController door; 
     [SerializeField] private string memoryShardID = "Chapter1"; // ID shard yang mau di-unlock
+    [SerializeField] private Dialogue doorOpenDialogue;
+    [SerializeField] private string statueSolvedFlag = "chapter1_statue_solved";
 
     [Header("Blink Settings")]
     [SerializeField] private float blinkSpeed = 1.5f; 
     [Range(0f, 1f)] [SerializeField] private float minAlpha = 0.4f; 
 
+    [Header("Audio Settings")]
+    [SerializeField] private AudioClip opendoorsound;
+
     private SpriteRenderer spriteRenderer;
     private bool isSolved = false;
     private bool isPlayerInRange = false;
     private Coroutine blinkCoroutine;
+    private AudioSource audioSource;
 
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+            audioSource.playOnAwake = false;
+        }
+    }
+
+    private void Start()
+    {
+        if (GameManager.Instance != null && GameManager.Instance.IsFlagSet(statueSolvedFlag))
+        {
+            isSolved = true;
+            StopBlinkEffect();
+            if (fullColorSprite != null)
+                spriteRenderer.sprite = fullColorSprite;
+        }
     }
 
     private void OnEnable()
@@ -84,12 +108,22 @@ public class PatungStatue : MonoBehaviour
             if (InventoryManager.Instance.hasFishingRod)
             {
                 isSolved = true;
+                if (GameManager.Instance != null)
+                {
+                    GameManager.Instance.SetFlag(statueSolvedFlag, true);
+                }
                 InventoryManager.Instance.UseFishingRod(); 
                 if (ToDoManager.Instance != null)
                 {
                     // Angka 1 berarti mencoret misi urutan KEDUA di daftar misi Chapter tersebut
                     ToDoManager.Instance.SelesaikanMisi(2); 
                 }
+
+                if (audioSource != null && opendoorsound != null)
+                {
+                    audioSource.PlayOneShot(opendoorsound);
+                }
+
                 StopBlinkEffect(); // TAMBAHAN: Matikan kedip karena patung sudah selesai!
 
                 if (fullColorSprite != null)
@@ -97,6 +131,11 @@ public class PatungStatue : MonoBehaviour
 
                 if (door != null)
                     door.OpenDoor();
+
+                if (doorOpenDialogue != null)
+                {
+                    DialogueManager.instance.StartDialogue(doorOpenDialogue);
+                }
 
                 Debug.Log("Patung telah terpasang kail! Pintu terbuka.");
 

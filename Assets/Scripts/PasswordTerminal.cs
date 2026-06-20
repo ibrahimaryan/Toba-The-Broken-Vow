@@ -15,6 +15,16 @@ public class PasswordTerminal : MonoBehaviour
     [SerializeField] private GameObject panel;
     [SerializeField] private GameObject rewardPanel;
     [SerializeField] private PatungStatue targetStatue; 
+    [SerializeField] private TMP_Text attemptText;
+
+    [Header("Audio Settings")]
+    [SerializeField] private AudioClip buttonClickSound;
+    [SerializeField] private AudioClip wrongPasswordSound;
+    [SerializeField] private AudioClip rewardSound;
+
+    [Header("Dialogue Settings")]
+    [SerializeField] private Dialogue solvedCloseDialogue;
+    [SerializeField] private string solvedCloseDialogueFlag = "chapter1_terminal_solved_dialogue";
 
     [Header("Blink Settings")]
     [SerializeField] private float blinkSpeed = 1.5f; 
@@ -25,11 +35,18 @@ public class PasswordTerminal : MonoBehaviour
     private bool isPuzzleSolved = false; 
 
     private SpriteRenderer spriteRenderer;
+    private AudioSource audioSource;
     private Coroutine blinkCoroutine;
 
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+            audioSource.playOnAwake = false;
+        }
     }
 
     private void Start()
@@ -76,6 +93,10 @@ public class PasswordTerminal : MonoBehaviour
             if (digitFields[i] != null && string.IsNullOrEmpty(digitFields[i].text))
             {
                 digitFields[i].text = angka;
+                if (audioSource != null && buttonClickSound != null)
+                {
+                    audioSource.PlayOneShot(buttonClickSound);
+                }
                 break; // Keluar dari loop setelah mengisi 1 kotak
             }
         }
@@ -92,6 +113,10 @@ public class PasswordTerminal : MonoBehaviour
             if (digitFields[i] != null && !string.IsNullOrEmpty(digitFields[i].text))
             {
                 digitFields[i].text = "";
+                if (audioSource != null && buttonClickSound != null)
+                {
+                    audioSource.PlayOneShot(buttonClickSound);
+                }
                 break; // Keluar dari loop setelah menghapus 1 kotak
             }
         }
@@ -117,6 +142,15 @@ public class PasswordTerminal : MonoBehaviour
         for (int i = 0; i < digitFields.Length; i++)
         {
             if (digitFields[i] != null) digitFields[i].text = "";
+        }
+    }
+
+    private void UpdateAttemptText()
+    {
+        if (attemptText != null)
+        {
+            int remainingAttempts = 3 - attemptCount;
+            attemptText.text = "*Anda memiliki " + remainingAttempts + " kesempatan lagi";
         }
     }
 
@@ -149,7 +183,14 @@ public class PasswordTerminal : MonoBehaviour
             }
 
             if (panel != null) panel.SetActive(false);
-            if (rewardPanel != null) rewardPanel.SetActive(true);
+            if (rewardPanel != null)
+            {
+                rewardPanel.SetActive(true);
+                if (audioSource != null && rewardSound != null)
+                {
+                    audioSource.PlayOneShot(rewardSound);
+                }
+            }
 
             StopBlink(); 
 
@@ -168,12 +209,21 @@ public class PasswordTerminal : MonoBehaviour
             Debug.Log("Kode Salah!");
             attemptCount++;
             ResetAllFields(); // Kosongkan semua kotak jika salah
+
+            if (audioSource != null && wrongPasswordSound != null)
+            {
+                audioSource.PlayOneShot(wrongPasswordSound);
+            }
             
             if (attemptCount >= 3)
             {
                 attemptCount = 0;
                 firstItem.ResetInteractions(); 
                 ClosePanel(); 
+            }
+            else
+            {
+                UpdateAttemptText();
             }
         }
     }
@@ -193,6 +243,8 @@ public class PasswordTerminal : MonoBehaviour
                 if (digitFields[i] != null) digitFields[i].DeactivateInputField();
             }
 
+            UpdateAttemptText();
+
             StopBlink(); 
         }
     }
@@ -210,11 +262,22 @@ public class PasswordTerminal : MonoBehaviour
 
     public void CloseAllPanels()
     {
+        bool wasRewardActive = (rewardPanel != null && rewardPanel.activeSelf);
+
         ClosePanel();
 
         if (rewardPanel != null && rewardPanel.activeSelf)
         {
             rewardPanel.SetActive(false);
+        }
+
+        if (wasRewardActive || (isPuzzleSolved && GameManager.Instance != null && GameManager.Instance.IsFlagSet("chapter1_puzzle_solved")))
+        {
+            if (solvedCloseDialogue != null && GameManager.Instance != null && !GameManager.Instance.IsFlagSet(solvedCloseDialogueFlag))
+            {
+                DialogueManager.instance.StartDialogue(solvedCloseDialogue);
+                GameManager.Instance.SetFlag(solvedCloseDialogueFlag, true);
+            }
         }
     }
 

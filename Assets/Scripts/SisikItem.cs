@@ -9,13 +9,23 @@ public class SisikItem : MonoBehaviour
     [Range(0f, 1f)] [SerializeField] private float minAlpha = 0.3f; 
     [SerializeField] private Sprite[] possibleSprites; // Daftar 7 alternatif sprite sisik
 
+    [Header("Audio Settings")]
+    [SerializeField] private AudioClip collectsound; 
+
     private SpriteRenderer spriteRenderer;
     private Coroutine blinkCoroutine;
     private bool isPlayerInRange = false;
+    private AudioSource audioSource;
 
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+            audioSource.playOnAwake = false;
+        }
     }
 
     private void Start()
@@ -113,6 +123,11 @@ public class SisikItem : MonoBehaviour
     private void Collect()
     {
         Debug.Log($"Sisik {sisikID} berhasil diambil!");
+
+        if (collectsound != null)
+        {
+            AudioSource.PlayClipAtPoint(collectsound, Camera.main != null ? Camera.main.transform.position : transform.position);
+        }
 
         // Masukkan ke inventory dinamis
         if (InventoryManager.Instance != null)

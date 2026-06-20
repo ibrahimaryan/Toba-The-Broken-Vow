@@ -103,6 +103,11 @@ public class BarangTrigger : MonoBehaviour
             return;
         }
 
+        if (InteractionPromptUI.Instance != null)
+        {
+            InteractionPromptUI.Instance.HidePrompt();
+        }
+
         if (audioSource != null && opensound != null)
         {
             audioSource.PlayOneShot(opensound);
@@ -205,6 +210,10 @@ public class BarangTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayerInRange = true;
+            if (GameManager.Instance != null && !GameManager.Instance.IsFlagSet("sisik_puzzle_solved") && InteractionPromptUI.Instance != null)
+            {
+                InteractionPromptUI.Instance.ShowPrompt("Tekan E untuk periksa");
+            }
         }
     }
 
@@ -213,6 +222,10 @@ public class BarangTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayerInRange = false;
+            if (InteractionPromptUI.Instance != null)
+            {
+                InteractionPromptUI.Instance.HidePrompt();
+            }
         }
     }
 }

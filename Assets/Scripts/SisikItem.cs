@@ -95,6 +95,10 @@ public class SisikItem : MonoBehaviour
                 blinkCoroutine = null;
             }
             isPlayerInRange = false;
+            if (InteractionPromptUI.Instance != null)
+            {
+                InteractionPromptUI.Instance.HidePrompt();
+            }
         }
     }
 
@@ -123,6 +127,11 @@ public class SisikItem : MonoBehaviour
     private void Collect()
     {
         Debug.Log($"Sisik {sisikID} berhasil diambil!");
+
+        if (InteractionPromptUI.Instance != null)
+        {
+            InteractionPromptUI.Instance.HidePrompt();
+        }
 
         if (collectsound != null)
         {
@@ -162,6 +171,10 @@ public class SisikItem : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayerInRange = true;
+            if (InteractionPromptUI.Instance != null)
+            {
+                InteractionPromptUI.Instance.ShowPrompt("Tekan E untuk mengambil Sisik");
+            }
         }
     }
 
@@ -170,6 +183,10 @@ public class SisikItem : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayerInRange = false;
+            if (InteractionPromptUI.Instance != null)
+            {
+                InteractionPromptUI.Instance.HidePrompt();
+            }
         }
     }
 }

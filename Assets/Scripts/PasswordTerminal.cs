@@ -237,6 +237,11 @@ public class PasswordTerminal : MonoBehaviour
             panel.SetActive(true);
             ResetAllFields(); // Pastikan kosong saat dibuka
 
+            if (InteractionPromptUI.Instance != null)
+            {
+                InteractionPromptUI.Instance.HidePrompt();
+            }
+
             // Matikan interaksi keyboard langsung di semua kotak
             for (int i = 0; i < digitFields.Length; i++)
             {
@@ -257,6 +262,11 @@ public class PasswordTerminal : MonoBehaviour
             panel.SetActive(false);
 
             if (!isPuzzleSolved) StartBlink();
+
+            if (isPlayerInRange && !isPuzzleSolved && InteractionPromptUI.Instance != null)
+            {
+                InteractionPromptUI.Instance.ShowPrompt("Tekan E untuk akses terminal");
+            }
         }
     }
 
@@ -317,7 +327,14 @@ public class PasswordTerminal : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player")) isPlayerInRange = true;
+        if (other.CompareTag("Player"))
+        {
+            isPlayerInRange = true;
+            if (!isPuzzleSolved && InteractionPromptUI.Instance != null)
+            {
+                InteractionPromptUI.Instance.ShowPrompt("Tekan E untuk akses terminal");
+            }
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -326,6 +343,10 @@ public class PasswordTerminal : MonoBehaviour
         {
             isPlayerInRange = false;
             CloseAllPanels(); 
+            if (InteractionPromptUI.Instance != null)
+            {
+                InteractionPromptUI.Instance.HidePrompt();
+            }
         }
     }
 }

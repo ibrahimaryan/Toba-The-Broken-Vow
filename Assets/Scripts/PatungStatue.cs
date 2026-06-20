@@ -108,6 +108,11 @@ public class PatungStatue : MonoBehaviour
             if (InventoryManager.Instance.hasFishingRod)
             {
                 isSolved = true;
+                if (InteractionPromptUI.Instance != null)
+                {
+                    InteractionPromptUI.Instance.HidePrompt();
+                }
+
                 if (GameManager.Instance != null)
                 {
                     GameManager.Instance.SetFlag(statueSolvedFlag, true);
@@ -159,11 +164,26 @@ public class PatungStatue : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player")) isPlayerInRange = true;
+        if (other.CompareTag("Player"))
+        {
+            isPlayerInRange = true;
+            bool isPuzzleSolved = GameManager.Instance != null && GameManager.Instance.IsFlagSet("chapter1_puzzle_solved");
+            if (!isSolved && isPuzzleSolved && InteractionPromptUI.Instance != null)
+            {
+                InteractionPromptUI.Instance.ShowPrompt("Tekan E untuk pasang item");
+            }
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("Player")) isPlayerInRange = false;
+        if (other.CompareTag("Player"))
+        {
+            isPlayerInRange = false;
+            if (InteractionPromptUI.Instance != null)
+            {
+                InteractionPromptUI.Instance.HidePrompt();
+            }
+        }
     }
 }

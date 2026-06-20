@@ -113,6 +113,11 @@ public class SecretItem : MonoBehaviour
         popUpPanel.SetActive(true);
         canInteract = false; 
 
+        if (InteractionPromptUI.Instance != null)
+        {
+            InteractionPromptUI.Instance.HidePrompt();
+        }
+
         if (audioSource != null && interactSound != null)
         {
             audioSource.PlayOneShot(interactSound);
@@ -187,10 +192,24 @@ public class SecretItem : MonoBehaviour
     public int GetCurrentSecretIndex() => randomizedIndices[currentSpriteIndex];
 
     private void OnTriggerEnter2D(Collider2D other) {
-        if (other.CompareTag("Player")) isPlayerInRange = true;
+        if (other.CompareTag("Player"))
+        {
+            isPlayerInRange = true;
+            if (canInteract && InteractionPromptUI.Instance != null)
+            {
+                InteractionPromptUI.Instance.ShowPrompt("Tekan E untuk berinteraksi");
+            }
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other) {
-        if (other.CompareTag("Player")) isPlayerInRange = false;
+        if (other.CompareTag("Player"))
+        {
+            isPlayerInRange = false;
+            if (InteractionPromptUI.Instance != null)
+            {
+                InteractionPromptUI.Instance.HidePrompt();
+            }
+        }
     }
 }

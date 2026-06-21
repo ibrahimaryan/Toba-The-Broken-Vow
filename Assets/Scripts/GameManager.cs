@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
@@ -17,6 +18,7 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            LoadFlags(); // Muat flags dari PlayerPrefs saat game mulai
         }
         else
         {
@@ -33,6 +35,7 @@ public class GameManager : MonoBehaviour
     {
         persistentFlags[flagID] = value;
         Debug.Log($"GameManager: flag {flagID} = {value}");
+        SaveFlags(); // Simpan otomatis setiap ada perubahan flag
     }
 
     public bool IsDoorOpened(string doorID)
@@ -43,5 +46,41 @@ public class GameManager : MonoBehaviour
     public void SetDoorOpened(string doorID, bool isOpen)
     {
         SetFlag("door_" + doorID, isOpen);
+    }
+
+    // --- SAVE & LOAD PERSISTENT FLAGS ---
+    private void SaveFlags()
+    {
+        List<string> keys = new List<string>(persistentFlags.Keys);
+        string serializedKeys = string.Join(",", keys);
+        PlayerPrefs.SetString("GameManager_FlagKeys", serializedKeys);
+
+        foreach (var kvp in persistentFlags)
+        {
+            PlayerPrefs.SetInt("GameManager_Flag_" + kvp.Key, kvp.Value ? 1 : 0);
+        }
+        PlayerPrefs.Save();
+        Debug.Log("GameManager: Flags autosaved successfully.");
+    }
+
+    private void LoadFlags()
+    {
+        persistentFlags.Clear();
+        if (PlayerPrefs.HasKey("GameManager_FlagKeys"))
+        {
+            string serializedKeys = PlayerPrefs.GetString("GameManager_FlagKeys");
+            if (!string.IsNullOrEmpty(serializedKeys))
+            {
+                string[] keys = serializedKeys.Split(',');
+                foreach (string key in keys)
+                {
+                    if (PlayerPrefs.HasKey("GameManager_Flag_" + key))
+                    {
+                        persistentFlags[key] = PlayerPrefs.GetInt("GameManager_Flag_" + key) == 1;
+                    }
+                }
+            }
+            Debug.Log("GameManager: Flags loaded successfully from PlayerPrefs.");
+        }
     }
 }

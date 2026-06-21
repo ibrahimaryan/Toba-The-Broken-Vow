@@ -34,6 +34,7 @@ public class InventoryManager : MonoBehaviour
     public bool hasFishingRod { get; private set; } = false;
     public bool hasAxe { get; private set; } = false;
     public bool hasEquipment2 { get; private set; } = false;
+    public bool hasCangkul { get; private set; } = false;
     public string currentEquippedItem { get; private set; } = ""; // ID item yang sedang dipasang ("kapak", "equipment2", atau "")
 
     // Database penyimpanan item dan jumlahnya di runtime
@@ -65,7 +66,7 @@ public class InventoryManager : MonoBehaviour
                 }
             }
         }
-        UpdateInventoryUI();
+        LoadInventory(); // Muat inventory dari PlayerPrefs
     }
 
     private void OnEnable()
@@ -89,6 +90,7 @@ public class InventoryManager : MonoBehaviour
         hasFishingRod = true;
         AddItem("fishing_rod", 1);
         UpdateInventoryUI(); 
+        SaveInventory();
         Debug.Log("Kail Pancing masuk ke inventory!");
     }
 
@@ -97,6 +99,7 @@ public class InventoryManager : MonoBehaviour
         hasFishingRod = false;
         RemoveItem("fishing_rod", 1);
         UpdateInventoryUI(); 
+        SaveInventory();
         Debug.Log("Kail Pancing telah digunakan!");
     }
 
@@ -105,6 +108,7 @@ public class InventoryManager : MonoBehaviour
     {
         hasAxe = true;
         UpdateInventoryUI();
+        SaveInventory();
         Debug.Log("Kapak masuk ke equipment slot!");
     }
 
@@ -112,7 +116,16 @@ public class InventoryManager : MonoBehaviour
     {
         hasEquipment2 = true;
         UpdateInventoryUI();
+        SaveInventory();
         Debug.Log("Equipment 2 masuk ke equipment slot!");
+    }
+
+    public void EquipCangkul()
+    {
+        hasCangkul = true;
+        UpdateInventoryUI();
+        SaveInventory();
+        Debug.Log("Cangkul masuk ke equipment slot!");
     }
 
     public void CycleEquipment()
@@ -120,11 +133,13 @@ public class InventoryManager : MonoBehaviour
         List<string> ownedEquipment = new List<string>();
         if (hasAxe) ownedEquipment.Add("kapak");
         if (hasEquipment2) ownedEquipment.Add("equipment2");
+        if (hasCangkul) ownedEquipment.Add("cangkul");
 
         if (ownedEquipment.Count == 0)
         {
             currentEquippedItem = "";
             UpdateInventoryUI();
+            SaveInventory();
             return;
         }
 
@@ -141,6 +156,7 @@ public class InventoryManager : MonoBehaviour
         }
 
         UpdateInventoryUI();
+        SaveInventory();
         Debug.Log($"Equipment aktif diganti ke: {(string.IsNullOrEmpty(currentEquippedItem) ? "None" : currentEquippedItem)}");
     }
 
@@ -158,6 +174,7 @@ public class InventoryManager : MonoBehaviour
         }
         Debug.Log($"Inventory: Menambah {count}x {itemID}. Total sekarang: {items[itemID]}");
         UpdateInventoryUI();
+        SaveInventory();
     }
 
     public void RemoveItem(string itemID, int count = 1)
@@ -170,7 +187,58 @@ public class InventoryManager : MonoBehaviour
                 items.Remove(itemID);
             }
             UpdateInventoryUI();
+            SaveInventory();
         }
+    }
+
+    // --- SAVE & LOAD SYSTEM ---
+    private void SaveInventory()
+    {
+        PlayerPrefs.SetInt("Inventory_hasFishingRod", hasFishingRod ? 1 : 0);
+        PlayerPrefs.SetInt("Inventory_hasAxe", hasAxe ? 1 : 0);
+        PlayerPrefs.SetInt("Inventory_hasEquipment2", hasEquipment2 ? 1 : 0);
+        PlayerPrefs.SetInt("Inventory_hasCangkul", hasCangkul ? 1 : 0);
+        PlayerPrefs.SetString("Inventory_currentEquippedItem", currentEquippedItem);
+
+        // Serialize Dictionary Keys
+        List<string> keys = new List<string>(items.Keys);
+        string serializedKeys = string.Join(",", keys);
+        PlayerPrefs.SetString("Inventory_ItemKeys", serializedKeys);
+
+        foreach (var kvp in items)
+        {
+            PlayerPrefs.SetInt("Inventory_ItemAmount_" + kvp.Key, kvp.Value);
+        }
+        PlayerPrefs.Save();
+        Debug.Log("Inventory: Autosaved successfully.");
+    }
+
+    private void LoadInventory()
+    {
+        hasFishingRod = PlayerPrefs.GetInt("Inventory_hasFishingRod", 0) == 1;
+        hasAxe = PlayerPrefs.GetInt("Inventory_hasAxe", 0) == 1;
+        hasEquipment2 = PlayerPrefs.GetInt("Inventory_hasEquipment2", 0) == 1;
+        hasCangkul = PlayerPrefs.GetInt("Inventory_hasCangkul", 0) == 1;
+        currentEquippedItem = PlayerPrefs.GetString("Inventory_currentEquippedItem", "");
+
+        items.Clear();
+        if (PlayerPrefs.HasKey("Inventory_ItemKeys"))
+        {
+            string serializedKeys = PlayerPrefs.GetString("Inventory_ItemKeys");
+            if (!string.IsNullOrEmpty(serializedKeys))
+            {
+                string[] keys = serializedKeys.Split(',');
+                foreach (string key in keys)
+                {
+                    if (PlayerPrefs.HasKey("Inventory_ItemAmount_" + key))
+                    {
+                        items[key] = PlayerPrefs.GetInt("Inventory_ItemAmount_" + key);
+                    }
+                }
+            }
+        }
+        Debug.Log("Inventory: Loaded successfully.");
+        UpdateInventoryUI();
     }
 
     public int GetItemCount(string itemID)
@@ -239,6 +307,7 @@ public class InventoryManager : MonoBehaviour
             List<string> ownedEquipment = new List<string>();
             if (hasAxe) ownedEquipment.Add("kapak");
             if (hasEquipment2) ownedEquipment.Add("equipment2");
+            if (hasCangkul) ownedEquipment.Add("cangkul");
 
             for (int i = equipmentStartSlotIndex; i < staticSlots.Length; i++)
             {

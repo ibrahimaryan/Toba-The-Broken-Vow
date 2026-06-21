@@ -24,8 +24,9 @@ public class MainMenuController : MonoBehaviour
     // Dipanggil oleh tombol New Game / Mulai
     public void PlayNewGame()
     {
-        // Opsional: Hapus save lama jika pemain benar-benar ingin mengulang dari awal
-        // PlayerPrefs.DeleteKey("SavedScene"); 
+        // Hapus seluruh data save lama agar bersih dari awal
+        PlayerPrefs.DeleteAll(); 
+        PlayerPrefs.Save();
 
         SceneManager.LoadScene("chapter1_kamar"); 
     }

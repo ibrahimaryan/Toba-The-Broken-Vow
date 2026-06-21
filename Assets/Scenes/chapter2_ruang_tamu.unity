@@ -3294,11 +3294,6 @@ MonoBehaviour:
       isSpeechBubble: 1
       isCutsceneStyle: 0
       holdTime: 3
-    - characterName: Samosir
-      sentence: Eh apa itu ada emas emas
-      isSpeechBubble: 1
-      isCutsceneStyle: 0
-      holdTime: 3
   triggerOnlyOnce: 1
   triggerID: chapter2_meja_kertas
   saatDialogBerjalan:
@@ -9935,7 +9930,6 @@ MonoBehaviour:
   - ruangtamu
   - gudang
   - dapur
-  urutanMisi: 0
 --- !u!1 &1821146863
 GameObject:
   m_ObjectHideFlags: 0

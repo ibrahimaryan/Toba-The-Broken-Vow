@@ -148,16 +148,33 @@ public class PlayerControllerScript : MonoBehaviour
         rb.MovePosition(rb.position + movement * (speed * Time.fixedDeltaTime));
     }
 
+    private bool isFacingLocked = false;
+    private Coroutine lockFacingCoroutine;
+
+    public void LockFacingDirection(bool faceLeft, float duration)
+    {
+        if (lockFacingCoroutine != null)
+        {
+            StopCoroutine(lockFacingCoroutine);
+        }
+        lockFacingCoroutine = StartCoroutine(LockFacingCoroutine(faceLeft, duration));
+    }
+
+    private IEnumerator LockFacingCoroutine(bool faceLeft, float duration)
+    {
+        transform.localScale = new Vector3(faceLeft ? -1f : 1f, 1f, 1f);
+        isFacingLocked = true;
+        yield return new WaitForSeconds(duration);
+        isFacingLocked = false;
+    }
+
     private void AdjustPlayerFacingDirection()
     {
-        // Cara baru mengambil posisi mouse di Input System
-        Vector3 mousePos = Mouse.current.position.ReadValue(); 
-        Vector3 playerScreenPoint = Camera.main.WorldToScreenPoint(transform.position);
-        
-        // if (mySpriteRenderer != null)
-        // {
-        //     mySpriteRenderer.flipX = mousePos.x < playerScreenPoint.x;
-        // }
+        // Jika arah hadap sedang dikunci (saat memukul), biarkan tetap terkunci
+        if (isFacingLocked) return;
+
+        // Reset kembali ke skala normal (1) agar animasi jalan/idle dari Blend Tree tidak terbalik
+        transform.localScale = Vector3.one;
     }
 
     /// <summary>

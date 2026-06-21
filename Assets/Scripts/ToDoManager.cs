@@ -25,7 +25,10 @@ public class ToDoManager : MonoBehaviour
 
     void Awake()
     {
-        Instance = this;
+       if (Instance == null)
+        {
+            Instance = this;
+        }
     }
 
     void Start()

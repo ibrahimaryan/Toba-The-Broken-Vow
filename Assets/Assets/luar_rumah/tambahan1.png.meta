@@ -1,0 +1,702 @@
+fileFormatVersion: 2
+guid: 69e2393713f26f64488d41d125162fb3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5294456868971855090
+    second: tambahan1_0
+  - first:
+      213: -2757096121902589163
+    second: tambahan1_1
+  - first:
+      213: -4898460729557241923
+    second: tambahan1_2
+  - first:
+      213: 486134193457447264
+    second: tambahan1_3
+  - first:
+      213: 940905289338916666
+    second: tambahan1_4
+  - first:
+      213: 5760576080258014592
+    second: tambahan1_5
+  - first:
+      213: -8421968115586316148
+    second: tambahan1_6
+  - first:
+      213: -1836802832346327477
+    second: tambahan1_7
+  - first:
+      213: 909369801696050271
+    second: tambahan1_8
+  - first:
+      213: -4909118671408917428
+    second: tambahan1_9
+  - first:
+      213: -3650682461974527039
+    second: tambahan1_10
+  - first:
+      213: 1962785018488039530
+    second: tambahan1_11
+  - first:
+      213: 3501242259691818032
+    second: tambahan1_12
+  - first:
+      213: 8628014958591116201
+    second: tambahan1_13
+  - first:
+      213: 6070213286544330843
+    second: tambahan1_14
+  - first:
+      213: 2222967314510591859
+    second: tambahan1_15
+  - first:
+      213: -7822072449820675434
+    second: tambahan1_16
+  - first:
+      213: 8222461940411722768
+    second: tambahan1_17
+  - first:
+      213: 1560516515368324905
+    second: tambahan1_18
+  - first:
+      213: -6345695477656048117
+    second: tambahan1_19
+  - first:
+      213: 7584648688529904275
+    second: tambahan1_20
+  - first:
+      213: 613831343510444095
+    second: tambahan1_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: tambahan1_0
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 670
+        width: 291
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fcb1b99870b97940800000000000000
+      internalID: 5294456868971855090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tambahan1_1
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 672
+        width: 255
+        height: 298
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51b93625fa3dcb9d0800000000000000
+      internalID: -2757096121902589163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tambahan1_2
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 672
+        width: 202
+        height: 295
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbf2a8c6beb250cb0800000000000000
+      internalID: -4898460729557241923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tambahan1_3
+      rect:
+        serializedVersion: 2
+        x: 941
+        y: 675
+        width: 160
+        height: 292
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 061c33a29781fb600800000000000000
+      internalID: 486134193457447264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tambahan1_4
+      rect:
+        serializedVersion: 2
+        x: 1177
+        y: 675
+        width: 138
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3f05522064ce0d00800000000000000
+      internalID: 940905289338916666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tambahan1_5
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 484
+        width: 223
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08d14659c6da1ff40800000000000000
+      internalID: 5760576080258014592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tambahan1_6
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 500
+        width: 153
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c88cfc0de982f1b80800000000000000
+      internalID: -8421968115586316148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tambahan1_7
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 500
+        width: 123
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b46d0974e8d5286e0800000000000000
+      internalID: -1836802832346327477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tambahan1_8
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 516
+        width: 69
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5c7f8f340bbe9c00800000000000000
+      internalID: 909369801696050271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tambahan1_9
+      rect:
+        serializedVersion: 2
+        x: 829
+        y: 492
+        width: 159
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c441f66f39e4fdbb0800000000000000
+      internalID: -4909118671408917428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tambahan1_10
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 498
+        width: 122
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c3824a94ab265dc0800000000000000
+      internalID: -3650682461974527039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tambahan1_11
+      rect:
+        serializedVersion: 2
+        x: 1207
+        y: 498
+        width: 85
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a68207533963d3b10800000000000000
+      internalID: 1962785018488039530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tambahan1_12
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 498
+        width: 53
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03c4489e849e69030800000000000000
+      internalID: 3501242259691818032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tambahan1_13
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 270
+        width: 150
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a3849344eddcb770800000000000000
+      internalID: 8628014958591116201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tambahan1_14
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 270
+        width: 141
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b50d45f92dabd3450800000000000000
+      internalID: 6070213286544330843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tambahan1_15
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 270
+        width: 161
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37735b8aef099de10800000000000000
+      internalID: 2222967314510591859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tambahan1_16
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 266
+        width: 158
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 692b11dcc8a627390800000000000000
+      internalID: -7822072449820675434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tambahan1_17
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 66
+        width: 190
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01ce861029d0c1270800000000000000
+      internalID: 8222461940411722768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tambahan1_18
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 68
+        width: 175
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92fc8a4b08118a510800000000000000
+      internalID: 1560516515368324905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tambahan1_19
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 73
+        width: 198
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0e2281859f8fe7a0800000000000000
+      internalID: -6345695477656048117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tambahan1_20
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 73
+        width: 184
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39215f90cc5124960800000000000000
+      internalID: 7584648688529904275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tambahan1_21
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 73
+        width: 174
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f38d0fdca54c48800800000000000000
+      internalID: 613831343510444095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      tambahan1_0: 5294456868971855090
+      tambahan1_1: -2757096121902589163
+      tambahan1_10: -3650682461974527039
+      tambahan1_11: 1962785018488039530
+      tambahan1_12: 3501242259691818032
+      tambahan1_13: 8628014958591116201
+      tambahan1_14: 6070213286544330843
+      tambahan1_15: 2222967314510591859
+      tambahan1_16: -7822072449820675434
+      tambahan1_17: 8222461940411722768
+      tambahan1_18: 1560516515368324905
+      tambahan1_19: -6345695477656048117
+      tambahan1_2: -4898460729557241923
+      tambahan1_20: 7584648688529904275
+      tambahan1_21: 613831343510444095
+      tambahan1_3: 486134193457447264
+      tambahan1_4: 940905289338916666
+      tambahan1_5: 5760576080258014592
+      tambahan1_6: -8421968115586316148
+      tambahan1_7: -1836802832346327477
+      tambahan1_8: 909369801696050271
+      tambahan1_9: -4909118671408917428
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

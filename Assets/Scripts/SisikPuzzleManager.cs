@@ -25,6 +25,7 @@ public class SisikPuzzleManager : MonoBehaviour
 
     [Header("Dialogue (Optional)")]
     [SerializeField] private Dialogue failDialogue; // Dialog saat susunan masih salah
+    [SerializeField] private Dialogue successDialogue; // Dialog setelah puzzle selesai & reward panel ditutup
 
     [Header("Audio Settings")]
     [SerializeField] private AudioClip buttonClickSound;
@@ -216,6 +217,8 @@ public class SisikPuzzleManager : MonoBehaviour
             puzzlePanel.SetActive(false);
         }
 
+        bool wasRewardActive = rewardPanel != null && rewardPanel.activeSelf;
+
         if (rewardPanel != null)
         {
             rewardPanel.SetActive(false);
@@ -224,5 +227,11 @@ public class SisikPuzzleManager : MonoBehaviour
         // Nyalakan kembali input player
         var player = FindAnyObjectByType<PlayerControllerScript>();
         if (player != null) player.ToggleInput(true);
+
+        // Jika panel reward baru saja ditutup, mulai dialog sukses agar cerita berlanjut
+        if (wasRewardActive && successDialogue != null && DialogueManager.instance != null)
+        {
+            DialogueManager.instance.StartDialogue(successDialogue);
+        }
     }
 }

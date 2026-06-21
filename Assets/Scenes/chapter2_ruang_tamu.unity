@@ -2260,6 +2260,13 @@ MonoBehaviour:
       m_Calls: []
   failDialogue:
     lines: []
+  successDialogue:
+    lines:
+    - characterName: Samosir
+      sentence: TIba-tiba muncul kunci, apa ini buat pintu tadi di bawah ya??
+      isSpeechBubble: 1
+      isCutsceneStyle: 0
+      holdTime: 3
   buttonClickSound: {fileID: 8300000, guid: 1760c5c3419d7b64094bf102772aa320, type: 3}
   wrongPasswordSound: {fileID: 8300000, guid: 4b702b3ad3f67214b8d0db693efa45e1, type: 3}
   rewardSound: {fileID: 8300000, guid: 35ee005b99f931a41ab1544bccacf4b7, type: 3}

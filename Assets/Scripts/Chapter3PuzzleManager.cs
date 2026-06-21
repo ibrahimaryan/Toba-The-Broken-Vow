@@ -44,6 +44,21 @@ public class Chapter3PuzzleManager : MonoBehaviour
     [SerializeField] private Dialogue failDialogue; // Dialog saat susunan masih salah
     [SerializeField] private Dialogue successDialogue; // Dialog saat puzzle berhasil diselesaikan
 
+    [Header("Audio Settings")]
+    [SerializeField] private AudioClip correctSound;
+    [SerializeField] private AudioClip wrongSound;
+    private AudioSource audioSource;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+            audioSource.playOnAwake = false;
+        }
+    }
+
     private bool hasRandomized = false;
 
     // Menyimpan parent awal asli dari masing-masing item sebelum diacak
@@ -206,6 +221,12 @@ public class Chapter3PuzzleManager : MonoBehaviour
             puzzlePanel.SetActive(false);
         }
 
+        // Putar suara sukses
+        if (audioSource != null && correctSound != null)
+        {
+            audioSource.PlayOneShot(correctSound);
+        }
+
         // Aktifkan Game Object Kapak di dunia game
         if (axeWorldGameObject != null)
         {
@@ -253,6 +274,12 @@ public class Chapter3PuzzleManager : MonoBehaviour
 
     private void HandleFailure()
     {
+        // Putar suara gagal
+        if (audioSource != null && wrongSound != null)
+        {
+            audioSource.PlayOneShot(wrongSound);
+        }
+
         // Tampilkan dialog gagal jika dipasang
         if (failDialogue != null && DialogueManager.instance != null)
         {

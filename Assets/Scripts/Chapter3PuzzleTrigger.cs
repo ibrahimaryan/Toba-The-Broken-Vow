@@ -18,12 +18,18 @@ public class Chapter3PuzzleTrigger : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
+    [Header("Activation Flag (Optional)")]
+    [SerializeField] private string activationFlag = "chapter2_npc_sequence_played";
+
     private void Start()
     {
-        // Mulai efek berkedip jika puzzle belum diselesaikan
+        // Mulai efek berkedip jika puzzle belum diselesaikan dan sudah diaktifkan oleh alur cerita
         if (GameManager.Instance != null && !GameManager.Instance.IsFlagSet("chapter3_puzzle_solved"))
         {
-            StartBlink();
+            if (string.IsNullOrEmpty(activationFlag) || GameManager.Instance.IsFlagSet(activationFlag))
+            {
+                StartBlink();
+            }
         }
     }
 
@@ -76,6 +82,11 @@ public class Chapter3PuzzleTrigger : MonoBehaviour
         // Buka panel puzzle
         if (puzzleManager != null)
         {
+            if (InteractionPromptUI.Instance != null)
+            {
+                InteractionPromptUI.Instance.HidePrompt();
+            }
+
             puzzleManager.OpenPuzzle();
             
             // Matikan kedipan saat panel dibuka
@@ -88,6 +99,10 @@ public class Chapter3PuzzleTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayerInRange = true;
+            if (InteractionPromptUI.Instance != null && GameManager.Instance != null && !GameManager.Instance.IsFlagSet("chapter3_puzzle_solved"))
+            {
+                InteractionPromptUI.Instance.ShowPrompt("Tekan E untuk periksa");
+            }
         }
     }
 
@@ -96,6 +111,10 @@ public class Chapter3PuzzleTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayerInRange = false;
+            if (InteractionPromptUI.Instance != null)
+            {
+                InteractionPromptUI.Instance.HidePrompt();
+            }
         }
     }
 }

@@ -46,11 +46,27 @@ public class DialogueManager : MonoBehaviour
 
     void Update()
     {
-        // PENTING: Tombol 'E' SEKARANG HANYA BERLAKU UNTUK DIALOG KECIL/BIASA.
-        // Dialog cutscene atau bubble (otomatis) tidak bisa di-skip pakai E.
-        if (!isTyping && screenBoxPanel.activeInHierarchy && Keyboard.current.eKey.wasPressedThisFrame)
+        if (!isTyping)
         {
-            DisplayNextSentence();
+            bool nextPressed = false;
+            if (Keyboard.current != null)
+            {
+                if (Keyboard.current.enterKey.wasPressedThisFrame || Keyboard.current.spaceKey.wasPressedThisFrame)
+                {
+                    nextPressed = true;
+                }
+            }
+
+            // Dialog Biasa (screenBoxPanel) bisa lanjut dengan tombol E, Enter, atau Space
+            if (screenBoxPanel.activeInHierarchy && (Keyboard.current.eKey.wasPressedThisFrame || nextPressed))
+            {
+                DisplayNextSentence();
+            }
+            // Dialog Bubble (bubblePanel) bisa lanjut dengan tombol Enter atau Space
+            else if (bubblePanel.activeInHierarchy && nextPressed)
+            {
+                DisplayNextSentence();
+            }
         }
     }
 
@@ -98,6 +114,7 @@ public class DialogueManager : MonoBehaviour
         {
             bubblePanel.SetActive(true);
             activeTextDisplay = bubbleText;
+            AdjustBubblePosition(line.characterName);
         }
         else if (line.isCutsceneStyle && cutsceneBoxPanel != null) 
         {
@@ -123,10 +140,12 @@ public class DialogueManager : MonoBehaviour
 
         isTyping = false;
 
-        // FITUR OTOMATIS LANJUT SEPERTI FILM (Kini khusus untuk Bubble Saja!)
-        if (line.isSpeechBubble)
+        // FITUR OTOMATIS LANJUT SEPERTI FILM (Hanya untuk bubble Samosir/Player/Narrator, sedangkan NPC menunggu Enter)
+        bool isPlayerOrNarratorBubble = line.isSpeechBubble && 
+            (line.characterName == "Samosir" || line.characterName == "Player" || string.IsNullOrEmpty(line.characterName));
+
+        if (isPlayerOrNarratorBubble)
         {
-            // Tahan layar sejenak
             yield return new WaitForSeconds(durasiOtomatis);
             DisplayNextSentence(); 
         }
@@ -155,5 +174,66 @@ public class DialogueManager : MonoBehaviour
         if(screenBoxPanel != null) screenBoxPanel.SetActive(false);
         if(bubblePanel != null) bubblePanel.SetActive(false);
         if(cutsceneBoxPanel != null) cutsceneBoxPanel.SetActive(false);
+    }
+
+    private void AdjustBubblePosition(string characterName)
+    {
+        if (bubblePanel == null) return;
+        
+        // Pengaman jika nama kosong (narrator/dialog tanpa nama)
+        if (string.IsNullOrEmpty(characterName)) return;
+
+        // Cari GameObject pembicara berdasarkan nama di scene
+        GameObject speakerGo = GameObject.Find(characterName);
+        if (speakerGo == null && (characterName == "Samosir" || characterName == "Player"))
+        {
+            var player = FindAnyObjectByType<PlayerControllerScript>();
+            if (player != null) speakerGo = player.gameObject;
+        }
+
+        if (speakerGo != null && Camera.main != null)
+        {
+            // Offset Y agar bubble berada di atas kepala karakter (sesuaikan dengan tinggi sprite Anda)
+            Vector3 worldOffset = new Vector3(0, 2.0f, 0); 
+            
+            // Dapatkan referensi Canvas parent untuk mendeteksi Render Mode
+            Canvas parentCanvas = bubblePanel.GetComponentInParent<Canvas>();
+            
+            if (parentCanvas != null)
+            {
+                if (parentCanvas.renderMode == RenderMode.ScreenSpaceOverlay)
+                {
+                    // Konversi posisi dunia ke posisi layar (Screen Space)
+                    Vector3 screenPos = Camera.main.WorldToScreenPoint(speakerGo.transform.position + worldOffset);
+                    bubblePanel.transform.position = screenPos;
+                }
+                else if (parentCanvas.renderMode == RenderMode.ScreenSpaceCamera)
+                {
+                    // Konversi posisi dunia ke posisi layar (Screen Space)
+                    Vector3 screenPos = Camera.main.WorldToScreenPoint(speakerGo.transform.position + worldOffset);
+                    
+                    // Konversi posisi layar ke posisi world relatif terhadap Camera Canvas
+                    if (RectTransformUtility.ScreenPointToWorldPointInRectangle(
+                        bubblePanel.transform.parent as RectTransform,
+                        screenPos,
+                        parentCanvas.worldCamera != null ? parentCanvas.worldCamera : Camera.main,
+                        out Vector3 worldPos))
+                    {
+                        bubblePanel.transform.position = worldPos;
+                    }
+                }
+                else if (parentCanvas.renderMode == RenderMode.WorldSpace)
+                {
+                    // Untuk World Space Canvas, tempatkan langsung di koordinat dunia karakter + offset
+                    bubblePanel.transform.position = speakerGo.transform.position + worldOffset;
+                }
+            }
+            else
+            {
+                // Fallback jika tidak ada Canvas parent
+                Vector3 screenPos = Camera.main.WorldToScreenPoint(speakerGo.transform.position + worldOffset);
+                bubblePanel.transform.position = screenPos;
+            }
+        }
     }
 }

@@ -14,6 +14,10 @@ public class AxePickupTrigger : MonoBehaviour
     [Tooltip("Panel UI yang bertuliskan 'Anda mendapatkan Kapak!'")]
     [SerializeField] private GameObject getAxePanel;
 
+    [Header("Audio Settings")]
+    [SerializeField] private AudioClip pickupSound;
+    private AudioSource audioSource;
+
     private SpriteRenderer spriteRenderer;
     private Coroutine blinkCoroutine;
     private bool isPlayerInRange = false;
@@ -23,6 +27,12 @@ public class AxePickupTrigger : MonoBehaviour
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+            audioSource.playOnAwake = false;
+        }
     }
 
     private void Start()
@@ -93,6 +103,18 @@ public class AxePickupTrigger : MonoBehaviour
     private void CollectAxe()
     {
         Debug.Log("Kapak berhasil diambil dan dipasang sebagai Equipment!");
+
+        // Putar suara mengambil kapak jika ada
+        if (audioSource != null && pickupSound != null)
+        {
+            audioSource.PlayOneShot(pickupSound);
+        }
+
+        // Sembunyikan prompt interaksi saat mengambil kapak
+        if (InteractionPromptUI.Instance != null)
+        {
+            InteractionPromptUI.Instance.HidePrompt();
+        }
 
         // 1. Masukkan ke slot equipment (bukan inventory biasa)
         if (InventoryManager.Instance != null)
@@ -174,6 +196,10 @@ public class AxePickupTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayerInRange = true;
+            if (InteractionPromptUI.Instance != null && GameManager.Instance != null && !GameManager.Instance.IsFlagSet("chapter3_axe_collected"))
+            {
+                InteractionPromptUI.Instance.ShowPrompt("Tekan E untuk mengambil Kapak");
+            }
         }
     }
 
@@ -182,6 +208,10 @@ public class AxePickupTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayerInRange = false;
+            if (InteractionPromptUI.Instance != null)
+            {
+                InteractionPromptUI.Instance.HidePrompt();
+            }
         }
     }
 }

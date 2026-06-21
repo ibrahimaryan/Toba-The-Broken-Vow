@@ -18,6 +18,10 @@ public class Chapter3PuzzleItem : MonoBehaviour, IBeginDragHandler, IDragHandler
     public float targetRotationAngle = 0f;
     [SerializeField] private float rotationSpeed = 10f; // Kecepatan animasi rotasi
 
+    [Header("Audio Settings")]
+    [SerializeField] private AudioClip rotateSound;
+    private AudioSource audioSource;
+
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
     private Canvas canvas;
@@ -29,6 +33,13 @@ public class Chapter3PuzzleItem : MonoBehaviour, IBeginDragHandler, IDragHandler
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
         canvas = GetComponentInParent<Canvas>();
+
+        audioSource = GetComponent<AudioSource>();
+        if (audioSource == null)
+        {
+            audioSource = gameObject.AddComponent<AudioSource>();
+            audioSource.playOnAwake = false;
+        }
     }
 
     private void Start()
@@ -115,6 +126,12 @@ public class Chapter3PuzzleItem : MonoBehaviour, IBeginDragHandler, IDragHandler
     {
         // Jangan putar jika user sedang menyeret (dragging)
         if (eventData.dragging) return;
+
+        // Putar suara rotasi jika ada
+        if (audioSource != null && rotateSound != null)
+        {
+            audioSource.PlayOneShot(rotateSound);
+        }
 
         // Klik kiri/kanan memutar 90 derajat searah jarum jam (atau berlawanan jika mau)
         targetRotationAngle -= 90f;

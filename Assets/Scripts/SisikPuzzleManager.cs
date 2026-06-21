@@ -224,11 +224,16 @@ public class SisikPuzzleManager : MonoBehaviour
             rewardPanel.SetActive(false);
         }
 
+        // TAMBAHKAN INI: Tutup paksa seluruh panel dialog agar tidak menggantung di layar
+        if (DialogueManager.instance != null)
+        {
+            DialogueManager.instance.TutupPaksaSeluruhPanel();
+        }
+
         // Nyalakan kembali input player
         var player = FindAnyObjectByType<PlayerControllerScript>();
         if (player != null) player.ToggleInput(true);
 
-        // Jika panel reward baru saja ditutup, mulai dialog sukses agar cerita berlanjut
         if (wasRewardActive && successDialogue != null && DialogueManager.instance != null)
         {
             DialogueManager.instance.StartDialogue(successDialogue);

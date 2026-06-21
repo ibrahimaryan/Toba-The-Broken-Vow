@@ -203,6 +203,11 @@ public class Chapter3PuzzleManager : MonoBehaviour
 
         if (allCorrect)
         {
+            if (ToDoManager.Instance != null)
+                {
+                    // Angka 1 berarti mencoret misi urutan KEDUA di daftar misi Chapter tersebut
+                    ToDoManager.Instance.SelesaikanMisi(0); 
+                }
             Debug.Log("Puzzle Chapter 3 Sukses! Pola tersusun rapi.");
             HandleSuccess();
         }

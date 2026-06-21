@@ -3995,7 +3995,7 @@ MonoBehaviour:
     sudahSelesai: 0
   - namaMisi: Cari dan Lihat Kertas
     sudahSelesai: 0
-  - namaMisi: Selesaikan
+  - namaMisi: Selesaikan Tantangan
     sudahSelesai: 0
 --- !u!4 &704742206
 Transform:
@@ -4029,7 +4029,6 @@ MonoBehaviour:
   - ruangtamu
   - gudang
   - dapur
-  urutanMisi: 0
 --- !u!1 &810846409
 GameObject:
   m_ObjectHideFlags: 0

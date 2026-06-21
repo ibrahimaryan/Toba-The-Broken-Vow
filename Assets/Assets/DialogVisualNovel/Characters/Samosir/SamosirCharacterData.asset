@@ -18,4 +18,4 @@ MonoBehaviour:
   angryPortrait: {fileID: -5099292496197868168, guid: 531323abd87a5504080d5daadaa0a298, type: 3}
   shockedPortrait: {fileID: 4113829005332862926, guid: bbf41f869ac8c9248924d0afb645765d, type: 3}
   confusedPortrait: {fileID: 4130640169021434097, guid: 413b8d597054db34ead5eb54a63e825e, type: 3}
-  sadPortrait: {fileID: -6747219157669017561, guid: c5f299e629dcd0249beafbb018ae91fe, type: 3}
+  sadPortrait: {fileID: 7028616704906629411, guid: e351d85e1c9ed2842be786a0b76b3e5c, type: 3}

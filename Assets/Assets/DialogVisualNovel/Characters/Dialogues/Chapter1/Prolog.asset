@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ab77d71d3b830b499fe68f1bee93993, type: 3}
+  m_Name: Prolog
+  m_EditorClassIdentifier: Assembly-CSharp::VNDialogueData
+  lines:
+  - speaker: {fileID: 0}
+    text: 
+    isPrologueCenterText: 1
+    emotion: 0
+    position: 0
+    backgroundOverride: {fileID: -2086832803264746168, guid: a47efa86e9890e94cb7e93e18aa70ae3, type: 3}
+    sfxClip: {fileID: 8300000, guid: d3ca07139892f534a94b5a74910c1440, type: 3}
+  - speaker: {fileID: 0}
+    text: 
+    isPrologueCenterText: 1
+    emotion: 0
+    position: 0
+    backgroundOverride: {fileID: -2086832803264746168, guid: a47efa86e9890e94cb7e93e18aa70ae3, type: 3}
+    sfxClip: {fileID: 8300000, guid: f8d00c2367e91fb4dade6c7e518a15a8, type: 3}
+  - speaker: {fileID: 0}
+    text: 
+    isPrologueCenterText: 1
+    emotion: 0
+    position: 0
+    backgroundOverride: {fileID: -2086832803264746168, guid: a47efa86e9890e94cb7e93e18aa70ae3, type: 3}
+    sfxClip: {fileID: 8300000, guid: d0345f2eaa2b2f24f9771be77316bdd3, type: 3}
+  - speaker: {fileID: 0}
+    text: Ada janji yang tidak boleh diucapkan jika tak mampu ditepati
+    isPrologueCenterText: 1
+    emotion: 0
+    position: 0
+    backgroundOverride: {fileID: -2086832803264746168, guid: a47efa86e9890e94cb7e93e18aa70ae3, type: 3}
+    sfxClip: {fileID: 0}
+  - speaker: {fileID: 0}
+    text: Dan ada rahasia yang harus dibawa mati, demi keselamatan bumi.
+    isPrologueCenterText: 1
+    emotion: 0
+    position: 0
+    backgroundOverride: {fileID: -2086832803264746168, guid: a47efa86e9890e94cb7e93e18aa70ae3, type: 3}
+    sfxClip: {fileID: 0}
+  - speaker: {fileID: 0}
+    text: Ini bukanlah kisah tentang kepahlawanan.
+    isPrologueCenterText: 1
+    emotion: 0
+    position: 0
+    backgroundOverride: {fileID: -2086832803264746168, guid: a47efa86e9890e94cb7e93e18aa70ae3, type: 3}
+    sfxClip: {fileID: 0}
+  - speaker: {fileID: 0}
+    text: Ini adalah kisah tentang keserakahan, kelaparan, dan sumpah purba yang
+      patah.
+    isPrologueCenterText: 1
+    emotion: 0
+    position: 0
+    backgroundOverride: {fileID: -2086832803264746168, guid: a47efa86e9890e94cb7e93e18aa70ae3, type: 3}
+    sfxClip: {fileID: 0}
+  - speaker: {fileID: 0}
+    text: 
+    isPrologueCenterText: 1
+    emotion: 0
+    position: 0
+    backgroundOverride: {fileID: -2086832803264746168, guid: a47efa86e9890e94cb7e93e18aa70ae3, type: 3}
+    sfxClip: {fileID: 8300000, guid: 90ebda90908b73344906135a8a79fd8d, type: 3}

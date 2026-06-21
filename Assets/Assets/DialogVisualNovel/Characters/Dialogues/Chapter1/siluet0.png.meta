@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c5f299e629dcd0249beafbb018ae91fe
+guid: 0d34301b3d5a96b4abeb5a8201b64ab2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6747219157669017561
-    second: samosir_sad_0
+      213: -8108684554641483636
+    second: Desain tanpa judul (6)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: samosir_sad_0
+      name: Desain tanpa judul (6)_0
       rect:
         serializedVersion: 2
-        x: 812
-        y: 87
-        width: 311
-        height: 900
+        x: 0
+        y: 2
+        width: 1920
+        height: 1076
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7288d65acef0d52a0800000000000000
-      internalID: -6747219157669017561
+      spriteID: c88d5e4fb5a287f80800000000000000
+      internalID: -8108684554641483636
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      samosir_sad_0: -6747219157669017561
+      Desain tanpa judul (6)_0: -8108684554641483636
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

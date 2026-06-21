@@ -106,7 +106,14 @@ public class ChapterManager : MonoBehaviour
             if (loreBackgroundUI != null) loreBackgroundUI.SetActive(false);
         }
 
-        // 4. Proses Animasi Zoom In dan Menghilang (Fade Out)
+        // 4. Mulai Dialog Visual Novel BERSAMAAN dengan transisi Fade Out
+        // Ini menciptakan efek transisi menyilang (crossfade) yang mulus tanpa jeda!
+        if (dialogueManager != null && chapterIntroData != null)
+        {
+            dialogueManager.PlayDialogue(chapterIntroData);
+        }
+
+        // 5. Proses Animasi Zoom In dan Menghilang (Fade Out)
         float t = 0;
         while (t < zoomAndFadeDuration)
         {
@@ -129,8 +136,7 @@ public class ChapterManager : MonoBehaviour
             yield return null;
         }
 
-        // 5. Selesai transisi, matikan panel dan mulai Dialog Visual Novel
+        // 6. Selesai transisi, matikan panel intro sepenuhnya
         if (introPanel != null) introPanel.SetActive(false);
-        dialogueManager.PlayDialogue(chapterIntroData);
     }
 }

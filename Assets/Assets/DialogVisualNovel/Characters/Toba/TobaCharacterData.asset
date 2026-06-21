@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: TobaCharacterData
   m_EditorClassIdentifier: Assembly-CSharp::VNCharacterData
   characterName: Toba
-  neutralPortrait: {fileID: 0}
-  happyPortrait: {fileID: 0}
-  angryPortrait: {fileID: 0}
-  shockedPortrait: {fileID: 0}
-  confusedPortrait: {fileID: 0}
-  sadPortrait: {fileID: 0}
+  neutralPortrait: {fileID: -7075890606897879394, guid: 83757cd288bb0ac44b77edad93ab2e20, type: 3}
+  happyPortrait: {fileID: 6937817954938267909, guid: e93517a2596bceb45b31ca5e37564253, type: 3}
+  angryPortrait: {fileID: -6470460504253458178, guid: 9a738e5f4a9bd1e4888654d8fdf5a36c, type: 3}
+  shockedPortrait: {fileID: -4178046375966092550, guid: dd9e89ef7142e5d4fa0ace459f6dd152, type: 3}
+  confusedPortrait: {fileID: 4130640169021434097, guid: 290c156099d5abe4697ad1658fc9d641, type: 3}
+  sadPortrait: {fileID: 3465286685962602723, guid: efde6f7d522067a4985052ed59f158b0, type: 3}

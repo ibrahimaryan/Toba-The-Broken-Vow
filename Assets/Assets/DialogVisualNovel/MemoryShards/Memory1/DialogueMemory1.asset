@@ -13,25 +13,40 @@ MonoBehaviour:
   m_Name: DialogueMemory1
   m_EditorClassIdentifier: Assembly-CSharp::VNDialogueData
   lines:
-  - speaker: {fileID: 11400000, guid: 5a317f8e905122e4b80de0d576f24bde, type: 2}
-    text: Ayahh??
-    emotion: 4
-    position: 1
-    backgroundOverride: {fileID: 0}
-  - speaker: {fileID: 11400000, guid: 05f1881af97bcd44196b835b0b3bf3f1, type: 2}
+  - speaker: {fileID: 11400000, guid: e1ec41e8e71a4c54c96dbeacd10704cb, type: 2}
     text: Sudah seharian penuh aku melempar kail, tak satu pun ikan yang mendekat...
       Apakah hari ini aku harus kelaparan?
+    isPrologueCenterText: 0
     emotion: 4
     position: 1
-    backgroundOverride: {fileID: 0}
+    backgroundOverride: {fileID: -8108684554641483636, guid: 0d34301b3d5a96b4abeb5a8201b64ab2, type: 3}
+    sfxClip: {fileID: 0}
   - speaker: {fileID: 0}
-    text: 
-    emotion: 0
-    position: 1
-    backgroundOverride: {fileID: -2385007020577217817, guid: 7d49329c9c042704b8feb673dcc0eb2c, type: 3}
-  - speaker: {fileID: 11400000, guid: 05f1881af97bcd44196b835b0b3bf3f1, type: 2}
     text: Tunggu... tarikan ini kuat sekali! Ikan apa ini? Sisiknya... berkilau seperti
       emas murni! Aku belum pernah melihat ikan seajaib ini di sungai mana pun!
+    isPrologueCenterText: 0
     emotion: 3
     position: 1
-    backgroundOverride: {fileID: 0}
+    backgroundOverride: {fileID: -2385007020577217817, guid: 7d49329c9c042704b8feb673dcc0eb2c, type: 3}
+    sfxClip: {fileID: 0}
+  - speaker: {fileID: 11400000, guid: 5a317f8e905122e4b80de0d576f24bde, type: 2}
+    text: Pria pemancing tadi... namanya Toba
+    isPrologueCenterText: 0
+    emotion: 4
+    position: 1
+    backgroundOverride: {fileID: -3528917084668288327, guid: 1aff241e5d2df684bae83385a33c2a20, type: 3}
+    sfxClip: {fileID: 0}
+  - speaker: {fileID: 11400000, guid: 5a317f8e905122e4b80de0d576f24bde, type: 2}
+    text: Bukankah itu nama Ayahku?
+    isPrologueCenterText: 0
+    emotion: 3
+    position: 1
+    backgroundOverride: {fileID: -3528917084668288327, guid: 1aff241e5d2df684bae83385a33c2a20, type: 3}
+    sfxClip: {fileID: 0}
+  - speaker: {fileID: 11400000, guid: 5a317f8e905122e4b80de0d576f24bde, type: 2}
+    text: Kenapa ingatan tentang dirinya terasa begitu nyata di kepalaku?
+    isPrologueCenterText: 0
+    emotion: 3
+    position: 1
+    backgroundOverride: {fileID: -3528917084668288327, guid: 1aff241e5d2df684bae83385a33c2a20, type: 3}
+    sfxClip: {fileID: 0}

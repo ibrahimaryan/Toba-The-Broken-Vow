@@ -1654,7 +1654,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1200, y: 300}
+  m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &188163023
 MonoBehaviour:
@@ -1711,7 +1711,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 1
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -2423,8 +2423,8 @@ RectTransform:
   - {fileID: 1536918893}
   - {fileID: 690715516}
   - {fileID: 953209969}
-  - {fileID: 808066045}
   - {fileID: 1059153847}
+  - {fileID: 808066045}
   - {fileID: 241921568}
   - {fileID: 1968759594}
   m_Father: {fileID: 1512039004}
@@ -6410,7 +6410,6 @@ GameObject:
   - component: {fileID: 617310127}
   - component: {fileID: 617310126}
   - component: {fileID: 617310128}
-  - component: {fileID: 617310129}
   m_Layer: 0
   m_Name: DialogueManager
   m_TagString: Untagged
@@ -6552,22 +6551,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &617310129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 617310125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22afcb79e23183446a6c9a5778fb2e68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PrologueAutoTrigger
-  dialogueManager: {fileID: 617310126}
-  prologueData: {fileID: 11400000, guid: eb2f2f65570870f429ec6d9200a7e500, type: 2}
-  saveKey: HasPlayedPrologue
-  testSelaluMulai: 0
 --- !u!1 &618822568
 GameObject:
   m_ObjectHideFlags: 0
@@ -6683,7 +6666,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1920, y: 1080}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &667490753
 MonoBehaviour:
@@ -6698,7 +6681,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7051,8 +7034,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 30, y: -181}
-  m_SizeDelta: {x: 400, y: 800}
+  m_AnchoredPosition: {x: 30, y: -150}
+  m_SizeDelta: {x: 680, y: 905}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &690715517
 MonoBehaviour:
@@ -12118,8 +12101,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 648, y: -181}
-  m_SizeDelta: {x: 400, y: 800}
+  m_AnchoredPosition: {x: 627, y: -150}
+  m_SizeDelta: {x: 680, y: 905}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &953209970
 MonoBehaviour:
@@ -19767,8 +19750,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -599, y: -200}
-  m_SizeDelta: {x: 400, y: 800}
+  m_AnchoredPosition: {x: -607, y: -150}
+  m_SizeDelta: {x: 680, y: 905}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1536918894
 MonoBehaviour:
@@ -21391,8 +21374,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 250, y: 200}
+  m_AnchoredPosition: {x: 73, y: 0}
+  m_SizeDelta: {x: 250, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1649114627
 MonoBehaviour:
@@ -21441,15 +21424,15 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 46
-  m_fontSizeBase: 46
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_HorizontalAlignment: 1
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -24437,7 +24420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

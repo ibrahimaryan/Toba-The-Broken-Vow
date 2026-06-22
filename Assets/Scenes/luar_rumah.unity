@@ -100427,6 +100427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChapterQuests
   chapterID: Chapter_3
+  laguChapterIni: {fileID: 8300000, guid: 9aa0f76f192e6324788220cfed173b7f, type: 3}
   misiDiSceneIni:
   - namaMisi: Selesaikan Tantangan
     sudahSelesai: 0
@@ -132340,6 +132341,72 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1001 &2090623386
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2046048093620738469, guid: 8d771415e29f9dc4da5526c358e4c7cd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.53363
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046048093620738469, guid: 8d771415e29f9dc4da5526c358e4c7cd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 79.83359
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046048093620738469, guid: 8d771415e29f9dc4da5526c358e4c7cd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046048093620738469, guid: 8d771415e29f9dc4da5526c358e4c7cd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046048093620738469, guid: 8d771415e29f9dc4da5526c358e4c7cd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046048093620738469, guid: 8d771415e29f9dc4da5526c358e4c7cd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046048093620738469, guid: 8d771415e29f9dc4da5526c358e4c7cd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046048093620738469, guid: 8d771415e29f9dc4da5526c358e4c7cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046048093620738469, guid: 8d771415e29f9dc4da5526c358e4c7cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046048093620738469, guid: 8d771415e29f9dc4da5526c358e4c7cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8144124891229410138, guid: 8d771415e29f9dc4da5526c358e4c7cd, type: 3}
+      propertyPath: laguChapterIni
+      value: 
+      objectReference: {fileID: 8300000, guid: d34ea7649fa42594e88469988c6484ed, type: 3}
+    - target: {fileID: 8229494745051974156, guid: 8d771415e29f9dc4da5526c358e4c7cd, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: d34ea7649fa42594e88469988c6484ed, type: 3}
+    - target: {fileID: 8409861658857666930, guid: 8d771415e29f9dc4da5526c358e4c7cd, type: 3}
+      propertyPath: m_Name
+      value: BGMManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8144124891229410138, guid: 8d771415e29f9dc4da5526c358e4c7cd, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8d771415e29f9dc4da5526c358e4c7cd, type: 3}
 --- !u!1001 &2098052536
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -133241,3 +133308,4 @@ SceneRoots:
   - {fileID: 98491274}
   - {fileID: 2025342569}
   - {fileID: 726418057}
+  - {fileID: 2090623386}

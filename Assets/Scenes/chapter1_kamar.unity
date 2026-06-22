@@ -794,6 +794,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChapterQuests
   chapterID: Chapter_1
+  laguChapterIni: {fileID: 0}
   misiDiSceneIni:
   - namaMisi: Explore ruangan
     sudahSelesai: 0
@@ -6729,10 +6730,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22afcb79e23183446a6c9a5778fb2e68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PrologueAutoTrigger
-  dialogueManager: {fileID: 617310126}
-  prologueData: {fileID: 11400000, guid: eb2f2f65570870f429ec6d9200a7e500, type: 2}
-  saveKey: HasPlayedPrologue
-  testSelaluMulai: 0
 --- !u!1 &618822568
 GameObject:
   m_ObjectHideFlags: 0
@@ -17818,6 +17815,72 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1422323502}
   m_CullTransparentMesh: 1
+--- !u!1001 &1424018245
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2046048093620738469, guid: 8d771415e29f9dc4da5526c358e4c7cd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.53363
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046048093620738469, guid: 8d771415e29f9dc4da5526c358e4c7cd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 79.83359
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046048093620738469, guid: 8d771415e29f9dc4da5526c358e4c7cd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046048093620738469, guid: 8d771415e29f9dc4da5526c358e4c7cd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046048093620738469, guid: 8d771415e29f9dc4da5526c358e4c7cd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046048093620738469, guid: 8d771415e29f9dc4da5526c358e4c7cd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046048093620738469, guid: 8d771415e29f9dc4da5526c358e4c7cd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046048093620738469, guid: 8d771415e29f9dc4da5526c358e4c7cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046048093620738469, guid: 8d771415e29f9dc4da5526c358e4c7cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2046048093620738469, guid: 8d771415e29f9dc4da5526c358e4c7cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8144124891229410138, guid: 8d771415e29f9dc4da5526c358e4c7cd, type: 3}
+      propertyPath: laguChapterIni
+      value: 
+      objectReference: {fileID: 8300000, guid: d34ea7649fa42594e88469988c6484ed, type: 3}
+    - target: {fileID: 8229494745051974156, guid: 8d771415e29f9dc4da5526c358e4c7cd, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: d34ea7649fa42594e88469988c6484ed, type: 3}
+    - target: {fileID: 8409861658857666930, guid: 8d771415e29f9dc4da5526c358e4c7cd, type: 3}
+      propertyPath: m_Name
+      value: BGMManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8144124891229410138, guid: 8d771415e29f9dc4da5526c358e4c7cd, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8d771415e29f9dc4da5526c358e4c7cd, type: 3}
 --- !u!1 &1425914327
 GameObject:
   m_ObjectHideFlags: 0
@@ -18247,7 +18310,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.085231125}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -18257,7 +18320,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.37, y: 1.17}
+  m_Size: {x: 1.37, y: 0.9995376}
   m_EdgeRadius: 0
 --- !u!114 &1437206481
 MonoBehaviour:
@@ -18273,6 +18336,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   dialogue:
     lines:
+    - characterName: Samosir
+      sentence: Aduuh kepalakuu, hah dimana inii? Suara siapa tadi...
+      isSpeechBubble: 1
+      isCutsceneStyle: 0
+      holdTime: 50
     - characterName: Samosir
       sentence: Sepertinya aku harus melihat sekitar ruangan dan menemukan cara untuk
         keluar dari sini
@@ -18330,7 +18398,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.22878641}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -18340,7 +18408,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.47, y: 1.27}
+  m_Size: {x: 1.47, y: 1.7275728}
   m_EdgeRadius: 0
 --- !u!1 &1437758125
 GameObject:
@@ -26730,3 +26798,4 @@ SceneRoots:
   - {fileID: 327795788}
   - {fileID: 946585110}
   - {fileID: 61060866}
+  - {fileID: 1424018245}

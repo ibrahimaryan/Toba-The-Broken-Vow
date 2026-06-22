@@ -7,6 +7,9 @@ public class ChapterQuests : MonoBehaviour
     [Tooltip("Beri nama ID yang sama untuk scene-scene yang berada di chapter yang sama (Contoh: Chapter_2)")]
     public string chapterID; 
 
+    [Header("Pengaturan Audio")]
+    [Tooltip("Masukkan lagu khusus untuk chapter ini. Biarkan kosong jika ingin melanjutkan lagu dari scene sebelumnya.")]
+    public AudioClip laguChapterIni;
     [Header("Daftar Misi Khusus Chapter Ini")]
     public List<Quest> misiDiSceneIni;
 
@@ -19,20 +22,21 @@ public class ChapterQuests : MonoBehaviour
     {
         if (ToDoManager.Instance != null)
         {
-            // JIKA CHAPTER ID NYA SAMA, MAKA JANGAN RESET MISINYA!
-            // Ini artinya Player hanya berpindah ruangan/scene di dalam chapter yang sama.
             if (ToDoManager.Instance.currentChapterID == chapterID)
             {
-                Debug.Log("Pindah scene dalam Chapter yang sama. Mempertahankan progres misi.");
-                return; // Langsung keluar, tidak mereset data lama
+                return; // Pindah scene biasa dalam chapter yang sama, lagu jangan diganti
             }
 
-            // JIKA CHAPTER ID NYA BERBEDA, BARU TIMPA DENGAN MISI BARU (Pindah Chapter Utama)
+            // JIKA MASUK CHAPTER BARU:
             ToDoManager.Instance.daftarMisi = new List<Quest>(misiDiSceneIni);
-            ToDoManager.Instance.currentChapterID = chapterID; // Update ID chapter aktif di ToDoManager
-            
+            ToDoManager.Instance.currentChapterID = chapterID; 
             ToDoManager.Instance.UpdateTampilanUI();
-            Debug.Log("Chapter Baru Terdeteksi! Memuat daftar misi untuk: " + chapterID);
+
+            // KODE UNTUK MENGGANTI LAGU SECARA OTOMATIS
+            if (BGMManager.Instance != null && laguChapterIni != null)
+            {
+                BGMManager.Instance.GantiLagu(laguChapterIni, 1.5f); // Angka 1.5f adalah durasi pudar (detik)
+            }
         }
     }
 }

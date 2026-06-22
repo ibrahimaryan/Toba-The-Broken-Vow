@@ -43,7 +43,7 @@ public class DialogueManagerCS : MonoBehaviour
     {
         // Pastikan semua UI mati saat game baru mulai
         if (dialoguePanel != null) dialoguePanel.SetActive(false);
-        if (prologuePanel != null) prologuePanel.SetActive(false);
+        // prologuePanel.SetActive(false) dihapus agar tidak mematikan UI dari PrologueManager
     }
 
     public void PlayDialogue(VNDialogueData dialogueData)
@@ -83,7 +83,8 @@ public class DialogueManagerCS : MonoBehaviour
                 if (prologueText != null) prologueText.text = currentFullText;
                 
                 // Jika teks prolog di-skip (muncul instan), mulai hitung mundur auto-play
-                autoAdvanceCoroutine = StartCoroutine(AutoAdvanceDelay());
+                VNDialogueLine skippedLine = currentDialogue.lines[currentLineIndex - 1];
+                autoAdvanceCoroutine = StartCoroutine(AutoAdvanceDelay(skippedLine));
             }
             else
             {
@@ -99,7 +100,16 @@ public class DialogueManagerCS : MonoBehaviour
             
             if (line.sfxClip != null && sfxSource != null)
             {
-                sfxSource.PlayOneShot(line.sfxClip);
+                if (line.isPrologueCenterText)
+                {
+                    // Gunakan clip.Play agar bisa dideteksi isPlaying dan tidak tumpang tindih
+                    sfxSource.clip = line.sfxClip;
+                    sfxSource.Play();
+                }
+                else
+                {
+                    sfxSource.PlayOneShot(line.sfxClip);
+                }
             }
             
             // Atur Panel mana yang muncul
@@ -203,13 +213,23 @@ public class DialogueManagerCS : MonoBehaviour
         // Jika ini adalah teks Prologue, jalankan hitung mundur otomatis untuk baris berikutnya
         if (line.isPrologueCenterText)
         {
-            autoAdvanceCoroutine = StartCoroutine(AutoAdvanceDelay());
+            autoAdvanceCoroutine = StartCoroutine(AutoAdvanceDelay(line));
         }
     }
 
-    private IEnumerator AutoAdvanceDelay()
+    private IEnumerator AutoAdvanceDelay(VNDialogueLine line)
     {
         yield return new WaitForSeconds(prologueAutoPlayDelay);
+
+        // Jika baris ini minta ditunggu sampai audionya selesai
+        if (line.waitForAudio && sfxSource != null)
+        {
+            while (sfxSource.isPlaying)
+            {
+                yield return null;
+            }
+        }
+
         DisplayNextLine();
     }
 

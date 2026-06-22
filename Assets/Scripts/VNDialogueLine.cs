@@ -33,5 +33,9 @@ public class VNDialogueLine
     
     [Header("Optional Overrides")]
     public Sprite backgroundOverride;
+    
+    [Header("Audio")]
     public AudioClip sfxClip;
+    [Tooltip("Jika dicentang, Auto-Play Prologue akan tertahan hingga audio selesai dimainkan.")]
+    public bool waitForAudio = false;
 }

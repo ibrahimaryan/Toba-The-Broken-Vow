@@ -11,6 +11,10 @@ public class ChoppableAssets : MonoBehaviour
     [SerializeField] private GameObject dropPrefab;
     [SerializeField] private string hitAnimationTrigger = "hit"; // Parameter trigger di Animator Player
 
+    [Header("Save Settings")]
+    [Tooltip("ID unik opsional untuk menyimpan status hancur. Jika kosong, digenerate dari nama & posisi.")]
+    [SerializeField] private string uniqueID;
+
     [Header("Audio (Optional)")]
     [SerializeField] private AudioClip hitSound;
     [SerializeField] private AudioClip destroySound;
@@ -26,6 +30,25 @@ public class ChoppableAssets : MonoBehaviour
             audioSource = gameObject.AddComponent<AudioSource>();
             audioSource.playOnAwake = false;
         }
+    }
+
+    private void Start()
+    {
+        string key = GetSavedKey();
+        if (GameManager.Instance != null && GameManager.Instance.IsFlagSet(key))
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private string GetSavedKey()
+    {
+        if (!string.IsNullOrEmpty(uniqueID))
+        {
+            return "choppable_" + uniqueID;
+        }
+        string sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        return "choppable_" + sceneName + "_" + gameObject.name + "_" + transform.position.x.ToString("F2") + "_" + transform.position.y.ToString("F2");
     }
 
     private void OnEnable()
@@ -113,6 +136,13 @@ public class ChoppableAssets : MonoBehaviour
 
         if (health <= 0)
         {
+            // Simpan status hancur ke GameManager
+            string key = GetSavedKey();
+            if (GameManager.Instance != null)
+            {
+                GameManager.Instance.SetFlag(key, true);
+            }
+
             if (destroySound != null)
             {
                 AudioSource.PlayClipAtPoint(destroySound, Camera.main != null ? Camera.main.transform.position : transform.position);

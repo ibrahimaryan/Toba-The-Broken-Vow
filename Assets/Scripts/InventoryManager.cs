@@ -555,7 +555,7 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    private Sprite GetItemSprite(string itemID)
+    public Sprite GetItemSprite(string itemID)
     {
         if (itemDatabase == null) return null;
         foreach (ItemData data in itemDatabase)

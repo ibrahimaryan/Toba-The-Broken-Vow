@@ -108,9 +108,9 @@ public class AxePickupTrigger : MonoBehaviour
         Debug.Log("Kapak berhasil diambil dan dipasang sebagai Equipment!");
 
         // Putar suara mengambil kapak jika ada
-        if (audioSource != null && pickupSound != null)
+        if (pickupSound != null)
         {
-            audioSource.PlayOneShot(pickupSound);
+            PlaySoundPersistent(pickupSound);
         }
 
         // Sembunyikan prompt interaksi saat mengambil kapak
@@ -185,6 +185,27 @@ public class AxePickupTrigger : MonoBehaviour
 
         // Setelah panel ditutup, kita baru menonaktifkan Game Object Kapak ini secara penuh
         gameObject.SetActive(false);
+    }
+
+    private void PlaySoundPersistent(AudioClip clip)
+    {
+        if (clip == null) return;
+        GameObject tempGO = new GameObject("TempAudio_" + clip.name);
+        AudioSource tempSource = tempGO.AddComponent<AudioSource>();
+        tempSource.clip = clip;
+        if (audioSource != null)
+        {
+            tempSource.outputAudioMixerGroup = audioSource.outputAudioMixerGroup;
+            tempSource.volume = audioSource.volume;
+            tempSource.pitch = audioSource.pitch;
+            tempSource.spatialBlend = audioSource.spatialBlend;
+        }
+        else
+        {
+            tempSource.spatialBlend = 0f; // 2D Sound
+        }
+        tempSource.Play();
+        Destroy(tempGO, clip.length);
     }
 
     private IEnumerator BlinkEffect()

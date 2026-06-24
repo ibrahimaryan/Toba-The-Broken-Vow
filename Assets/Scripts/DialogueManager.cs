@@ -162,6 +162,8 @@ public class DialogueManager : MonoBehaviour
         screenBoxPanel.SetActive(false);
         bubblePanel.SetActive(false);
         if (cutsceneBoxPanel != null) cutsceneBoxPanel.SetActive(false);
+
+        ResetBubbleTarget();
     }
 
     public void TutupPaksaSeluruhPanel()
@@ -174,6 +176,20 @@ public class DialogueManager : MonoBehaviour
         if(screenBoxPanel != null) screenBoxPanel.SetActive(false);
         if(bubblePanel != null) bubblePanel.SetActive(false);
         if(cutsceneBoxPanel != null) cutsceneBoxPanel.SetActive(false);
+
+        ResetBubbleTarget();
+    }
+
+    private void ResetBubbleTarget()
+    {
+        if (bubblePanel != null)
+        {
+            var dynamicBubble = bubblePanel.GetComponent<DynamicBubblePosition>();
+            if (dynamicBubble != null)
+            {
+                dynamicBubble.targetCharacter = null;
+            }
+        }
     }
 
     private void AdjustBubblePosition(string characterName)
@@ -183,12 +199,57 @@ public class DialogueManager : MonoBehaviour
         // Pengaman jika nama kosong (narrator/dialog tanpa nama)
         if (string.IsNullOrEmpty(characterName)) return;
 
-        // Cari GameObject pembicara berdasarkan nama di scene
+        // 1. Cari GameObject pembicara berdasarkan nama persis di scene
         GameObject speakerGo = GameObject.Find(characterName);
+        
+        // 2. Coba cari parsial jika tidak ketemu persis dan bukan Player/Samosir
+        if (speakerGo == null && characterName != "Samosir" && characterName != "Player")
+        {
+            var transforms = FindObjectsByType<Transform>(FindObjectsSortMode.None);
+            foreach (var t in transforms)
+            {
+                if (t.gameObject.name.IndexOf(characterName, System.StringComparison.OrdinalIgnoreCase) >= 0)
+                {
+                    speakerGo = t.gameObject;
+                    break;
+                }
+            }
+        }
+
+        // 3. Fallback jika nama Samosir/Player, atau jika pencarian nama gagal
         if (speakerGo == null && (characterName == "Samosir" || characterName == "Player"))
         {
             var player = FindAnyObjectByType<PlayerControllerScript>();
             if (player != null) speakerGo = player.gameObject;
+        }
+        else if (speakerGo == null)
+        {
+            // Jika pembicara bukan player/Samosir, coba cari dari story manager aktif
+            if (Chapter4StoryManager.Instance != null && Chapter4StoryManager.Instance.npcGameObject != null)
+            {
+                speakerGo = Chapter4StoryManager.Instance.npcGameObject;
+            }
+            else if (Chapter3StoryManager.Instance != null && Chapter3StoryManager.Instance.npcGameObject != null)
+            {
+                speakerGo = Chapter3StoryManager.Instance.npcGameObject;
+            }
+        }
+
+        // Tambahan: jika ada script DynamicBubblePosition, set targetCharacter agar diikuti secara real-time
+        var dynamicBubble = bubblePanel.GetComponent<DynamicBubblePosition>();
+        if (dynamicBubble != null)
+        {
+            dynamicBubble.targetCharacter = speakerGo != null ? speakerGo.transform : null;
+        }
+
+        // Debug Log untuk mempermudah pelacakan posisi bubble
+        if (speakerGo != null)
+        {
+            Debug.Log($"[DialogueManager] Memosisikan bubble chat untuk '{characterName}' pada GameObject '{speakerGo.name}' di posisi {speakerGo.transform.position}");
+        }
+        else
+        {
+            Debug.LogWarning($"[DialogueManager] Tidak dapat menemukan GameObject untuk pembicara '{characterName}'.");
         }
 
         if (speakerGo != null && Camera.main != null)

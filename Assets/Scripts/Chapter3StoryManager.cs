@@ -11,7 +11,7 @@ public class Chapter3StoryManager : MonoBehaviour
     [SerializeField] private Transform objectiveTargetTransform; // Tarik Empty GameObject target ke sini
 
     [Header("NPC Event Settings")]
-    [SerializeField] private GameObject npcGameObject; // NPC yang akan tiba-tiba muncul
+    [SerializeField] public GameObject npcGameObject; // NPC yang akan tiba-tiba muncul
     [SerializeField] private Dialogue npcDialogue;
     [SerializeField] private string explorationFlag = "chapter3_player_explored_map";
     [SerializeField] private string npcSequenceFlag = "chapter3_npc_sequence_played";

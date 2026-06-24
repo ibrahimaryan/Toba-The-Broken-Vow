@@ -9,6 +9,7 @@ public class EquipmentPickupTrigger : MonoBehaviour
 
     [Header("Dialogue (Optional)")]
     [SerializeField] private Dialogue pickupDialogue;
+    [SerializeField] private Dialogue approachDialogue; // Dialog saat mendekati objek (sebelum diambil)
 
     [Header("UI PopUp Settings")]
     [SerializeField] private GameObject popupPanel;
@@ -101,9 +102,9 @@ public class EquipmentPickupTrigger : MonoBehaviour
     {
         Debug.Log("Alat Pemecah Batu berhasil diambil dan dipasang sebagai Equipment 2!");
 
-        if (audioSource != null && pickupSound != null)
+        if (pickupSound != null)
         {
-            audioSource.PlayOneShot(pickupSound);
+            PlaySoundPersistent(pickupSound);
         }
 
         if (InteractionPromptUI.Instance != null)
@@ -172,6 +173,27 @@ public class EquipmentPickupTrigger : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    private void PlaySoundPersistent(AudioClip clip)
+    {
+        if (clip == null) return;
+        GameObject tempGO = new GameObject("TempAudio_" + clip.name);
+        AudioSource tempSource = tempGO.AddComponent<AudioSource>();
+        tempSource.clip = clip;
+        if (audioSource != null)
+        {
+            tempSource.outputAudioMixerGroup = audioSource.outputAudioMixerGroup;
+            tempSource.volume = audioSource.volume;
+            tempSource.pitch = audioSource.pitch;
+            tempSource.spatialBlend = audioSource.spatialBlend;
+        }
+        else
+        {
+            tempSource.spatialBlend = 0f; // 2D Sound
+        }
+        tempSource.Play();
+        Destroy(tempGO, clip.length);
+    }
+
     private IEnumerator BlinkEffect()
     {
         while (spriteRenderer != null)
@@ -188,11 +210,83 @@ public class EquipmentPickupTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayerInRange = true;
-            if (InteractionPromptUI.Instance != null && GameManager.Instance != null && !GameManager.Instance.IsFlagSet("chapter4_pickaxe_collected"))
+            if (GameManager.Instance != null && !GameManager.Instance.IsFlagSet("chapter4_pickaxe_collected"))
             {
-                InteractionPromptUI.Instance.ShowPrompt("Tekan E untuk mengambil Alat Pemecah Batu");
+                bool approachTalked = GameManager.Instance.IsFlagSet("chapter4_pickaxe_approach_talked");
+                
+                Dialogue activeDialogue = null;
+                if (Chapter4StoryManager.Instance != null && Chapter4StoryManager.Instance.PickaxeApproachDialogue != null)
+                {
+                    activeDialogue = Chapter4StoryManager.Instance.PickaxeApproachDialogue;
+                }
+                else
+                {
+                    activeDialogue = approachDialogue;
+                }
+
+                if (activeDialogue != null && !approachTalked)
+                {
+                    StartCoroutine(PlayApproachDialogueSequence(activeDialogue));
+                }
+                else
+                {
+                    ShowPickupPrompt();
+                }
             }
         }
+    }
+
+    private void ShowPickupPrompt()
+    {
+        if (InteractionPromptUI.Instance != null)
+        {
+            InteractionPromptUI.Instance.ShowPrompt("Tekan E untuk mengambil Alat Pemecah Batu");
+        }
+    }
+
+    private IEnumerator PlayApproachDialogueSequence(Dialogue activeDialogue)
+    {
+        var player = FindAnyObjectByType<PlayerControllerScript>();
+        if (player != null)
+        {
+            player.StopMovement();
+            player.ToggleInput(false);
+        }
+
+        if (InteractionPromptUI.Instance != null)
+        {
+            InteractionPromptUI.Instance.HidePrompt();
+        }
+
+        if (activeDialogue != null && DialogueManager.instance != null)
+        {
+            DialogueManager.instance.StartDialogue(activeDialogue);
+            yield return new WaitForSeconds(0.1f);
+            while (IsDialogueActive()) yield return null;
+        }
+
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.SetFlag("chapter4_pickaxe_approach_talked", true);
+        }
+
+        if (player != null) player.ToggleInput(true);
+
+        if (isPlayerInRange)
+        {
+            ShowPickupPrompt();
+        }
+    }
+
+    private bool IsDialogueActive()
+    {
+        if (DialogueManager.instance == null) return false;
+
+        bool screenActive = DialogueManager.instance.screenBoxPanel != null && DialogueManager.instance.screenBoxPanel.activeSelf;
+        bool bubbleActive = DialogueManager.instance.bubblePanel != null && DialogueManager.instance.bubblePanel.activeSelf;
+        bool cutsceneActive = DialogueManager.instance.cutsceneBoxPanel != null && DialogueManager.instance.cutsceneBoxPanel.activeSelf;
+
+        return screenActive || bubbleActive || cutsceneActive;
     }
 
     private void OnTriggerExit2D(Collider2D other)

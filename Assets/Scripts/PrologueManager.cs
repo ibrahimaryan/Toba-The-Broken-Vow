@@ -30,6 +30,13 @@ public class PrologueManager : MonoBehaviour
 
     private void Start()
     {
+        // Cegah prolog berjalan dua kali jika player kembali ke scene ini dari chapter lain
+        if (PlayerPrefs.GetInt("ProloguePlayed_Chapter1", 0) == 1)
+        {
+            gameObject.SetActive(false);
+            return;
+        }
+
         Debug.Log("[PrologueManager] Memulai pengecekan Prologue Data...");
         if (prologueData != null && prologueData.lines.Count > 0)
         {
@@ -114,6 +121,10 @@ public class PrologueManager : MonoBehaviour
         }
 
         // 5. Prologue Selesai Sepenuhnya
+        // Simpan data bahwa prolog sudah pernah ditonton, agar tidak berulang saat kembali ke scene ini
+        PlayerPrefs.SetInt("ProloguePlayed_Chapter1", 1);
+        PlayerPrefs.Save();
+
         Debug.Log("[PrologueManager] Prologue selesai! Mematikan UI dan memanggil Event OnPrologueFinished...");
         if (prologuePanel != null) prologuePanel.SetActive(false);
         if (prologueText != null) prologueText.text = "";

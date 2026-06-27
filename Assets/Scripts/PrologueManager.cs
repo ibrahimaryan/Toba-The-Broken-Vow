@@ -3,31 +3,25 @@ using TMPro;
 using System.Collections;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
-
 public class PrologueManager : MonoBehaviour
 {
     [Header("Prologue Data")]
     public VNDialogueData prologueData;
-
     [Header("UI References")]
     public GameObject prologuePanel;
     public TextMeshProUGUI prologueText;
-
     [Header("Audio Settings")]
     public AudioSource sfxSource;
     [Tooltip("Jeda waktu sebelum otomatis pindah ke baris teks selanjutnya")]
     public float defaultAutoPlayDelay = 2.5f;
     [Tooltip("Kecepatan ketikan teks (semakin kecil semakin cepat)")]
     public float typingSpeed = 0.04f;
-
     [Header("Events")]
     [Tooltip("Nama Scene Gameplay yang akan dimuat setelah prolog selesai (Kosongkan jika tidak pindah scene)")]
     public string nextSceneToLoad;
     [Tooltip("Apa yang terjadi setelah prolog selesai? (Bisa dipakai untuk efek transisi / hal lain)")]
     public UnityEvent onPrologueFinished;
-
     private bool skipRequested = false;
-
     private void Start()
     {
         // Cegah prolog berjalan dua kali jika player kembali ke scene ini dari chapter lain
@@ -36,7 +30,6 @@ public class PrologueManager : MonoBehaviour
             gameObject.SetActive(false);
             return;
         }
-
         Debug.Log("[PrologueManager] Memulai pengecekan Prologue Data...");
         if (prologueData != null && prologueData.lines.Count > 0)
         {
@@ -49,7 +42,6 @@ public class PrologueManager : MonoBehaviour
             Debug.LogError("[PrologueManager] ERROR: Prolog Data kosong atau belum dimasukkan ke PrologueManager di Inspector!");
         }
     }
-
     private void Update()
     {
         // Deteksi klik kiri atau spasi/enter untuk mempercepat/skip
@@ -60,20 +52,17 @@ public class PrologueManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return)) skipRequested = true;
 #endif
     }
-
     private IEnumerator RunPrologueSequence()
     {
         foreach (var line in prologueData.lines)
         {
             skipRequested = false;
-
             // 1. Mainkan Audio / Voice Over
             if (line.sfxClip != null && sfxSource != null)
             {
                 sfxSource.clip = line.sfxClip;
                 sfxSource.Play();
             }
-
             // 2. Ketik teks perlahan
             Debug.Log($"[PrologueManager] Menampilkan teks: {line.text}");
             if (prologueText != null) prologueText.text = "";
@@ -93,7 +82,6 @@ public class PrologueManager : MonoBehaviour
                     yield return new WaitForSeconds(typingSpeed);
                 }
             }
-
             // 3. Jeda waktu tunggu default setelah teks utuh
             float timer = 0f;
             while (timer < defaultAutoPlayDelay)
@@ -103,7 +91,6 @@ public class PrologueManager : MonoBehaviour
                 timer += Time.deltaTime;
                 yield return null;
             }
-
             // 4. Wait for audio - Selalu pastikan suara habis sebelum lanjut ke elemen teks berikutnya
             if (!skipRequested && sfxSource != null && sfxSource.isPlaying)
             {
@@ -119,19 +106,16 @@ public class PrologueManager : MonoBehaviour
                 }
             }
         }
-
         // 5. Prologue Selesai Sepenuhnya
         // Simpan data bahwa prolog sudah pernah ditonton, agar tidak berulang saat kembali ke scene ini
         PlayerPrefs.SetInt("ProloguePlayed_Chapter1", 1);
         PlayerPrefs.Save();
-
         Debug.Log("[PrologueManager] Prologue selesai! Mematikan UI dan memanggil Event OnPrologueFinished...");
         if (prologuePanel != null) prologuePanel.SetActive(false);
         if (prologueText != null) prologueText.text = "";
         
         // Panggil event (misalnya: transisi fade out)
         onPrologueFinished?.Invoke();
-
         // Pindah Scene jika namanya diisi
         if (!string.IsNullOrEmpty(nextSceneToLoad))
         {

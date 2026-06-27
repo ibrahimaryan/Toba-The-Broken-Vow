@@ -16,32 +16,60 @@ public class DynamicBubblePosition : MonoBehaviour
     private Camera kameraUtama;
     private Transform letakPlayer;
 
+    // Target karakter saat ini (bisa diset secara dinamis oleh DialogueManager)
+    [HideInInspector]
+    public Transform targetCharacter;
+
     void Awake()
     {
         kameraUtama = Camera.main;
-        
-        // Mengambil posisi parent utama (Karakter Samosir) tempat Canvas ini menempel
         letakPlayer = transform.root; 
     }
 
-    void Update()
+    void LateUpdate()
     {
-        if (kameraUtama == null || letakPlayer == null) return;
+        if (kameraUtama == null) kameraUtama = Camera.main;
+        if (kameraUtama == null) return;
 
-        // Mengubah koordinat Player di game menjadi koordinat layar (Viewport)
-        // Viewport: Y = 0 (paling bawah layar), Y = 1 (paling atas layar)
-        Vector3 posisiDiLayar = kameraUtama.WorldToViewportPoint(letakPlayer.position);
+        // Tentukan target yang akan diikuti
+        Transform currentTarget = targetCharacter != null ? targetCharacter : letakPlayer;
+        if (currentTarget == null) return;
 
-        // Jika Samosir terlalu dekat dengan batas atas layar (misal berinteraksi dengan lukisan di atas)
-        if (posisiDiLayar.y > batasAtas)
+        // Cek posisi target di layar untuk menentukan di atas kepala atau di bawah kaki
+        Vector3 posisiDiLayar = kameraUtama.WorldToViewportPoint(currentTarget.position);
+        Vector3 offset = (posisiDiLayar.y > batasAtas) ? posisiBawah : posisiAtas;
+
+        // Hitung posisi target di dunia dengan offset Y
+        Vector3 targetWorldPos = currentTarget.position + new Vector3(0, offset.y, 0);
+
+        // Posisikan bubble sesuai dengan Render Mode Canvas parent-nya
+        Canvas parentCanvas = GetComponentInParent<Canvas>();
+        if (parentCanvas != null)
         {
-            // Pindahkan bubble ke bawah kaki
-            transform.localPosition = posisiBawah;
+            if (parentCanvas.renderMode == RenderMode.ScreenSpaceOverlay)
+            {
+                transform.position = kameraUtama.WorldToScreenPoint(targetWorldPos);
+            }
+            else if (parentCanvas.renderMode == RenderMode.ScreenSpaceCamera)
+            {
+                Vector3 screenPos = kameraUtama.WorldToScreenPoint(targetWorldPos);
+                if (RectTransformUtility.ScreenPointToWorldPointInRectangle(
+                    transform.parent as RectTransform,
+                    screenPos,
+                    parentCanvas.worldCamera != null ? parentCanvas.worldCamera : kameraUtama,
+                    out Vector3 worldPos))
+                {
+                    transform.position = worldPos;
+                }
+            }
+            else // WorldSpace
+            {
+                transform.position = targetWorldPos;
+            }
         }
         else
         {
-            // Jika aman, biarkan bubble di atas kepala
-            transform.localPosition = posisiAtas;
+            transform.position = kameraUtama.WorldToScreenPoint(targetWorldPos);
         }
     }
 }

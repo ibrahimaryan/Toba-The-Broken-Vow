@@ -93,19 +93,31 @@ public class Chapter4StoryManager : MonoBehaviour
             bool cangkulReceived = GameManager.Instance.IsFlagSet("chapter4_cangkul_received");
             bool dugTreasure = GameManager.Instance.IsFlagSet("chapter4_dug_treasure");
 
-            if (cangkulReceived)
+            if (dugTreasure)
             {
-                // Jika chapter 4 selesai, sembunyikan NPC atau letakkan di gubug sesuai status
+                // Jika chapter 4 selesai (harta digali), jangan sembunyikan NPC di sini karena objeknya sama dengan Chapter 5 (Chapter 5 yang akan mengontrol keaktifannya)
+                if (pickaxePickupGameObject != null) pickaxePickupGameObject.SetActive(false);
+                if (crossGameObject != null) crossGameObject.SetActive(false);
+
+                // Panggil SetupChapter4Quests agar misi terisi di UI setelah load scene
+                SetupChapter4Quests();
+            }
+            else if (cangkulReceived)
+            {
+                // Jika baru cangkul yang diterima, NPC masih berada di gubug
                 if (npcGameObject != null)
                 {
                     npcGameObject.SetActive(true);
                     if (npcHutPoint != null) npcGameObject.transform.position = npcHutPoint.position;
                 }
                 if (pickaxePickupGameObject != null) pickaxePickupGameObject.SetActive(false);
-                if (crossGameObject != null) crossGameObject.SetActive(!dugTreasure);
+                if (crossGameObject != null) crossGameObject.SetActive(true);
 
                 // Panggil SetupChapter4Quests agar misi terisi di UI setelah load scene
                 SetupChapter4Quests();
+
+                // Pantau jarak player: jika menjauh > 15 unit, sembunyikan NPC Chapter 4 dari gubug
+                StartCoroutine(HideNPCOncePlayerLeaves());
             }
             else if (talkedPostAxe)
             {
@@ -347,6 +359,31 @@ public class Chapter4StoryManager : MonoBehaviour
         }
     }
 
+    private IEnumerator HideNPCOncePlayerLeaves()
+    {
+        var player = FindAnyObjectByType<PlayerControllerScript>();
+        if (player == null) yield break;
+
+        float leaveDistance = 15f;
+        while (npcGameObject != null && npcGameObject.activeSelf)
+        {
+            // PENGAMAN: Jika sudah masuk ke Chapter 5 (harta digali), serahkan kontrol NPC ke Chapter 5
+            if (GameManager.Instance != null && GameManager.Instance.IsFlagSet("chapter4_dug_treasure"))
+            {
+                yield break;
+            }
+
+            float dist = Vector2.Distance(player.transform.position, npcGameObject.transform.position);
+            if (dist > leaveDistance)
+            {
+                npcGameObject.SetActive(false);
+                Debug.Log("[Chapter4StoryManager] Player sudah menjauh dari gubug. NPC Opung Chapter 4 disembunyikan.");
+                yield break;
+            }
+            yield return new WaitForSeconds(0.5f); // Periksa setiap 0.5 detik
+        }
+    }
+
     private IEnumerator PlayHandoverSequence()
     {
         isRunningSequence = true;
@@ -430,6 +467,9 @@ public class Chapter4StoryManager : MonoBehaviour
 
         if (player != null) player.ToggleInput(true);
         isRunningSequence = false;
+
+        // Mulai memantau jarak untuk menyembunyikan NPC setelah player menjauh dari gubug
+        StartCoroutine(HideNPCOncePlayerLeaves());
     }
 
     private IEnumerator PlayDialogueOnly(Dialogue dialogue)
@@ -501,13 +541,14 @@ public class Chapter4StoryManager : MonoBehaviour
             ToDoManager.Instance.daftarMisi[1].namaMisi = "Cari alat pemecah batu di ujung map";
             ToDoManager.Instance.daftarMisi[1].sudahSelesai = hasPickaxe;
 
-            ToDoManager.Instance.daftarMisi[2].namaMisi = $"Tebang pohon untuk mengumpulkan Kayu ({currentWood}/{woodRequired})";
-            ToDoManager.Instance.daftarMisi[2].sudahSelesai = (currentWood >= woodRequired);
-
-            ToDoManager.Instance.daftarMisi[3].namaMisi = $"Pecahkan batu untuk mengumpulkan Batu ({currentStone}/{stoneRequired})";
-            ToDoManager.Instance.daftarMisi[3].sudahSelesai = (currentStone >= stoneRequired);
-
             bool isDone = GameManager.Instance.IsFlagSet("chapter4_cangkul_received");
+
+            ToDoManager.Instance.daftarMisi[2].namaMisi = $"Tebang pohon untuk mengumpulkan Kayu ({(isDone ? woodRequired : currentWood)}/{woodRequired})";
+            ToDoManager.Instance.daftarMisi[2].sudahSelesai = (currentWood >= woodRequired) || isDone;
+
+            ToDoManager.Instance.daftarMisi[3].namaMisi = $"Pecahkan batu untuk mengumpulkan Batu ({(isDone ? stoneRequired : currentStone)}/{stoneRequired})";
+            ToDoManager.Instance.daftarMisi[3].sudahSelesai = (currentStone >= stoneRequired) || isDone;
+
             ToDoManager.Instance.daftarMisi[4].namaMisi = "Serahkan Kayu dan Batu ke Opung di Gubug";
             ToDoManager.Instance.daftarMisi[4].sudahSelesai = isDone;
 
@@ -551,11 +592,8 @@ public class Chapter4StoryManager : MonoBehaviour
             GameManager.Instance.SetFlag("chapter4_cross_reached", true);
         }
 
-        // 3. Sembunyikan tanda silang
-        if (crossGameObject != null)
-        {
-            crossGameObject.SetActive(false);
-        }
+        // 3. Tanda silang dibiarkan tetap aktif agar player ingat lokasinya
+
 
         // 4. Aktifkan alat pemecah batu
         if (pickaxePickupGameObject != null)
@@ -648,11 +686,12 @@ public class Chapter4StoryManager : MonoBehaviour
             InventoryManager.Instance.AddItem("kunci_bambu", 1);
         }
 
-        // 4. Sembunyikan tanda silang secara permanen
+        // 4. Sembunyikan tanda silang secara permanen karena berpindah ke Chapter 5
         if (crossGameObject != null)
         {
             crossGameObject.SetActive(false);
         }
+        // JANGAN nonaktifkan npcGameObject (Opung) di sini karena objeknya sama dengan Chapter 5
 
         // 5. Tampilkan panel "Dapat Harta Karun!"
         if (getTreasurePanel != null)
@@ -706,6 +745,12 @@ public class Chapter4StoryManager : MonoBehaviour
 
         // 8. Update status misi & pointer
         UpdateQuestStatus();
+
+        // 9. Pemicu transisi ke Chapter 5 secara real-time jika ada di scene
+        if (Chapter5StoryManager.Instance != null)
+        {
+            Chapter5StoryManager.Instance.StartChapter5();
+        }
 
         if (player != null) player.ToggleInput(true);
         isRunningSequence = false;

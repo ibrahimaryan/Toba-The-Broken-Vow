@@ -40,7 +40,8 @@ public class Chapter4CrossTrigger : MonoBehaviour
         // Tanda silang aktif jika:
         // 1. Belum pernah dicapai (tahap 1)
         // 2. ATAU sudah dapat cangkul tapi belum digali (tahap 2)
-        bool shouldBeActive = !crossReached || (cangkulReceived && !dugTreasure);
+        // Tanda silang harus tetap aktif di tanah sebagai penanda sampai selesai digali
+        bool shouldBeActive = !dugTreasure;
         gameObject.SetActive(shouldBeActive);
     }
 

@@ -49,11 +49,14 @@ public class Chapter3StoryManager : MonoBehaviour
 
     private void Start()
     {
+        // PENGAMAN: Jika Chapter 3 sudah selesai (kapak diambil), jangan sentuh NPC ini karena objeknya sama dengan Chapter 4 & 5
+        bool isChapter3Finished = GameManager.Instance != null && GameManager.Instance.IsFlagSet("chapter3_axe_collected");
+
         // 1. Setup awal status NPC
-        if (npcGameObject != null)
+        if (npcGameObject != null && !isChapter3Finished)
         {
             // Sembunyikan NPC jika sequence belum berjalan (hanya muncul saat terpicu)
-            // Atau nonaktifkan jika sequence sudah pernah selesai sepenuhnya
+            // Atau nonaktifkan jika sekuens sudah pernah selesai sepenuhnya
             if (GameManager.Instance != null && GameManager.Instance.IsFlagSet(npcSequenceFlag))
             {
                 npcGameObject.SetActive(false);

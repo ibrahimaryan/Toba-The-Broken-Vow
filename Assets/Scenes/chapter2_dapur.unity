@@ -1534,6 +1534,7 @@ MonoBehaviour:
   posisiAtas: {x: 0, y: 1.5, z: 0}
   posisiBawah: {x: 0, y: -1.5, z: 0}
   batasAtas: 0.7
+  targetCharacter: {fileID: 0}
 --- !u!114 &594633330
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8269,11 +8270,6 @@ MonoBehaviour:
     lines:
     - characterName: Samosir
       sentence: Isinya seperti dapur pada umumnya
-      isSpeechBubble: 1
-      isCutsceneStyle: 0
-      holdTime: 3
-    - characterName: Samosir
-      sentence: Coba ruangan seberang...
       isSpeechBubble: 1
       isCutsceneStyle: 0
       holdTime: 3

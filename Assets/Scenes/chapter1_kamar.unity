@@ -3275,7 +3275,7 @@ MonoBehaviour:
   loreTextUI: {fileID: 261041959}
   loreTextContent: Dahulu, di sebuah lembah kering yang subur, hiduplah seorang pemuda
     yatim piatu bernama Toba. Ia menyambung hidup dengan bertani dan memancing.
-  waitBeforeLore: 0.5
+  waitBeforeLore: 1.5
   loreReadingDuration: 4
   playOnStart: 0
 --- !u!4 &603727453

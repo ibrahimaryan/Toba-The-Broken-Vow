@@ -26,6 +26,10 @@ public class SisikPuzzleManager : MonoBehaviour
     [Header("Dialogue (Optional)")]
     [SerializeField] private Dialogue failDialogue; // Dialog saat susunan masih salah
     [SerializeField] private Dialogue successDialogue; // Dialog setelah puzzle selesai & reward panel ditutup
+    [SerializeField] private VNDialogueData successVNDialogue; // VN Dialog setelah puzzle selesai (prioritas di atas Dialogue lama)
+
+    [Header("Memory Shard (Optional)")]
+    [SerializeField] private string rewardMemoryShardID; // Jika diisi, memory shard ini akan terbuka setelah puzzle/dialog selesai
 
     [Header("Audio Settings")]
     [SerializeField] private AudioClip buttonClickSound;
@@ -121,6 +125,8 @@ public class SisikPuzzleManager : MonoBehaviour
 
     private void HandleSuccess()
     {
+        isPuzzleSolved = true; // Tandai bahwa puzzle sudah selesai
+
         // Tutup panel puzzle
         if (puzzlePanel != null)
         {
@@ -160,11 +166,31 @@ public class SisikPuzzleManager : MonoBehaviour
             }
         }
 
-        // Jika tidak ada panel reward, langsung kembalikan input player
+        // Jika tidak ada panel reward, langsung kembalikan input player & jalankan dialog
         if (rewardPanel == null)
         {
             var player = FindAnyObjectByType<PlayerControllerScript>();
-            if (player != null) player.ToggleInput(true);
+            
+            if (successVNDialogue != null)
+            {
+                var vnManager = FindAnyObjectByType<DialogueManagerCS>();
+                if (vnManager != null)
+                {
+                    if (player != null) player.ToggleInput(false);
+                    vnManager.PlayDialogue(successVNDialogue);
+                    StartCoroutine(WaitVNDialogueAndUnlockShard(vnManager, player));
+                }
+            }
+            else if (successDialogue != null && DialogueManager.instance != null)
+            {
+                if (player != null) player.ToggleInput(false);
+                DialogueManager.instance.StartDialogue(successDialogue);
+            }
+            else
+            {
+                if (player != null) player.ToggleInput(true);
+                UnlockMemoryShardIfAny();
+            }
         }
 
         // Jalankan event sukses
@@ -193,6 +219,22 @@ public class SisikPuzzleManager : MonoBehaviour
                 UnityEngine.InputSystem.Keyboard.current.escapeKey.wasPressedThisFrame)
             {
                 ClosePuzzlePanel();
+                return; // Langsung keluar dari fungsi agar tidak tereksekusi ganda
+            }
+
+            // JIKA Panel Kunci aktif, izinkan menutup dengan klik mouse, Enter, atau Spasi 
+            // (Solusi untuk masalah bentrok ESC)
+            if (rewardPanel != null && rewardPanel.activeSelf)
+            {
+                bool mouseClick = UnityEngine.InputSystem.Mouse.current != null && UnityEngine.InputSystem.Mouse.current.leftButton.wasPressedThisFrame;
+                bool enterOrSpace = UnityEngine.InputSystem.Keyboard.current != null && 
+                                   (UnityEngine.InputSystem.Keyboard.current.enterKey.wasPressedThisFrame || 
+                                    UnityEngine.InputSystem.Keyboard.current.spaceKey.wasPressedThisFrame);
+
+                if (mouseClick || enterOrSpace)
+                {
+                    ClosePuzzlePanel();
+                }
             }
         }
     }
@@ -234,9 +276,65 @@ public class SisikPuzzleManager : MonoBehaviour
         var player = FindAnyObjectByType<PlayerControllerScript>();
         if (player != null) player.ToggleInput(true);
 
-        if (wasRewardActive && successDialogue != null && DialogueManager.instance != null)
+        if (wasRewardActive)
         {
-            DialogueManager.instance.StartDialogue(successDialogue);
+            if (successVNDialogue != null)
+            {
+                var vnManager = FindAnyObjectByType<DialogueManagerCS>();
+                if (vnManager != null)
+                {
+                    if (player != null) player.ToggleInput(false); // Tahan input saat VN
+                    vnManager.PlayDialogue(successVNDialogue);
+                    StartCoroutine(WaitVNDialogueAndUnlockShard(vnManager, player));
+                }
+            }
+            else if (successDialogue != null && DialogueManager.instance != null)
+            {
+                DialogueManager.instance.StartDialogue(successDialogue);
+                UnlockMemoryShardIfAny();
+            }
+            else
+            {
+                UnlockMemoryShardIfAny();
+            }
+        }
+        else
+        {
+            UnlockMemoryShardIfAny();
+        }
+    }
+
+    private System.Collections.IEnumerator WaitVNDialogueAndUnlockShard(DialogueManagerCS vnManager, PlayerControllerScript player)
+    {
+        // Tunggu 1 frame agar status IsPlaying sempat diperbarui oleh vnManager
+        yield return null; 
+
+        // Tunggu sampai dialog benar-benar selesai
+        while (vnManager != null && vnManager.IsPlaying)
+        {
+            yield return null;
+        }
+
+        // Dialog selesai, unlock memori shard jika ada
+        UnlockMemoryShardIfAny();
+
+        // Kembalikan input player jika tidak tertahan oleh popup memory shard
+        if (player != null && (MemoryShardManager.Instance == null || string.IsNullOrEmpty(rewardMemoryShardID)))
+        {
+            player.ToggleInput(true);
+        }
+    }
+
+    private bool isPuzzleSolved = false;
+
+    private void UnlockMemoryShardIfAny()
+    {
+        // Hanya buka memory shard jika puzzle benar-benar SUDAH diselesaikan 
+        // (mencegah terbuka tidak sengaja saat panel puzzle biasa ditutup)
+        if (isPuzzleSolved && !string.IsNullOrEmpty(rewardMemoryShardID) && MemoryShardManager.Instance != null)
+        {
+            MemoryShardManager.Instance.UnlockShard(rewardMemoryShardID);
+            rewardMemoryShardID = ""; // Kosongkan agar tidak terpicu berkali-kali jika tombol tutup ditekan lagi
         }
     }
 }

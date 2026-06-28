@@ -20,6 +20,8 @@ public class MemoryShardManager : MonoBehaviour
     public Button tontonButton;
     public Button tutupButton;
 
+    private MemoryShardData currentActiveShard; // Menyimpan memori shard mana yang sedang aktif di popup
+
     private void Awake()
     {
         if (Instance == null) Instance = this;
@@ -46,6 +48,7 @@ public class MemoryShardManager : MonoBehaviour
             if (shard.shardID == shardID)
             {
                 shard.isUnlocked = true;
+                currentActiveShard = shard; // Simpan memori shard yang baru didapat
                 Debug.Log($"Memory Shard Unlocked: {shard.title}");
                 ShowShardPopup(); // Tampilkan popup
                 break;
@@ -58,23 +61,35 @@ public class MemoryShardManager : MonoBehaviour
         if (popupPanel != null)
         {
             popupPanel.SetActive(true);
+            Debug.Log($"[MEMORY SHARD] Popup Panel '{popupPanel.name}' berstatus: {popupPanel.activeInHierarchy}. Posisi di Hierarchy: di bawah '{popupPanel.transform.parent.name}'. Apakah terhalang UI lain?");
+        }
+        else
+        {
+            Debug.LogError("[MEMORY SHARD ERROR] Popup Panel belum dimasukkan ke dalam Inspector MemoryShardManager!");
         }
     }
 
     private void OnTontonClicked()
     {
+        Debug.Log("[MemoryShardManager] Tombol 'Tonton' diklik!");
         if (popupPanel != null) popupPanel.SetActive(false);
         
-        // Mainkan Cutscene / Chapter Intro
-        if (targetChapterManager != null)
+        // Panggil animasi Intro Chapter (siluet zoom & fade) sebelum dialog
+        if (targetChapterManager != null && currentActiveShard != null)
         {
-            targetChapterManager.TriggerChapterIntro();
+            if (!targetChapterManager.gameObject.scene.IsValid())
+            {
+                Debug.LogError("[MemoryShardManager] ERROR FATAL: Target Chapter Manager yang Anda masukkan di Inspector adalah PREFAB dari folder Project, BUKAN GameObject yang ada di Scene (Hierarchy)! Tolong seret ChapterManager dari Hierarchy ke kotak Target Chapter Manager!");
+                return;
+            }
+
+            Debug.Log("[MemoryShardManager] Memutar Intro Chapter...");
+            targetChapterManager.TriggerChapterIntro(currentActiveShard.dialogueData);
         }
-        else
+        else if (currentActiveShard != null)
         {
-            // Fallback
-            ChapterManager chapter = FindFirstObjectByType<ChapterManager>();
-            if (chapter != null) chapter.TriggerChapterIntro();
+            // Jika tidak ada ChapterManager, langsung putar dialognya
+            PlayShardDialogue(currentActiveShard);
         }
     }
 
@@ -85,13 +100,25 @@ public class MemoryShardManager : MonoBehaviour
 
     public void PlayShardDialogue(MemoryShardData shard)
     {
-        if (shard.isUnlocked && shard.dialogueData != null && dialogueManager != null)
+        if (!shard.isUnlocked)
         {
-            dialogueManager.PlayDialogue(shard.dialogueData);
+            Debug.LogWarning("[MemoryShardManager] Cannot play dialogue: Memory Shard is locked.");
+            return;
         }
-        else if (!shard.isUnlocked)
+
+        if (shard.dialogueData == null)
         {
-            Debug.LogWarning("Cannot play dialogue: Memory Shard is locked.");
+            Debug.LogError($"[MemoryShardManager] GAGAL: File 'Dialogue Data' pada Memory Shard '{shard.name}' KOSONG! Masukkan data VN ke dalamnya.");
+            return;
         }
+
+        if (dialogueManager == null)
+        {
+            Debug.LogError("[MemoryShardManager] GAGAL: Kolom 'Dialogue Manager' di Inspector MemoryShardManager KOSONG! Masukkan objek DialogueManager dari Hierarchy.");
+            return;
+        }
+
+        // Jika semua aman, putar dialognya
+        dialogueManager.PlayDialogue(shard.dialogueData);
     }
 }

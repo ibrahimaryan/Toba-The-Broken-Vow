@@ -128,7 +128,20 @@ public class DialogueManagerCS : MonoBehaviour
                 if (prologuePanel != null) prologuePanel.SetActive(false);
                 // Tampilkan panel HANYA jika teks tidak kosong atau ada karakter yang bicara
                 bool showPanel = !string.IsNullOrWhiteSpace(line.text) || line.speaker != null;
-                if (dialoguePanel != null) dialoguePanel.SetActive(showPanel);
+                if (dialoguePanel != null) 
+                {
+                    dialoguePanel.SetActive(showPanel);
+                    
+                    // PAKSA MUNCUL: Memastikan panel tidak tersembunyi karena Alpha atau Scale 0
+                    if (showPanel)
+                    {
+                        CanvasGroup cg = dialoguePanel.GetComponent<CanvasGroup>();
+                        if (cg != null) cg.alpha = 1f;
+                        dialoguePanel.transform.localScale = Vector3.one;
+                        dialoguePanel.transform.SetAsLastSibling(); // Paksa pindah ke urutan paling bawah (paling depan di layar)
+                        Debug.Log("[DialogueManagerCS] Panel Dialog BERHASIL dinyalakan dan dipaksa tampil di depan!");
+                    }
+                }
             }
 
             UpdateVisuals(line);

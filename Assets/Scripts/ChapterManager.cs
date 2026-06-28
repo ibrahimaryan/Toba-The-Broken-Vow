@@ -43,16 +43,30 @@ public class ChapterManager : MonoBehaviour
         }
     }
 
-    // Fungsi publik yang bisa dipanggil oleh MemoryShardManager saat pemain menyentuh shard
-    public void TriggerChapterIntro()
+    public void TriggerChapterIntro(VNDialogueData customData = null)
     {
-        if (chapterIntroData != null && dialogueManager != null)
+        Debug.Log($"[ChapterManager] TriggerChapterIntro dipanggil! Apakah GameObject ini aktif? {gameObject.activeInHierarchy}");
+        
+        if (!gameObject.activeInHierarchy)
         {
-            StartCoroutine(PlayIntroSequence());
+            Debug.LogError("[ChapterManager] ERROR FATAL: ChapterManager berada di GameObject yang sedang MATI (Inactive)! StartCoroutine TIDAK AKAN JALAN! Pindahkan komponen ChapterManager ke GameObject yang selalu hidup (misal: GameManager).");
+            return;
+        }
+
+        VNDialogueData dataToPlay = customData != null ? customData : chapterIntroData;
+        
+        if (dataToPlay != null && dialogueManager != null)
+        {
+            StartCoroutine(PlayIntroSequence(dataToPlay));
+        }
+        else
+        {
+            if (dataToPlay == null) Debug.LogError("[ChapterManager] GAGAL: Data Dialog KOSONG! (Tidak ada VN Dialogue Data yang dimasukkan)");
+            if (dialogueManager == null) Debug.LogError("[ChapterManager] GAGAL: Kolom 'Dialogue Manager' di Inspector ChapterManager KOSONG!");
         }
     }
 
-    private IEnumerator PlayIntroSequence()
+    private IEnumerator PlayIntroSequence(VNDialogueData dataToPlay)
     {
         // 1. Setup awal: Layar Hitam + Nama Chapter Aktif
         if (introPanel != null) introPanel.SetActive(true);
@@ -69,34 +83,19 @@ public class ChapterManager : MonoBehaviour
         
         if (silhouetteImage != null)
         {
-            if (silhouetteSprite != null) silhouetteImage.sprite = silhouetteSprite;
             silhouetteImage.gameObject.SetActive(false); // Sembunyikan dulu
-            silhouetteImage.transform.localScale = Vector3.one; // Reset zoom
+            silhouetteImage.transform.localScale = Vector3.one; // Reset scale
+            if (silhouetteSprite != null) silhouetteImage.sprite = silhouetteSprite;
         }
 
-        // 2. Tunggu sebentar (Hanya teks dan hitam)
-        yield return new WaitForSeconds(waitBeforeSilhouette);
-
-        // 3. Tampilkan gambar siluet
-        if (silhouetteImage != null && silhouetteSprite != null)
-        {
-            silhouetteImage.gameObject.SetActive(true);
-        }
-
-        // --- Tampilkan Teks Lore (Cerita Pengantar) ---
+        // 2. Tampilkan teks lore (jika ada)
         if (loreTextUI != null && !string.IsNullOrEmpty(loreTextContent))
         {
-            if (loreBackgroundUI != null) loreBackgroundUI.SetActive(true);
-            loreTextUI.gameObject.SetActive(true);
-            loreTextUI.text = "";
             yield return new WaitForSeconds(waitBeforeLore);
-
-            // Efek ngetik Teks Lore
-            foreach (char c in loreTextContent)
-            {
-                loreTextUI.text += c;
-                yield return new WaitForSeconds(0.04f); // Kecepatan ketik
-            }
+            
+            if (loreBackgroundUI != null) loreBackgroundUI.SetActive(true);
+            loreTextUI.text = loreTextContent;
+            loreTextUI.gameObject.SetActive(true);
 
             // Tunggu sebentar agar pemain selesai membaca
             yield return new WaitForSeconds(loreReadingDuration);
@@ -106,11 +105,18 @@ public class ChapterManager : MonoBehaviour
             if (loreBackgroundUI != null) loreBackgroundUI.SetActive(false);
         }
 
+        // 3. Tampilkan Siluet (setelah teks lore hilang)
+        if (silhouetteImage != null && silhouetteSprite != null)
+        {
+            silhouetteImage.gameObject.SetActive(true);
+            yield return new WaitForSeconds(waitBeforeSilhouette);
+        }
+
         // 4. Mulai Dialog Visual Novel BERSAMAAN dengan transisi Fade Out
         // Ini menciptakan efek transisi menyilang (crossfade) yang mulus tanpa jeda!
-        if (dialogueManager != null && chapterIntroData != null)
+        if (dialogueManager != null && dataToPlay != null)
         {
-            dialogueManager.PlayDialogue(chapterIntroData);
+            dialogueManager.PlayDialogue(dataToPlay);
         }
 
         // 5. Proses Animasi Zoom In dan Menghilang (Fade Out)

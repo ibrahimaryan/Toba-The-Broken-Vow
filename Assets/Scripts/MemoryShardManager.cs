@@ -73,6 +73,16 @@ public class MemoryShardManager : MonoBehaviour
     {
         Debug.Log("[MemoryShardManager] Tombol 'Tonton' diklik!");
         if (popupPanel != null) popupPanel.SetActive(false);
+
+        // Jika kotak Target Chapter Manager lupa diisi di Inspector, cari otomatis di Scene
+        if (targetChapterManager == null)
+        {
+            targetChapterManager = FindFirstObjectByType<ChapterManager>();
+            if (targetChapterManager != null)
+            {
+                Debug.Log("[MemoryShardManager] Menemukan ChapterManager secara otomatis di Scene!");
+            }
+        }
         
         // Panggil animasi Intro Chapter (siluet zoom & fade) sebelum dialog
         if (targetChapterManager != null && currentActiveShard != null)
@@ -88,6 +98,7 @@ public class MemoryShardManager : MonoBehaviour
         }
         else if (currentActiveShard != null)
         {
+            Debug.LogWarning("[MemoryShardManager] Tidak ada ChapterManager di Scene! Memutar dialog secara langsung tanpa animasi Intro.");
             // Jika tidak ada ChapterManager, langsung putar dialognya
             PlayShardDialogue(currentActiveShard);
         }

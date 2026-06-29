@@ -27,6 +27,10 @@ public class EquipmentPickupTrigger : MonoBehaviour
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer == null)
+        {
+            spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        }
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
         {

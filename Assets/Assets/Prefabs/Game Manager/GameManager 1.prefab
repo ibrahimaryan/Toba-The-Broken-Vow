@@ -6427,6 +6427,16 @@ MonoBehaviour:
     itemIcon: {fileID: -1508821506250449534, guid: aeba2ae1761d60847a71309f0cf838ae, type: 3}
   - itemID: kapak
     itemIcon: {fileID: 5736220196789336816, guid: b6d470a34e0a6e643889dd3a3e46923c, type: 3}
+  - itemID: kayu
+    itemIcon: {fileID: -8421968115586316148, guid: 69e2393713f26f64488d41d125162fb3, type: 3}
+  - itemID: batu
+    itemIcon: {fileID: 3501242259691818032, guid: 69e2393713f26f64488d41d125162fb3, type: 3}
+  - itemID: equipment2
+    itemIcon: {fileID: -7822072449820675434, guid: 69e2393713f26f64488d41d125162fb3, type: 3}
+  - itemID: cangkul
+    itemIcon: {fileID: -1468857760849077057, guid: d410f452f850ec74382afddbfe1764e0, type: 3}
+  - itemID: kunci_bambu
+    itemIcon: {fileID: -2419923012820496030, guid: d3ee8fac71b36d04c9a32b5575959512, type: 3}
   equipmentStartSlotIndex: 15
   equipmentEmptyBgSprite: {fileID: 0}
   equipmentNormalBgSprite: {fileID: 0}

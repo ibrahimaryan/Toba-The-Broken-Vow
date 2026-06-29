@@ -215,6 +215,7 @@ public class Chapter4StoryManager : MonoBehaviour
     public void OnAxeCollectedTriggered()
     {
         SpawnNPCPostAxe();
+        UpdateObjectivePointer();
     }
 
     private void SpawnNPCPostAxe()

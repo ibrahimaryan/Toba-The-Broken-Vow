@@ -260,6 +260,9 @@ public class Chapter5StoryManager : MonoBehaviour
         Debug.Log("[Chapter5StoryManager] PlaySuccessSequence Started!");
         isRunningSequence = true;
 
+        // Sembunyikan/hilangkan pointer pipa karena puzzle telah selesai dipecahkan
+        UpdateObjectivePointer();
+
         var player = FindAnyObjectByType<PlayerControllerScript>();
         if (player != null)
         {
@@ -313,6 +316,9 @@ public class Chapter5StoryManager : MonoBehaviour
         // Pulihkan input player agar pemain bisa jalan mendekati Opung untuk berinteraksi
         if (player != null) player.ToggleInput(true);
         isRunningSequence = false;
+
+        // Arahkan pointer ke Opung setelah muncul
+        UpdateObjectivePointer();
     }
 
     // Dipanggil oleh Chapter5OpungTrigger ketika player masuk/keluar area Opung

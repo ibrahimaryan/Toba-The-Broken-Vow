@@ -68,7 +68,7 @@ public class ChapterManager : MonoBehaviour
 
     private IEnumerator PlayIntroSequence(VNDialogueData dataToPlay)
     {
-        Debug.Log($"[ChapterManager] START PlayIntroSequence! waitBeforeSilhouette={waitBeforeSilhouette}, chapterName={chapterName}");
+        Debug.Log($"[ChapterManager] Memeriksa isi Inspector... introPanel = {introPanel != null}, introCanvasGroup = {introCanvasGroup != null}, dialogueManager = {dialogueManager != null}");
 
         // Pengecekan krusial: Apakah introPanel adalah Prefab dari folder?
         if (introPanel != null && !introPanel.scene.IsValid())
@@ -77,7 +77,7 @@ public class ChapterManager : MonoBehaviour
             yield break; // Hentikan animasi agar tidak error
         }
 
-        // AUTO-RECOVERY
+        // AUTO-RECOVERY: Jika referensi hilang (karena DontDestroyOnLoad), kita cari ulang otomatis!
         if (introPanel == null)
         {
             Debug.LogWarning("[ChapterManager] introPanel terputus! Memulai pemulihan otomatis dari ScreenUiCanvas...");
@@ -89,10 +89,6 @@ public class ChapterManager : MonoBehaviour
                 {
                     introPanel = introTransform.gameObject;
                     introCanvasGroup = introPanel.GetComponent<CanvasGroup>();
-                    if (introCanvasGroup == null) 
-                    {
-                        introCanvasGroup = introPanel.AddComponent<CanvasGroup>();
-                    }
 
                     // Cari text dan gambar berdasarkan nama
                     TextMeshProUGUI[] texts = introPanel.GetComponentsInChildren<TextMeshProUGUI>(true);
@@ -105,8 +101,6 @@ public class ChapterManager : MonoBehaviour
                             loreBackgroundUI = txt.transform.parent.gameObject;
                         }
                     }
-                    
-                    if (chapterNameText == null && texts.Length > 0) chapterNameText = texts[0];
 
                     Image[] images = introPanel.GetComponentsInChildren<Image>(true);
                     foreach (var img in images) 
@@ -118,36 +112,29 @@ public class ChapterManager : MonoBehaviour
                     }
                     Debug.Log("[ChapterManager] Pemulihan SUKSES! IntroPanel kembali terhubung.");
                 }
-            }
-        }
-
-        if (waitBeforeSilhouette <= 0f) waitBeforeSilhouette = 1.5f;
-        if (loreReadingDuration <= 0f) loreReadingDuration = 4.0f;
-        if (zoomAndFadeDuration <= 0f) zoomAndFadeDuration = 2.0f;
-
-        if (dialogueManager == null || !dialogueManager.gameObject.activeInHierarchy || dialogueManager.dialoguePanel == null)
-        {
-            DialogueManagerCS[] allManagers = FindObjectsByType<DialogueManagerCS>(FindObjectsSortMode.None);
-            foreach (var mgr in allManagers)
-            {
-                if (mgr.gameObject.activeInHierarchy && mgr.dialoguePanel != null)
+                else
                 {
-                    dialogueManager = mgr;
-                    Debug.Log("[ChapterManager] Auto-Recover DialogueManagerCS yang ASLI (Punya Panel)!");
-                    break;
+                    Debug.LogError("[ChapterManager] Pemulihan GAGAL: IntroPanel tidak ditemukan di dalam ScreenUiCanvas.");
+                    yield break;
                 }
             }
+            else
+            {
+                Debug.LogError("[ChapterManager] Pemulihan GAGAL: ScreenUiCanvas tidak ditemukan di Scene.");
+                yield break;
+            }
         }
 
-        Debug.Log($"[ChapterManager] LANGKAH 1: Set layar hitam. introPanel={(introPanel!=null?"Ada":"NULL")}, introCanvasGroup={(introCanvasGroup!=null?"Ada":"NULL")}");
-        // 1. Setup awal: Layar Hitam
-        if (introPanel != null) 
-        {
-            introPanel.SetActive(true);
-            introPanel.transform.SetAsLastSibling(); // Paksa ke depan
-        }
+        // 1. Setup awal: Layar Hitam + Nama Chapter Aktif
+        if (introPanel != null) introPanel.SetActive(true);
         if (introCanvasGroup != null) introCanvasGroup.alpha = 1f;
         
+        if (chapterNameText != null) 
+        {
+            chapterNameText.text = chapterName;
+            chapterNameText.gameObject.SetActive(true);
+        }
+
         if (loreTextUI != null) loreTextUI.gameObject.SetActive(false);
         if (loreBackgroundUI != null) loreBackgroundUI.SetActive(false);
         
@@ -158,49 +145,48 @@ public class ChapterManager : MonoBehaviour
             if (silhouetteSprite != null) silhouetteImage.sprite = silhouetteSprite;
         }
 
-        Debug.Log($"[ChapterManager] LANGKAH 2: Munculkan Judul Chapter. chapterNameText={(chapterNameText!=null?"Ada":"NULL")}");
-        // 2. Munculkan Teks Judul Chapter
-        if (chapterNameText != null) 
-        {
-            chapterNameText.text = chapterName;
-            chapterNameText.gameObject.SetActive(true);
-            Debug.Log($"[ChapterManager] Menunggu {waitBeforeSilhouette} detik untuk judul chapter...");
-            yield return new WaitForSeconds(waitBeforeSilhouette); 
-            chapterNameText.gameObject.SetActive(false); 
-        }
+        // 2. Beri waktu agar Nama Chapter tampil sendirian (sekitar 1 detik)
+        yield return new WaitForSeconds(1.0f);
 
-        Debug.Log($"[ChapterManager] LANGKAH 3: Munculkan Siluet & Lore. silhouetteImage={(silhouetteImage!=null?"Ada":"NULL")}, loreTextUI={(loreTextUI!=null?"Ada":"NULL")}");
-        // 3. Tampilkan Siluet & Lore Text BERSAMAAN
+        // 3. Tampilkan Siluet SEBELUM Lore Text
         if (silhouetteImage != null && silhouetteSprite != null)
         {
             silhouetteImage.gameObject.SetActive(true);
+            // Jeda sebentar sebelum lore text muncul (bisa diatur di Inspector)
+            yield return new WaitForSeconds(waitBeforeSilhouette);
         }
 
+        // 4. Tampilkan teks lore (jika ada) SAAT siluet sudah tampil di layar
         if (loreTextUI != null && !string.IsNullOrEmpty(loreTextContent))
         {
+            yield return new WaitForSeconds(waitBeforeLore);
+            
             if (loreBackgroundUI != null) loreBackgroundUI.SetActive(true);
-            loreTextUI.text = loreTextContent;
+            loreTextUI.text = "";
             loreTextUI.gameObject.SetActive(true);
 
-            Debug.Log($"[ChapterManager] Menunggu {loreReadingDuration} detik untuk membaca lore...");
+            // Efek Typewriter (mengetik satu per satu)
+            foreach (char c in loreTextContent)
+            {
+                loreTextUI.text += c;
+                yield return new WaitForSeconds(0.04f); // Kecepatan ketik (bisa diubah)
+            }
+
+            // Tunggu sebentar agar pemain selesai membaca
             yield return new WaitForSeconds(loreReadingDuration);
 
+            // Matikan teks lore sebelum animasi zoom & memudar (Fade Out)
             loreTextUI.gameObject.SetActive(false);
             if (loreBackgroundUI != null) loreBackgroundUI.SetActive(false);
         }
 
-        Debug.Log($"[ChapterManager] LANGKAH 4: Memulai VN Dialog. dialogueManager={(dialogueManager!=null?"Ada":"NULL")}");
-        // 4. Mulai Dialog Visual Novel
+        // 4. Mulai Dialog Visual Novel BERSAMAAN dengan transisi Fade Out
+        // Ini menciptakan efek transisi menyilang (crossfade) yang mulus tanpa jeda!
         if (dialogueManager != null && dataToPlay != null)
         {
             dialogueManager.PlayDialogue(dataToPlay);
         }
-        else
-        {
-            Debug.LogError($"[ChapterManager] GAGAL MULAI VN! dialogueManager={(dialogueManager!=null?"Ada":"NULL")}, dataToPlay={(dataToPlay!=null?"Ada":"NULL")}");
-        }
 
-        Debug.Log("[ChapterManager] LANGKAH 5: Animasi Zoom & Fade Out.");
         // 5. Proses Animasi Zoom In dan Menghilang (Fade Out)
         float t = 0;
         while (t < zoomAndFadeDuration)
@@ -208,12 +194,14 @@ public class ChapterManager : MonoBehaviour
             t += Time.deltaTime;
             float normalizedTime = t / zoomAndFadeDuration; // 0 hingga 1
 
+            // Animasi Zoom In pada Siluet
             if (silhouetteImage != null)
             {
                 float scale = Mathf.Lerp(1f, 1f + zoomSpeed, normalizedTime);
                 silhouetteImage.transform.localScale = new Vector3(scale, scale, 1f);
             }
 
+            // Animasi Menghilang (Fade Out) pada seluruh Panel
             if (introCanvasGroup != null)
             {
                 introCanvasGroup.alpha = Mathf.Lerp(1f, 0f, normalizedTime);
@@ -222,8 +210,7 @@ public class ChapterManager : MonoBehaviour
             yield return null;
         }
 
-        Debug.Log("[ChapterManager] SELESAI.");
+        // 6. Selesai transisi, matikan panel intro sepenuhnya
         if (introPanel != null) introPanel.SetActive(false);
-        if (silhouetteImage != null) silhouetteImage.gameObject.SetActive(false);
     }
 }

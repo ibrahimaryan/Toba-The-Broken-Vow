@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ab77d71d3b830b499fe68f1bee93993, type: 3}
+  m_Name: Ch3VNDialogueData
+  m_EditorClassIdentifier: Assembly-CSharp::VNDialogueData
+  lines:
+  - speaker: {fileID: 11400000, guid: 5a317f8e905122e4b80de0d576f24bde, type: 2}
+    text: Lapar sekali... Ayah masih lama di ladang. Kalau aku makan sedikit saja...
+      Ayah pasti tidak akan tahu. Nasi ini... lauk ini... baunya enak sekali...
+    isPrologueCenterText: 0
+    emotion: 1
+    position: 1
+    backgroundOverride: {fileID: -3221993416251538628, guid: c3f409194a8e9934c9e916ee53d208eb, type: 3}
+    sfxClip: {fileID: 0}
+    waitForAudio: 0
+    isAutoPlay: 0
+    autoPlayDelay: 0
+  - speaker: {fileID: 11400000, guid: 5a317f8e905122e4b80de0d576f24bde, type: 2}
+    text: A-ah... tidak sengaja habis. Bagaimana ini? Ayah sudah menunggu lama di
+      bawah terik matahari, dia pasti sangat lapar dan marah...
+    isPrologueCenterText: 0
+    emotion: 3
+    position: 1
+    backgroundOverride: {fileID: -3221993416251538628, guid: c3f409194a8e9934c9e916ee53d208eb, type: 3}
+    sfxClip: {fileID: 0}
+    waitForAudio: 0
+    isAutoPlay: 0
+    autoPlayDelay: 0

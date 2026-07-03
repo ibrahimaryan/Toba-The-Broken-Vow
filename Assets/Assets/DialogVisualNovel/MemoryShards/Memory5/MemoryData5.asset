@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 948eabe8877b5a943862498f87e128e9, type: 3}
-  m_Name: MemoryData2
+  m_Name: MemoryData5
   m_EditorClassIdentifier: Assembly-CSharp::MemoryShardData
-  shardID: Chapter2
-  title: Memory Shard II
-  thumbnail: {fileID: 7609181962434042441, guid: 60cfde30ef0610942a376f48a965c62b, type: 3}
+  shardID: Chapter5
+  title: Memory Shard V
+  thumbnail: {fileID: -8748720450863373525, guid: de6e771485c9e9344b33b0e28ece6640, type: 3}
   dialogueData: {fileID: 11400000, guid: de79938fb0c90ca4fa5897631a3ec69b, type: 2}
   isUnlocked: 1
-  chapterName: Chapter2
+  chapterName: Chapter 5
   silhouetteSprite: {fileID: 4675621331081925504, guid: 02ce57558e6b2494ebee95caa614c881, type: 3}
-  loreTextContent: Ikan emas yang berhasil ditangkap Toba bukanlah ikan biasa. Di
-    hadapannya, makhluk itu menjelma menjadi seorang wanita cantik bernama Putri
-    Boru Sasada. Sejak saat itu, takdir keduanya mulai terjalin dalam sebuah ikatan
-    yang disertai sumpah suci.
+  loreTextContent: Sebuah janji purba yang sakral, kini hancur berkeping-keping oleh
+    amarah sesaat. Langit pun murka, memuntahkan lautan air mata yang menenggelamkan
+    lembah subur itu selamanya. Di tengah keheningan magis setelah badai mereda,
+    tertinggallah puing-puing memori terakhir... dan sebuah takdir perpisahan yang
+    tak lagi bisa ditolak

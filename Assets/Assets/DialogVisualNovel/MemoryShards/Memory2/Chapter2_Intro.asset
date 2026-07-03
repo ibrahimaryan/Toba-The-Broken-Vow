@@ -14,13 +14,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::VNDialogueData
   lines:
   - speaker: {fileID: 11400000, guid: 603999d8edf05be4dbdc65a9f8430d9a, type: 2}
-    text: test
+    text: 
     isPrologueCenterText: 0
     emotion: 0
     position: 0
     backgroundOverride: {fileID: -2080961060696355761, guid: 565997eb4edd9df47ae5e469982291ea, type: 3}
     sfxClip: {fileID: 0}
     waitForAudio: 0
+    isAutoPlay: 1
+    autoPlayDelay: 2
+  - speaker: {fileID: 11400000, guid: 603999d8edf05be4dbdc65a9f8430d9a, type: 2}
+    text: 
+    isPrologueCenterText: 0
+    emotion: 6
+    position: 0
+    backgroundOverride: {fileID: -2080961060696355761, guid: 565997eb4edd9df47ae5e469982291ea, type: 3}
+    sfxClip: {fileID: 0}
+    waitForAudio: 0
+    isAutoPlay: 1
+    autoPlayDelay: 2
   - speaker: {fileID: 11400000, guid: 603999d8edf05be4dbdc65a9f8430d9a, type: 2}
     text: 
     isPrologueCenterText: 0
@@ -29,14 +41,18 @@ MonoBehaviour:
     backgroundOverride: {fileID: -2080961060696355761, guid: 565997eb4edd9df47ae5e469982291ea, type: 3}
     sfxClip: {fileID: 0}
     waitForAudio: 0
+    isAutoPlay: 1
+    autoPlayDelay: 2
   - speaker: {fileID: 11400000, guid: e1ec41e8e71a4c54c96dbeacd10704cb, type: 2}
     text: Ikan itu... berubah menjadi seorang wanita?
     isPrologueCenterText: 0
     emotion: 3
-    position: 0
+    position: 2
     backgroundOverride: {fileID: -2080961060696355761, guid: 565997eb4edd9df47ae5e469982291ea, type: 3}
     sfxClip: {fileID: 0}
     waitForAudio: 0
+    isAutoPlay: 0
+    autoPlayDelay: 2
   - speaker: {fileID: 11400000, guid: 603999d8edf05be4dbdc65a9f8430d9a, type: 2}
     text: Benar, Toba. Akulah ikan yang kau selamatkan dari perairan kuno.
     isPrologueCenterText: 0
@@ -45,6 +61,8 @@ MonoBehaviour:
     backgroundOverride: {fileID: -2080961060696355761, guid: 565997eb4edd9df47ae5e469982291ea, type: 3}
     sfxClip: {fileID: 0}
     waitForAudio: 0
+    isAutoPlay: 0
+    autoPlayDelay: 2
   - speaker: {fileID: 11400000, guid: 603999d8edf05be4dbdc65a9f8430d9a, type: 2}
     text: Aku bersedia menjadi istrimu, Toba. Menemanimu melewati peluh di ladang
       ini. Namun, ingatlah satu syaratku...
@@ -54,14 +72,18 @@ MonoBehaviour:
     backgroundOverride: {fileID: -2080961060696355761, guid: 565997eb4edd9df47ae5e469982291ea, type: 3}
     sfxClip: {fileID: 0}
     waitForAudio: 0
+    isAutoPlay: 0
+    autoPlayDelay: 2
   - speaker: {fileID: 11400000, guid: e1ec41e8e71a4c54c96dbeacd10704cb, type: 2}
     text: Katakan saja, wahai tuan putri. Apapun akan aku penuhi sebagai maharmu.
     isPrologueCenterText: 0
     emotion: 1
-    position: 0
+    position: 2
     backgroundOverride: {fileID: -2080961060696355761, guid: 565997eb4edd9df47ae5e469982291ea, type: 3}
     sfxClip: {fileID: 0}
     waitForAudio: 0
+    isAutoPlay: 0
+    autoPlayDelay: 2
   - speaker: {fileID: 11400000, guid: 603999d8edf05be4dbdc65a9f8430d9a, type: 2}
     text: Jangan pernah sekali pun kau mengungkit masa laluku. Jangan pernah sebut
       kepada siapa pun, termasuk anak kita kelak, bahwa aku adalah jelmaan dari perairan
@@ -72,20 +94,26 @@ MonoBehaviour:
     backgroundOverride: {fileID: -2080961060696355761, guid: 565997eb4edd9df47ae5e469982291ea, type: 3}
     sfxClip: {fileID: 0}
     waitForAudio: 0
-  - speaker: {fileID: 11400000, guid: 603999d8edf05be4dbdc65a9f8430d9a, type: 2}
+    isAutoPlay: 0
+    autoPlayDelay: 2
+  - speaker: {fileID: 11400000, guid: e1ec41e8e71a4c54c96dbeacd10704cb, type: 2}
     text: Aku bersumpah demi langit dan bumi, aku tidak akan pernah melanggarnya.
     isPrologueCenterText: 0
     emotion: 1
-    position: 0
+    position: 2
     backgroundOverride: {fileID: -2080961060696355761, guid: 565997eb4edd9df47ae5e469982291ea, type: 3}
     sfxClip: {fileID: 0}
     waitForAudio: 0
+    isAutoPlay: 0
+    autoPlayDelay: 2
   - speaker: {fileID: 11400000, guid: 5a317f8e905122e4b80de0d576f24bde, type: 2}
     text: Wanita itu... ibuku? Dan ayahkuu?? menikahinyaa?? Jadi... aku adalah anak
       dari sebuah sumpah?
     isPrologueCenterText: 0
     emotion: 3
-    position: 0
+    position: 1
     backgroundOverride: {fileID: -5721800124490532648, guid: 4a006e16091b33e4586b07283ef66929, type: 3}
     sfxClip: {fileID: 0}
     waitForAudio: 0
+    isAutoPlay: 0
+    autoPlayDelay: 2

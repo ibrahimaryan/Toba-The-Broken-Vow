@@ -17,6 +17,10 @@ public class MemoryShardManager : MonoBehaviour
     [Header("UI Popup Settings")]
     [Tooltip("Panel UI popup pemberitahuan Memory Shard")]
     public GameObject popupPanel;
+    [Tooltip("Komponen Image untuk menampilkan gambar Memory Shard di popup")]
+    public Image popupThumbnail;
+    [Tooltip("Komponen Text (TMP) untuk menampilkan judul Memory Shard di popup")]
+    public TextMeshProUGUI popupTitle;
     public Button tontonButton;
     public Button tutupButton;
 
@@ -60,6 +64,16 @@ public class MemoryShardManager : MonoBehaviour
     {
         if (popupPanel != null)
         {
+            // Update UI secara dinamis! 1 Panel untuk semua Shard!
+            if (currentActiveShard != null)
+            {
+                if (popupThumbnail != null && currentActiveShard.thumbnail != null) 
+                    popupThumbnail.sprite = currentActiveShard.thumbnail;
+                
+                if (popupTitle != null) 
+                    popupTitle.text = currentActiveShard.title;
+            }
+
             popupPanel.SetActive(true);
             Debug.Log($"[MEMORY SHARD] Popup Panel '{popupPanel.name}' berstatus: {popupPanel.activeInHierarchy}. Posisi di Hierarchy: di bawah '{popupPanel.transform.parent.name}'. Apakah terhalang UI lain?");
         }
@@ -94,7 +108,7 @@ public class MemoryShardManager : MonoBehaviour
             }
 
             Debug.Log("[MemoryShardManager] Memutar Intro Chapter...");
-            targetChapterManager.TriggerChapterIntro(currentActiveShard.dialogueData);
+            targetChapterManager.TriggerChapterIntro(currentActiveShard);
         }
         else if (currentActiveShard != null)
         {

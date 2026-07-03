@@ -8,4 +8,10 @@ public class MemoryShardData : ScriptableObject
     public Sprite thumbnail;
     public VNDialogueData dialogueData;
     public bool isUnlocked = false;
+
+    [Header("Chapter Intro Settings (Optional)")]
+    public string chapterName;
+    public Sprite silhouetteSprite;
+    [TextArea(3, 5)]
+    public string loreTextContent;
 }

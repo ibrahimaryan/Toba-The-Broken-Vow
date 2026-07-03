@@ -405,6 +405,11 @@ public class Chapter5StoryManager : MonoBehaviour
         // Matikan petunjuk pointer
         UpdateObjectivePointer();
 
+        if (MemoryShardManager.Instance != null)
+        {
+            MemoryShardManager.Instance.UnlockShard("Chapter5");
+        }
+
         if (player != null) player.ToggleInput(true);
         isRunningSequence = false;
     }

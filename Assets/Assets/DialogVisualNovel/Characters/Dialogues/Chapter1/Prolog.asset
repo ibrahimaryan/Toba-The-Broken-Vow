@@ -21,6 +21,8 @@ MonoBehaviour:
     backgroundOverride: {fileID: -2086832803264746168, guid: a47efa86e9890e94cb7e93e18aa70ae3, type: 3}
     sfxClip: {fileID: 8300000, guid: d3ca07139892f534a94b5a74910c1440, type: 3}
     waitForAudio: 1
+    isAutoPlay: 0
+    autoPlayDelay: 2
   - speaker: {fileID: 0}
     text: 
     isPrologueCenterText: 1
@@ -29,6 +31,8 @@ MonoBehaviour:
     backgroundOverride: {fileID: -2086832803264746168, guid: a47efa86e9890e94cb7e93e18aa70ae3, type: 3}
     sfxClip: {fileID: 8300000, guid: f8d00c2367e91fb4dade6c7e518a15a8, type: 3}
     waitForAudio: 1
+    isAutoPlay: 0
+    autoPlayDelay: 2
   - speaker: {fileID: 0}
     text: 
     isPrologueCenterText: 1
@@ -37,6 +41,8 @@ MonoBehaviour:
     backgroundOverride: {fileID: -2086832803264746168, guid: a47efa86e9890e94cb7e93e18aa70ae3, type: 3}
     sfxClip: {fileID: 8300000, guid: d0345f2eaa2b2f24f9771be77316bdd3, type: 3}
     waitForAudio: 1
+    isAutoPlay: 0
+    autoPlayDelay: 2
   - speaker: {fileID: 0}
     text: Ada janji yang tidak boleh diucapkan jika tak mampu ditepati
     isPrologueCenterText: 1
@@ -45,6 +51,8 @@ MonoBehaviour:
     backgroundOverride: {fileID: -2086832803264746168, guid: a47efa86e9890e94cb7e93e18aa70ae3, type: 3}
     sfxClip: {fileID: 0}
     waitForAudio: 0
+    isAutoPlay: 0
+    autoPlayDelay: 2
   - speaker: {fileID: 0}
     text: Dan ada rahasia yang harus dibawa mati, demi keselamatan bumi.
     isPrologueCenterText: 1
@@ -53,6 +61,8 @@ MonoBehaviour:
     backgroundOverride: {fileID: -2086832803264746168, guid: a47efa86e9890e94cb7e93e18aa70ae3, type: 3}
     sfxClip: {fileID: 0}
     waitForAudio: 0
+    isAutoPlay: 0
+    autoPlayDelay: 2
   - speaker: {fileID: 0}
     text: Ini bukanlah kisah tentang kepahlawanan.
     isPrologueCenterText: 1
@@ -61,6 +71,8 @@ MonoBehaviour:
     backgroundOverride: {fileID: -2086832803264746168, guid: a47efa86e9890e94cb7e93e18aa70ae3, type: 3}
     sfxClip: {fileID: 0}
     waitForAudio: 0
+    isAutoPlay: 0
+    autoPlayDelay: 2
   - speaker: {fileID: 0}
     text: Ini adalah kisah tentang keserakahan, kelaparan, dan sumpah purba yang
       patah.
@@ -70,6 +82,8 @@ MonoBehaviour:
     backgroundOverride: {fileID: -2086832803264746168, guid: a47efa86e9890e94cb7e93e18aa70ae3, type: 3}
     sfxClip: {fileID: 0}
     waitForAudio: 0
+    isAutoPlay: 0
+    autoPlayDelay: 2
   - speaker: {fileID: 0}
     text: 
     isPrologueCenterText: 1
@@ -78,3 +92,5 @@ MonoBehaviour:
     backgroundOverride: {fileID: -2086832803264746168, guid: a47efa86e9890e94cb7e93e18aa70ae3, type: 3}
     sfxClip: {fileID: 8300000, guid: 90ebda90908b73344906135a8a79fd8d, type: 3}
     waitForAudio: 1
+    isAutoPlay: 0
+    autoPlayDelay: 2

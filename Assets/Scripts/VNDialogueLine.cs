@@ -7,7 +7,8 @@ public enum VNEmotion
     Angry,
     Shocked,
     Confused,
-    Sad
+    Sad,
+    Optional
 }
 
 public enum VNPortraitPosition
@@ -38,4 +39,10 @@ public class VNDialogueLine
     public AudioClip sfxClip;
     [Tooltip("Jika dicentang, Auto-Play Prologue akan tertahan hingga audio selesai dimainkan.")]
     public bool waitForAudio = false;
+
+    [Header("Auto-Play Khusus (Transisi/Animasi)")]
+    [Tooltip("Jika dicentang, baris ini akan berjalan otomatis tanpa perlu di-klik, dan menyembunyikan panel dialog.")]
+    public bool isAutoPlay = false;
+    [Tooltip("Berapa detik jeda sebelum lanjut ke baris berikutnya secara otomatis.")]
+    public float autoPlayDelay = 2.0f;
 }

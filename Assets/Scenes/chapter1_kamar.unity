@@ -3268,14 +3268,14 @@ MonoBehaviour:
   silhouetteImage: {fileID: 1012278510}
   chapterName: Chapter 1
   silhouetteSprite: {fileID: 5686602129714437190, guid: 922b65f9045ec9f4a9e1a9c8c3cda619, type: 3}
-  waitBeforeSilhouette: 1.5
+  waitBeforeSilhouette: 2.5
   zoomAndFadeDuration: 2
   zoomSpeed: 0.5
   loreBackgroundUI: {fileID: 1160743606}
   loreTextUI: {fileID: 261041959}
   loreTextContent: Dahulu, di sebuah lembah kering yang subur, hiduplah seorang pemuda
     yatim piatu bernama Toba. Ia menyambung hidup dengan bertani dan memancing.
-  waitBeforeLore: 1.5
+  waitBeforeLore: 2.5
   loreReadingDuration: 4
   playOnStart: 0
 --- !u!4 &603727453
@@ -10428,6 +10428,8 @@ MonoBehaviour:
   dialogueManager: {fileID: 617310126}
   targetChapterManager: {fileID: 603727452}
   popupPanel: {fileID: 682731655}
+  popupThumbnail: {fileID: 1755141045}
+  popupTitle: {fileID: 708011707}
   tontonButton: {fileID: 1963159103}
   tutupButton: {fileID: 1510356997}
 --- !u!4 &1375633342
@@ -16094,6 +16096,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1664833697850970933, guid: 91f234957030ad2489a05d4c5f7d7b8f, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2489291893727898761, guid: 1d9a25cfc1ef18f4eb552e8859b393b8, type: 2}
     - target: {fileID: 3132508986989071054, guid: 91f234957030ad2489a05d4c5f7d7b8f, type: 3}
       propertyPath: m_Layer
       value: 5
@@ -16114,6 +16120,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4123466885288098533, guid: 91f234957030ad2489a05d4c5f7d7b8f, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2489291893727898761, guid: 1d9a25cfc1ef18f4eb552e8859b393b8, type: 2}
+    - target: {fileID: 4205613503379323983, guid: 91f234957030ad2489a05d4c5f7d7b8f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5627208233271254431, guid: 91f234957030ad2489a05d4c5f7d7b8f, type: 3}
       propertyPath: m_Layer
       value: 5
@@ -16126,6 +16140,14 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6544919114991150609, guid: 91f234957030ad2489a05d4c5f7d7b8f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6605944746309912547, guid: 91f234957030ad2489a05d4c5f7d7b8f, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2489291893727898761, guid: 1d9a25cfc1ef18f4eb552e8859b393b8, type: 2}
     - target: {fileID: 6898950526711436324, guid: 91f234957030ad2489a05d4c5f7d7b8f, type: 3}
       propertyPath: m_Layer
       value: 5

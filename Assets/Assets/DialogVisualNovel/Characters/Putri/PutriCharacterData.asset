@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: PutriCharacterData
   m_EditorClassIdentifier: Assembly-CSharp::VNCharacterData
   characterName: Putri Boru Sasada
-  neutralPortrait: {fileID: -855298285791758126, guid: 29b9a3c2f8cbd4d40a0d34e169bb89e2, type: 3}
+  neutralPortrait: {fileID: -855298285791758126, guid: 4ff1bfebfe8c84e45b06500e0ea47729, type: 3}
   happyPortrait: {fileID: 6937817954938267909, guid: 5907afa89c5fe104f9577386763f8865, type: 3}
   angryPortrait: {fileID: -6470460504253458178, guid: 430e4f16b83ed7e4799fe36a84da7533, type: 3}
   shockedPortrait: {fileID: -4178046375966092550, guid: 2176d40182e84bb43a341a0f2c7e02a9, type: 3}
   confusedPortrait: {fileID: 4130640169021434097, guid: 73417ccaba76562428d08b33cd8c3d61, type: 3}
   sadPortrait: {fileID: 3465286685962602723, guid: 59f078f05fc544143a712f63d8d91b13, type: 3}
+  optionalPortrait: {fileID: 7028616704906629411, guid: 460dbb553ae4f844ba3c7f8fa9798028, type: 3}

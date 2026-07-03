@@ -753,6 +753,11 @@ public class Chapter4StoryManager : MonoBehaviour
             Chapter5StoryManager.Instance.StartChapter5();
         }
 
+        if (MemoryShardManager.Instance != null)
+        {
+            MemoryShardManager.Instance.UnlockShard("Chapter4");
+        }
+
         if (player != null) player.ToggleInput(true);
         isRunningSequence = false;
     }

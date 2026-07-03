@@ -46,8 +46,74 @@ public class DialogueManagerCS : MonoBehaviour
         // prologuePanel.SetActive(false) dihapus agar tidak mematikan UI dari PrologueManager
     }
 
+    private void EnsureUIReferences()
+    {
+        // Jika UI Panel hilang (karena pindah scene dan tertimpa DontDestroyOnLoad), cari ulang!
+        if (dialoguePanel == null)
+        {
+            Debug.LogWarning("[DialogueManager] Referensi UI hilang! Memulai Auto-Recovery...");
+            GameObject canvas = GameObject.Find("ScreenUiCanvas");
+            if (canvas != null)
+            {
+                Transform panel = canvas.transform.Find("DialoguePanel");
+                if (panel != null)
+                {
+                    dialoguePanel = panel.gameObject;
+                    
+                    // Cari ulang komponen teks di dalamnya
+                    TextMeshProUGUI[] texts = dialoguePanel.GetComponentsInChildren<TextMeshProUGUI>(true);
+                    foreach(var t in texts)
+                    {
+                        if (t.name.Contains("Speaker")) speakerNameText = t;
+                        if (t.name.Contains("Dialogue")) dialogueText = t;
+                    }
+                    Debug.Log("[DialogueManager] Auto-Recovery UI SUKSES!");
+                }
+            }
+        }
+
+        // Cari ulang Background Fader jika hilang
+        if (backgroundFader == null)
+        {
+            GameObject canvas = GameObject.Find("ScreenUiCanvas");
+            if (canvas != null)
+            {
+                Transform bg = canvas.transform.Find("Background");
+                if (bg != null) backgroundFader = bg.GetComponent<BackgroundFader>();
+
+                // Cari ulang Portrait Slots
+                if (leftSlot == null)
+                {
+                    Transform left = canvas.transform.Find("LeftPortraitRoot");
+                    if (left == null) left = canvas.transform.Find("LeftPotraitRoot"); // Fallback typo
+                    if (left != null) leftSlot = left.GetComponent<PortraitSlot>();
+                }
+                if (centerSlot == null)
+                {
+                    Transform center = canvas.transform.Find("CenterPortraitRoot");
+                    if (center == null) center = canvas.transform.Find("CenterPotraitRoot"); // Fallback typo
+                    if (center != null) centerSlot = center.GetComponent<PortraitSlot>();
+                }
+                if (rightSlot == null)
+                {
+                    Transform right = canvas.transform.Find("RightPortraitRoot");
+                    if (right == null) right = canvas.transform.Find("RightPotraitRoot"); // Fallback typo
+                    if (right != null) rightSlot = right.GetComponent<PortraitSlot>();
+                }
+            }
+        }
+    }
+
     public void PlayDialogue(VNDialogueData dialogueData)
     {
+        if (dialogueData == null) 
+        {
+            Debug.LogError("[DialogueManager] Gagal memutar dialog: Data KOSONG!");
+            return;
+        }
+
+        EnsureUIReferences(); // PASTIKAN UI ADA SEBELUM MULAI!
+
         currentDialogue = dialogueData;
         currentLineIndex = 0;
         isPlaying = true;
@@ -126,8 +192,8 @@ public class DialogueManagerCS : MonoBehaviour
             else
             {
                 if (prologuePanel != null) prologuePanel.SetActive(false);
-                // Tampilkan panel HANYA jika teks tidak kosong atau ada karakter yang bicara
-                bool showPanel = !string.IsNullOrWhiteSpace(line.text) || line.speaker != null;
+                // Tampilkan panel HANYA jika teks tidak kosong atau ada karakter yang bicara DAN BUKAN mode isAutoPlay
+                bool showPanel = (!string.IsNullOrWhiteSpace(line.text) || line.speaker != null) && !line.isAutoPlay;
                 if (dialoguePanel != null) 
                 {
                     dialoguePanel.SetActive(showPanel);
@@ -223,8 +289,8 @@ public class DialogueManagerCS : MonoBehaviour
         }
         isTyping = false;
 
-        // Jika ini adalah teks Prologue, jalankan hitung mundur otomatis untuk baris berikutnya
-        if (line.isPrologueCenterText)
+        // Jika ini adalah teks Prologue ATAU AutoPlay, jalankan hitung mundur otomatis untuk baris berikutnya
+        if (line.isPrologueCenterText || line.isAutoPlay)
         {
             autoAdvanceCoroutine = StartCoroutine(AutoAdvanceDelay(line));
         }
@@ -232,7 +298,8 @@ public class DialogueManagerCS : MonoBehaviour
 
     private IEnumerator AutoAdvanceDelay(VNDialogueLine line)
     {
-        yield return new WaitForSeconds(prologueAutoPlayDelay);
+        float delay = line.isAutoPlay ? line.autoPlayDelay : prologueAutoPlayDelay;
+        yield return new WaitForSeconds(delay);
 
         // Jika baris ini minta ditunggu sampai audionya selesai
         if (line.waitForAudio && sfxSource != null)

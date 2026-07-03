@@ -22,6 +22,7 @@ public class PortraitSlot : MonoBehaviour
         }
         
         portraitImage.sprite = sprite;
+        portraitImage.SetNativeSize(); // Atur ukuran ke ukuran asli sprite (400x700) agar tidak melar
         portraitImage.color = new Color(1, 1, 1, 1);
         gameObject.SetActive(true); // Otomatis nyalakan wadah
         
@@ -33,8 +34,7 @@ public class PortraitSlot : MonoBehaviour
     {
         if (portraitImage.sprite == null) return;
         
-        Color c = portraitImage.color;
-        c.a = isDimmed ? 0.4f : 1.0f;
+        Color c = isDimmed ? new Color(0.4f, 0.4f, 0.4f, 1f) : Color.white;
         portraitImage.color = c;
     }
     

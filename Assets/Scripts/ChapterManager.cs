@@ -43,17 +43,23 @@ public class ChapterManager : MonoBehaviour
         }
     }
 
-    public void TriggerChapterIntro(VNDialogueData customData = null)
+    public void TriggerChapterIntro(MemoryShardData shardData = null)
     {
-        Debug.Log($"[ChapterManager] TriggerChapterIntro dipanggil! Apakah GameObject ini aktif? {gameObject.activeInHierarchy}");
-        
         if (!gameObject.activeInHierarchy)
         {
-            Debug.LogError("[ChapterManager] ERROR FATAL: ChapterManager berada di GameObject yang sedang MATI (Inactive)! StartCoroutine TIDAK AKAN JALAN! Pindahkan komponen ChapterManager ke GameObject yang selalu hidup (misal: GameManager).");
+            Debug.LogError("[ChapterManager] ERROR FATAL: ChapterManager berada di GameObject yang sedang MATI!");
             return;
         }
 
-        VNDialogueData dataToPlay = customData != null ? customData : chapterIntroData;
+        // Terapkan data intro dari Shard (jika ada) sehingga 1 scene bisa memutar banyak chapter!
+        if (shardData != null)
+        {
+            if (!string.IsNullOrEmpty(shardData.chapterName)) chapterName = shardData.chapterName;
+            if (shardData.silhouetteSprite != null) silhouetteSprite = shardData.silhouetteSprite;
+            if (!string.IsNullOrEmpty(shardData.loreTextContent)) loreTextContent = shardData.loreTextContent;
+        }
+
+        VNDialogueData dataToPlay = shardData != null ? shardData.dialogueData : chapterIntroData;
         
         if (dataToPlay != null && dialogueManager != null)
         {
@@ -61,7 +67,7 @@ public class ChapterManager : MonoBehaviour
         }
         else
         {
-            if (dataToPlay == null) Debug.LogError("[ChapterManager] GAGAL: Data Dialog KOSONG! (Tidak ada VN Dialogue Data yang dimasukkan)");
+            if (dataToPlay == null) Debug.LogError("[ChapterManager] GAGAL: Data Dialog KOSONG!");
             if (dialogueManager == null) Debug.LogError("[ChapterManager] GAGAL: Kolom 'Dialogue Manager' di Inspector ChapterManager KOSONG!");
         }
     }
@@ -70,74 +76,130 @@ public class ChapterManager : MonoBehaviour
     {
         Debug.Log($"[ChapterManager] Memeriksa isi Inspector... introPanel = {introPanel != null}, introCanvasGroup = {introCanvasGroup != null}, dialogueManager = {dialogueManager != null}");
 
-        // Pengecekan krusial: Apakah introPanel adalah Prefab dari folder?
-        if (introPanel != null && !introPanel.scene.IsValid())
+        // Pengecekan krusial dibuang. Kita akan selalu MENGAMBIL ALIH paksa dari Scene!
+        Debug.LogWarning("[ChapterManager] Membuang referensi Inspector dan memaksa pencarian IntroPanel dari ScreenUiCanvas yang aktif...");
+        
+        GameObject canvasObj = GameObject.Find("ScreenUiCanvas");
+        if (canvasObj != null)
         {
-            Debug.LogError("[ChapterManager] ERROR FATAL: Intro Panel yang dimasukkan di Inspector adalah PREFAB dari folder Project! Tolong seret IntroPanel dari Hierarchy (ScreenUiCanvas) ke kotak Intro Panel.");
-            yield break; // Hentikan animasi agar tidak error
-        }
-
-        // AUTO-RECOVERY: Jika referensi hilang (karena DontDestroyOnLoad), kita cari ulang otomatis!
-        if (introPanel == null)
-        {
-            Debug.LogWarning("[ChapterManager] introPanel terputus! Memulai pemulihan otomatis dari ScreenUiCanvas...");
-            GameObject canvasObj = GameObject.Find("ScreenUiCanvas");
-            if (canvasObj != null)
+            Transform introTransform = canvasObj.transform.Find("IntroPanel");
+            if (introTransform != null)
             {
-                Transform introTransform = canvasObj.transform.Find("IntroPanel");
-                if (introTransform != null)
-                {
-                    introPanel = introTransform.gameObject;
-                    introCanvasGroup = introPanel.GetComponent<CanvasGroup>();
+                introPanel = introTransform.gameObject;
+                introCanvasGroup = introPanel.GetComponent<CanvasGroup>();
 
-                    // Cari text dan gambar berdasarkan nama
-                    TextMeshProUGUI[] texts = introPanel.GetComponentsInChildren<TextMeshProUGUI>(true);
-                    foreach (var txt in texts) 
+                // Cari text dan gambar berdasarkan nama
+                TextMeshProUGUI[] texts = introPanel.GetComponentsInChildren<TextMeshProUGUI>(true);
+                chapterNameText = null;
+                loreTextUI = null;
+                foreach (var txt in texts) 
+                {
+                    if (txt.name.ToLower().Contains("chapter") && chapterNameText == null) chapterNameText = txt;
+                    if (txt.name.ToLower().Contains("lore") && loreTextUI == null) 
                     {
-                        if (txt.name.ToLower().Contains("chapter") && chapterNameText == null) chapterNameText = txt;
-                        if (txt.name.ToLower().Contains("lore") && loreTextUI == null) 
+                        loreTextUI = txt;
+                    }
+                }
+
+                // Cari LoreBackground secara spesifik dari semua child IntroPanel (walaupun dia sibling dari LoreText)
+                Transform[] allChildren = introPanel.GetComponentsInChildren<Transform>(true);
+                foreach (var child in allChildren)
+                {
+                    if (child.name.ToLower().Contains("lorebackground") && loreBackgroundUI == null)
+                    {
+                        loreBackgroundUI = child.gameObject;
+                    }
+                }
+
+                // Fallback pencarian Chapter Text jika namanya tidak mengandung "chapter"
+                if (chapterNameText == null && texts.Length > 0)
+                {
+                    foreach (var txt in texts)
+                    {
+                        if (txt != loreTextUI)
                         {
-                            loreTextUI = txt;
-                            loreBackgroundUI = txt.transform.parent.gameObject;
+                            chapterNameText = txt;
+                            break;
                         }
                     }
+                }
 
-                    Image[] images = introPanel.GetComponentsInChildren<Image>(true);
-                    foreach (var img in images) 
-                    {
-                        if ((img.name.ToLower().Contains("siluet") || img.name.ToLower().Contains("silhouette")) && silhouetteImage == null) 
-                        {
-                            silhouetteImage = img;
-                        }
-                    }
-                    Debug.Log("[ChapterManager] Pemulihan SUKSES! IntroPanel kembali terhubung.");
-                }
-                else
+                Image[] images = introPanel.GetComponentsInChildren<Image>(true);
+                silhouetteImage = null;
+                foreach (var img in images) 
                 {
-                    Debug.LogError("[ChapterManager] Pemulihan GAGAL: IntroPanel tidak ditemukan di dalam ScreenUiCanvas.");
-                    yield break;
+                    if ((img.name.ToLower().Contains("siluet") || img.name.ToLower().Contains("silhouette")) && silhouetteImage == null) 
+                    {
+                        silhouetteImage = img;
+                    }
                 }
+
+                Debug.Log($"[ChapterManager] Pengambilalihan SUKSES! ChapterText={(chapterNameText != null)}, LoreText={(loreTextUI != null)}, Siluet={(silhouetteImage != null)}");
             }
             else
             {
-                Debug.LogError("[ChapterManager] Pemulihan GAGAL: ScreenUiCanvas tidak ditemukan di Scene.");
+                Debug.LogError("[ChapterManager] GAGAL: IntroPanel tidak ditemukan di dalam ScreenUiCanvas.");
                 yield break;
             }
         }
+        else
+        {
+            Debug.LogError("[ChapterManager] GAGAL: ScreenUiCanvas tidak ditemukan di Scene.");
+            yield break;
+        }
+
+        // AUTO-RECOVERY untuk DialogueManager
+        if (dialogueManager == null)
+        {
+            dialogueManager = Object.FindAnyObjectByType<DialogueManagerCS>();
+            if (dialogueManager != null) Debug.Log("[ChapterManager] DialogueManager berhasil dipulihkan secara otomatis!");
+            else Debug.LogError("[ChapterManager] FATAL: DialogueManagerCS tidak ditemukan di Scene!");
+        }
 
         // 1. Setup awal: Layar Hitam + Nama Chapter Aktif
-        if (introPanel != null) introPanel.SetActive(true);
+        if (introPanel != null) 
+        {
+            // PENGAMANAN EKSTRA: Paksa IntroPanel menjadi Hitam Pekat dan memiliki CanvasGroup
+            Image bgImage = introPanel.GetComponent<Image>();
+            if (bgImage == null) bgImage = introPanel.AddComponent<Image>();
+            bgImage.sprite = null;
+            bgImage.color = Color.black;
+            
+            if (introCanvasGroup == null) introCanvasGroup = introPanel.GetComponent<CanvasGroup>();
+            if (introCanvasGroup == null) introCanvasGroup = introPanel.AddComponent<CanvasGroup>();
+            
+            introPanel.SetActive(true);
+            
+            // Lacak asal-usul IntroPanel ini dan PAKSA SEMUA PARENT HIDUP!
+            string path = introPanel.name;
+            Transform parentTransform = introPanel.transform.parent;
+            while (parentTransform != null) 
+            { 
+                path = parentTransform.name + "/" + path; 
+                
+                // Jika parent mati, hidupkan paksa!
+                if (!parentTransform.gameObject.activeSelf)
+                {
+                    Debug.Log($"[ChapterManager] MENGHIDUPKAN PAKSA PARENT YANG MATI: {parentTransform.name}");
+                    parentTransform.gameObject.SetActive(true);
+                }
+                
+                parentTransform = parentTransform.parent; 
+            }
+            Debug.Log($"[ChapterManager] IntroPanel diaktifkan dan dipaksa menjadi Hitam Pekat! Path objek: {path}");
+        }
         if (introCanvasGroup != null) introCanvasGroup.alpha = 1f;
         
+        Debug.Log($"[ChapterManager] Menyiapkan Teks Chapter. string chapterName = '{chapterName}'");
         if (chapterNameText != null) 
         {
             chapterNameText.text = chapterName;
             chapterNameText.gameObject.SetActive(true);
+            Debug.Log("[ChapterManager] Teks Chapter Dinyalakan!");
         }
 
         if (loreTextUI != null) loreTextUI.gameObject.SetActive(false);
         if (loreBackgroundUI != null) loreBackgroundUI.SetActive(false);
-        
         if (silhouetteImage != null)
         {
             silhouetteImage.gameObject.SetActive(false); // Sembunyikan dulu
@@ -145,22 +207,29 @@ public class ChapterManager : MonoBehaviour
             if (silhouetteSprite != null) silhouetteImage.sprite = silhouetteSprite;
         }
 
-        // 2. Beri waktu agar Nama Chapter tampil sendirian (sekitar 1 detik)
-        yield return new WaitForSeconds(1.0f);
+        // CEK STATUS SEBELUM WAIT: Apakah masih aktif?!
+        Debug.Log($"[ChapterManager] SEBELUM JEDA 3 DETIK: introPanel.activeInHierarchy = {introPanel.activeInHierarchy}, CanvasGroup.alpha = {introCanvasGroup.alpha}");
 
-        // 3. Tampilkan Siluet SEBELUM Lore Text
+        // 2. Beri waktu agar Nama Chapter tampil sendirian
+        yield return new WaitForSeconds(waitBeforeSilhouette);
+        
+        // CEK STATUS SETELAH WAIT: Apakah berubah?!
+        Debug.Log($"[ChapterManager] SETELAH JEDA 3 DETIK: introPanel.activeInHierarchy = {introPanel.activeInHierarchy}, CanvasGroup.alpha = {introCanvasGroup.alpha}");
+        Debug.Log("[ChapterManager] Jeda selesai, memunculkan siluet!");
+
+        // 3. Tampilkan Siluet, Background Dongeng, dan Teks Dongeng BERSAMAAN
+        if (chapterNameText != null) 
+        {
+            chapterNameText.gameObject.SetActive(false); // Sembunyikan teks chapter saat siluet muncul
+        }
+
         if (silhouetteImage != null && silhouetteSprite != null)
         {
             silhouetteImage.gameObject.SetActive(true);
-            // Jeda sebentar sebelum lore text muncul (bisa diatur di Inspector)
-            yield return new WaitForSeconds(waitBeforeSilhouette);
         }
 
-        // 4. Tampilkan teks lore (jika ada) SAAT siluet sudah tampil di layar
         if (loreTextUI != null && !string.IsNullOrEmpty(loreTextContent))
         {
-            yield return new WaitForSeconds(waitBeforeLore);
-            
             if (loreBackgroundUI != null) loreBackgroundUI.SetActive(true);
             loreTextUI.text = "";
             loreTextUI.gameObject.SetActive(true);

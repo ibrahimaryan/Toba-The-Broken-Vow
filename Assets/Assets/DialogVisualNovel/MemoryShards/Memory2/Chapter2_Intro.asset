@@ -18,37 +18,37 @@ MonoBehaviour:
     isPrologueCenterText: 0
     emotion: 0
     position: 0
-    backgroundOverride: {fileID: -2080961060696355761, guid: 565997eb4edd9df47ae5e469982291ea, type: 3}
+    backgroundOverride: {fileID: -942935082914806590, guid: 44fdf8bd207d7c34c85f1b5dedc8ba80, type: 3}
     sfxClip: {fileID: 0}
     waitForAudio: 0
     isAutoPlay: 1
-    autoPlayDelay: 2
+    autoPlayDelay: 3
   - speaker: {fileID: 11400000, guid: 603999d8edf05be4dbdc65a9f8430d9a, type: 2}
     text: 
     isPrologueCenterText: 0
     emotion: 6
     position: 0
-    backgroundOverride: {fileID: -2080961060696355761, guid: 565997eb4edd9df47ae5e469982291ea, type: 3}
+    backgroundOverride: {fileID: -942935082914806590, guid: 44fdf8bd207d7c34c85f1b5dedc8ba80, type: 3}
     sfxClip: {fileID: 0}
     waitForAudio: 0
     isAutoPlay: 1
-    autoPlayDelay: 2
+    autoPlayDelay: 3
   - speaker: {fileID: 11400000, guid: 603999d8edf05be4dbdc65a9f8430d9a, type: 2}
     text: 
     isPrologueCenterText: 0
     emotion: 1
     position: 0
-    backgroundOverride: {fileID: -2080961060696355761, guid: 565997eb4edd9df47ae5e469982291ea, type: 3}
+    backgroundOverride: {fileID: -942935082914806590, guid: 44fdf8bd207d7c34c85f1b5dedc8ba80, type: 3}
     sfxClip: {fileID: 0}
     waitForAudio: 0
     isAutoPlay: 1
-    autoPlayDelay: 2
+    autoPlayDelay: 3
   - speaker: {fileID: 11400000, guid: e1ec41e8e71a4c54c96dbeacd10704cb, type: 2}
     text: Ikan itu... berubah menjadi seorang wanita?
     isPrologueCenterText: 0
     emotion: 3
     position: 2
-    backgroundOverride: {fileID: -2080961060696355761, guid: 565997eb4edd9df47ae5e469982291ea, type: 3}
+    backgroundOverride: {fileID: -942935082914806590, guid: 44fdf8bd207d7c34c85f1b5dedc8ba80, type: 3}
     sfxClip: {fileID: 0}
     waitForAudio: 0
     isAutoPlay: 0
@@ -58,7 +58,7 @@ MonoBehaviour:
     isPrologueCenterText: 0
     emotion: 1
     position: 0
-    backgroundOverride: {fileID: -2080961060696355761, guid: 565997eb4edd9df47ae5e469982291ea, type: 3}
+    backgroundOverride: {fileID: -942935082914806590, guid: 44fdf8bd207d7c34c85f1b5dedc8ba80, type: 3}
     sfxClip: {fileID: 0}
     waitForAudio: 0
     isAutoPlay: 0
@@ -69,7 +69,7 @@ MonoBehaviour:
     isPrologueCenterText: 0
     emotion: 1
     position: 0
-    backgroundOverride: {fileID: -2080961060696355761, guid: 565997eb4edd9df47ae5e469982291ea, type: 3}
+    backgroundOverride: {fileID: -942935082914806590, guid: 44fdf8bd207d7c34c85f1b5dedc8ba80, type: 3}
     sfxClip: {fileID: 0}
     waitForAudio: 0
     isAutoPlay: 0
@@ -79,7 +79,7 @@ MonoBehaviour:
     isPrologueCenterText: 0
     emotion: 1
     position: 2
-    backgroundOverride: {fileID: -2080961060696355761, guid: 565997eb4edd9df47ae5e469982291ea, type: 3}
+    backgroundOverride: {fileID: -942935082914806590, guid: 44fdf8bd207d7c34c85f1b5dedc8ba80, type: 3}
     sfxClip: {fileID: 0}
     waitForAudio: 0
     isAutoPlay: 0
@@ -91,7 +91,7 @@ MonoBehaviour:
     isPrologueCenterText: 0
     emotion: 1
     position: 0
-    backgroundOverride: {fileID: -2080961060696355761, guid: 565997eb4edd9df47ae5e469982291ea, type: 3}
+    backgroundOverride: {fileID: -942935082914806590, guid: 44fdf8bd207d7c34c85f1b5dedc8ba80, type: 3}
     sfxClip: {fileID: 0}
     waitForAudio: 0
     isAutoPlay: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
     isPrologueCenterText: 0
     emotion: 1
     position: 2
-    backgroundOverride: {fileID: -2080961060696355761, guid: 565997eb4edd9df47ae5e469982291ea, type: 3}
+    backgroundOverride: {fileID: -942935082914806590, guid: 44fdf8bd207d7c34c85f1b5dedc8ba80, type: 3}
     sfxClip: {fileID: 0}
     waitForAudio: 0
     isAutoPlay: 0

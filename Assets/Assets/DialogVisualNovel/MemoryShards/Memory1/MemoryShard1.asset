@@ -17,7 +17,7 @@ MonoBehaviour:
   thumbnail: {fileID: -5752717760419928123, guid: bf9385422cb935a4f8008b5de15aaf73, type: 3}
   dialogueData: {fileID: 11400000, guid: 2adf62e7d1086dd4caa4e280f4942451, type: 2}
   isUnlocked: 1
-  chapterName: Chapter1
+  chapterName: Chapter 1
   silhouetteSprite: {fileID: 5686602129714437190, guid: 922b65f9045ec9f4a9e1a9c8c3cda619, type: 3}
   loreTextContent: Dahulu, di sebuah lembah kering yang subur, hiduplah seorang pemuda
     yatim piatu bernama Toba. Ia menyambung hidup dengan bertani dan memancing.

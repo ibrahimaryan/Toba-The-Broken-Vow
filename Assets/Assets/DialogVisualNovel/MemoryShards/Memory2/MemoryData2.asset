@@ -17,7 +17,7 @@ MonoBehaviour:
   thumbnail: {fileID: 7609181962434042441, guid: 60cfde30ef0610942a376f48a965c62b, type: 3}
   dialogueData: {fileID: 11400000, guid: de79938fb0c90ca4fa5897631a3ec69b, type: 2}
   isUnlocked: 1
-  chapterName: Chapter2
+  chapterName: Chapter 2
   silhouetteSprite: {fileID: 4675621331081925504, guid: 02ce57558e6b2494ebee95caa614c881, type: 3}
   loreTextContent: Ikan emas yang berhasil ditangkap Toba bukanlah ikan biasa. Di
     hadapannya, makhluk itu menjelma menjadi seorang wanita cantik bernama Putri

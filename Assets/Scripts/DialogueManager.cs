@@ -63,7 +63,7 @@ public class DialogueManager : MonoBehaviour
                 DisplayNextSentence();
             }
             // Dialog Bubble (bubblePanel) bisa lanjut dengan tombol Enter atau Space
-            else if (bubblePanel.activeInHierarchy && nextPressed)
+           else if (bubblePanel != null && bubblePanel.activeInHierarchy && nextPressed)
             {
                 DisplayNextSentence();
             }

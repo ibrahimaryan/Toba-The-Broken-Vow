@@ -1,18 +1,33 @@
 using UnityEngine;
-using UnityEngine.UI; // Wajib jika ingin mengubah ikon tombol nanti
+using UnityEngine.UI; // Wajib dipanggil untuk memanipulasi UI (Image, Button, dll)
 
 public class PengaturanAudio : MonoBehaviour
 {
+    [Header("Pengaturan Visual Tombol")]
+    [Tooltip("Masukkan komponen Image dari tombol Mute di sini")]
+    public Image targetIkon; 
+    
+    [Tooltip("Gambar saat suara menyala normal")]
+    public Sprite ikonSoundOn; 
+    
+    [Tooltip("Gambar saat suara dimatikan (silang)")]
+    public Sprite ikonSoundOff;
+
     private bool isMuted = false;
 
     public void ToggleMute()
     {
+        // Membalikkan status (true jadi false, false jadi true)
         isMuted = !isMuted;
         
-        // AudioListener mengatur volume Telinga (Kamera) di Unity
-        // Jika isMuted true, volume jadi 0 (bisu). Jika false, volume jadi 1 (normal).
+        // Mengubah volume global Unity
         AudioListener.volume = isMuted ? 0f : 1f; 
         
-        Debug.Log("Status Mute: " + isMuted);
+        // Mengubah gambar (sprite) ikon pada tombol
+        if (targetIkon != null)
+        {
+            // Jika isMuted true, pakai ikonSoundOff. Jika false, pakai ikonSoundOn.
+            targetIkon.sprite = isMuted ? ikonSoundOff : ikonSoundOn;
+        }
     }
 }

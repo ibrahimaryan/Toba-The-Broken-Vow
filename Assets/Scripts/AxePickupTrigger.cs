@@ -168,11 +168,6 @@ public class AxePickupTrigger : MonoBehaviour
             // Jika tidak ada panel popup, panggil event langsung dan matikan gameobject ini
             OnAxeCollected?.Invoke();
             
-            if (MemoryShardManager.Instance != null)
-            {
-                MemoryShardManager.Instance.UnlockShard("Chapter3");
-            }
-
             gameObject.SetActive(false);
         }
     }
@@ -192,11 +187,6 @@ public class AxePickupTrigger : MonoBehaviour
 
         // Panggil event setelah kapak dikoleksi dan panel ditutup
         OnAxeCollected?.Invoke();
-
-        if (MemoryShardManager.Instance != null)
-        {
-            MemoryShardManager.Instance.UnlockShard("Chapter3");
-        }
 
         // Setelah panel ditutup, kita baru menonaktifkan Game Object Kapak ini secara penuh
         gameObject.SetActive(false);

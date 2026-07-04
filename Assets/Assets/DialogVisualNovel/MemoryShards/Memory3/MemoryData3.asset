@@ -19,6 +19,6 @@ MonoBehaviour:
   isUnlocked: 1
   chapterName: Chapter 3
   silhouetteSprite: {fileID: -701186083470409295, guid: 401b64e084b9a704b967ee42d2725068, type: 3}
-  loreTextContent: "Pernikahan mereka dikaruniai seorang anak laki-laki \r\nbernama
-    Samosir. Samosir tumbuh menjadi anak yang sedikit malas dan gemar \r\nbermain,
-    hingga suatu hari tugas mendatangi ladang mengubah segalanya."
+  loreTextContent: "Pernikahan mereka dikaruniai seorang anak laki-laki bernama Samosir.
+    Samosir tumbuh menjadi anak yang sedikit malas dan gemar bermain, hingga suatu
+    hari tugas mendatangi ladang mengubah segalanya.\r\r "

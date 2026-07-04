@@ -1,0 +1,113 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ab77d71d3b830b499fe68f1bee93993, type: 3}
+  m_Name: Ch5VNDialogueData
+  m_EditorClassIdentifier: Assembly-CSharp::VNDialogueData
+  lines:
+  - speaker: {fileID: 0}
+    text: 
+    isPrologueCenterText: 0
+    emotion: 0
+    position: 0
+    backgroundOverride: {fileID: -2086832803264746168, guid: a47efa86e9890e94cb7e93e18aa70ae3, type: 3}
+    sfxClip: {fileID: 8300000, guid: 7c80f4bd9563c5341a25ca2970394c39, type: 3}
+    waitForAudio: 0
+    isAutoPlay: 1
+    autoPlayDelay: 6
+  - speaker: {fileID: 11400000, guid: 603999d8edf05be4dbdc65a9f8430d9a, type: 2}
+    text: Samosir... anakku...
+    isPrologueCenterText: 0
+    emotion: 6
+    position: 0
+    backgroundOverride: {fileID: 203835155543474433, guid: 83eb168cf63cd2c46940ffdb68d13843, type: 3}
+    sfxClip: {fileID: 0}
+    waitForAudio: 0
+    isAutoPlay: 0
+    autoPlayDelay: 0
+  - speaker: {fileID: 11400000, guid: 5a317f8e905122e4b80de0d576f24bde, type: 2}
+    text: Ibu? Apakah itu Ibu? Tolong jangan pergi!
+    isPrologueCenterText: 0
+    emotion: 5
+    position: 2
+    backgroundOverride: {fileID: 0}
+    sfxClip: {fileID: 0}
+    waitForAudio: 0
+    isAutoPlay: 0
+    autoPlayDelay: 0
+  - speaker: {fileID: 11400000, guid: 603999d8edf05be4dbdc65a9f8430d9a, type: 2}
+    text: Takdir telah digariskan, Nak. Ayahmu telah melanggar janji purba, dan wujudku
+      harus kembali ke kedalaman air ini. Lembah subur tempat kita tinggal kini telah
+      tiada, digantikan oleh danau besar dari air mata dan kutukan.
+    isPrologueCenterText: 0
+    emotion: 6
+    position: 0
+    backgroundOverride: {fileID: 203835155543474433, guid: 83eb168cf63cd2c46940ffdb68d13843, type: 3}
+    sfxClip: {fileID: 0}
+    waitForAudio: 0
+    isAutoPlay: 0
+    autoPlayDelay: 0
+  - speaker: {fileID: 11400000, guid: 5a317f8e905122e4b80de0d576f24bde, type: 2}
+    text: Lalu bagaimana denganku? Aku sendirian di sini...
+    isPrologueCenterText: 0
+    emotion: 5
+    position: 2
+    backgroundOverride: {fileID: 203835155543474433, guid: 83eb168cf63cd2c46940ffdb68d13843, type: 3}
+    sfxClip: {fileID: 0}
+    waitForAudio: 0
+    isAutoPlay: 0
+    autoPlayDelay: 0
+  - speaker: {fileID: 11400000, guid: 603999d8edf05be4dbdc65a9f8430d9a, type: 2}
+    text: Kau adalah daratan yang tersisa, Samosir. Tempatmu berpijak akan menjadi
+      sebuah pulau di tengah danau ini. Tugasmu adalah tetap hidup, menjaga ingatan
+      ini, agar manusia di masa depan tahu pentingnya sebuah amanah dan janji.
+    isPrologueCenterText: 0
+    emotion: 6
+    position: 0
+    backgroundOverride: {fileID: 203835155543474433, guid: 83eb168cf63cd2c46940ffdb68d13843, type: 3}
+    sfxClip: {fileID: 0}
+    waitForAudio: 0
+    isAutoPlay: 0
+    autoPlayDelay: 0
+  - speaker: {fileID: 0}
+    text: "setelah semua yang terjadi\u2026"
+    isPrologueCenterText: 1
+    emotion: 0
+    position: 0
+    backgroundOverride: {fileID: -2086832803264746168, guid: a47efa86e9890e94cb7e93e18aa70ae3, type: 3}
+    sfxClip: {fileID: 0}
+    waitForAudio: 0
+    isAutoPlay: 0
+    autoPlayDelay: 0
+  - speaker: {fileID: 11400000, guid: 5a317f8e905122e4b80de0d576f24bde, type: 2}
+    text: Namaku Samosir. Aku terjaga di atas gubug ini bukan untuk melupakan, melainkan
+      untuk mengingat. Danau di sekeliling pulau ini dinamakan Danau Toba, dan pulau
+      tempatku berdiri adalah Pulau Samosir. Sebuah warisan abadi dari sebuah janji
+      yang patah.
+    isPrologueCenterText: 0
+    emotion: 1
+    position: 1
+    backgroundOverride: {fileID: -942935082914806590, guid: 44fdf8bd207d7c34c85f1b5dedc8ba80, type: 3}
+    sfxClip: {fileID: 0}
+    waitForAudio: 0
+    isAutoPlay: 0
+    autoPlayDelay: 0
+  - speaker: {fileID: 0}
+    text: "Jangan terlalu lama menatap ke belakang, atau kamu akan menabrak apa yang
+      ada di depanmu\u2026"
+    isPrologueCenterText: 1
+    emotion: 0
+    position: 0
+    backgroundOverride: {fileID: -2086832803264746168, guid: a47efa86e9890e94cb7e93e18aa70ae3, type: 3}
+    sfxClip: {fileID: 0}
+    waitForAudio: 0
+    isAutoPlay: 0
+    autoPlayDelay: 0

@@ -29,8 +29,8 @@ MonoBehaviour:
     emotion: 6
     position: 0
     backgroundOverride: {fileID: -942935082914806590, guid: 44fdf8bd207d7c34c85f1b5dedc8ba80, type: 3}
-    sfxClip: {fileID: 0}
-    waitForAudio: 0
+    sfxClip: {fileID: 8300000, guid: e54c7763be7a4a94998f316cc07ea35f, type: 3}
+    waitForAudio: 1
     isAutoPlay: 1
     autoPlayDelay: 3
   - speaker: {fileID: 11400000, guid: 603999d8edf05be4dbdc65a9f8430d9a, type: 2}

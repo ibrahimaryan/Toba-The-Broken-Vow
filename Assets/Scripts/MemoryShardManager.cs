@@ -88,6 +88,16 @@ public class MemoryShardManager : MonoBehaviour
         Debug.Log("[MemoryShardManager] Tombol 'Tonton' diklik!");
         if (popupPanel != null) popupPanel.SetActive(false);
 
+        // Jika Chapter 5, teleport player saat popup Memory Shard ditutup
+        if (currentActiveShard != null && currentActiveShard.shardID == "Chapter5")
+        {
+            var player = FindAnyObjectByType<PlayerControllerScript>();
+            if (player != null)
+            {
+                player.transform.position = new Vector3(-3f, 78f, player.transform.position.z);
+            }
+        }
+
         // Jika kotak Target Chapter Manager lupa diisi di Inspector, cari otomatis di Scene
         if (targetChapterManager == null)
         {
@@ -121,6 +131,16 @@ public class MemoryShardManager : MonoBehaviour
     private void OnTutupClicked()
     {
         if (popupPanel != null) popupPanel.SetActive(false);
+
+        // Jika Chapter 5, teleport player saat popup Memory Shard ditutup
+        if (currentActiveShard != null && currentActiveShard.shardID == "Chapter5")
+        {
+            var player = FindAnyObjectByType<PlayerControllerScript>();
+            if (player != null)
+            {
+                player.transform.position = new Vector3(-3f, 78f, player.transform.position.z);
+            }
+        }
     }
 
     public void PlayShardDialogue(MemoryShardData shard)

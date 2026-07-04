@@ -275,6 +275,11 @@ public class Chapter3PuzzleManager : MonoBehaviour
 
         // Jalankan event sukses
         OnPuzzleSolved?.Invoke();
+
+        if (MemoryShardManager.Instance != null)
+        {
+            MemoryShardManager.Instance.UnlockShard("Chapter3");
+        }
     }
 
     private void HandleFailure()

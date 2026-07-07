@@ -119,12 +119,14 @@ public class MemoryShardManager : MonoBehaviour
 
             Debug.Log("[MemoryShardManager] Memutar Intro Chapter...");
             targetChapterManager.TriggerChapterIntro(currentActiveShard);
+            StartCoroutine(WaitVNDialogueAndUnlockPlayer());
         }
         else if (currentActiveShard != null)
         {
             Debug.LogWarning("[MemoryShardManager] Tidak ada ChapterManager di Scene! Memutar dialog secara langsung tanpa animasi Intro.");
             // Jika tidak ada ChapterManager, langsung putar dialognya
             PlayShardDialogue(currentActiveShard);
+            StartCoroutine(WaitVNDialogueAndUnlockPlayer());
         }
     }
 
@@ -141,6 +143,26 @@ public class MemoryShardManager : MonoBehaviour
                 player.transform.position = new Vector3(-3f, 78f, player.transform.position.z);
             }
         }
+
+        // Kembalikan input player
+        var activePlayer = FindAnyObjectByType<PlayerControllerScript>();
+        if (activePlayer != null) activePlayer.ToggleInput(true);
+    }
+
+    private System.Collections.IEnumerator WaitVNDialogueAndUnlockPlayer()
+    {
+        yield return null; // Tunggu satu frame agar dialogManager sempat disetup/mulai
+
+        if (dialogueManager != null)
+        {
+            while (dialogueManager.IsPlaying)
+            {
+                yield return null;
+            }
+        }
+
+        var player = FindAnyObjectByType<PlayerControllerScript>();
+        if (player != null) player.ToggleInput(true);
     }
 
     public void PlayShardDialogue(MemoryShardData shard)

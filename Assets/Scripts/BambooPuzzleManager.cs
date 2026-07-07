@@ -426,7 +426,7 @@ public class BambooPuzzleManager : MonoBehaviour
         isGameFinished = true;
         Debug.Log("Waterpipe Puzzle Berhasil Dipecahkan!");
 
-        PlaySound(successSound);
+        PlaySoundPersistent(successSound);
 
         if (winPanel != null)
         {
@@ -491,5 +491,26 @@ public class BambooPuzzleManager : MonoBehaviour
         {
             audioSource.PlayOneShot(clip);
         }
+    }
+
+    private void PlaySoundPersistent(AudioClip clip)
+    {
+        if (clip == null) return;
+        GameObject tempGO = new GameObject("TempAudio_" + clip.name);
+        AudioSource tempSource = tempGO.AddComponent<AudioSource>();
+        tempSource.clip = clip;
+        if (audioSource != null)
+        {
+            tempSource.outputAudioMixerGroup = audioSource.outputAudioMixerGroup;
+            tempSource.volume = audioSource.volume;
+            tempSource.pitch = audioSource.pitch;
+            tempSource.spatialBlend = audioSource.spatialBlend;
+        }
+        else
+        {
+            tempSource.spatialBlend = 0f; // 2D Sound
+        }
+        tempSource.Play();
+        Destroy(tempGO, clip.length);
     }
 }

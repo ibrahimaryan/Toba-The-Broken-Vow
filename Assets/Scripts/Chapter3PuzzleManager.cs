@@ -263,22 +263,49 @@ public class Chapter3PuzzleManager : MonoBehaviour
             Debug.Log("Rantang Solved diaktifkan.");
         }
 
-        // Kembalikan pergerakan player
+        // Kembalikan pergerakan player atau pertahankan lock jika ada dialog
         var player = FindAnyObjectByType<PlayerControllerScript>();
-        if (player != null) player.ToggleInput(true);
-
-        // Putar dialog sukses jika ada
         if (successDialogue != null && DialogueManager.instance != null)
         {
+            if (player != null) player.ToggleInput(false); // Lock gerakan player saat dialog sukses
             DialogueManager.instance.StartDialogue(successDialogue);
+            StartCoroutine(WaitDialogueAndUnlockShard(player));
+        }
+        else
+        {
+            if (player != null) player.ToggleInput(true);
+            UnlockMemoryShardIfAny();
         }
 
         // Jalankan event sukses
         OnPuzzleSolved?.Invoke();
+    }
 
+    private void UnlockMemoryShardIfAny()
+    {
         if (MemoryShardManager.Instance != null)
         {
             MemoryShardManager.Instance.UnlockShard("Chapter3");
+        }
+    }
+
+    private System.Collections.IEnumerator WaitDialogueAndUnlockShard(PlayerControllerScript player)
+    {
+        yield return null; // Tunggu satu frame agar dialog sempat aktif
+
+        while (DialogueManager.instance != null && 
+               ((DialogueManager.instance.screenBoxPanel != null && DialogueManager.instance.screenBoxPanel.activeInHierarchy) ||
+                (DialogueManager.instance.bubblePanel != null && DialogueManager.instance.bubblePanel.activeInHierarchy) ||
+                (DialogueManager.instance.cutsceneBoxPanel != null && DialogueManager.instance.cutsceneBoxPanel.activeInHierarchy)))
+        {
+            yield return null;
+        }
+
+        UnlockMemoryShardIfAny();
+
+        if (player != null && MemoryShardManager.Instance == null)
+        {
+            player.ToggleInput(true);
         }
     }
 

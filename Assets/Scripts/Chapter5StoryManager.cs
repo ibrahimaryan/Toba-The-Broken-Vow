@@ -156,6 +156,15 @@ public class Chapter5StoryManager : MonoBehaviour
             player.ToggleInput(false);
         }
 
+        // Tunggu sampai popup memory shard dan dialog VN-nya selesai sepenuhnya
+        yield return null; // Tunggu satu frame agar setup awal selesai
+        while (MemoryShardManager.Instance != null && 
+               ((MemoryShardManager.Instance.popupPanel != null && MemoryShardManager.Instance.popupPanel.activeInHierarchy) ||
+                (MemoryShardManager.Instance.dialogueManager != null && MemoryShardManager.Instance.dialogueManager.IsPlaying)))
+        {
+            yield return null;
+        }
+
         // Jalankan dialog pembuka
         if (openingDialogue != null && DialogueManager.instance != null)
         {

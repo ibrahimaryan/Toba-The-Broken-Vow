@@ -254423,6 +254423,80 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4326937951787829375, guid: 1b0207e13df636b44967eb35b76ff2bf, type: 3}
   m_PrefabInstance: {fileID: 83652966}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &83763242
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1551502645}
+    m_Modifications:
+    - target: {fileID: -6125119113774911070, guid: f6c5a6799da548043baa289875127834, type: 3}
+      propertyPath: hitSound
+      value: 
+      objectReference: {fileID: 8300000, guid: b918f376d88543045b4712b3550bc2bf, type: 3}
+    - target: {fileID: -6125119113774911070, guid: f6c5a6799da548043baa289875127834, type: 3}
+      propertyPath: dropPrefab
+      value: 
+      objectReference: {fileID: 7103314747039442807, guid: 0b6ac7be6df10804e92d4d9be1bb544d, type: 3}
+    - target: {fileID: -6125119113774911070, guid: f6c5a6799da548043baa289875127834, type: 3}
+      propertyPath: destroySound
+      value: 
+      objectReference: {fileID: 8300000, guid: b918f376d88543045b4712b3550bc2bf, type: 3}
+    - target: {fileID: 626221697076304511, guid: f6c5a6799da548043baa289875127834, type: 3}
+      propertyPath: m_Name
+      value: tambahan1_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573389516729116146, guid: f6c5a6799da548043baa289875127834, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573389516729116146, guid: f6c5a6799da548043baa289875127834, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 60.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573389516729116146, guid: f6c5a6799da548043baa289875127834, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573389516729116146, guid: f6c5a6799da548043baa289875127834, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573389516729116146, guid: f6c5a6799da548043baa289875127834, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573389516729116146, guid: f6c5a6799da548043baa289875127834, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573389516729116146, guid: f6c5a6799da548043baa289875127834, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573389516729116146, guid: f6c5a6799da548043baa289875127834, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573389516729116146, guid: f6c5a6799da548043baa289875127834, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5573389516729116146, guid: f6c5a6799da548043baa289875127834, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f6c5a6799da548043baa289875127834, type: 3}
+--- !u!4 &83763243 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5573389516729116146, guid: f6c5a6799da548043baa289875127834, type: 3}
+  m_PrefabInstance: {fileID: 83763242}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &84628478
 GameObject:
   m_ObjectHideFlags: 0
@@ -255776,6 +255850,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 928233688637776411, guid: c9e7756cd286af8428e9fb705da05794, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.0008946459
+      objectReference: {fileID: 0}
+    - target: {fileID: 1713973417596712895, guid: c9e7756cd286af8428e9fb705da05794, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1713973417596712895, guid: c9e7756cd286af8428e9fb705da05794, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2370208568223719716, guid: c9e7756cd286af8428e9fb705da05794, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2370208568223719716, guid: c9e7756cd286af8428e9fb705da05794, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2811153831590612472, guid: c9e7756cd286af8428e9fb705da05794, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2811153831590612472, guid: c9e7756cd286af8428e9fb705da05794, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2811153831590612472, guid: c9e7756cd286af8428e9fb705da05794, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3277676384503065172, guid: c9e7756cd286af8428e9fb705da05794, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -9.399902
@@ -255784,12 +255890,48 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4045563251141182066, guid: c9e7756cd286af8428e9fb705da05794, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4045563251141182066, guid: c9e7756cd286af8428e9fb705da05794, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053092475379609908, guid: c9e7756cd286af8428e9fb705da05794, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4053092475379609908, guid: c9e7756cd286af8428e9fb705da05794, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4613838525125582621, guid: c9e7756cd286af8428e9fb705da05794, type: 3}
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 4686350989726187612, guid: c9e7756cd286af8428e9fb705da05794, type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4787767984550729140, guid: c9e7756cd286af8428e9fb705da05794, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4787767984550729140, guid: c9e7756cd286af8428e9fb705da05794, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4787767984550729140, guid: c9e7756cd286af8428e9fb705da05794, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4787767984550729140, guid: c9e7756cd286af8428e9fb705da05794, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5133856016685022440, guid: c9e7756cd286af8428e9fb705da05794, type: 3}
+      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5205327993744331901, guid: c9e7756cd286af8428e9fb705da05794, type: 3}
@@ -255843,6 +255985,14 @@ PrefabInstance:
     - target: {fileID: 5472511550536312587, guid: c9e7756cd286af8428e9fb705da05794, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -9.399902
+      objectReference: {fileID: 0}
+    - target: {fileID: 5613693236285106023, guid: c9e7756cd286af8428e9fb705da05794, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5613693236285106023, guid: c9e7756cd286af8428e9fb705da05794, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -259915,11 +260065,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5573389516729116146, guid: f6c5a6799da548043baa289875127834, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.07
+      value: 1.26
       objectReference: {fileID: 0}
     - target: {fileID: 5573389516729116146, guid: f6c5a6799da548043baa289875127834, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 60.16
+      value: 60.25
       objectReference: {fileID: 0}
     - target: {fileID: 5573389516729116146, guid: f6c5a6799da548043baa289875127834, type: 3}
       propertyPath: m_LocalPosition.z
@@ -261570,7 +261720,7 @@ Transform:
   m_GameObject: {fileID: 820507023}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.36, y: 80.47, z: 0}
+  m_LocalPosition: {x: -7.3, y: 80.44, z: 0}
   m_LocalScale: {x: 0.09875207, y: 0.09875207, z: 0.09875207}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -265989,8 +266139,12 @@ MonoBehaviour:
       isCutsceneStyle: 0
       holdTime: 3
     - characterName: Opung
-      sentence: Jejak kaki di tanah kelahiran tidak pernah berbohong. Jika kau merasa
-        butuh sesuatu cek rantang yang usang
+      sentence: Jejak kaki di tanah kelahiran tidak pernah berbohong...
+      isSpeechBubble: 1
+      isCutsceneStyle: 0
+      holdTime: 3
+    - characterName: Opung
+      sentence: Jika kau merasa butuh sesuatu cek rantang yang usang...
       isSpeechBubble: 1
       isCutsceneStyle: 0
       holdTime: 3
@@ -268187,6 +268341,7 @@ Transform:
   - {fileID: 2077038712}
   - {fileID: 232035983}
   - {fileID: 621997627}
+  - {fileID: 83763243}
   - {fileID: 552901303}
   - {fileID: 191205167}
   - {fileID: 2074838037}
@@ -268788,10 +268943,15 @@ MonoBehaviour:
     lines:
     - characterName: Samosir
       sentence: Rantang ini... aku ingat pernah membawanya sambil berlari di jalan
-        ini. Perutku... waktu itu perutku sangat perih.
+        ini...
       isSpeechBubble: 1
       isCutsceneStyle: 0
-      holdTime: 3
+      holdTime: 2
+    - characterName: Samosir
+      sentence: Perutku... waktu itu perutku sangat perih.
+      isSpeechBubble: 1
+      isCutsceneStyle: 0
+      holdTime: 1
   triggerOnlyOnce: 1
   triggerID: chapter3_rantang_rusak
   saatDialogBerjalan:
@@ -277304,7 +277464,7 @@ Transform:
   m_GameObject: {fileID: 1660690760}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.48, y: 79.77, z: 0}
+  m_LocalPosition: {x: 1.48, y: 78.67, z: 0}
   m_LocalScale: {x: 1.310647, y: 1.310647, z: 1.310647}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -277600,7 +277760,12 @@ MonoBehaviour:
       holdTime: 3
     - characterName: Opung
       sentence: "Nakk\u2026 Keluarlah dari tempat ini, dan pastikan bawa pulang kayu
-        dan batu. Lalu temui aku, ada yang perlu aku berikan padamu nanti."
+        dan batu..."
+      isSpeechBubble: 1
+      isCutsceneStyle: 0
+      holdTime: 3
+    - characterName: Opung
+      sentence: Lalu temui aku, ada yang perlu aku berikan padamu nanti.
       isSpeechBubble: 1
       isCutsceneStyle: 0
       holdTime: 3
@@ -277662,8 +277827,12 @@ MonoBehaviour:
       isCutsceneStyle: 0
       holdTime: 3
     - characterName: Opung
-      sentence: Bagus nak, kamu penurut ya? Memang itu yang harusnya kamu lakukan.
-        Ini aku beri kamu sebuah cangkul
+      sentence: Bagus nak, kamu penurut ya??
+      isSpeechBubble: 1
+      isCutsceneStyle: 0
+      holdTime: 3
+    - characterName: Opung
+      sentence: Memang itu yang harusnya kamu lakukan. Ini aku beri kamu sebuah cangkul
       isSpeechBubble: 1
       isCutsceneStyle: 0
       holdTime: 3

@@ -290,8 +290,9 @@ public class SisikPuzzleManager : MonoBehaviour
             }
             else if (successDialogue != null && DialogueManager.instance != null)
             {
+                if (player != null) player.ToggleInput(false); // Tahan input saat dialog biasa
                 DialogueManager.instance.StartDialogue(successDialogue);
-                UnlockMemoryShardIfAny();
+                StartCoroutine(WaitNormalDialogueAndUnlockShard(player));
             }
             else
             {
@@ -301,6 +302,26 @@ public class SisikPuzzleManager : MonoBehaviour
         else
         {
             UnlockMemoryShardIfAny();
+        }
+    }
+
+    private System.Collections.IEnumerator WaitNormalDialogueAndUnlockShard(PlayerControllerScript player)
+    {
+        yield return null; // Tunggu satu frame agar dialog sempat aktif
+
+        while (DialogueManager.instance != null && 
+               ((DialogueManager.instance.screenBoxPanel != null && DialogueManager.instance.screenBoxPanel.activeInHierarchy) ||
+                (DialogueManager.instance.bubblePanel != null && DialogueManager.instance.bubblePanel.activeInHierarchy) ||
+                (DialogueManager.instance.cutsceneBoxPanel != null && DialogueManager.instance.cutsceneBoxPanel.activeInHierarchy)))
+        {
+            yield return null;
+        }
+
+        UnlockMemoryShardIfAny();
+
+        if (player != null && (MemoryShardManager.Instance == null || string.IsNullOrEmpty(rewardMemoryShardID)))
+        {
+            player.ToggleInput(true);
         }
     }
 

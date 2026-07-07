@@ -137,28 +137,57 @@ public class PatungStatue : MonoBehaviour
                 if (door != null)
                     door.OpenDoor();
 
+                var player = FindAnyObjectByType<PlayerControllerScript>();
                 if (doorOpenDialogue != null)
                 {
+                    if (player != null) player.ToggleInput(false); // Lock gerakan player
                     DialogueManager.instance.StartDialogue(doorOpenDialogue);
+                    StartCoroutine(ShowUIAfterDialogue(player));
+                }
+                else
+                {
+                    ShowMemoryShardUI();
                 }
 
                 Debug.Log("Patung telah terpasang kail! Pintu terbuka.");
-
-                // MUNCULKAN UI MEMORY SHARD
-                if (MemoryShardManager.Instance != null && !string.IsNullOrEmpty(memoryShardID))
-                {
-                    MemoryShardManager.Instance.UnlockShard(memoryShardID);
-                }
-                else if (MemoryShardManager.Instance != null)
-                {
-                    // Jika lupa ngisi ID, langsung munculkan saja
-                    MemoryShardManager.Instance.ShowShardPopup();
-                }
             }
             else
             {
                 Debug.Log("Patung membutuhkan alat pancing...");
             }
+        }
+    }
+
+    private void ShowMemoryShardUI()
+    {
+        if (MemoryShardManager.Instance != null && !string.IsNullOrEmpty(memoryShardID))
+        {
+            MemoryShardManager.Instance.UnlockShard(memoryShardID);
+        }
+        else if (MemoryShardManager.Instance != null)
+        {
+            MemoryShardManager.Instance.ShowShardPopup();
+        }
+    }
+
+    private IEnumerator ShowUIAfterDialogue(PlayerControllerScript player)
+    {
+        yield return null; // Tunggu satu frame agar dialog sempat aktif
+
+        while (DialogueManager.instance != null && 
+               ((DialogueManager.instance.screenBoxPanel != null && DialogueManager.instance.screenBoxPanel.activeInHierarchy) ||
+                (DialogueManager.instance.bubblePanel != null && DialogueManager.instance.bubblePanel.activeInHierarchy) ||
+                (DialogueManager.instance.cutsceneBoxPanel != null && DialogueManager.instance.cutsceneBoxPanel.activeInHierarchy)))
+        {
+            yield return null;
+        }
+
+        ShowMemoryShardUI();
+
+        // Kembalikan input player jika tidak tertahan oleh popup memory shard
+        if (player != null && (MemoryShardManager.Instance == null || string.IsNullOrEmpty(memoryShardID)))
+        {
+            player.ToggleInput(true);
         }
     }
 

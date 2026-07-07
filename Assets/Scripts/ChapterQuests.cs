@@ -27,9 +27,24 @@ public class ChapterQuests : MonoBehaviour
                 return; // Pindah scene biasa dalam chapter yang sama, lagu jangan diganti
             }
 
-            // JIKA MASUK CHAPTER BARU:
+            // Gunakan SetCurrentChapterID agar chapter tidak bisa mundur
+            if (!ToDoManager.Instance.IsChapterAtLeast(chapterID))
+            {
+                // Chapter ini lebih rendah dari yang sedang aktif, tolak penggantian misi
+                // tapi tetap perbarui UI agar misi yang benar tampil
+                ToDoManager.Instance.UpdateTampilanUI();
+
+                // KODE UNTUK MENGGANTI LAGU SECARA OTOMATIS
+                if (BGMManager.Instance != null && laguChapterIni != null)
+                {
+                    BGMManager.Instance.GantiLagu(laguChapterIni, 1.5f);
+                }
+                return;
+            }
+
+            // JIKA MASUK CHAPTER BARU YANG LEBIH MAJU:
             ToDoManager.Instance.daftarMisi = new List<Quest>(misiDiSceneIni);
-            ToDoManager.Instance.currentChapterID = chapterID; 
+            ToDoManager.Instance.SetCurrentChapterID(chapterID); 
             ToDoManager.Instance.UpdateTampilanUI();
 
             // KODE UNTUK MENGGANTI LAGU SECARA OTOMATIS

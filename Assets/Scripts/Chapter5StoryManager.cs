@@ -140,6 +140,23 @@ public class Chapter5StoryManager : MonoBehaviour
         }
         else
         {
+            // Isi kembali daftarMisi Chapter 5 agar tidak kosong saat scene di-reload
+            SetupChapter5Quests();
+
+            // Restore status misi berdasarkan flags yang sudah tersimpan
+            bool arrivedAtPipe = GameManager.Instance.IsFlagSet("chapter5_arrived_dialogue_done");
+            if (arrivedAtPipe && ToDoManager.Instance != null && ToDoManager.Instance.daftarMisi.Count > 0)
+                ToDoManager.Instance.daftarMisi[0].sudahSelesai = true;
+
+            if (solved && ToDoManager.Instance != null && ToDoManager.Instance.daftarMisi.Count > 1)
+                ToDoManager.Instance.daftarMisi[1].sudahSelesai = true;
+
+            if (opungTalked && ToDoManager.Instance != null && ToDoManager.Instance.daftarMisi.Count > 2)
+                ToDoManager.Instance.daftarMisi[2].sudahSelesai = true;
+
+            if (ToDoManager.Instance != null)
+                ToDoManager.Instance.UpdateTampilanUI();
+
             UpdateObjectivePointer();
         }
     }
@@ -427,7 +444,7 @@ public class Chapter5StoryManager : MonoBehaviour
     {
         if (ToDoManager.Instance != null)
         {
-            ToDoManager.Instance.currentChapterID = "Chapter_5";
+            ToDoManager.Instance.SetCurrentChapterID("Chapter_5");
             ToDoManager.Instance.daftarMisi = new List<Quest>
             {
                 new Quest { namaMisi = "Periksa saluran pipa bambu yang tersumbat", sudahSelesai = false },

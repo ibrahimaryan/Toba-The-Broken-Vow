@@ -21,6 +21,30 @@ public class ToDoManager : MonoBehaviour
     public string currentChapterID; // Mengetahui ID chapter yang sedang aktif saat ini
     public List<Quest> daftarMisi; 
 
+    // Urutan prioritas chapter — semakin tinggi indeks, semakin maju
+    private static readonly string[] chapterOrder = new string[]
+    {
+        "Chapter_1", "Chapter_2", "Chapter_3", "Chapter_4", "Chapter_5"
+    };
+
+    // Kembalikan true jika newID lebih maju atau sama dengan currentChapterID
+    public bool IsChapterAtLeast(string newID)
+    {
+        int newIndex = System.Array.IndexOf(chapterOrder, newID);
+        int curIndex = System.Array.IndexOf(chapterOrder, currentChapterID);
+        // Jika salah satu tidak dikenal, izinkan
+        if (newIndex < 0 || curIndex < 0) return true;
+        return newIndex >= curIndex;
+    }
+
+    public void SetCurrentChapterID(string newID)
+    {
+        if (!IsChapterAtLeast(newID)) return; // Tolak jika mundur
+        currentChapterID = newID;
+        PlayerPrefs.SetString("ToDoManager_ChapterID", currentChapterID);
+        PlayerPrefs.Save();
+    }
+
     private bool isPanelAktif = false; 
 
     void Awake()
@@ -28,6 +52,12 @@ public class ToDoManager : MonoBehaviour
        if (Instance == null)
         {
             Instance = this;
+            // Restore chapter ID yang tersimpan agar tidak mundur setelah restart
+            string saved = PlayerPrefs.GetString("ToDoManager_ChapterID", "");
+            if (!string.IsNullOrEmpty(saved))
+            {
+                currentChapterID = saved;
+            }
         }
     }
 

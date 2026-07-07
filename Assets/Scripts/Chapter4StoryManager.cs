@@ -99,8 +99,12 @@ public class Chapter4StoryManager : MonoBehaviour
                 if (pickaxePickupGameObject != null) pickaxePickupGameObject.SetActive(false);
                 if (crossGameObject != null) crossGameObject.SetActive(false);
 
-                // Panggil SetupChapter4Quests agar misi terisi di UI setelah load scene
-                SetupChapter4Quests();
+                // Panggil SetupChapter4Quests HANYA jika Chapter 5 belum mengambil alih
+                bool chapter5Active = GameManager.Instance.IsFlagSet("chapter5_intro_done");
+                if (!chapter5Active)
+                {
+                    SetupChapter4Quests();
+                }
             }
             else if (cangkulReceived)
             {
@@ -496,20 +500,24 @@ public class Chapter4StoryManager : MonoBehaviour
 
     private void SetupChapter4Quests()
     {
-        if (ToDoManager.Instance != null)
+        if (ToDoManager.Instance == null) return;
+
+        // Jangan timpa misi jika chapter yang aktif sudah lebih maju dari Chapter_4
+        if (!ToDoManager.Instance.IsChapterAtLeast("Chapter_4")) return;
+        // Juga jangan timpa jika sudah di Chapter_5
+        if (ToDoManager.Instance.currentChapterID == "Chapter_5") return;
+
+        ToDoManager.Instance.SetCurrentChapterID("Chapter_4");
+        ToDoManager.Instance.daftarMisi = new List<Quest>
         {
-            ToDoManager.Instance.currentChapterID = "Chapter_4";
-            ToDoManager.Instance.daftarMisi = new List<Quest>
-            {
-                new Quest { namaMisi = "Periksa area misterius (tanda silang)", sudahSelesai = false },
-                new Quest { namaMisi = "Cari alat pemecah batu di ujung map", sudahSelesai = false },
-                new Quest { namaMisi = $"Tebang pohon untuk mengumpulkan Kayu (0/{woodRequired})", sudahSelesai = false },
-                new Quest { namaMisi = $"Pecahkan batu untuk mengumpulkan Batu (0/{stoneRequired})", sudahSelesai = false },
-                new Quest { namaMisi = "Serahkan Kayu dan Batu ke Opung di Gubug", sudahSelesai = false },
-                new Quest { namaMisi = "Gali tanah di tanda silang menggunakan Cangkul", sudahSelesai = false }
-            };
-            ToDoManager.Instance.UpdateTampilanUI();
-        }
+            new Quest { namaMisi = "Periksa area misterius (tanda silang)", sudahSelesai = false },
+            new Quest { namaMisi = "Cari alat pemecah batu di ujung map", sudahSelesai = false },
+            new Quest { namaMisi = $"Tebang pohon untuk mengumpulkan Kayu (0/{woodRequired})", sudahSelesai = false },
+            new Quest { namaMisi = $"Pecahkan batu untuk mengumpulkan Batu (0/{stoneRequired})", sudahSelesai = false },
+            new Quest { namaMisi = "Serahkan Kayu dan Batu ke Opung di Gubug", sudahSelesai = false },
+            new Quest { namaMisi = "Gali tanah di tanda silang menggunakan Cangkul", sudahSelesai = false }
+        };
+        ToDoManager.Instance.UpdateTampilanUI();
     }
 
     public void UpdateQuestStatus()

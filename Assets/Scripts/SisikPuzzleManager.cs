@@ -15,6 +15,7 @@ public class SisikPuzzleManager : MonoBehaviour
     [SerializeField] private GameObject puzzlePanel;
     [SerializeField] private GameObject submitButton; // Tombol periksa / submit
     [SerializeField] private GameObject rewardPanel; // Panel "Dapat Kunci"
+    [SerializeField] private GameObject reopenPanel; // Panel re open
 
     [Header("Gate Settings")]
     [SerializeField] private DoorController targetGate; // Pintu/Gate yang terbuka setelah puzzle selesai
@@ -48,8 +49,25 @@ public class SisikPuzzleManager : MonoBehaviour
         }
     }
     
+    private bool isReopeningSolved = false;
+
     public void OpenPuzzle(int collectedCount)
     {
+        if (GameManager.Instance != null && GameManager.Instance.IsFlagSet("sisik_puzzle_solved"))
+        {
+            isReopeningSolved = true;
+            if (reopenPanel != null)
+            {
+                reopenPanel.SetActive(true);
+                // Matikan pergerakan player
+                var player = FindAnyObjectByType<PlayerControllerScript>();
+                if (player != null) player.ToggleInput(false);
+            }
+            return;
+        }
+
+        isReopeningSolved = false;
+
         if (puzzlePanel != null)
         {
             puzzlePanel.SetActive(true);
@@ -211,7 +229,7 @@ public class SisikPuzzleManager : MonoBehaviour
 
     private void Update()
     {
-        bool isAnyPanelActive = (puzzlePanel != null && puzzlePanel.activeSelf) || (rewardPanel != null && rewardPanel.activeSelf);
+        bool isAnyPanelActive = (puzzlePanel != null && puzzlePanel.activeSelf) || (rewardPanel != null && rewardPanel.activeSelf) || (reopenPanel != null && reopenPanel.activeSelf);
         if (isAnyPanelActive)
         {
             // Cek tombol ESC menggunakan New Input System
@@ -236,7 +254,21 @@ public class SisikPuzzleManager : MonoBehaviour
                     ClosePuzzlePanel();
                 }
             }
+
+            if (reopenPanel != null && reopenPanel.activeSelf)
+            {
+                bool mouseClick = UnityEngine.InputSystem.Mouse.current != null && UnityEngine.InputSystem.Mouse.current.leftButton.wasPressedThisFrame;
+                bool enterOrSpace = UnityEngine.InputSystem.Keyboard.current != null && 
+                                   (UnityEngine.InputSystem.Keyboard.current.enterKey.wasPressedThisFrame || 
+                                    UnityEngine.InputSystem.Keyboard.current.spaceKey.wasPressedThisFrame);
+
+                if (mouseClick || enterOrSpace)
+                {
+                    ClosePuzzlePanel();
+                }
+            }
         }
+        
     }
 
     public void ResetAllDraggables()
@@ -266,6 +298,11 @@ public class SisikPuzzleManager : MonoBehaviour
             rewardPanel.SetActive(false);
         }
 
+        if (reopenPanel != null)
+        {
+            reopenPanel.SetActive(false);
+        }
+
         // TAMBAHKAN INI: Tutup paksa seluruh panel dialog agar tidak menggantung di layar
         if (DialogueManager.instance != null)
         {
@@ -276,7 +313,7 @@ public class SisikPuzzleManager : MonoBehaviour
         var player = FindAnyObjectByType<PlayerControllerScript>();
         if (player != null) player.ToggleInput(true);
 
-        if (wasRewardActive)
+        if (wasRewardActive && !isReopeningSolved)
         {
             if (successVNDialogue != null)
             {

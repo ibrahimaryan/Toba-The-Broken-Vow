@@ -60,6 +60,19 @@ public class ToDoManager : MonoBehaviour
     {
         listText.text = ""; 
 
+        if (GameManager.Instance != null && GameManager.Instance.IsFlagSet("sisik_puzzle_solved") &&
+            (currentChapterID == "Chapter_1" || currentChapterID == "Chapter_2"))
+        {
+            listText.text = "<color=#808080><s>- Semua tantangan sudah selesai</s></color>\n";
+            return;
+        }
+
+        if (GameManager.Instance != null && GameManager.Instance.IsFlagSet("chapter5_completed"))
+        {
+            listText.text = "<color=#808080><s>- Semua tantangan sudah selesai</s></color>\n";
+            return;
+        }
+
         foreach (Quest misi in daftarMisi)
         {
             if (misi.sudahSelesai)

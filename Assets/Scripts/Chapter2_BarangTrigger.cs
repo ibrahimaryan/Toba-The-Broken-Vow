@@ -210,7 +210,7 @@ public class BarangTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayerInRange = true;
-            if (GameManager.Instance != null && !GameManager.Instance.IsFlagSet("sisik_puzzle_solved") && InteractionPromptUI.Instance != null)
+            if (GameManager.Instance != null && InteractionPromptUI.Instance != null)
             {
                 InteractionPromptUI.Instance.ShowPrompt("Tekan E untuk periksa");
             }

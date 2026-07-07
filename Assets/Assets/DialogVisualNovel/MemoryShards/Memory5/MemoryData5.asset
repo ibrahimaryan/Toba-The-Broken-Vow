@@ -15,7 +15,7 @@ MonoBehaviour:
   shardID: Chapter5
   title: Memory Shard V
   thumbnail: {fileID: -8748720450863373525, guid: de6e771485c9e9344b33b0e28ece6640, type: 3}
-  dialogueData: {fileID: 11400000, guid: de79938fb0c90ca4fa5897631a3ec69b, type: 2}
+  dialogueData: {fileID: 11400000, guid: 0581e349a178d44439dbe25b6a31228e, type: 2}
   isUnlocked: 1
   chapterName: Chapter 5
   silhouetteSprite: {fileID: 2167782677101540272, guid: 5ec6f24a15d96af46af9032cbc76fd94, type: 3}

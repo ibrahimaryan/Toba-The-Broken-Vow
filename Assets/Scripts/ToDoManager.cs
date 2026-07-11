@@ -90,10 +90,17 @@ public class ToDoManager : MonoBehaviour
     {
         listText.text = ""; 
 
+        if (GameManager.Instance != null && GameManager.Instance.IsFlagSet("chapter1_statue_solved") &&
+            (currentChapterID == "Chapter_1"))
+        {
+            listText.text = "<color=#808080><s>- Tantangan chapter ini sudah selesai</s></color>\n";
+            return;
+        }
+
         if (GameManager.Instance != null && GameManager.Instance.IsFlagSet("sisik_puzzle_solved") &&
             (currentChapterID == "Chapter_1" || currentChapterID == "Chapter_2"))
         {
-            listText.text = "<color=#808080><s>- Semua tantangan sudah selesai</s></color>\n";
+            listText.text = "<color=#808080><s>- Tantangan chapter ini sudah selesai</s></color>\n";
             return;
         }
 

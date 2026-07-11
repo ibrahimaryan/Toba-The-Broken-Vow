@@ -3304,7 +3304,6 @@ GameObject:
   - component: {fileID: 617310127}
   - component: {fileID: 617310126}
   - component: {fileID: 617310128}
-  - component: {fileID: 617310129}
   m_Layer: 0
   m_Name: DialogueManager
   m_TagString: Untagged
@@ -3447,18 +3446,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &617310129
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 617310125}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22afcb79e23183446a6c9a5778fb2e68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PrologueAutoTrigger
 --- !u!1 &657289368 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8649937729667940298, guid: 19e048160ef381a4fa6f24c6d8abef26, type: 3}
@@ -16178,7 +16165,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4178337691010201096, guid: 91f234957030ad2489a05d4c5f7d7b8f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 103.94102
+      value: 103.94103
       objectReference: {fileID: 0}
     - target: {fileID: 4205613503379323983, guid: 91f234957030ad2489a05d4c5f7d7b8f, type: 3}
       propertyPath: m_IsActive

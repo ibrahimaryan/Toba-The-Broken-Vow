@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -19,8 +20,27 @@ public class GameManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
             LoadFlags(); // Muat flags dari PlayerPrefs saat game mulai
+            SceneManager.sceneLoaded += OnSceneLoaded;
         }
         else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (Instance == this)
+        {
+            SceneManager.sceneLoaded -= OnSceneLoaded;
+            Instance = null;
+        }
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // Hancurkan GameManager jika masuk ke scene MainMenu
+        if (scene.name == "MainMenu")
         {
             Destroy(gameObject);
         }

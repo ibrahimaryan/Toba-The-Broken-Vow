@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/luar_rumah.unity
     guid: 92ab81adfbdb5c84fae4662ed9e7eda3
+  - enabled: 1
+    path: Assets/Scenes/MemoryShardPlayerScene.unity
+    guid: 35df2ad091c002c458884142ad343716
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

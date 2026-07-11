@@ -6,6 +6,9 @@ public class MainMenuController : MonoBehaviour
     [Header("UI Buttons")]
     public GameObject continueButton; // Tempat memasukkan tombol Continue
 
+    [Header("UI Panels")]
+    public GameObject memoryShardPanel; // Tempat memasukkan panel Memory Shard
+
     void Start()
     {
         // Saat menu dibuka, cek apakah ada data save bernama "SavedScene"
@@ -18,6 +21,13 @@ public class MainMenuController : MonoBehaviour
         {
             // Jika belum ada save sama sekali, sembunyikan tombol Continue
             continueButton.SetActive(false);
+        }
+
+        // Cek apakah baru kembali setelah memutar Memory Shard
+        if (MainMenuMemoryGallery.shouldOpenGalleryOnStart && memoryShardPanel != null)
+        {
+            memoryShardPanel.SetActive(true);
+            MainMenuMemoryGallery.shouldOpenGalleryOnStart = false; // Reset status flag
         }
     }
 

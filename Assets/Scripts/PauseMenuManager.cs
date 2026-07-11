@@ -10,6 +10,22 @@ public class PauseMenuManager : MonoBehaviour
     [Header("Referensi UI")]
     public GameObject pauseMenuUI;
 
+    private void Awake()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // Pastikan UI Pause selalu ditutup dan waktu kembali normal saat pindah/muat scene baru
+        Resume();
+    }
+
     void Update()
     {
         // Mengecek apakah tombol Escape ditekan

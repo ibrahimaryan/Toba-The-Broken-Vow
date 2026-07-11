@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.InputSystem; 
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -31,16 +32,60 @@ public class DialogueManager : MonoBehaviour
 
     void Awake()
     {
-        if (instance == null) instance = this;
-        else Destroy(gameObject);
+        if (instance == null)
+        {
+            instance = this;
+            sentences = new Queue<DialogueLine>(); // Inisialisasi lebih awal agar siap saat OnSceneLoaded
+            SceneManager.sceneLoaded += OnSceneLoaded;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    void OnDestroy()
+    {
+        if (instance == this)
+        {
+            SceneManager.sceneLoaded -= OnSceneLoaded;
+        }
+    }
+
+    private void EnsureUIReferences()
+    {
+        // Cari player aktif di scene
+        var player = FindAnyObjectByType<PlayerControllerScript>();
+        if (player != null)
+        {
+            // Selalu cari dan pasangkan ke bubble panel milik Player aktif di scene
+            Transform[] allChildren = player.GetComponentsInChildren<Transform>(true);
+            foreach (var child in allChildren)
+            {
+                if (child.name.Equals("Bubble Panel", System.StringComparison.OrdinalIgnoreCase) || 
+                    child.name.Equals("Speech Bubble", System.StringComparison.OrdinalIgnoreCase) ||
+                    child.name.Contains("Bubble"))
+                {
+                    bubblePanel = child.gameObject;
+                    bubbleText = bubblePanel.GetComponentInChildren<TextMeshProUGUI>(true);
+                    break;
+                }
+            }
+        }
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        EnsureUIReferences();
+        // Tutup paksa dialog, hentikan coroutine, dan bersihkan antrean ketika pindah/load scene baru
+        TutupPaksaSeluruhPanel();
     }
 
     void Start()
     {
-        sentences = new Queue<DialogueLine>();
-        screenBoxPanel.SetActive(false);
-        bubblePanel.SetActive(false);
-        
+        EnsureUIReferences();
+        if (screenBoxPanel != null) screenBoxPanel.SetActive(false);
+        if (bubblePanel != null) bubblePanel.SetActive(false);
         if (cutsceneBoxPanel != null) cutsceneBoxPanel.SetActive(false);
     }
 
@@ -72,6 +117,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
+        EnsureUIReferences();
         // Paksa berhenti seluruh ketikan lama yang menggantung!
         StopAllCoroutines(); 
         isTyping = false; 
@@ -86,6 +132,7 @@ public class DialogueManager : MonoBehaviour
 
     public void DisplayNextSentence()
     {
+        EnsureUIReferences();
         if (isTyping) return; 
 
         if (sentences.Count == 0)
@@ -168,6 +215,7 @@ public class DialogueManager : MonoBehaviour
 
     public void TutupPaksaSeluruhPanel()
     {
+        EnsureUIReferences();
         StopAllCoroutines(); 
         isTyping = false;     // Matikan sisa ketikan yang nanggung
         sentences.Clear(); 

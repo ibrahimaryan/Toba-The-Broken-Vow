@@ -34,6 +34,9 @@ public class MemoryShardManager : MonoBehaviour
 
     private void Start()
     {
+        // Load status memory shard yang tersimpan
+        LoadShardStatus();
+
         if (popupPanel != null) popupPanel.SetActive(false);
 
         if (tontonButton != null)
@@ -41,6 +44,16 @@ public class MemoryShardManager : MonoBehaviour
 
         if (tutupButton != null)
             tutupButton.onClick.AddListener(OnTutupClicked);
+    }
+
+    public void LoadShardStatus()
+    {
+        foreach (var shard in allShards)
+        {
+            if (shard == null) continue;
+            int status = PlayerPrefs.GetInt("MemoryShard_" + shard.shardID, 0);
+            shard.isUnlocked = (status == 1);
+        }
     }
 
     public void UnlockShard(string shardID)
@@ -52,6 +65,8 @@ public class MemoryShardManager : MonoBehaviour
             if (shard.shardID == shardID)
             {
                 shard.isUnlocked = true;
+                PlayerPrefs.SetInt("MemoryShard_" + shardID, 1);
+                PlayerPrefs.Save();
                 currentActiveShard = shard; // Simpan memori shard yang baru didapat
                 Debug.Log($"Memory Shard Unlocked: {shard.title}");
                 ShowShardPopup(); // Tampilkan popup

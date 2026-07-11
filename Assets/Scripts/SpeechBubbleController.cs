@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 using UnityEngine.InputSystem; // Tambahkan library pemanggil New Input System
+using UnityEngine.SceneManagement;
 
 public class SpeechBubbleController : MonoBehaviour
 {
@@ -9,10 +10,31 @@ public class SpeechBubbleController : MonoBehaviour
     public GameObject bubblePanel;
     public TextMeshProUGUI dialogText;
 
+    private void Awake()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (bubblePanel != null)
+        {
+            bubblePanel.SetActive(false);
+        }
+    }
+
     void Start()
     {
         // Pastikan saat game mulai, bubble dalam keadaan tersembunyi
-        bubblePanel.SetActive(false);
+        if (bubblePanel != null)
+        {
+            bubblePanel.SetActive(false);
+        }
     }
 
     void Update()

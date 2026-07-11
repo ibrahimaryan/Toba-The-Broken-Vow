@@ -25,6 +25,14 @@ public class LoadPlayerPosition : MonoBehaviour
         }
     }
 
+    private void OnDestroy()
+    {
+        if (instance == this)
+        {
+            instance = null;
+        }
+    }
+
     void Start()
     {
         // Hanya Samosir yang Asli yang boleh menjalankan perintah muat posisi ini

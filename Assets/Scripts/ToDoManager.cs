@@ -82,8 +82,21 @@ public class ToDoManager : MonoBehaviour
         if (urutanMisi >= 0 && urutanMisi < daftarMisi.Count)
         {
             daftarMisi[urutanMisi].sudahSelesai = true;
+            PlayerPrefs.SetInt("Quest_" + currentChapterID + "_" + urutanMisi, 1);
+            PlayerPrefs.Save();
             UpdateTampilanUI(); 
         }
+    }
+
+    public void LoadQuestStatus()
+    {
+        if (daftarMisi == null) return;
+        for (int i = 0; i < daftarMisi.Count; i++)
+        {
+            int status = PlayerPrefs.GetInt("Quest_" + currentChapterID + "_" + i, 0);
+            daftarMisi[i].sudahSelesai = (status == 1);
+        }
+        UpdateTampilanUI();
     }
 
     public void UpdateTampilanUI()

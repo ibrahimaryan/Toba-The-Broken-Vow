@@ -37,16 +37,14 @@ public class ObjectivePointer : MonoBehaviour
             }
         }
 
-        // Jika targetTransform kosong, coba cari dari Chapter3StoryManager
-        if (targetTransform == null && Chapter3StoryManager.Instance != null)
+        // Pemicu agar Story Manager memperbarui pointer setelah ObjectivePointer siap
+        if (Chapter3StoryManager.Instance != null)
         {
-            Transform storyTarget = Chapter3StoryManager.Instance.GetObjectiveTarget();
-            if (storyTarget != null && GameManager.Instance != null &&
-                GameManager.Instance.IsFlagSet("chapter3_exit_dialogue_played") &&
-                !GameManager.Instance.IsFlagSet("chapter3_player_explored_map"))
-            {
-                SetTarget(storyTarget);
-            }
+            Chapter3StoryManager.Instance.UpdateObjectivePointer();
+        }
+        else if (Chapter4StoryManager.Instance != null)
+        {
+            Chapter4StoryManager.Instance.UpdateQuestStatus();
         }
 
         // Pastikan visual panah mati jika belum ada target
@@ -58,7 +56,53 @@ public class ObjectivePointer : MonoBehaviour
 
     private void Update()
     {
-        if (targetTransform == null || playerTransform == null || arrowVisual == null)
+        // Pengaman ekstra untuk mendeteksi missing reference / destroyed player object
+        bool isPlayerDestroyedOrNull = false;
+        try
+        {
+            if (playerTransform == null || playerTransform.gameObject == null)
+            {
+                isPlayerDestroyedOrNull = true;
+            }
+        }
+        catch (System.Exception)
+        {
+            isPlayerDestroyedOrNull = true;
+        }
+
+        if (isPlayerDestroyedOrNull)
+        {
+            var player = FindAnyObjectByType<PlayerControllerScript>();
+            if (player != null)
+            {
+                playerTransform = player.transform;
+                Debug.Log("[ObjectivePointer] Player berhasil ditemukan kembali secara dinamis.");
+            }
+            else
+            {
+                if (arrowVisual != null && arrowVisual.activeSelf)
+                {
+                    arrowVisual.SetActive(false);
+                }
+                return;
+            }
+        }
+
+        // Pengaman ekstra untuk targetTransform (karena target bisa hancur/hilang)
+        bool isTargetDestroyedOrNull = false;
+        try
+        {
+            if (targetTransform == null || targetTransform.gameObject == null)
+            {
+                isTargetDestroyedOrNull = true;
+            }
+        }
+        catch (System.Exception)
+        {
+            isTargetDestroyedOrNull = true;
+        }
+
+        if (isTargetDestroyedOrNull || arrowVisual == null)
         {
             if (arrowVisual != null && arrowVisual.activeSelf)
             {

@@ -249,6 +249,11 @@ public class Chapter3PuzzleManager : MonoBehaviour
             GameManager.Instance.SetFlag("chapter3_puzzle_solved", true);
         }
 
+        if (Chapter3StoryManager.Instance != null)
+        {
+            Chapter3StoryManager.Instance.UpdateObjectivePointer();
+        }
+
         // Nonaktifkan trigger rantang lama
         if (rantangTriggerObject != null)
         {

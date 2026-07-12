@@ -68,16 +68,46 @@ public class Chapter3PuzzleTrigger : MonoBehaviour
     private void OnEnable()
     {
         PlayerControllerScript.OnInteractPressed += HandleInteraction;
+
+        // Mulai kembali efek berkedip saat aktif jika puzzle belum diselesaikan dan sudah aktif
+        if (GameManager.Instance != null && !GameManager.Instance.IsFlagSet("chapter3_puzzle_solved"))
+        {
+            if (string.IsNullOrEmpty(activationFlag) || GameManager.Instance.IsFlagSet(activationFlag))
+            {
+                StartBlink();
+            }
+        }
     }
 
     private void OnDisable()
     {
         PlayerControllerScript.OnInteractPressed -= HandleInteraction;
+        StopBlink();
+    }
+
+    private bool IsDialogueActive()
+    {
+        bool standardDialogueActive = DialogueManager.instance != null && 
+               ((DialogueManager.instance.screenBoxPanel != null && DialogueManager.instance.screenBoxPanel.activeInHierarchy) ||
+                (DialogueManager.instance.bubblePanel != null && DialogueManager.instance.bubblePanel.activeInHierarchy) ||
+                (DialogueManager.instance.cutsceneBoxPanel != null && DialogueManager.instance.cutsceneBoxPanel.activeInHierarchy));
+
+        bool vnDialogueActive = false;
+        var vnManager = FindAnyObjectByType<DialogueManagerCS>();
+        if (vnManager != null)
+        {
+            vnDialogueActive = vnManager.IsPlaying;
+        }
+
+        return standardDialogueActive || vnDialogueActive;
     }
 
     private void HandleInteraction()
     {
         if (!isPlayerInRange) return;
+
+        // Cegah membuka puzzle jika masih ada dialog yang sedang aktif
+        if (IsDialogueActive()) return;
 
         // Buka panel puzzle
         if (puzzleManager != null)

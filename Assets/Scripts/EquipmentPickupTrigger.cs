@@ -47,17 +47,21 @@ public class EquipmentPickupTrigger : MonoBehaviour
             gameObject.SetActive(false);
             return;
         }
-
-        // Mulai efek berkedip
-        if (spriteRenderer != null)
-        {
-            blinkCoroutine = StartCoroutine(BlinkEffect());
-        }
     }
 
     private void OnEnable()
     {
         PlayerControllerScript.OnInteractPressed += HandleInteraction;
+
+        // Mulai kembali efek berkedip jika belum dikumpulkan
+        if (spriteRenderer != null && (GameManager.Instance == null || !GameManager.Instance.IsFlagSet("chapter4_pickaxe_collected")))
+        {
+            if (blinkCoroutine != null)
+            {
+                StopCoroutine(blinkCoroutine);
+            }
+            blinkCoroutine = StartCoroutine(BlinkEffect());
+        }
     }
 
     private void OnDisable()
@@ -66,6 +70,7 @@ public class EquipmentPickupTrigger : MonoBehaviour
         if (blinkCoroutine != null)
         {
             StopCoroutine(blinkCoroutine);
+            blinkCoroutine = null;
         }
     }
 

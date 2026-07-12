@@ -61,11 +61,13 @@ public class ObjectiveTarget : MonoBehaviour
         {
             Chapter3StoryManager.Instance.TriggerExploration();
         }
-
-        // 3. Hilangkan panah penunjuk arah
-        if (ObjectivePointer.Instance != null)
+        else
         {
-            ObjectivePointer.Instance.ClearTarget();
+            // 3. Hilangkan panah penunjuk arah jika tidak ada Story Manager yang mengaturnya
+            if (ObjectivePointer.Instance != null)
+            {
+                ObjectivePointer.Instance.ClearTarget();
+            }
         }
 
         // 4. Mainkan dialog dan matikan input player sejenak

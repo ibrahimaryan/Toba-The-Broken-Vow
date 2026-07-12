@@ -1891,7 +1891,7 @@ MonoBehaviour:
   successDialogue:
     lines:
     - characterName: Samosir
-      sentence: TIba-tiba muncul kunci, apa ini buat pintu tadi di bawah ya??
+      sentence: TIba-tiba muncul kunci, apa ini buat pintu di bawah ya??
       isSpeechBubble: 1
       isCutsceneStyle: 0
       holdTime: 3
@@ -5281,12 +5281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueTrigger
   dialogue:
-    lines:
-    - characterName: Samosir
-      sentence: Terkunci lagi?? Apa ada kunci misteri lagi untuk kali ini?
-      isSpeechBubble: 1
-      isCutsceneStyle: 0
-      holdTime: 3
+    lines: []
   triggerOnlyOnce: 1
   triggerID: chapter2_pintu_bawah
   saatDialogBerjalan:
@@ -9964,7 +9959,7 @@ Transform:
   m_GameObject: {fileID: 1382846870}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.91, y: -1.45, z: 0}
+  m_LocalPosition: {x: 0.03, y: 1.51, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

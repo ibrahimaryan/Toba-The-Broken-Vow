@@ -1282,7 +1282,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 294030421}
-  - component: {fileID: 294030420}
   - component: {fileID: 294030422}
   - component: {fileID: 294030424}
   - component: {fileID: 294030423}
@@ -1294,18 +1293,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &294030420
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 294030419}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08cfb9ebdb6e6794493f15b8779ee553, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CutsceneManager
 --- !u!4 &294030421
 Transform:
   m_ObjectHideFlags: 0
@@ -16165,7 +16152,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4178337691010201096, guid: 91f234957030ad2489a05d4c5f7d7b8f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 103.94103
+      value: 103.94087
       objectReference: {fileID: 0}
     - target: {fileID: 4205613503379323983, guid: 91f234957030ad2489a05d4c5f7d7b8f, type: 3}
       propertyPath: m_IsActive

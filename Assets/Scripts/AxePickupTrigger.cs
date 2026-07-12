@@ -135,6 +135,11 @@ public class AxePickupTrigger : MonoBehaviour
             GameManager.Instance.SetFlag("chapter3_axe_collected", true);
         }
 
+        if (Chapter3StoryManager.Instance != null)
+        {
+            Chapter3StoryManager.Instance.UpdateObjectivePointer();
+        }
+
         // 3. Putar dialog pengambilan jika ada
         if (pickupDialogue != null && DialogueManager.instance != null)
         {

@@ -102,7 +102,7 @@ MonoBehaviour:
     autoPlayDelay: 0
   - speaker: {fileID: 0}
     text: "Jangan terlalu lama menatap ke belakang, atau kamu akan menabrak apa yang
-      ada di depanmu\u2026"
+      ada di depanmu\u2026\nTAMATT.."
     isPrologueCenterText: 1
     emotion: 0
     position: 0

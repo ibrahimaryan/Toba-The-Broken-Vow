@@ -15,6 +15,7 @@ public class Chapter3StoryManager : MonoBehaviour
     [SerializeField] private Dialogue npcDialogue;
     [SerializeField] private string explorationFlag = "chapter3_player_explored_map";
     [SerializeField] private string npcSequenceFlag = "chapter3_npc_sequence_played";
+    [SerializeField] private float npcInteractionDistance = 2.0f; // Jarak interaksi dekat dengan NPC
 
     [Header("Puzzle Settings")]
     [SerializeField] private Chapter3PuzzleTrigger chapter3PuzzleTrigger;
@@ -24,6 +25,8 @@ public class Chapter3StoryManager : MonoBehaviour
 
     private bool isPlayerInHutZone = false;
     private bool isRunningSequence = false;
+    private bool isNearNPC = false;
+    private Transform currentTarget = null;
 
     private void Awake()
     {
@@ -87,10 +90,9 @@ public class Chapter3StoryManager : MonoBehaviour
                 {
                     StartCoroutine(PlayExitDialogueCoroutine());
                 }
-                else if (!explored && objectiveTargetTransform != null && ObjectivePointer.Instance != null)
+                else
                 {
-                    // Jika dialog keluar gubug sudah diputar tapi eksplorasi target belum diselesaikan, aktifkan panah kembali
-                    ObjectivePointer.Instance.SetTarget(objectiveTargetTransform);
+                    UpdateObjectivePointer();
                 }
             }
             else
@@ -123,11 +125,7 @@ public class Chapter3StoryManager : MonoBehaviour
             GameManager.Instance.SetFlag(exitDialogueFlag, true);
         }
 
-        // Aktifkan panah penunjuk jalan ke arah target setelah dialog keluar ruangan selesai
-        if (objectiveTargetTransform != null && ObjectivePointer.Instance != null)
-        {
-            ObjectivePointer.Instance.SetTarget(objectiveTargetTransform);
-        }
+        UpdateObjectivePointer();
 
         if (player != null) player.ToggleInput(true);
     }
@@ -151,6 +149,8 @@ public class Chapter3StoryManager : MonoBehaviour
             {
                 SetPlayerInHutZone(true);
             }
+
+            UpdateObjectivePointer();
         }
     }
 
@@ -164,25 +164,6 @@ public class Chapter3StoryManager : MonoBehaviour
         {
             // Coba munculkan NPC
             TrySpawnNPC();
-
-            // Tampilkan prompt interaksi jika NPC aktif dan dialog belum selesai
-            if (npcGameObject != null && npcGameObject.activeSelf && 
-                GameManager.Instance != null && !GameManager.Instance.IsFlagSet(npcSequenceFlag) && 
-                !isRunningSequence)
-            {
-                if (InteractionPromptUI.Instance != null)
-                {
-                    InteractionPromptUI.Instance.ShowPrompt("Tekan E untuk bicara");
-                }
-            }
-        }
-        else
-        {
-            // Sembunyikan prompt saat keluar area gubug
-            if (InteractionPromptUI.Instance != null)
-            {
-                InteractionPromptUI.Instance.HidePrompt();
-            }
         }
     }
 
@@ -208,9 +189,57 @@ public class Chapter3StoryManager : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        // Cek jarak pemain ke NPC untuk menampilkan prompt interaksi secara dinamis
+        if (npcGameObject != null && npcGameObject.activeSelf && 
+            GameManager.Instance != null && !GameManager.Instance.IsFlagSet(npcSequenceFlag) && 
+            !isRunningSequence)
+        {
+            var player = FindAnyObjectByType<PlayerControllerScript>();
+            if (player != null)
+            {
+                float distance = Vector2.Distance(player.transform.position, npcGameObject.transform.position);
+                if (distance <= npcInteractionDistance)
+                {
+                    if (!isNearNPC)
+                    {
+                        isNearNPC = true;
+                        if (InteractionPromptUI.Instance != null)
+                        {
+                            InteractionPromptUI.Instance.ShowPrompt("Tekan E untuk bicara");
+                        }
+                    }
+                }
+                else
+                {
+                    if (isNearNPC)
+                    {
+                        isNearNPC = false;
+                        if (InteractionPromptUI.Instance != null)
+                        {
+                            InteractionPromptUI.Instance.HidePrompt();
+                        }
+                    }
+                }
+            }
+        }
+        else
+        {
+            if (isNearNPC)
+            {
+                isNearNPC = false;
+                if (InteractionPromptUI.Instance != null)
+                {
+                    InteractionPromptUI.Instance.HidePrompt();
+                }
+            }
+        }
+    }
+
     private void HandleInteraction()
     {
-        if (isPlayerInHutZone && 
+        if (isNearNPC && 
             npcGameObject != null && npcGameObject.activeSelf &&
             GameManager.Instance != null &&
             !GameManager.Instance.IsFlagSet(npcSequenceFlag) &&
@@ -227,6 +256,7 @@ public class Chapter3StoryManager : MonoBehaviour
 
     private IEnumerator PlayNPCSequenceCoroutine()
     {
+        Debug.Log("[Chapter3StoryManager] PlayNPCSequenceCoroutine - Memulai sekuens NPC...");
         isRunningSequence = true;
 
         // 1. Matikan input player selama dialog
@@ -240,6 +270,7 @@ public class Chapter3StoryManager : MonoBehaviour
         // 2. Mainkan dialog NPC
         if (npcDialogue != null && DialogueManager.instance != null)
         {
+            Debug.Log("[Chapter3StoryManager] PlayNPCSequenceCoroutine - Menjalankan dialog NPC...");
             DialogueManager.instance.StartDialogue(npcDialogue);
 
             yield return new WaitForSeconds(0.1f);
@@ -247,10 +278,17 @@ public class Chapter3StoryManager : MonoBehaviour
             {
                 yield return null;
             }
+            Debug.Log("[Chapter3StoryManager] PlayNPCSequenceCoroutine - Dialog NPC selesai.");
+        }
+        else
+        {
+            Debug.LogWarning($"[Chapter3StoryManager] PlayNPCSequenceCoroutine - npcDialogue ada? {npcDialogue != null}, DialogueManager ada? {DialogueManager.instance != null}");
         }
 
         // 4. NPC perlahan menghilang
+        Debug.Log("[Chapter3StoryManager] PlayNPCSequenceCoroutine - Menghilangkan NPC...");
         yield return StartCoroutine(FadeOutNPCCoroutine());
+        Debug.Log("[Chapter3StoryManager] PlayNPCSequenceCoroutine - NPC berhasil dihilangkan.");
 
         // 5. Puzzle mulai berkedip (blinking)
         if (chapter3PuzzleTrigger != null)
@@ -262,12 +300,17 @@ public class Chapter3StoryManager : MonoBehaviour
         if (GameManager.Instance != null)
         {
             GameManager.Instance.SetFlag(npcSequenceFlag, true);
+            Debug.Log($"[Chapter3StoryManager] PlayNPCSequenceCoroutine - Flag {npcSequenceFlag} diset ke true.");
         }
+
+        Debug.Log("[Chapter3StoryManager] PlayNPCSequenceCoroutine - Memperbarui pointer objektif...");
+        UpdateObjectivePointer();
 
         // 7. Kembalikan input player
         if (player != null) player.ToggleInput(true);
 
         isRunningSequence = false;
+        Debug.Log("[Chapter3StoryManager] PlayNPCSequenceCoroutine - Sekuens NPC SELESAI.");
     }
 
     private IEnumerator FadeOutNPCCoroutine()
@@ -290,6 +333,63 @@ public class Chapter3StoryManager : MonoBehaviour
         }
 
         npcGameObject.SetActive(false);
+    }
+
+    public void UpdateObjectivePointer()
+    {
+        if (ObjectivePointer.Instance == null || GameManager.Instance == null) return;
+
+        bool exitPlayed = GameManager.Instance.IsFlagSet(exitDialogueFlag);
+        bool explored = GameManager.Instance.IsFlagSet(explorationFlag);
+        bool npcSequencePlayed = GameManager.Instance.IsFlagSet(npcSequenceFlag);
+        bool puzzleSolved = GameManager.Instance.IsFlagSet("chapter3_puzzle_solved");
+        bool axeCollected = GameManager.Instance.IsFlagSet("chapter3_axe_collected");
+
+        Transform newTarget = null;
+
+        Debug.Log($"[Chapter3StoryManager] UpdateObjectivePointer - exitPlayed={exitPlayed}, explored={explored}, npcSequencePlayed={npcSequencePlayed}, puzzleSolved={puzzleSolved}, axeCollected={axeCollected}");
+
+        if (axeCollected)
+        {
+            newTarget = null;
+        }
+        else if (puzzleSolved)
+        {
+            var axeTrigger = FindAnyObjectByType<AxePickupTrigger>();
+            if (axeTrigger != null) newTarget = axeTrigger.transform;
+        }
+        else if (npcSequencePlayed)
+        {
+            if (chapter3PuzzleTrigger != null) 
+            {
+                newTarget = chapter3PuzzleTrigger.transform;
+            }
+            else
+            {
+                var trigger = FindAnyObjectByType<Chapter3PuzzleTrigger>();
+                if (trigger != null) newTarget = trigger.transform;
+            }
+        }
+        else if (explored)
+        {
+            // Arahkan ke NPC (di Gubug) meskipun NPC belum aktif/muncul di scene
+            if (npcGameObject != null) 
+            {
+                newTarget = npcGameObject.transform;
+            }
+        }
+        else if (exitPlayed)
+        {
+            newTarget = objectiveTargetTransform;
+        }
+
+        Debug.Log($"[Chapter3StoryManager] UpdateObjectivePointer - final newTarget: {(newTarget != null ? newTarget.name : "null")}, currentTarget: {(currentTarget != null ? currentTarget.name : "null")}");
+
+        if (newTarget != currentTarget)
+        {
+            currentTarget = newTarget;
+            ObjectivePointer.Instance.SetTarget(newTarget);
+        }
     }
 
     private bool IsDialogueActive()

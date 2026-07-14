@@ -273,12 +273,19 @@ public class PasswordTerminal : MonoBehaviour
     public void CloseAllPanels()
     {
         bool wasRewardActive = (rewardPanel != null && rewardPanel.activeSelf);
+        bool wasAnyActive = (panel != null && panel.activeSelf) || wasRewardActive;
 
         ClosePanel();
 
         if (rewardPanel != null && rewardPanel.activeSelf)
         {
             rewardPanel.SetActive(false);
+        }
+
+        if (wasAnyActive && UnityEngine.InputSystem.Keyboard.current != null && 
+            UnityEngine.InputSystem.Keyboard.current.escapeKey.wasPressedThisFrame)
+        {
+            PauseMenuManager.PanelWasClosedThisFrame = true;
         }
 
         if (wasRewardActive || (isPuzzleSolved && GameManager.Instance != null && GameManager.Instance.IsFlagSet("chapter1_puzzle_solved")))
@@ -337,6 +344,19 @@ public class PasswordTerminal : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if ((panel != null && panel.activeSelf) || (rewardPanel != null && rewardPanel.activeSelf))
+        {
+            if (UnityEngine.InputSystem.Keyboard.current != null && 
+                UnityEngine.InputSystem.Keyboard.current.escapeKey.wasPressedThisFrame)
+            {
+                CloseAllPanels();
+                PauseMenuManager.PanelWasClosedThisFrame = true;
+            }
+        }
+    }
+
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -348,5 +368,11 @@ public class PasswordTerminal : MonoBehaviour
                 InteractionPromptUI.Instance.HidePrompt();
             }
         }
+    }
+
+    public bool IsPanelActive()
+    {
+        return (panel != null && panel.activeSelf) || 
+               (rewardPanel != null && rewardPanel.activeSelf);
     }
 }

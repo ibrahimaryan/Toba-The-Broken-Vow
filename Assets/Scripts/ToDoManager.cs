@@ -135,4 +135,22 @@ public class ToDoManager : MonoBehaviour
             }
         }
     }
-}
+
+    private void Update()
+    {
+        if (toDoPanel != null && toDoPanel.activeSelf)
+        {
+            if (UnityEngine.InputSystem.Keyboard.current != null && 
+                UnityEngine.InputSystem.Keyboard.current.escapeKey.wasPressedThisFrame)
+            {
+                ToggleToDoList();
+                PauseMenuManager.PanelWasClosedThisFrame = true;
+            }
+        }
+    }
+
+    public bool IsToDoListOpen()
+    {
+        return toDoPanel != null && toDoPanel.activeSelf;
+    }
+}

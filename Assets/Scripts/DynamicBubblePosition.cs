@@ -42,17 +42,37 @@ public class DynamicBubblePosition : MonoBehaviour
         // Hitung posisi target di dunia dengan offset Y
         Vector3 targetWorldPos = currentTarget.position + new Vector3(0, offset.y, 0);
 
+        // Ambil padding dari ukuran RectTransform agar gelembung dialog tidak terpotong layar
+        RectTransform rectTransform = transform as RectTransform;
+        float paddingX = 150f; // Nilai fallback horizontal (setengah lebar bubble)
+        float paddingY = 80f;  // Nilai fallback vertikal (setengah tinggi bubble)
+        if (rectTransform != null)
+        {
+            Vector2 sizeInPixels = GetSizeInScreenPixels(rectTransform);
+            paddingX = sizeInPixels.x * 0.5f;
+            paddingY = sizeInPixels.y * 0.5f;
+        }
+
+        if (paddingX <= 0) paddingX = 150f;
+        if (paddingY <= 0) paddingY = 80f;
+
         // Posisikan bubble sesuai dengan Render Mode Canvas parent-nya
         Canvas parentCanvas = GetComponentInParent<Canvas>();
         if (parentCanvas != null)
         {
             if (parentCanvas.renderMode == RenderMode.ScreenSpaceOverlay)
             {
-                transform.position = kameraUtama.WorldToScreenPoint(targetWorldPos);
+                Vector3 screenPos = kameraUtama.WorldToScreenPoint(targetWorldPos);
+                screenPos.x = Mathf.Clamp(screenPos.x, paddingX, Screen.width - paddingX);
+                screenPos.y = Mathf.Clamp(screenPos.y, paddingY, Screen.height - paddingY);
+                transform.position = screenPos;
             }
             else if (parentCanvas.renderMode == RenderMode.ScreenSpaceCamera)
             {
                 Vector3 screenPos = kameraUtama.WorldToScreenPoint(targetWorldPos);
+                screenPos.x = Mathf.Clamp(screenPos.x, paddingX, Screen.width - paddingX);
+                screenPos.y = Mathf.Clamp(screenPos.y, paddingY, Screen.height - paddingY);
+
                 if (RectTransformUtility.ScreenPointToWorldPointInRectangle(
                     transform.parent as RectTransform,
                     screenPos,
@@ -64,12 +84,50 @@ public class DynamicBubblePosition : MonoBehaviour
             }
             else // WorldSpace
             {
-                transform.position = targetWorldPos;
+                // Hitung posisi di layar, lakukan pembatasan (clamping), lalu kembalikan ke posisi dunia (World Space)
+                Vector3 screenPos = kameraUtama.WorldToScreenPoint(targetWorldPos);
+                screenPos.x = Mathf.Clamp(screenPos.x, paddingX, Screen.width - paddingX);
+                screenPos.y = Mathf.Clamp(screenPos.y, paddingY, Screen.height - paddingY);
+
+                Vector3 worldPos = kameraUtama.ScreenToWorldPoint(new Vector3(screenPos.x, screenPos.y, screenPos.z));
+                transform.position = worldPos;
             }
         }
         else
         {
-            transform.position = kameraUtama.WorldToScreenPoint(targetWorldPos);
+            Vector3 screenPos = kameraUtama.WorldToScreenPoint(targetWorldPos);
+            screenPos.x = Mathf.Clamp(screenPos.x, paddingX, Screen.width - paddingX);
+            screenPos.y = Mathf.Clamp(screenPos.y, paddingY, Screen.height - paddingY);
+            transform.position = screenPos;
         }
+    }
+
+    private Vector2 GetSizeInScreenPixels(RectTransform rectTransform)
+    {
+        Vector3[] corners = new Vector3[4];
+        rectTransform.GetWorldCorners(corners);
+        
+        Vector2 screenCorner0, screenCorner1, screenCorner3;
+        
+        Canvas parentCanvas = GetComponentInParent<Canvas>();
+        if (parentCanvas != null && parentCanvas.renderMode == RenderMode.ScreenSpaceOverlay)
+        {
+            // For overlay canvas, world corners are already in screen space
+            screenCorner0 = corners[0];
+            screenCorner1 = corners[1];
+            screenCorner3 = corners[3];
+        }
+        else
+        {
+            // For ScreenSpaceCamera or WorldSpace, convert world coordinates to screen pixels
+            screenCorner0 = kameraUtama.WorldToScreenPoint(corners[0]);
+            screenCorner1 = kameraUtama.WorldToScreenPoint(corners[1]);
+            screenCorner3 = kameraUtama.WorldToScreenPoint(corners[3]);
+        }
+        
+        float width = Vector2.Distance(screenCorner0, screenCorner3);
+        float height = Vector2.Distance(screenCorner0, screenCorner1);
+        
+        return new Vector2(width, height);
     }
 }

@@ -1099,7 +1099,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '*Cari dan susun kepingannya'
+  m_text: '*Temukan semua sisiknya,
+
+    Seret dan sesuaikan bentuknya'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b37e530aee4138f479fb07a2065bdfd8, type: 2}
   m_sharedMaterial: {fileID: 6329517837591597208, guid: b37e530aee4138f479fb07a2065bdfd8, type: 2}

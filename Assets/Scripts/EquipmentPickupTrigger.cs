@@ -309,4 +309,10 @@ public class EquipmentPickupTrigger : MonoBehaviour
             }
         }
     }
+
+    public bool IsPanelActive()
+    {
+        return isPanelActive;
+    }
 }
+

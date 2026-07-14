@@ -165,6 +165,7 @@ public class BambooPuzzleManager : MonoBehaviour
                     // Jika belum selesai, tutup panel saja (keluar biasa)
                     ClosePuzzlePanel();
                 }
+                PauseMenuManager.PanelWasClosedThisFrame = true;
             }
         }
     }
@@ -513,4 +514,12 @@ public class BambooPuzzleManager : MonoBehaviour
         tempSource.Play();
         Destroy(tempGO, clip.length);
     }
+
+    public bool IsPanelActive()
+    {
+        return (puzzlePanel != null && puzzlePanel.activeSelf) || 
+               (failPanel != null && failPanel.activeSelf) || 
+               (winPanel != null && winPanel.activeSelf);
+    }
 }
+

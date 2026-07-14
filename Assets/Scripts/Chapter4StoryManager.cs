@@ -825,4 +825,12 @@ public class Chapter4StoryManager : MonoBehaviour
 
         return screenActive || bubbleActive || cutsceneActive;
     }
+
+    public bool IsAnyPanelActive()
+    {
+        return (getCangkulPanel != null && getCangkulPanel.activeSelf) ||
+               (getTreasurePanel != null && getTreasurePanel.activeSelf) ||
+               (getBambooKeyPanel != null && getBambooKeyPanel.activeSelf);
+    }
 }
+

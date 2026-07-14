@@ -89,10 +89,28 @@ public class SecretItem : MonoBehaviour
         PlayerControllerScript.OnClosePressed -= ClosePopUp;
     }
 
+    private void Update()
+    {
+        if (popUpPanel != null && popUpPanel.activeSelf)
+        {
+            if (UnityEngine.InputSystem.Keyboard.current != null && 
+                UnityEngine.InputSystem.Keyboard.current.escapeKey.wasPressedThisFrame)
+            {
+                ClosePopUp();
+                PauseMenuManager.PanelWasClosedThisFrame = true;
+            }
+        }
+    }
+
     public void ClosePopUp() {
         // Jika tidak disetting pindah scene, maka tombol close berfugnsi normal menutup popup
         if (!pindahSceneCutscene && popUpPanel.activeSelf) {
             popUpPanel.SetActive(false);
+            if (UnityEngine.InputSystem.Keyboard.current != null && 
+                UnityEngine.InputSystem.Keyboard.current.escapeKey.wasPressedThisFrame)
+            {
+                PauseMenuManager.PanelWasClosedThisFrame = true;
+            }
             if (audioSource != null && closeSound != null)
             {
                 audioSource.PlayOneShot(closeSound);
@@ -211,5 +229,10 @@ public class SecretItem : MonoBehaviour
                 InteractionPromptUI.Instance.HidePrompt();
             }
         }
+    }
+
+    public bool IsPanelActive()
+    {
+        return popUpPanel != null && popUpPanel.activeSelf;
     }
 }

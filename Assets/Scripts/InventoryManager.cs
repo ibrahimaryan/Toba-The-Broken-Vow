@@ -567,4 +567,22 @@ public class InventoryManager : MonoBehaviour
         }
         return null;
     }
-}
+
+    private void Update()
+    {
+        if (inventoryPanel != null && inventoryPanel.activeSelf)
+        {
+            if (UnityEngine.InputSystem.Keyboard.current != null && 
+                UnityEngine.InputSystem.Keyboard.current.escapeKey.wasPressedThisFrame)
+            {
+                ToggleInventory();
+                PauseMenuManager.PanelWasClosedThisFrame = true;
+            }
+        }
+    }
+
+    public bool IsInventoryOpen()
+    {
+        return inventoryPanel != null && inventoryPanel.activeSelf;
+    }
+}

@@ -371,6 +371,7 @@ public class Chapter3PuzzleManager : MonoBehaviour
                 UnityEngine.InputSystem.Keyboard.current.escapeKey.wasPressedThisFrame)
             {
                 ClosePuzzlePanel();
+                PauseMenuManager.PanelWasClosedThisFrame = true;
             }
         }
     }
@@ -393,4 +394,10 @@ public class Chapter3PuzzleManager : MonoBehaviour
             }
         }
     }
+
+    public bool IsPanelActive()
+    {
+        return puzzlePanel != null && puzzlePanel.activeSelf;
+    }
 }
+

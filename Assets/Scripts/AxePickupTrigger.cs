@@ -252,4 +252,10 @@ public class AxePickupTrigger : MonoBehaviour
             }
         }
     }
+
+    public bool IsPanelActive()
+    {
+        return isPanelActive;
+    }
 }
+

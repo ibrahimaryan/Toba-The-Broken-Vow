@@ -232,11 +232,11 @@ public class SisikPuzzleManager : MonoBehaviour
         bool isAnyPanelActive = (puzzlePanel != null && puzzlePanel.activeSelf) || (rewardPanel != null && rewardPanel.activeSelf) || (reopenPanel != null && reopenPanel.activeSelf);
         if (isAnyPanelActive)
         {
-            // Cek tombol ESC menggunakan New Input System
             if (UnityEngine.InputSystem.Keyboard.current != null && 
                 UnityEngine.InputSystem.Keyboard.current.escapeKey.wasPressedThisFrame)
             {
                 ClosePuzzlePanel();
+                PauseMenuManager.PanelWasClosedThisFrame = true;
                 return; // Langsung keluar dari fungsi agar tidak tereksekusi ganda
             }
 
@@ -395,4 +395,12 @@ public class SisikPuzzleManager : MonoBehaviour
             rewardMemoryShardID = ""; // Kosongkan agar tidak terpicu berkali-kali jika tombol tutup ditekan lagi
         }
     }
+
+    public bool IsPanelActive()
+    {
+        return (puzzlePanel != null && puzzlePanel.activeSelf) || 
+               (rewardPanel != null && rewardPanel.activeSelf) || 
+               (reopenPanel != null && reopenPanel.activeSelf);
+    }
 }
+

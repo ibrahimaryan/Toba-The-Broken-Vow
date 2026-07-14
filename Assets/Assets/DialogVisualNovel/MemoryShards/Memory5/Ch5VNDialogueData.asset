@@ -86,7 +86,7 @@ MonoBehaviour:
     sfxClip: {fileID: 0}
     waitForAudio: 0
     isAutoPlay: 0
-    autoPlayDelay: 0
+    autoPlayDelay: 5
   - speaker: {fileID: 11400000, guid: 5a317f8e905122e4b80de0d576f24bde, type: 2}
     text: Namaku Samosir. Aku terjaga di atas gubug ini bukan untuk melupakan, melainkan
       untuk mengingat. Danau di sekeliling pulau ini dinamakan Danau Toba, dan pulau
@@ -110,4 +110,4 @@ MonoBehaviour:
     sfxClip: {fileID: 0}
     waitForAudio: 0
     isAutoPlay: 0
-    autoPlayDelay: 0
+    autoPlayDelay: 5

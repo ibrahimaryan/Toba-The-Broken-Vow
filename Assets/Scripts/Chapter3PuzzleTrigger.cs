@@ -19,14 +19,22 @@ public class Chapter3PuzzleTrigger : MonoBehaviour
     }
 
     [Header("Activation Flag (Optional)")]
-    [SerializeField] private string activationFlag = "chapter2_npc_sequence_played";
+    [SerializeField] private string activationFlag = "chapter3_npc_sequence_played";
+
+    private bool IsActivated()
+    {
+        if (GameManager.Instance == null) return true;
+        // Direct hardcode check to avoid stale serialized inspector values, fallback to the activationFlag field
+        return GameManager.Instance.IsFlagSet("chapter3_npc_sequence_played") || 
+               (!string.IsNullOrEmpty(activationFlag) && GameManager.Instance.IsFlagSet(activationFlag));
+    }
 
     private void Start()
     {
         // Mulai efek berkedip jika puzzle belum diselesaikan dan sudah diaktifkan oleh alur cerita
         if (GameManager.Instance != null && !GameManager.Instance.IsFlagSet("chapter3_puzzle_solved"))
         {
-            if (string.IsNullOrEmpty(activationFlag) || GameManager.Instance.IsFlagSet(activationFlag))
+            if (IsActivated())
             {
                 StartBlink();
             }
@@ -72,7 +80,7 @@ public class Chapter3PuzzleTrigger : MonoBehaviour
         // Mulai kembali efek berkedip saat aktif jika puzzle belum diselesaikan dan sudah aktif
         if (GameManager.Instance != null && !GameManager.Instance.IsFlagSet("chapter3_puzzle_solved"))
         {
-            if (string.IsNullOrEmpty(activationFlag) || GameManager.Instance.IsFlagSet(activationFlag))
+            if (IsActivated())
             {
                 StartBlink();
             }
@@ -109,6 +117,9 @@ public class Chapter3PuzzleTrigger : MonoBehaviour
         // Cegah membuka puzzle jika masih ada dialog yang sedang aktif
         if (IsDialogueActive()) return;
 
+        // Cegah jika belum diaktifkan (belum berdialog dengan Opung)
+        if (!IsActivated()) return;
+
         // Buka panel puzzle
         if (puzzleManager != null)
         {
@@ -129,7 +140,7 @@ public class Chapter3PuzzleTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             isPlayerInRange = true;
-            if (InteractionPromptUI.Instance != null && GameManager.Instance != null && !GameManager.Instance.IsFlagSet("chapter3_puzzle_solved"))
+            if (IsActivated() && InteractionPromptUI.Instance != null && GameManager.Instance != null && !GameManager.Instance.IsFlagSet("chapter3_puzzle_solved"))
             {
                 InteractionPromptUI.Instance.ShowPrompt("Tekan E untuk periksa");
             }
@@ -144,6 +155,30 @@ public class Chapter3PuzzleTrigger : MonoBehaviour
             if (InteractionPromptUI.Instance != null)
             {
                 InteractionPromptUI.Instance.HidePrompt();
+            }
+        }
+    }
+
+    private void Update()
+    {
+        if (GameManager.Instance == null) return;
+
+        // Tampilkan/perbarui prompt interaksi secara dinamis ketika pemain berada di dalam range
+        if (isPlayerInRange && !GameManager.Instance.IsFlagSet("chapter3_puzzle_solved"))
+        {
+            if (IsActivated() && !IsDialogueActive())
+            {
+                if (InteractionPromptUI.Instance != null)
+                {
+                    InteractionPromptUI.Instance.ShowPrompt("Tekan E untuk periksa");
+                }
+            }
+            else
+            {
+                if (InteractionPromptUI.Instance != null)
+                {
+                    InteractionPromptUI.Instance.HidePrompt();
+                }
             }
         }
     }

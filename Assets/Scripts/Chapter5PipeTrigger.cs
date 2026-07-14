@@ -34,6 +34,12 @@ public class Chapter5PipeTrigger : MonoBehaviour
         }
     }
 
+    private bool IsDiggingFinished()
+    {
+        if (GameManager.Instance == null) return true;
+        return GameManager.Instance.IsFlagSet("chapter4_dug_treasure");
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -66,6 +72,7 @@ public class Chapter5PipeTrigger : MonoBehaviour
 
     private void ShowPromptIfNeeded()
     {
+        if (!IsDiggingFinished()) return;
         if (GameManager.Instance == null || InteractionPromptUI.Instance == null) return;
 
         bool solved = GameManager.Instance.IsFlagSet("bamboo_pipe_puzzle_solved");
@@ -91,6 +98,7 @@ public class Chapter5PipeTrigger : MonoBehaviour
     private void HandleInteraction()
     {
         if (!isPlayerInRange) return;
+        if (!IsDiggingFinished()) return;
         if (GameManager.Instance == null) return;
 
         bool solved = GameManager.Instance.IsFlagSet("bamboo_pipe_puzzle_solved");
@@ -117,6 +125,15 @@ public class Chapter5PipeTrigger : MonoBehaviour
         if (solved)
         {
             gameObject.SetActive(false);
+            return;
+        }
+
+        if (!IsDiggingFinished())
+        {
+            if (isPlayerInRange && InteractionPromptUI.Instance != null)
+            {
+                InteractionPromptUI.Instance.HidePrompt();
+            }
             return;
         }
 

@@ -75,14 +75,18 @@ public class Chapter5StoryManager : MonoBehaviour
 
             if (!isChapter5Active)
             {
-                // Sembunyikan semua elemen Chapter 5 jika chapter ini belum aktif
-                if (lockedPipeGameObject != null) lockedPipeGameObject.SetActive(false);
+                // Sembunyikan elemen Chapter 5 jika chapter ini belum aktif (tapi biarkan lockedPipeGameObject tetap aktif/terlihat)
                 if (openPipeGameObject != null) openPipeGameObject.SetActive(false);
                 if (opungNPCGameObject != null) opungNPCGameObject.SetActive(false);
                 return; // Keluar, jangan jalankan sekuens Chapter 5
             }
 
             InitializeChapterState();
+        }
+        else
+        {
+            // Jika GameManager null (misal testing scene langsung), sembunyikan Opung secara default agar tidak bisa diinteraksi sebelum puzzle selesai
+            if (opungNPCGameObject != null) opungNPCGameObject.SetActive(false);
         }
     }
 
@@ -286,6 +290,12 @@ public class Chapter5StoryManager : MonoBehaviour
         Debug.Log("[Chapter5StoryManager] PlaySuccessSequence Started!");
         isRunningSequence = true;
 
+        // Tutup panel puzzle terlebih dahulu
+        if (puzzleManager != null)
+        {
+            puzzleManager.ClosePuzzlePanel();
+        }
+
         // Sembunyikan/hilangkan pointer pipa karena puzzle telah selesai dipecahkan
         UpdateObjectivePointer();
 
@@ -355,8 +365,11 @@ public class Chapter5StoryManager : MonoBehaviour
 
         if (isPlayerInOpungZone)
         {
+            // Pastikan puzzle sudah selesai sebelum mengizinkan interaksi dengan Opung
+            bool puzzleSolved = GameManager.Instance != null && GameManager.Instance.IsFlagSet("bamboo_pipe_puzzle_solved");
+
             // Tampilkan prompt interaksi jika Opung aktif dan dialog belum selesai
-            if (opungNPCGameObject != null && opungNPCGameObject.activeSelf && 
+            if (puzzleSolved && opungNPCGameObject != null && opungNPCGameObject.activeSelf && 
                 GameManager.Instance != null && !GameManager.Instance.IsFlagSet("chapter5_opung_talked") && 
                 !isRunningSequence)
             {
@@ -378,7 +391,8 @@ public class Chapter5StoryManager : MonoBehaviour
 
     private void HandleOpungInteraction()
     {
-        if (isPlayerInOpungZone && 
+        bool puzzleSolved = GameManager.Instance != null && GameManager.Instance.IsFlagSet("bamboo_pipe_puzzle_solved");
+        if (isPlayerInOpungZone && puzzleSolved &&
             opungNPCGameObject != null && opungNPCGameObject.activeSelf &&
             GameManager.Instance != null &&
             !GameManager.Instance.IsFlagSet("chapter5_opung_talked") &&

@@ -254016,7 +254016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddb82d864ced7c3479a4ef380bd372c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Chapter5StoryManager
-  puzzleManager: {fileID: 1659904065}
+  puzzleManager: {fileID: 1127181105}
   lockedPipeGameObject: {fileID: 108159054}
   openPipeGameObject: {fileID: 1258336872}
   opungNPCGameObject: {fileID: 1660690760}
@@ -256024,6 +256024,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5462889649075145953, guid: c9e7756cd286af8428e9fb705da05794, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5462889649075145953, guid: c9e7756cd286af8428e9fb705da05794, type: 3}
       propertyPath: bubbleText
       value: 
       objectReference: {fileID: 1856876366}
@@ -256062,6 +256066,10 @@ PrefabInstance:
     - target: {fileID: 8205816332193286333, guid: c9e7756cd286af8428e9fb705da05794, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8987368870020312218, guid: c9e7756cd286af8428e9fb705da05794, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -256500,7 +256508,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.51, y: 0.7}
+  m_Size: {x: 0.71, y: 0.7}
   m_EdgeRadius: 0
 --- !u!212 &210356281
 SpriteRenderer:
@@ -265227,6 +265235,71 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1126846306}
   m_CullTransparentMesh: 1
+--- !u!1 &1127181103
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1127181104}
+  - component: {fileID: 1127181105}
+  m_Layer: 0
+  m_Name: Chapter5_bamboopuzzlemanager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1127181104
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127181103}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -963, y: -460.8, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1659904062}
+  - {fileID: 1376876551}
+  - {fileID: 1974293709}
+  m_Father: {fileID: 1822363766}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1127181105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1127181103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acbb3540923118a4180eeb7d82818028, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BambooPuzzleManager
+  startPositions:
+  - {x: 0, y: 3}
+  - {x: 2, y: 3}
+  endPositions:
+  - {x: 1, y: 0}
+  - {x: 2, y: 0}
+  maxTurns: 17
+  turnText: {fileID: 1673031833}
+  puzzlePanel: {fileID: 1659904061}
+  failPanel: {fileID: 1376876550}
+  winPanel: {fileID: 1974293708}
+  rotateSound: {fileID: 8300000, guid: 1e2938759172a9540b0eb32fc015b4b7, type: 3}
+  retrySound: {fileID: 8300000, guid: 4b702b3ad3f67214b8d0db693efa45e1, type: 3}
+  successSound: {fileID: 8300000, guid: 35ee005b99f931a41ab1544bccacf4b7, type: 3}
+  failSound: {fileID: 8300000, guid: 4b702b3ad3f67214b8d0db693efa45e1, type: 3}
+  OnPuzzleSolved:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &1142876868
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -265553,11 +265626,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4326937951787829375, guid: 1b0207e13df636b44967eb35b76ff2bf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.5
+      value: 16.02
       objectReference: {fileID: 0}
     - target: {fileID: 4326937951787829375, guid: 1b0207e13df636b44967eb35b76ff2bf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 89.5
+      value: 88.99
       objectReference: {fileID: 0}
     - target: {fileID: 4326937951787829375, guid: 1b0207e13df636b44967eb35b76ff2bf, type: 3}
       propertyPath: m_LocalPosition.z
@@ -267136,19 +267209,19 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1376876550}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 1.1999999, y: 1.1999999, z: 1.1999999}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1648766451}
   - {fileID: 2102529441}
   - {fileID: 2098948532}
-  m_Father: {fileID: 1822363766}
+  m_Father: {fileID: 1127181104}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 963, y: 460.8}
+  m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1376876552
 MonoBehaviour:
@@ -277574,7 +277647,6 @@ GameObject:
   - component: {fileID: 1659904062}
   - component: {fileID: 1659904064}
   - component: {fileID: 1659904063}
-  - component: {fileID: 1659904065}
   m_Layer: 0
   m_Name: Chapter5_Panel_puzzle_bambu
   m_TagString: Untagged
@@ -277589,8 +277661,8 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1659904061}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -277603,12 +277675,12 @@ RectTransform:
   - {fileID: 1673031832}
   - {fileID: 1718720164}
   - {fileID: 673461026}
-  m_Father: {fileID: 1822363766}
+  m_Father: {fileID: 1127181104}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 963, y: 460.8}
+  m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1659904063
 MonoBehaviour:
@@ -277648,36 +277720,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1659904061}
   m_CullTransparentMesh: 1
---- !u!114 &1659904065
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1659904061}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acbb3540923118a4180eeb7d82818028, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BambooPuzzleManager
-  startPositions:
-  - {x: 0, y: 3}
-  - {x: 2, y: 3}
-  endPositions:
-  - {x: 1, y: 0}
-  - {x: 2, y: 0}
-  maxTurns: 17
-  turnText: {fileID: 1673031833}
-  puzzlePanel: {fileID: 1659904061}
-  failPanel: {fileID: 1376876550}
-  winPanel: {fileID: 1974293708}
-  rotateSound: {fileID: 8300000, guid: 1e2938759172a9540b0eb32fc015b4b7, type: 3}
-  retrySound: {fileID: 8300000, guid: 4b702b3ad3f67214b8d0db693efa45e1, type: 3}
-  successSound: {fileID: 8300000, guid: 35ee005b99f931a41ab1544bccacf4b7, type: 3}
-  failSound: {fileID: 8300000, guid: 4b702b3ad3f67214b8d0db693efa45e1, type: 3}
-  OnPuzzleSolved:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!1 &1660690760
 GameObject:
   m_ObjectHideFlags: 0
@@ -279646,9 +279688,7 @@ RectTransform:
   - {fileID: 1317130787}
   - {fileID: 1796648204}
   - {fileID: 1745574341}
-  - {fileID: 1659904062}
-  - {fileID: 1376876551}
-  - {fileID: 1974293709}
+  - {fileID: 1127181104}
   - {fileID: 1631777937}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -280896,7 +280936,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1974293708}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 10}
   m_LocalScale: {x: 1.1999999, y: 1.1999999, z: 1.1999999}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -280904,12 +280944,12 @@ RectTransform:
   - {fileID: 843862666}
   - {fileID: 1387350762}
   - {fileID: 618076003}
-  m_Father: {fileID: 1822363766}
+  m_Father: {fileID: 1127181104}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 963, y: 460.8}
+  m_SizeDelta: {x: 1920, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1974293710
 MonoBehaviour:
@@ -283475,7 +283515,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1659904065}
+      - m_Target: {fileID: 1127181105}
         m_TargetAssemblyTypeName: BambooPuzzleManager, Assembly-CSharp
         m_MethodName: OnClickRetry
         m_Mode: 1

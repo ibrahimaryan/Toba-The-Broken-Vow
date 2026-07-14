@@ -97,7 +97,7 @@ public class PauseMenuManager : MonoBehaviour
         }
 
         // 5. Check BambooPuzzle panel
-        BambooPuzzleManager[] bambooManagers = FindObjectsByType<BambooPuzzleManager>(FindObjectsSortMode.None);
+        BambooPuzzleManager[] bambooManagers = FindObjectsByType<BambooPuzzleManager>(FindObjectsInactive.Include, FindObjectsSortMode.None);
         foreach (var bm in bambooManagers)
         {
             if (bm != null && bm.IsPanelActive())

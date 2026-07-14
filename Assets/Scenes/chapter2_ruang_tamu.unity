@@ -1893,7 +1893,7 @@ MonoBehaviour:
   successDialogue:
     lines:
     - characterName: Samosir
-      sentence: TIba-tiba muncul kunci, apa ini buat pintu di bawah ya??
+      sentence: Tiba-tiba muncul kunci, apa ini buat pintu di bawah ya??
       isSpeechBubble: 1
       isCutsceneStyle: 0
       holdTime: 3

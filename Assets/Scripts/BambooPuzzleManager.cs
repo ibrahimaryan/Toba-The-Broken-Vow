@@ -61,8 +61,8 @@ public class BambooPuzzleManager : MonoBehaviour
             audioSource.playOnAwake = false;
         }
 
-        // Cari semua objek bertipe BambooPipeTile di dalam anak Manager ini dan petakan ke grid 2D
-        BambooPipeTile[] childTiles = GetComponentsInChildren<BambooPipeTile>();
+        // Cari semua objek bertipe BambooPipeTile di dalam anak Manager ini dan petakan ke grid 2D (termasuk yang nonaktif)
+        BambooPipeTile[] childTiles = GetComponentsInChildren<BambooPipeTile>(true);
         foreach (BambooPipeTile tile in childTiles)
         {
             if (tile.gridX >= 0 && tile.gridX < GRID_WIDTH && tile.gridY >= 0 && tile.gridY < GRID_HEIGHT)
@@ -148,12 +148,18 @@ public class BambooPuzzleManager : MonoBehaviour
     private void Update()
     {
         // Logika keluar panel dengan tombol ESC menggunakan New Input System (seperti di SisikPuzzleManager)
-        bool isAnyPanelActive = (puzzlePanel != null && puzzlePanel.activeSelf);
+        bool isAnyPanelActive = IsPanelActive();
         if (isAnyPanelActive)
         {
             if (UnityEngine.InputSystem.Keyboard.current != null && 
                 UnityEngine.InputSystem.Keyboard.current.escapeKey.wasPressedThisFrame)
             {
+                // Jika failPanel sedang aktif, kunci input ESC (tidak bisa keluar/pause, harus tekan Ulangi)
+                if (failPanel != null && failPanel.activeSelf)
+                {
+                    return;
+                }
+
                 if (isGameFinished)
                 {
                     // Jika sudah selesai dan player tekan ESC, tutup panel dan picu dialog/cerita
@@ -238,7 +244,7 @@ public class BambooPuzzleManager : MonoBehaviour
         clickedTile.RotatePipe();
 
         // Putar SFX Putaran
-        PlaySound(rotateSound);
+        PlaySoundPersistent(rotateSound);
 
         // Kurangi langkah
         currentTurnsLeft--;
@@ -434,6 +440,12 @@ public class BambooPuzzleManager : MonoBehaviour
             winPanel.SetActive(true);
         }
 
+        // SEMBUNYIKAN PANEL PUZZLE UTAMA
+        if (puzzlePanel != null)
+        {
+            puzzlePanel.SetActive(false);
+        }
+
         // Simpan flag kesuksesan di GameManager jika ada
         if (GameManager.Instance != null)
         {
@@ -450,6 +462,12 @@ public class BambooPuzzleManager : MonoBehaviour
         {
             failPanel.SetActive(true);
         }
+
+        // SEMBUNYIKAN PANEL PUZZLE UTAMA
+        if (puzzlePanel != null)
+        {
+            puzzlePanel.SetActive(false);
+        }
     }
 
     // Dipanggil lewat Button UI "Retry" di failPanel
@@ -460,6 +478,12 @@ public class BambooPuzzleManager : MonoBehaviour
         if (failPanel != null)
         {
             failPanel.SetActive(false);
+        }
+
+        // Tampilkan kembali panel puzzle utama agar grid terlihat lagi
+        if (puzzlePanel != null)
+        {
+            puzzlePanel.SetActive(true);
         }
 
         InitializePuzzle();

@@ -44,6 +44,12 @@ public class DialogueManagerCS : MonoBehaviour
         // Pastikan semua UI mati saat game baru mulai
         if (dialoguePanel != null) dialoguePanel.SetActive(false);
         // prologuePanel.SetActive(false) dihapus agar tidak mematikan UI dari PrologueManager
+
+        // Fallback: Cari referensi prologueText jika hilang di Inspector
+        if (prologueText == null && prologuePanel != null)
+        {
+            prologueText = prologuePanel.GetComponentInChildren<TextMeshProUGUI>(true);
+        }
     }
 
     private void EnsureUIReferences()
@@ -68,6 +74,22 @@ public class DialogueManagerCS : MonoBehaviour
                         if (t.name.Contains("Dialogue")) dialogueText = t;
                     }
                     Debug.Log("[DialogueManager] Auto-Recovery UI SUKSES!");
+                }
+            }
+        }
+
+        // Auto-Recovery untuk Prologue Panel
+        if (prologuePanel == null || prologuePanel.scene.rootCount == 0) // rootCount == 0 berarti dia adalah asset Prefab, bukan instance di Scene!
+        {
+            GameObject canvas = GameObject.Find("ScreenUiCanvas");
+            if (canvas != null)
+            {
+                Transform pPanel = canvas.transform.Find("ProloguePanel");
+                if (pPanel != null)
+                {
+                    prologuePanel = pPanel.gameObject;
+                    prologueText = prologuePanel.GetComponentInChildren<TextMeshProUGUI>(true);
+                    Debug.Log("[DialogueManager] Auto-Recovery ProloguePanel SUKSES!");
                 }
             }
         }
@@ -146,7 +168,11 @@ public class DialogueManagerCS : MonoBehaviour
             StopAllCoroutines();
             if (currentDialogue.lines[currentLineIndex - 1].isPrologueCenterText)
             {
-                if (prologueText != null) prologueText.text = currentFullText;
+                if (prologueText != null) 
+                {
+                    prologueText.text = currentFullText;
+                    prologueText.maxVisibleCharacters = 99999;
+                }
                 
                 // Jika teks prolog di-skip (muncul instan), mulai hitung mundur auto-play
                 VNDialogueLine skippedLine = currentDialogue.lines[currentLineIndex - 1];
@@ -154,7 +180,11 @@ public class DialogueManagerCS : MonoBehaviour
             }
             else
             {
-                if (dialogueText != null) dialogueText.text = currentFullText;
+                if (dialogueText != null) 
+                {
+                    dialogueText.text = currentFullText;
+                    dialogueText.maxVisibleCharacters = 99999;
+                }
             }
             isTyping = false;
             return; 
@@ -182,7 +212,31 @@ public class DialogueManagerCS : MonoBehaviour
             if (line.isPrologueCenterText)
             {
                 if (dialoguePanel != null) dialoguePanel.SetActive(false);
-                if (prologuePanel != null) prologuePanel.SetActive(true);
+                if (prologuePanel != null) 
+                {
+                    prologuePanel.SetActive(true);
+                    prologuePanel.transform.SetAsLastSibling(); // Pastikan panel ini merender paling depan (di atas FadeOverlay)
+
+                    // Fallback pencarian saat runtime jika null (gunakan GetComponentInChildren untuk mengabaikan salah ketik nama)
+                    if (prologueText == null)
+                    {
+                        prologueText = prologuePanel.GetComponentInChildren<TextMeshProUGUI>(true);
+                    }
+
+                    if (prologueText != null) 
+                    {
+                        prologueText.gameObject.SetActive(true);
+                        prologueText.color = Color.white; // Paksa warna teks putih agar tidak transparan
+                    }    
+                }
+                
+                // PAKSA MUNCUL: Memastikan prologuePanel tidak tersembunyi karena Alpha atau Scale 0
+                if (prologuePanel != null)
+                {
+                    CanvasGroup cg = prologuePanel.GetComponent<CanvasGroup>();
+                    if (cg != null) cg.alpha = 1f;
+                    prologuePanel.transform.localScale = Vector3.one;
+                }
                 
                 // Sembunyikan semua potret
                 if (leftSlot != null) leftSlot.Clear();
@@ -277,13 +331,21 @@ public class DialogueManagerCS : MonoBehaviour
         currentFullText = line.text;
         
         TextMeshProUGUI targetTextUI = line.isPrologueCenterText ? prologueText : dialogueText;
-        if (targetTextUI != null) targetTextUI.text = "";
-        
+        if (targetTextUI != null) 
+        {
+            targetTextUI.text = "";
+            targetTextUI.maxVisibleCharacters = 99999; // Lepas limit
+            targetTextUI.ForceMeshUpdate(true);
+        }
+
         if (!string.IsNullOrEmpty(line.text) && targetTextUI != null)
         {
-            foreach (char c in line.text.ToCharArray())
+            int totalChars = line.text.Length;
+            for (int i = 0; i <= totalChars; i++)
             {
-                targetTextUI.text += c;
+                // Gunakan substring untuk kompatibilitas mutlak (mengakali bug maxVisibleCharacters)
+                targetTextUI.text = currentFullText.Substring(0, i);
+                targetTextUI.ForceMeshUpdate(true); // PAKSA REBUILD SETIAP HURUF
                 yield return new WaitForSeconds(0.02f); // Typing speed
             }
         }
@@ -331,14 +393,38 @@ public class DialogueManagerCS : MonoBehaviour
     
     private void Update()
     {
-        if (!isPlaying) return;
-        
-        bool nextClicked = false;
+        // Paksa PrologueText selalu aktif jika sedang di elemen prolog
+        if (isPlaying && currentDialogue != null && currentLineIndex > 0 && currentLineIndex <= currentDialogue.lines.Count)
+        {
+            VNDialogueLine currentLine = currentDialogue.lines[currentLineIndex - 1];
+            if (currentLine.isPrologueCenterText)
+            {
+                if (prologueText != null && !prologueText.gameObject.activeInHierarchy)
+                {
+                    Debug.LogWarning("[DialogueManagerCS] Auto-Fix: Memaksa PrologueText aktif karena terdeteksi mati!");
+                    prologueText.gameObject.SetActive(true);
+                    prologueText.color = Color.white;
+                }
+
+                if (prologuePanel != null)
+                {
+                    Transform bg = prologuePanel.transform.Find("PrologueBakcground"); // Sesuai ejaan di screenshot user
+                    if (bg != null && !bg.gameObject.activeSelf) bg.gameObject.SetActive(true);
+                    
+                    Transform bg2 = prologuePanel.transform.Find("PrologueBackground"); // Jaga-jaga ejaan benar
+                    if (bg2 != null && !bg2.gameObject.activeSelf) bg2.gameObject.SetActive(true);
+                }
+            }
+        }
+
+        if (isPlaying)
+        {
+            bool nextClicked = false;
 
 #if ENABLE_INPUT_SYSTEM
-        // Mendukung sistem Input System baru (Unity 6+)
-        if (UnityEngine.InputSystem.Mouse.current != null && UnityEngine.InputSystem.Mouse.current.leftButton.wasPressedThisFrame) nextClicked = true;
-        if (UnityEngine.InputSystem.Keyboard.current != null && (UnityEngine.InputSystem.Keyboard.current.spaceKey.wasPressedThisFrame || UnityEngine.InputSystem.Keyboard.current.enterKey.wasPressedThisFrame)) nextClicked = true;
+            // Mendukung sistem Input System baru (Unity 6+)
+            if (UnityEngine.InputSystem.Mouse.current != null && UnityEngine.InputSystem.Mouse.current.leftButton.wasPressedThisFrame) nextClicked = true;
+            if (UnityEngine.InputSystem.Keyboard.current != null && (UnityEngine.InputSystem.Keyboard.current.spaceKey.wasPressedThisFrame || UnityEngine.InputSystem.Keyboard.current.enterKey.wasPressedThisFrame)) nextClicked = true;
 #else
         // Mendukung sistem Input Manager lama
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return)) nextClicked = true;
@@ -349,4 +435,5 @@ public class DialogueManagerCS : MonoBehaviour
             DisplayNextLine();
         }
     }
+}
 }

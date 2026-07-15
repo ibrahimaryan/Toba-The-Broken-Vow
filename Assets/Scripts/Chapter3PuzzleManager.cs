@@ -74,6 +74,22 @@ public class Chapter3PuzzleManager : MonoBehaviour
                 defaultParents[item] = item.transform.parent;
             }
         }
+
+        // PENGAMAN: Jika puzzle sudah selesai, pastikan status visual rantang terupdate
+        if (GameManager.Instance != null && GameManager.Instance.IsFlagSet("chapter3_puzzle_solved"))
+        {
+            if (rantangTriggerObject != null)
+            {
+                rantangTriggerObject.SetActive(false);
+                Debug.Log("Start: Rantang Trigger dinonaktifkan karena chapter3_puzzle_solved.");
+            }
+
+            if (rantangSolvedObject != null)
+            {
+                rantangSolvedObject.SetActive(true);
+                Debug.Log("Start: Rantang Solved diaktifkan karena chapter3_puzzle_solved.");
+            }
+        }
     }
 
     public void OpenPuzzle()
